@@ -1,0 +1,1775 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <meta name="viewport" content="width=1280, height=720" />
+  <title>Bulletin Domaine — Les Arcs</title>
+
+  <!-- ====================================================
+       SECTION PERSONNALISATION — modifiez ces variables
+       avant d'exporter la page vers MXTV
+       ==================================================== -->
+  <style>
+    :root {
+      /* === IDENTITÉ STATION === */
+      --station-name: "LES ARCS";        /* Nom affiché en en-tête */
+      --station-subtitle: "Arc 1950 · Les Arcs · Paradiski";
+
+      /* === PALETTE COULEURS === */
+      --bg-deep:        #070d1a;         /* Fond principal */
+      --bg-card:        #0d1828;         /* Fond des cartes */
+      --bg-card-alt:    #111f33;         /* Fond alterné */
+      --border-subtle:  rgba(255,255,255,0.07);
+      --accent-primary: #4db8ff;         /* Bleu glacier — couleur d'accent principale */
+      --accent-gold:    #f0c040;         /* Or — pour les indicateurs chauds */
+      --text-main:      #e8f0fe;
+      --text-muted:     rgba(232,240,254,0.55);
+
+      /* === COULEURS PISTES (standard ski) === */
+      --piste-verte:    #22c55e;
+      --piste-bleue:    #3b82f6;
+      --piste-rouge:    #ef4444;
+      --piste-noire:    #c0c0c0;
+
+      /* === STATUTS === */
+      --open-color:     #22c55e;
+      --closed-color:   #ef4444;
+      --planned-color:  #f59e0b;
+
+      /* === TYPOGRAPHIE === */
+      --font-display:   'Bebas Neue', 'Impact', sans-serif;
+      --font-body:      'Barlow Condensed', 'Arial Narrow', sans-serif;
+      --font-data:      'Courier New', monospace;
+
+      /* === LOGO === */
+      /* Remplacez l'URL par votre logo ou mettez "" pour masquer */
+      --logo-url: "";
+
+      /* === MISE EN PAGE === */
+      --columns: 3;                      /* 2 ou 3 colonnes de secteurs */
+      --card-radius: 12px;
+    }
+
+    /* ====================================================
+       STYLES GLOBAUX
+       ==================================================== */
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@300;400;500;600;700&display=swap');
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { font-size: 16px; }
+
+    body {
+      background: var(--bg-deep);
+      color: var(--text-main);
+      font-family: var(--font-body);
+      width: 1280px;
+      overflow-x: hidden;
+    }
+
+    /* Texture de fond subtile */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 50% at 50% -10%, rgba(77,184,255,0.08) 0%, transparent 60%),
+        radial-gradient(ellipse 40% 30% at 90% 100%, rgba(77,184,255,0.05) 0%, transparent 50%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ====================================================
+       EN-TÊTE
+       ==================================================== */
+    header {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 40px 16px;
+      border-bottom: 1px solid var(--border-subtle);
+      background: linear-gradient(180deg, rgba(13,24,40,0.9) 0%, transparent 100%);
+      z-index: 10;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo-area {
+      width: 56px;
+      height: 56px;
+      border-radius: 8px;
+      background: var(--accent-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-size: 22px;
+      color: var(--bg-deep);
+      letter-spacing: 1px;
+      flex-shrink: 0;
+    }
+
+    .station-title h1 {
+      font-family: var(--font-display);
+      font-size: 38px;
+      letter-spacing: 3px;
+      line-height: 1;
+      color: var(--text-main);
+    }
+
+    .station-title p {
+      font-size: 13px;
+      color: var(--text-muted);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-top: 3px;
+    }
+
+    .header-right {
+      text-align: right;
+    }
+
+    .update-time {
+      font-size: 12px;
+      color: var(--text-muted);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .update-time span {
+      color: var(--accent-primary);
+      font-weight: 600;
+    }
+
+    /* ====================================================
+       BANDEAUX MÉTÉO RÉSUMÉ
+       ==================================================== */
+    .weather-strip {
+      display: flex;
+      gap: 0;
+      border-bottom: 1px solid var(--border-subtle);
+      background: rgba(77,184,255,0.04);
+      padding: 0 40px;
+      z-index: 5;
+      position: relative;
+    }
+
+    .weather-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 28px;
+      border-right: 1px solid var(--border-subtle);
+      min-width: 160px;
+      gap: 4px;
+    }
+
+    .weather-item:last-child { border-right: none; }
+
+    .weather-label {
+      font-size: 10px;
+      color: var(--text-muted);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .weather-value {
+      font-family: var(--font-display);
+      font-size: 28px;
+      letter-spacing: 1px;
+      line-height: 1;
+    }
+
+    .weather-sub {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .weather-value.temp { color: var(--accent-primary); }
+    .weather-value.snow { color: #a8d8ff; }
+    .weather-value.wind { color: var(--text-main); }
+    .weather-value.risk-1 { color: #22c55e; }
+    .weather-value.risk-2 { color: #84cc16; }
+    .weather-value.risk-3 { color: var(--accent-gold); }
+    .weather-value.risk-4 { color: #f97316; }
+    .weather-value.risk-5 { color: var(--closed-color); }
+
+    /* ====================================================
+       RÉSUMÉ GLOBAL DU DOMAINE
+       ==================================================== */
+    .domain-summary {
+      display: flex;
+      gap: 12px;
+      padding: 16px 40px;
+      border-bottom: 1px solid var(--border-subtle);
+      position: relative;
+      z-index: 5;
+    }
+
+    .summary-pill {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 40px;
+      padding: 8px 18px 8px 12px;
+    }
+
+    .pill-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      flex-shrink: 0;
+    }
+
+    .pill-icon.lift-icon { background: rgba(77,184,255,0.2); }
+    .pill-icon.run-icon  { background: rgba(59,130,246,0.2); }
+    .pill-icon.green-icon { background: rgba(34,197,94,0.2); }
+    .pill-icon.blue-icon  { background: rgba(59,130,246,0.2); }
+    .pill-icon.red-icon   { background: rgba(239,68,68,0.2); }
+    .pill-icon.black-icon { background: rgba(192,192,192,0.15); }
+
+    .pill-data {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
+    }
+
+    .pill-count {
+      font-family: var(--font-display);
+      font-size: 22px;
+      color: var(--text-main);
+    }
+
+    .pill-count .open { color: var(--open-color); }
+    .pill-count .sep  { color: var(--text-muted); font-size: 18px; }
+
+    .pill-label {
+      font-size: 10px;
+      color: var(--text-muted);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    /* ====================================================
+       GRILLE DE SECTEURS
+       ==================================================== */
+    .sectors-grid {
+      display: grid;
+      grid-template-columns: repeat(var(--columns), 1fr);
+      gap: 16px;
+      padding: 20px 40px 40px;
+      position: relative;
+      z-index: 5;
+    }
+
+    /* ====================================================
+       CARTE DE SECTEUR
+       ==================================================== */
+    .sector-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--card-radius);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .sector-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 16px;
+      background: rgba(77,184,255,0.06);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .sector-name {
+      font-family: var(--font-display);
+      font-size: 20px;
+      letter-spacing: 2px;
+      color: var(--accent-primary);
+    }
+
+    .sector-ratio {
+      display: flex;
+      align-items: baseline;
+      gap: 3px;
+    }
+
+    .ratio-open {
+      font-family: var(--font-display);
+      font-size: 22px;
+      color: var(--open-color);
+    }
+
+    .ratio-sep {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .ratio-total {
+      font-family: var(--font-display);
+      font-size: 18px;
+      color: var(--text-muted);
+    }
+
+    .ratio-label {
+      font-size: 10px;
+      color: var(--text-muted);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-left: 8px;
+    }
+
+    /* ====================================================
+       SOUS-SECTIONS (Remontées / Pistes)
+       ==================================================== */
+    .subsection-title {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      padding: 8px 16px 4px;
+      border-bottom: 1px solid var(--border-subtle);
+      background: rgba(255,255,255,0.02);
+    }
+
+    /* ====================================================
+       LIGNE D'INSTALLATION
+       ==================================================== */
+    .item-row {
+      display: flex;
+      align-items: center;
+      padding: 7px 14px;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+      gap: 10px;
+      transition: background 0.15s;
+    }
+
+    .item-row:last-child { border-bottom: none; }
+    .item-row:hover { background: rgba(255,255,255,0.03); }
+
+    /* Badge type remontée */
+    .type-badge {
+      flex-shrink: 0;
+      width: 36px;
+      height: 22px;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .type-tph  { background: rgba(139,92,246,0.3); color: #c4b5fd; border: 1px solid rgba(139,92,246,0.4); }
+    .type-tc   { background: rgba(59,130,246,0.3);  color: #93c5fd; border: 1px solid rgba(59,130,246,0.4); }
+    .type-tsdb { background: rgba(77,184,255,0.25); color: #7dd3fc; border: 1px solid rgba(77,184,255,0.35); }
+    .type-tsd  { background: rgba(34,197,94,0.2);   color: #86efac; border: 1px solid rgba(34,197,94,0.3); }
+    .type-ts   { background: rgba(251,191,36,0.2);  color: #fde68a; border: 1px solid rgba(251,191,36,0.3); }
+    .type-tk   { background: rgba(249,115,22,0.2);  color: #fdba74; border: 1px solid rgba(249,115,22,0.3); }
+    .type-funi { background: rgba(168,85,247,0.2);  color: #d8b4fe; border: 1px solid rgba(168,85,247,0.3); }
+    .type-tlc  { background: rgba(20,184,166,0.2);  color: #99f6e4; border: 1px solid rgba(20,184,166,0.3); }
+    .type-tb   { background: rgba(244,63,94,0.2);   color: #fda4af; border: 1px solid rgba(244,63,94,0.3); }
+    .type-default { background: rgba(255,255,255,0.07); color: var(--text-muted); border: 1px solid var(--border-subtle); }
+
+    /* Point couleur piste */
+    .piste-dot {
+      flex-shrink: 0;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+    .dot-v { background: var(--piste-verte); box-shadow: 0 0 5px rgba(34,197,94,0.6); }
+    .dot-b { background: var(--piste-bleue); box-shadow: 0 0 5px rgba(59,130,246,0.6); }
+    .dot-r { background: var(--piste-rouge); box-shadow: 0 0 5px rgba(239,68,68,0.6); }
+    .dot-n { background: var(--piste-noire); box-shadow: 0 0 5px rgba(192,192,192,0.4); }
+
+    .item-name {
+      flex: 1;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-main);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .item-hours {
+      font-family: var(--font-data);
+      font-size: 10px;
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+
+    .item-message {
+      font-size: 10px;
+      color: var(--accent-gold);
+      white-space: nowrap;
+      max-width: 110px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* Indicateur statut */
+    .status-dot {
+      flex-shrink: 0;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+    .status-O { background: var(--open-color);   box-shadow: 0 0 6px rgba(34,197,94,0.8); }
+    .status-F { background: var(--closed-color); }
+    .status-P { background: var(--planned-color); animation: pulse-orange 1.5s infinite; }
+
+    @keyframes pulse-orange {
+      0%, 100% { opacity: 1; box-shadow: 0 0 6px rgba(245,158,11,0.8); }
+      50%       { opacity: 0.6; box-shadow: 0 0 2px rgba(245,158,11,0.3); }
+    }
+
+    /* ====================================================
+       SECTION LIAISONS
+       ==================================================== */
+    .liaison-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 9px 16px;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+      gap: 12px;
+    }
+
+    .liaison-arrow {
+      font-size: 11px;
+      color: var(--text-muted);
+      flex-shrink: 0;
+    }
+
+    .liaison-name {
+      flex: 1;
+      font-size: 12px;
+      color: var(--text-main);
+    }
+
+    /* ====================================================
+       SECTION NORDIQUE
+       ==================================================== */
+    .nordique-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 6px 14px;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+
+    .nordic-color {
+      width: 14px;
+      height: 5px;
+      border-radius: 3px;
+      flex-shrink: 0;
+    }
+    .nordic-v { background: var(--piste-verte); }
+    .nordic-b { background: var(--piste-bleue); }
+    .nordic-r { background: var(--piste-rouge); }
+    .nordic-n { background: var(--piste-noire); }
+
+    .nordic-name { flex: 1; font-size: 12px; }
+    .nordic-dist { font-size: 10px; color: var(--text-muted); }
+
+    /* ====================================================
+       FOOTER
+       ==================================================== */
+    footer {
+      text-align: center;
+      padding: 14px 40px;
+      border-top: 1px solid var(--border-subtle);
+      font-size: 11px;
+      color: var(--text-muted);
+      letter-spacing: 1px;
+      position: relative;
+      z-index: 5;
+    }
+
+    footer strong { color: var(--accent-primary); }
+
+    /* ====================================================
+       ANIMATION D'ENTRÉE
+       ==================================================== */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .sector-card {
+      animation: fadeUp 0.4s ease both;
+    }
+
+    .sector-card:nth-child(1)  { animation-delay: 0.05s; }
+    .sector-card:nth-child(2)  { animation-delay: 0.10s; }
+    .sector-card:nth-child(3)  { animation-delay: 0.15s; }
+    .sector-card:nth-child(4)  { animation-delay: 0.20s; }
+    .sector-card:nth-child(5)  { animation-delay: 0.25s; }
+    .sector-card:nth-child(6)  { animation-delay: 0.30s; }
+    .sector-card:nth-child(7)  { animation-delay: 0.35s; }
+    .sector-card:nth-child(8)  { animation-delay: 0.40s; }
+
+    /* ====================================================
+       BARRE DE PROGRESSION (ratio pistes)
+       ==================================================== */
+    .progress-bar {
+      height: 3px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 2px;
+      margin: 6px 16px 10px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      border-radius: 2px;
+      background: linear-gradient(90deg, var(--piste-verte), var(--accent-primary));
+      transition: width 0.8s ease;
+    }
+
+    /* ====================================================
+       SECTION ESPACES LUDIQUES
+       ==================================================== */
+    .activity-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--border-subtle);
+    }
+
+    .activity-item {
+      background: var(--bg-card);
+      padding: 8px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .activity-name {
+      font-size: 12px;
+      flex: 1;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .activity-hours {
+      font-family: var(--font-data);
+      font-size: 10px;
+      color: var(--text-muted);
+    }
+
+  </style>
+</head>
+<body>
+
+<!-- ========================================================
+     EN-TÊTE
+     ======================================================== -->
+<header>
+  <div class="header-left">
+    <div class="logo-area">LA</div>
+    <div class="station-title">
+      <h1>LES ARCS</h1>
+      <p>Arc 1950 · Paradiski · Bulletin du domaine</p>
+    </div>
+  </div>
+  <div class="header-right">
+    <div class="update-time">
+      Mis à jour le <span id="update-datetime">—</span>
+    </div>
+    <div class="update-time" style="margin-top:4px;">
+      Source : <strong style="color:var(--accent-primary)">Lumiplan</strong>
+    </div>
+  </div>
+</header>
+
+<!-- ========================================================
+     BANDEAUX MÉTÉO
+     ======================================================== -->
+<div class="weather-strip">
+  <div class="weather-item">
+    <div class="weather-label">Temp. sommet</div>
+    <div class="weather-value temp" id="w-temp">−8°</div>
+    <div class="weather-sub">Aiguille Rouge</div>
+  </div>
+  <div class="weather-item">
+    <div class="weather-label">Enneigement</div>
+    <div class="weather-value snow" id="w-snow">120 cm</div>
+    <div class="weather-sub">Haut domaine</div>
+  </div>
+  <div class="weather-item">
+    <div class="weather-label">Vent</div>
+    <div class="weather-value wind" id="w-wind">35 km/h</div>
+    <div class="weather-sub">SO · rafales 55</div>
+  </div>
+  <div class="weather-item">
+    <div class="weather-label">Limite pluie/neige</div>
+    <div class="weather-value snow" id="w-lpn">1 800 m</div>
+    <div class="weather-sub">En montée</div>
+  </div>
+  <div class="weather-item">
+    <div class="weather-label">Risque avalanche</div>
+    <div class="weather-value risk-2" id="w-risk">2 · Limité</div>
+    <div class="weather-sub">Massif des Arcs</div>
+  </div>
+  <div class="weather-item">
+    <div class="weather-label">Dernière chute</div>
+    <div class="weather-value snow" id="w-lastsnow">+15 cm</div>
+    <div class="weather-sub">Il y a 3 jours</div>
+  </div>
+</div>
+
+<!-- ========================================================
+     RÉSUMÉ GLOBAL
+     ======================================================== -->
+<div class="domain-summary">
+  <div class="summary-pill">
+    <div class="pill-icon lift-icon">🚡</div>
+    <div class="pill-data">
+      <div class="pill-count"><span class="open" id="s-lifts-open">21</span><span class="sep">/</span>42</div>
+      <div class="pill-label">Remontées</div>
+    </div>
+  </div>
+  <div class="summary-pill">
+    <div class="pill-icon run-icon">⛷</div>
+    <div class="pill-data">
+      <div class="pill-count"><span class="open" id="s-runs-open">78</span><span class="sep">/</span>104</div>
+      <div class="pill-label">Pistes</div>
+    </div>
+  </div>
+  <div class="summary-pill">
+    <div class="pill-icon green-icon">🟢</div>
+    <div class="pill-data">
+      <div class="pill-count"><span class="open">11</span><span class="sep">/</span>11</div>
+      <div class="pill-label">Vertes</div>
+    </div>
+  </div>
+  <div class="summary-pill">
+    <div class="pill-icon blue-icon">🔵</div>
+    <div class="pill-data">
+      <div class="pill-count"><span class="open">22</span><span class="sep">/</span>24</div>
+      <div class="pill-label">Bleues</div>
+    </div>
+  </div>
+  <div class="summary-pill">
+    <div class="pill-icon red-icon">🔴</div>
+    <div class="pill-data">
+      <div class="pill-count"><span class="open">30</span><span class="sep">/</span>38</div>
+      <div class="pill-label">Rouges</div>
+    </div>
+  </div>
+  <div class="summary-pill">
+    <div class="pill-icon black-icon">⚫</div>
+    <div class="pill-data">
+      <div class="pill-count"><span class="open">15</span><span class="sep">/</span>31</div>
+      <div class="pill-label">Noires</div>
+    </div>
+  </div>
+  <div class="summary-pill">
+    <div class="pill-icon" style="background:rgba(20,184,166,0.2)">🎿</div>
+    <div class="pill-data">
+      <div class="pill-count"><span class="open">15</span><span class="sep">/</span>16</div>
+      <div class="pill-label">Nordique</div>
+    </div>
+  </div>
+  <div class="summary-pill">
+    <div class="pill-icon" style="background:rgba(245,158,11,0.2)">🔗</div>
+    <div class="pill-data">
+      <div class="pill-count"><span style="color:var(--planned-color)">0</span><span class="sep">/</span>4</div>
+      <div class="pill-label">Liaisons</div>
+    </div>
+  </div>
+</div>
+
+<!-- ========================================================
+     GRILLE DES SECTEURS (données extraites de Lumiplan)
+     ======================================================== -->
+<div class="sectors-grid" id="sectors-grid">
+
+  <!-- SECTEUR : ARC 1600 -->
+  <div class="sector-card">
+    <div class="sector-header">
+      <div class="sector-name">ARC 1600</div>
+      <div>
+        <span class="ratio-open">7</span><span class="ratio-sep">/</span><span class="ratio-total">10</span>
+        <span class="ratio-label">remontées</span>
+      </div>
+    </div>
+    <div class="subsection-title">Remontées mécaniques</div>
+    <div class="item-row">
+      <span class="type-badge type-funi">FUNI</span>
+      <span class="item-name">FUNICULAIRE</span>
+      <span class="item-hours">07:30–21:00</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="type-badge type-tsd">TSD</span>
+      <span class="item-name">ARPETTE</span>
+      <span class="item-hours">09:10–16:50</span>
+      <span class="status-dot status-P"></span>
+    </div>
+    <div class="item-row">
+      <span class="type-badge type-tsd">TSD</span>
+      <span class="item-name">CACHETTE</span>
+      <span class="item-hours">09:00–17:05</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="type-badge type-tsd">TSD</span>
+      <span class="item-name">MONT BLANC</span>
+      <span class="item-hours">09:00–17:00</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="type-badge type-ts">TS</span>
+      <span class="item-name">CLOCHERET</span>
+      <span class="item-hours">09:15–16:45</span>
+      <span class="status-dot status-P"></span>
+    </div>
+    <div class="item-row">
+      <span class="type-badge type-ts">TS</span>
+      <span class="item-name">COMBETTES</span>
+      <span class="item-hours">09:00–17:15</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="type-badge type-tk">TK</span>
+      <span class="item-name">MILLERETTE</span>
+      <span class="item-hours">09:00–17:05</span>
+      <span class="status-dot status-F"></span>
+    </div>
+    <div class="item-row">
+      <span class="type-badge type-tk">TK</span>
+      <span class="item-name">SNOWPARK</span>
+      <span class="item-hours">09:15–17:00</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="type-badge type-tk">TK</span>
+      <span class="item-name">TOMMELET</span>
+      <span class="item-hours">09:00–16:55</span>
+      <span class="item-message">Pause 12h25–13h30</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="type-badge type-tk">TK</span>
+      <span class="item-name">VEZAILLE</span>
+      <span class="item-hours">09:15–16:55</span>
+      <span class="item-message">Pause 12h30–14h30</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="subsection-title">Pistes &amp; activités · 18/21</div>
+    <div class="progress-bar"><div class="progress-fill" style="width:86%"></div></div>
+    <div class="item-row">
+      <span class="piste-dot dot-v"></span>
+      <span class="item-name">JARDIN MILLERETTE</span>
+      <span class="item-hours">09:00–17:35</span>
+      <span class="status-dot status-F"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-v"></span>
+      <span class="item-name">PISTE DES ANIMAUX</span>
+      <span class="item-hours">09:00–17:30</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-v"></span>
+      <span class="item-name">VEZAILLE</span>
+      <span class="item-hours">09:15–17:25</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-b"></span>
+      <span class="item-name">ARPETTE 1</span>
+      <span class="item-hours">09:00–17:35</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-b"></span>
+      <span class="item-name">BELVEDERE 3 &amp; 4</span>
+      <span class="item-hours">09:00–17:35</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-b"></span>
+      <span class="item-name">BOIS DE SAULE</span>
+      <span class="item-hours">09:00–17:35</span>
+      <span class="status-dot status-F"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-b"></span>
+      <span class="item-name">CLAPET</span>
+      <span class="item-hours">09:15–17:15</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-r"></span>
+      <span class="item-name">AROLLES</span>
+      <span class="item-hours">09:00–17:35</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-r"></span>
+      <span class="item-name">CACHETTE</span>
+      <span class="item-hours">09:00–17:35</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-r"></span>
+      <span class="item-name">CLAIR BLANC</span>
+      <span class="item-hours">09:10–17:20</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-r"></span>
+      <span class="item-name">CLOCHERET</span>
+      <span class="item-hours">09:15–17:15</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-r"></span>
+      <span class="item-name">GRANGES</span>
+      <span class="item-hours">09:00–17:35</span>
+      <span class="status-dot status-F"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-n"></span>
+      <span class="item-name">BOSSES</span>
+      <span class="item-hours">09:15–17:25</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-n"></span>
+      <span class="item-name">ECUREUILS</span>
+      <span class="item-hours">09:00–17:30</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-n"></span>
+      <span class="item-name">FOND BLANC</span>
+      <span class="item-hours">09:10–17:20</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-n"></span>
+      <span class="item-name">MALGOVERT</span>
+      <span class="item-hours">09:00–17:25</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-n"></span>
+      <span class="item-name">ROUELLES</span>
+      <span class="item-hours">09:00–17:35</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-b"></span>
+      <span class="item-name">COMBETTES</span>
+      <span class="item-hours">09:00–17:30</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-b"></span>
+      <span class="item-name">GOLLET</span>
+      <span class="item-hours">09:00–17:35</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-b"></span>
+      <span class="item-name">LUTINS</span>
+      <span class="item-hours">09:00–17:30</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-r"></span>
+      <span class="item-name">TRAVERSEE 1</span>
+      <span class="item-hours">09:00–17:35</span>
+      <span class="status-dot status-O"></span>
+    </div>
+  </div>
+
+  <!-- SECTEUR : ARC 1800 -->
+  <div class="sector-card">
+    <div class="sector-header">
+      <div class="sector-name">ARC 1800</div>
+      <div>
+        <span class="ratio-open">5</span><span class="ratio-sep">/</span><span class="ratio-total">10</span>
+        <span class="ratio-label">remontées</span>
+      </div>
+    </div>
+    <div class="subsection-title">Remontées mécaniques</div>
+    <div class="item-row">
+      <span class="type-badge type-tph">TPH</span>
+      <span class="item-name">DAHU</span>
+      <span class="item-hours">08:30–23:00</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="type-badge type-tc">TC</span>
+      <span class="item-name">TRANSARC 1</span>
+      <span class="item-hours">09:00–16:40</span>
+      <span class="status-dot status-P"></span>
+    </div>
+    <div class="item-row">
+      <span class="type-badge type-tc">TC</span>
+      <span class="item-name">TRANSARC 2</span>
+      <span class="item-hours">09:05–16:50</span>
+      <span class="status-dot status-P"></span>
+    </div>
+    <div class="item-row">
+      <span class="type-badge type-tc">TC</span>
+      <span class="item-name">VILLARDS</span>
+      <span class="item-hours">09:00–19:30</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="type-badge type-tsd">TSD</span>
+      <span class="item-name">CARRELEY</span>
+      <span class="item-hours">09:05–16:50</span>
+      <span class="status-dot status-P"></span>
+    </div>
+    <div class="item-row">
+      <span class="type-badge type-tsd">TSD</span>
+      <span class="item-name">VAGERE</span>
+      <span class="item-hours">09:00–17:00</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="type-badge type-ts">TS</span>
+      <span class="item-name">CHARMETTOGER</span>
+      <span class="item-hours">09:00–16:50</span>
+      <span class="status-dot status-P"></span>
+    </div>
+    <div class="item-row">
+      <span class="type-badge type-ts">TS</span>
+      <span class="item-name">JARDIN ALPIN</span>
+      <span class="item-hours">08:45–16:40</span>
+      <span class="item-message">Pause 12h–13h</span>
+      <span class="status-dot status-P"></span>
+    </div>
+    <div class="item-row">
+      <span class="type-badge type-tlc">TLC</span>
+      <span class="item-name">1ERS VIRAGES 1800</span>
+      <span class="item-hours">09:15–17:15</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="type-badge type-tb">TB</span>
+      <span class="item-name">CABRIOLET</span>
+      <span class="item-hours">08:30–23:30</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="subsection-title">Pistes &amp; activités · 21/22</div>
+    <div class="progress-bar"><div class="progress-fill" style="width:95%"></div></div>
+    <div class="item-row">
+      <span class="piste-dot dot-v"></span>
+      <span class="item-name">1ERE GLISSE 1800</span>
+      <span class="item-hours">10:15–17:45</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-v"></span>
+      <span class="item-name">1ERS VIRAGES 1800</span>
+      <span class="item-hours">09:15–17:45</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-v"></span>
+      <span class="item-name">PISTE DES MINIS</span>
+      <span class="item-hours">09:00–20:00</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-b"></span>
+      <span class="item-name">ARPETTE 2 &amp; 3</span>
+      <span class="item-hours">09:10–17:20</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-b"></span>
+      <span class="item-name">BELVEDERE 2</span>
+      <span class="item-hours">09:05–17:20</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-b"></span>
+      <span class="item-name">CHANTEL</span>
+      <span class="item-hours">09:00–17:30</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-b"></span>
+      <span class="item-name">CHARMETTOGER</span>
+      <span class="item-hours">09:00–17:30</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-b"></span>
+      <span class="item-name">L'ALPAGE</span>
+      <span class="item-hours">09:00–17:30</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-r"></span>
+      <span class="item-name">CARRELEY</span>
+      <span class="item-hours">09:00–17:20</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-r"></span>
+      <span class="item-name">COL DES FRETTES</span>
+      <span class="item-hours">09:10–17:20</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-r"></span>
+      <span class="item-name">FROIDE FONTAINE</span>
+      <span class="item-hours">09:00–17:20</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-r"></span>
+      <span class="item-name">GOLF</span>
+      <span class="item-hours">09:00–17:30</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-r"></span>
+      <span class="item-name">GRAND RENARD</span>
+      <span class="item-hours">09:05–17:20</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-r"></span>
+      <span class="item-name">GRANDS MELEZES</span>
+      <span class="item-hours">09:00–17:20</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-r"></span>
+      <span class="item-name">LES COQS</span>
+      <span class="item-hours">09:00–17:30</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-r"></span>
+      <span class="item-name">PETIT RENARD</span>
+      <span class="item-hours">09:00–17:20</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-r"></span>
+      <span class="item-name">RECHES 1 &amp; 2</span>
+      <span class="item-hours">09:00–17:20</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-r"></span>
+      <span class="item-name">VAGERE</span>
+      <span class="item-hours">09:00–17:30</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row" style="opacity:0.5;">
+      <span class="piste-dot dot-r"></span>
+      <span class="item-name">STADE SLALOM TETRAS</span>
+      <span class="item-hours">09:00–17:20</span>
+      <span class="status-dot status-F"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-b"></span>
+      <span class="item-name">TRAVERSEE 2</span>
+      <span class="item-hours">09:00–17:20</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-r"></span>
+      <span class="item-name">TRAVERSEE 3</span>
+      <span class="item-hours">09:05–17:25</span>
+      <span class="status-dot status-O"></span>
+    </div>
+  </div>
+
+  <!-- SECTEUR : ARC 2000 -->
+  <div class="sector-card">
+    <div class="sector-header">
+      <div class="sector-name">ARC 2000</div>
+      <div>
+        <span class="ratio-open">8</span><span class="ratio-sep">/</span><span class="ratio-total">18</span>
+        <span class="ratio-label">remontées</span>
+      </div>
+    </div>
+    <div class="subsection-title">Remontées mécaniques</div>
+    <div class="item-row">
+      <span class="type-badge type-tph">TPH</span>
+      <span class="item-name">AIGUILLE ROUGE</span>
+      <span class="item-hours">09:45–16:10</span>
+      <span class="status-dot status-P"></span>
+    </div>
+    <div class="item-row">
+      <span class="type-badge type-tc">TC</span>
+      <span class="item-name">VARET</span>
+      <span class="item-hours">09:15–16:40</span>
+      <span class="status-dot status-P"></span>
+    </div>
+    <div class="item-row">
+      <span class="type-badge type-tsdb">TSDB</span>
+      <span class="item-name">ARCABULLE</span>
+      <span class="item-hours">09:05–16:50</span>
+      <span class="status-dot status-P"></span>
+    </div>
+    <div class="item-row">
+      <span class="type-badge type-tsdb">TSDB</span>
+      <span class="item-name">PRE ST ESPRIT</span>
+      <span class="item-hours">09:00–16:50</span>
+      <span class="status-dot status-P"></span>
+    </div>
+    <div class="item-row">
+      <span class="type-badge type-tsd">TSD</span>
+      <span class="item-name">BOIS DE L'OURS</span>
+      <span class="item-hours">09:05–16:50</span>
+      <span class="status-dot status-P"></span>
+    </div>
+    <div class="item-row">
+      <span class="type-badge type-tsd">TSD</span>
+      <span class="item-name">COMBORCIERE</span>
+      <span class="item-hours">09:00–16:55</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="type-badge type-tsd">TSD</span>
+      <span class="item-name">MARMOTTES</span>
+      <span class="item-hours">08:55–17:00</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="type-badge type-tsd">TSD</span>
+      <span class="item-name">PLAGNETTES</span>
+      <span class="item-hours">09:05–16:50</span>
+      <span class="status-dot status-P"></span>
+    </div>
+    <div class="item-row">
+      <span class="type-badge type-ts">TS</span>
+      <span class="item-name">GRAND COL</span>
+      <span class="item-hours">09:30–16:40</span>
+      <span class="status-dot status-P"></span>
+    </div>
+    <div class="item-row">
+      <span class="type-badge type-ts">TS</span>
+      <span class="item-name">LANCHETTES</span>
+      <span class="item-hours">09:05–16:50</span>
+      <span class="status-dot status-P"></span>
+    </div>
+    <div class="item-row">
+      <span class="type-badge type-ts">TS</span>
+      <span class="item-name">ST JACQUES</span>
+      <span class="item-hours">09:05–16:50</span>
+      <span class="status-dot status-P"></span>
+    </div>
+    <div class="item-row">
+      <span class="type-badge type-tk">TK</span>
+      <span class="item-name">LAC DES COMBES</span>
+      <span class="item-hours">08:45–16:50</span>
+      <span class="status-dot status-P"></span>
+    </div>
+    <div class="item-row">
+      <span class="type-badge type-tk">TK</span>
+      <span class="item-name">RHODOS</span>
+      <span class="item-hours">08:45–16:55</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="type-badge type-default">TR</span>
+      <span class="item-name">ELDORADOR</span>
+      <span class="item-hours">09:00–17:20</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="type-badge type-default">TR</span>
+      <span class="item-name">ETERLOU</span>
+      <span class="item-hours">09:15–17:00</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="type-badge type-default">TR</span>
+      <span class="item-name">FLAMME OLYMPIQUE</span>
+      <span class="item-hours">09:15–17:00</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="type-badge type-tlc">TLC</span>
+      <span class="item-name">PLAN VERT</span>
+      <span class="item-hours">09:15–17:10</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="type-badge type-default">TB</span>
+      <span class="item-name">CABRIOLET (2000)</span>
+      <span class="item-hours">08:30–23:30</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="subsection-title">Pistes · 33/41</div>
+    <div class="progress-bar"><div class="progress-fill" style="width:80%"></div></div>
+    <div class="item-row">
+      <span class="piste-dot dot-v"></span>
+      <span class="item-name">1ERE GLISSE 2000</span>
+      <span class="item-hours">09:00–17:50</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-v"></span>
+      <span class="item-name">1ERS VIRAGES (BAS KL)</span>
+      <span class="item-hours">09:05–17:20</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-b"></span>
+      <span class="item-name">BOSSE DE LA FLAMME</span>
+      <span class="item-hours">09:15–17:30</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-b"></span>
+      <span class="item-name">COL DE LA CHAL</span>
+      <span class="item-hours">09:05–17:20</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-b"></span>
+      <span class="item-name">DENTS DU PEIGNE</span>
+      <span class="item-hours">09:05–17:20</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-b"></span>
+      <span class="item-name">EDELWEISS</span>
+      <span class="item-hours">09:05–17:20</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-b"></span>
+      <span class="item-name">LAC DES COMBES</span>
+      <span class="item-hours">08:45–17:20</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-b"></span>
+      <span class="item-name">MARAIS</span>
+      <span class="item-hours">09:05–17:20</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-b"></span>
+      <span class="item-name">MARMOTTES</span>
+      <span class="item-hours">08:55–17:30</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-b"></span>
+      <span class="item-name">PLAN / PLAN DES EAUX</span>
+      <span class="item-hours">09:05–17:20</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-b"></span>
+      <span class="item-name">PLAN VERT</span>
+      <span class="item-hours">09:05–17:20</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-b"></span>
+      <span class="item-name">RESERVOIR</span>
+      <span class="item-hours">09:05–17:20</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-b"></span>
+      <span class="item-name">VALLEE DE L'ARC 1-4</span>
+      <span class="item-hours">09:05–17:20</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-r"></span>
+      <span class="item-name">ARANDELIERES 1</span>
+      <span class="item-hours">09:15–17:10</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-r"></span>
+      <span class="item-name">ARANDELIERES 2</span>
+      <span class="item-hours">09:45–16:50</span>
+      <span class="status-dot status-P"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-r"></span>
+      <span class="item-name">GRAND COL</span>
+      <span class="item-hours">09:30–17:10</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-r"></span>
+      <span class="item-name">LAC / MUGUET</span>
+      <span class="item-hours">09:05–17:20</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-r"></span>
+      <span class="item-name">PLAGNETTES / TEPPES</span>
+      <span class="item-hours">09:05–17:20</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-r"></span>
+      <span class="item-name">SECRET</span>
+      <span class="item-hours">09:00–17:25</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-n"></span>
+      <span class="item-name">AIGUILLE ROUGE</span>
+      <span class="item-hours">09:45–16:40</span>
+      <span class="status-dot status-P"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-n"></span>
+      <span class="item-name">BOIS DE L'OURS</span>
+      <span class="item-hours">09:05–17:20</span>
+      <span class="status-dot status-P"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-n"></span>
+      <span class="item-name">COMBORCIERE</span>
+      <span class="item-hours">09:00–17:25</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-n"></span>
+      <span class="item-name">COMBES / CRETES</span>
+      <span class="item-hours">09:05–17:20</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-n"></span>
+      <span class="item-name">DOU DE HOMME / DROSET</span>
+      <span class="item-hours">09:05–17:25</span>
+      <span class="status-dot status-P"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-n"></span>
+      <span class="item-name">GÉNÉPI</span>
+      <span class="item-hours">09:45–16:40</span>
+      <span class="status-dot status-F"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-n"></span>
+      <span class="item-name">LANCHES</span>
+      <span class="item-hours">09:15–17:10</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-n"></span>
+      <span class="item-name">REFUGE</span>
+      <span class="item-hours">09:30–17:10</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-n"></span>
+      <span class="item-name">ROBERT BLANC</span>
+      <span class="item-hours">09:45–16:40</span>
+      <span class="status-dot status-F"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-n"></span>
+      <span class="item-name">TUFFES</span>
+      <span class="item-hours">09:05–17:20</span>
+      <span class="status-dot status-O"></span>
+    </div>
+  </div>
+
+  <!-- SECTEUR : VILLAROGER -->
+  <div class="sector-card">
+    <div class="sector-header">
+      <div class="sector-name">VILLAROGER</div>
+      <div>
+        <span class="ratio-open">1</span><span class="ratio-sep">/</span><span class="ratio-total">4</span>
+        <span class="ratio-label">remontées</span>
+      </div>
+    </div>
+    <div class="subsection-title">Remontées mécaniques</div>
+    <div class="item-row">
+      <span class="type-badge type-tc">TC</span>
+      <span class="item-name">VILLAROGER</span>
+      <span class="item-hours">09:00–16:40</span>
+      <span class="status-dot status-P"></span>
+    </div>
+    <div class="item-row">
+      <span class="type-badge type-ts">TS</span>
+      <span class="item-name">DROSET</span>
+      <span class="item-hours">09:05–16:55</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="type-badge type-tk">TK</span>
+      <span class="item-name">RHONAZ</span>
+      <span class="item-hours">—</span>
+      <span class="status-dot status-F"></span>
+    </div>
+    <div class="item-row">
+      <span class="type-badge type-tlc">TLC</span>
+      <span class="item-name">AZURE</span>
+      <span class="item-hours">09:10–16:35</span>
+      <span class="status-dot status-P"></span>
+    </div>
+    <div class="subsection-title">Pistes · 6/8</div>
+    <div class="progress-bar"><div class="progress-fill" style="width:75%"></div></div>
+    <div class="item-row">
+      <span class="piste-dot dot-v"></span>
+      <span class="item-name">1ERE GLISSE VILLAROGER</span>
+      <span class="item-hours">09:10–17:05</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-b"></span>
+      <span class="item-name">LES LYS</span>
+      <span class="item-hours">09:00–17:10</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-b"></span>
+      <span class="item-name">RHONAZ</span>
+      <span class="item-hours">09:00–17:10</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-b"></span>
+      <span class="item-name">VILLAROGER</span>
+      <span class="item-hours">09:00–17:10</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-r"></span>
+      <span class="item-name">AIGUILLE ROUGE</span>
+      <span class="item-hours">09:05–17:10</span>
+      <span class="item-message">Partiellement ouverte</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-b"></span>
+      <span class="item-name">PRE</span>
+      <span class="item-hours">09:00–17:10</span>
+      <span class="status-dot status-F"></span>
+    </div>
+    <div class="item-row">
+      <span class="piste-dot dot-n"></span>
+      <span class="item-name">SOLLIET</span>
+      <span class="item-hours">09:00–17:10</span>
+      <span class="status-dot status-O"></span>
+    </div>
+    <div class="item-row" style="opacity:0.5;">
+      <span class="piste-dot dot-r"></span>
+      <span class="item-name">SOLLIERES</span>
+      <span class="item-hours">09:00–17:10</span>
+      <span class="status-dot status-F"></span>
+    </div>
+  </div>
+
+  <!-- SECTEUR : ESPACES LUDIQUES -->
+  <div class="sector-card">
+    <div class="sector-header">
+      <div class="sector-name">ESPACES LUDIQUES</div>
+      <div>
+        <span class="ratio-open">8</span><span class="ratio-sep">/</span><span class="ratio-total">17</span>
+        <span class="ratio-label">activités</span>
+      </div>
+    </div>
+    <div class="subsection-title">Activités · Luges · Snowparks</div>
+    <div class="activity-grid">
+      <div class="activity-item">
+        <span class="status-dot status-P" style="margin-right:4px"></span>
+        <span class="activity-name">Spark Bleu</span>
+        <span class="activity-hours">10:00–16:50</span>
+      </div>
+      <div class="activity-item">
+        <span class="status-dot status-P" style="margin-right:4px"></span>
+        <span class="activity-name">Spark Rouge</span>
+        <span class="activity-hours">10:00–16:50</span>
+      </div>
+      <div class="activity-item">
+        <span class="status-dot status-F" style="margin-right:4px"></span>
+        <span class="activity-name">Spark Noir</span>
+        <span class="activity-hours">10:00–16:50</span>
+      </div>
+      <div class="activity-item">
+        <span class="status-dot status-O" style="margin-right:4px"></span>
+        <span class="activity-name">Boarder Bleu</span>
+        <span class="activity-hours">10:30–17:00</span>
+      </div>
+      <div class="activity-item">
+        <span class="status-dot status-O" style="margin-right:4px"></span>
+        <span class="activity-name">Boarder Rouge</span>
+        <span class="activity-hours">10:30–17:00</span>
+      </div>
+      <div class="activity-item">
+        <span class="status-dot status-O" style="margin-right:4px"></span>
+        <span class="activity-name">Marsupilami XL 1800</span>
+        <span class="activity-hours">09:30–17:30</span>
+      </div>
+      <div class="activity-item">
+        <span class="status-dot status-O" style="margin-right:4px"></span>
+        <span class="activity-name">Luge 1800</span>
+        <span class="activity-hours">13:30–20:00</span>
+      </div>
+      <div class="activity-item">
+        <span class="status-dot status-P" style="margin-right:4px"></span>
+        <span class="activity-name">Luge 2000</span>
+        <span class="activity-hours">10:15–16:10</span>
+      </div>
+      <div class="activity-item">
+        <span class="status-dot status-O" style="margin-right:4px"></span>
+        <span class="activity-name">Luge Flamme Olym.</span>
+        <span class="activity-hours">—</span>
+      </div>
+      <div class="activity-item">
+        <span class="status-dot status-O" style="margin-right:4px"></span>
+        <span class="activity-name">Luge FDN 1800</span>
+        <span class="activity-hours">—</span>
+      </div>
+      <div class="activity-item">
+        <span class="status-dot status-O" style="margin-right:4px"></span>
+        <span class="activity-name">Forêt des Pitchouns</span>
+        <span class="activity-hours">09:15–17:35</span>
+      </div>
+      <div class="activity-item">
+        <span class="status-dot status-P" style="margin-right:4px"></span>
+        <span class="activity-name">Chronoski</span>
+        <span class="activity-hours">09:15–16:40</span>
+      </div>
+      <div class="activity-item">
+        <span class="status-dot status-P" style="margin-right:4px"></span>
+        <span class="activity-name">Tyrolienne Aig. Rouge</span>
+        <span class="activity-hours">09:25–16:40</span>
+      </div>
+      <div class="activity-item">
+        <span class="status-dot status-O" style="margin-right:4px"></span>
+        <span class="activity-name">Musée Animaux Mnt.</span>
+        <span class="activity-hours">09:15–17:05</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTEUR : LIAISONS + NORDIQUE -->
+  <div class="sector-card">
+    <div class="sector-header">
+      <div class="sector-name">LIAISONS &amp; NORDIQUE</div>
+    </div>
+
+    <div class="subsection-title">Liaisons inter-secteurs · 0/4</div>
+    <div class="liaison-row">
+      <span class="status-dot status-P"></span>
+      <span class="liaison-arrow">⇄</span>
+      <span class="liaison-name">ARC 1600 / ARC 2000</span>
+      <span class="item-hours">09:10–16:50</span>
+    </div>
+    <div class="liaison-row">
+      <span class="status-dot status-P"></span>
+      <span class="liaison-arrow">⇄</span>
+      <span class="liaison-name">ARC 1800 / ARC 2000</span>
+      <span class="item-hours">09:05–16:50</span>
+    </div>
+    <div class="liaison-row">
+      <span class="status-dot status-P"></span>
+      <span class="liaison-arrow">⇄</span>
+      <span class="liaison-name">ARC 2000 / VILLAROGER</span>
+      <span class="item-hours">09:05–16:50</span>
+    </div>
+    <div class="liaison-row">
+      <span class="status-dot status-P"></span>
+      <span class="liaison-arrow">⇄</span>
+      <span class="liaison-name">PEISEY-VALLANDRY / ARC 2000</span>
+      <span class="item-hours">09:05–16:50</span>
+    </div>
+
+    <div class="subsection-title" style="margin-top:8px">
+      Peisey-Vallandry Nordique · 15/16
+    </div>
+    <div class="progress-bar"><div class="progress-fill" style="width:94%"></div></div>
+
+    <div class="nordique-row">
+      <span class="nordic-color nordic-v"></span>
+      <span class="nordic-name">L'Eau Salée — Stade Biathlon</span>
+      <span class="nordic-dist">1,1 km · 09:00–17:00</span>
+      <span class="status-dot status-O" style="margin-left:8px"></span>
+    </div>
+    <div class="nordique-row">
+      <span class="nordic-color nordic-v"></span>
+      <span class="nordic-name">La Croe</span>
+      <span class="nordic-dist">1 km · 09:00–19:30</span>
+      <span class="status-dot status-O" style="margin-left:8px"></span>
+    </div>
+    <div class="nordique-row">
+      <span class="nordic-color nordic-b"></span>
+      <span class="nordic-name">La Gouille</span>
+      <span class="nordic-dist">6,9 km · 09:00–17:00</span>
+      <span class="status-dot status-O" style="margin-left:8px"></span>
+    </div>
+    <div class="nordique-row">
+      <span class="nordic-color nordic-b"></span>
+      <span class="nordic-name">Le Tumelet</span>
+      <span class="nordic-dist">0,4 km · 09:00–17:00</span>
+      <span class="status-dot status-O" style="margin-left:8px"></span>
+    </div>
+    <div class="nordique-row">
+      <span class="nordic-color nordic-b"></span>
+      <span class="nordic-name">Le Vigerand</span>
+      <span class="nordic-dist">1,5 km · 09:00–17:00</span>
+      <span class="status-dot status-O" style="margin-left:8px"></span>
+    </div>
+    <div class="nordique-row">
+      <span class="nordic-color nordic-b"></span>
+      <span class="nordic-name">Les Dzirpes</span>
+      <span class="nordic-dist">1,6 km · 09:00–19:30</span>
+      <span class="status-dot status-O" style="margin-left:8px"></span>
+    </div>
+    <div class="nordique-row">
+      <span class="nordic-color nordic-b"></span>
+      <span class="nordic-name">WOOPS</span>
+      <span class="nordic-dist">09:00–19:30</span>
+      <span class="status-dot status-O" style="margin-left:8px"></span>
+    </div>
+    <div class="nordique-row">
+      <span class="nordic-color nordic-r"></span>
+      <span class="nordic-name">Beaupraz</span>
+      <span class="nordic-dist">0,7 km · 09:00–17:00</span>
+      <span class="status-dot status-F" style="margin-left:8px"></span>
+    </div>
+    <div class="nordique-row">
+      <span class="nordic-color nordic-r"></span>
+      <span class="nordic-name">Le Cassinet</span>
+      <span class="nordic-dist">2 km · 09:00–19:30</span>
+      <span class="status-dot status-O" style="margin-left:8px"></span>
+    </div>
+    <div class="nordique-row">
+      <span class="nordic-color nordic-r"></span>
+      <span class="nordic-name">Le Mone</span>
+      <span class="nordic-dist">4,1 km · 09:00–17:00</span>
+      <span class="status-dot status-O" style="margin-left:8px"></span>
+    </div>
+    <div class="nordique-row">
+      <span class="nordic-color nordic-r"></span>
+      <span class="nordic-name">Pré Envers</span>
+      <span class="nordic-dist">0,7 km · 09:00–17:00</span>
+      <span class="status-dot status-O" style="margin-left:8px"></span>
+    </div>
+    <div class="nordique-row">
+      <span class="nordic-color nordic-n"></span>
+      <span class="nordic-name">L'Épinerie</span>
+      <span class="nordic-dist">1,6 km · 09:00–17:00</span>
+      <span class="status-dot status-O" style="margin-left:8px"></span>
+    </div>
+    <div class="nordique-row">
+      <span class="nordic-color nordic-n"></span>
+      <span class="nordic-name">La Culaz</span>
+      <span class="nordic-dist">0,7 km · 09:00–17:00</span>
+      <span class="status-dot status-O" style="margin-left:8px"></span>
+    </div>
+    <div class="nordique-row">
+      <span class="nordic-color nordic-n"></span>
+      <span class="nordic-name">Pont Romane</span>
+      <span class="nordic-dist">3,2 km · 09:00–19:30</span>
+      <span class="status-dot status-O" style="margin-left:8px"></span>
+    </div>
+    <div class="nordique-row">
+      <span class="nordic-color nordic-v"></span>
+      <span class="nordic-name">Piste de Luge (nordique)</span>
+      <span class="nordic-dist">09:00–17:00</span>
+      <span class="status-dot status-O" style="margin-left:8px"></span>
+    </div>
+    <div class="nordique-row">
+      <span class="nordic-color nordic-v"></span>
+      <span class="nordic-name">Itinéraire Piétons</span>
+      <span class="nordic-dist">09:00–17:00 · Balisage estival</span>
+      <span class="status-dot status-O" style="margin-left:8px"></span>
+    </div>
+  </div>
+
+</div>
+
+<!-- ========================================================
+     FOOTER
+     ======================================================== -->
+<footer>
+  Données extraites de <strong>Lumiplan</strong> ·
+  Généré par <strong>CSMART Weather</strong> ·
+  Mise à jour automatique toutes les 30 min
+</footer>
+
+<!-- ========================================================
+     SCRIPT — horodatage + compatibilité MXTV (scroll clavier)
+     ======================================================== -->
+<script>
+  // Horodatage dynamique
+  (function() {
+    const now = new Date();
+    const fmt = now.toLocaleDateString('fr-FR', { weekday:'long', day:'2-digit', month:'long', year:'numeric' })
+              + ' — '
+              + now.toLocaleTimeString('fr-FR', { hour:'2-digit', minute:'2-digit' });
+    document.getElementById('update-datetime').textContent = fmt;
+  })();
+
+  // Compatibilité télécommande TV (MXTV / smart TV)
+  function mxtvInit() {
+    var el = document.getElementById('btnFocus');
+    if (el) el.focus();
+    setTimeout(mxtvInit, 2000);
+  }
+
+  function mxtvPress(e) {
+    if (e.keyCode === 38) {
+      window.scrollBy({ top: -120, behavior: 'smooth' });
+    }
+    if (e.keyCode === 40) {
+      window.scrollBy({ top: 120, behavior: 'smooth' });
+    }
+    if (e.keyCode === 8 || e.keyCode === 461) {
+      if (window.parent) window.parent.postMessage("goToHome", "*");
+    }
+  }
+
+  window.addEventListener('load', function() {
+    mxtvInit();
+    // Barre de progression dynamique à l'animation
+    document.querySelectorAll('.progress-fill').forEach(function(bar) {
+      var target = bar.style.width;
+      bar.style.width = '0%';
+      setTimeout(function() { bar.style.width = target; }, 600);
+    });
+  });
+</script>
+
+<!-- Ancre de focus pour télécommande MXTV -->
+<a href="#" onkeydown="mxtvPress(event)" id="btnFocus" style="position:fixed;opacity:0;pointer-events:none;"></a>
+
+</body>
+</html>
