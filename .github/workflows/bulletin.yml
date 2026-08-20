@@ -1,0 +1,68 @@
+# CSMART Weather — rafraîchissement du bulletin du domaine
+#
+# À placer dans .github/workflows/bulletin.yml
+#
+# Le job récupère le bulletin, écrit bulletin.json et le publie sur la
+# branche des pages. Les téléviseurs relisent ce fichier toutes les cinq
+# minutes, sans jamais interroger la source.
+#
+# Deux limites à connaître :
+#   · les tâches planifiées de GitHub sont exécutées « au mieux » et
+#     accusent souvent dix à vingt minutes de retard. Pour un bulletin
+#     de domaine skiable c'est sans conséquence ; pour une information
+#     critique, préférer un ordonnanceur maîtrisé.
+#   · une planification est désactivée après soixante jours sans activité
+#     sur le dépôt. Comme ce job commite à chaque exécution, il s'auto-
+#     entretient — mais s'il échoue durablement, la planification s'éteint.
+
+name: Bulletin du domaine
+
+on:
+  schedule:
+    - cron: "*/30 5-20 * * *"   # toutes les 30 min, 5h–20h UTC
+  workflow_dispatch:            # déclenchement manuel depuis l'onglet Actions
+
+permissions:
+  contents: write
+
+concurrency:
+  group: bulletin
+  cancel-in-progress: false
+
+jobs:
+  rafraichir:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Installer les dépendances
+        run: npm install cheerio --no-save
+
+      - name: Récupérer le bulletin
+        id: fetch
+        run: node scripts/fetch-bulletin.mjs
+        working-directory: csmart
+        continue-on-error: true   # un échec ne doit pas écraser le fichier valide
+
+      - name: Publier si le bulletin est valide
+        if: steps.fetch.outcome == 'success'
+        run: |
+          cd csmart
+          if git diff --quiet -- bulletin.json; then
+            echo "Aucun changement, rien à publier."
+            exit 0
+          fi
+          git config user.name  "csmart-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add bulletin.json
+          git commit -m "Bulletin du domaine — $(date -u '+%Y-%m-%d %H:%M UTC')"
+          git push
+
+      - name: Signaler l'échec
+        if: steps.fetch.outcome != 'success'
+        run: |
+          echo "::warning::Bulletin non mis à jour. Les écrans conservent la version précédente."
