@@ -2,18 +2,18 @@
 #
 # À placer dans .github/workflows/bulletin.yml
 #
-# Le job récupère le bulletin, écrit bulletin.json et le publie sur la
-# branche des pages. Les téléviseurs relisent ce fichier toutes les cinq
-# minutes, sans jamais interroger la source.
+# Arborescence attendue, à la racine du dépôt :
+#   index.html
+#   bulletin.json
+#   scripts/fetch-bulletin.mjs
+#   .github/workflows/bulletin.yml
 #
 # Deux limites à connaître :
 #   · les tâches planifiées de GitHub sont exécutées « au mieux » et
-#     accusent souvent dix à vingt minutes de retard. Pour un bulletin
-#     de domaine skiable c'est sans conséquence ; pour une information
-#     critique, préférer un ordonnanceur maîtrisé.
-#   · une planification est désactivée après soixante jours sans activité
-#     sur le dépôt. Comme ce job commite à chaque exécution, il s'auto-
-#     entretient — mais s'il échoue durablement, la planification s'éteint.
+#     accusent souvent dix à vingt minutes de retard. Sans conséquence
+#     pour un bulletin de domaine skiable.
+#   · une planification s'éteint après soixante jours sans activité sur
+#     le dépôt. Ce job commitant à chaque exécution, il s'auto-entretient.
 
 name: Bulletin du domaine
 
@@ -33,11 +33,21 @@ jobs:
   rafraichir:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
-          node-version: "20"
+          node-version: "22"
+
+      # Étape de diagnostic : à retirer une fois le workflow stabilisé.
+      # Elle affiche l'arborescence réellement vue par le job, ce qui
+      # lève toute ambiguïté sur l'emplacement des fichiers.
+      - name: Vérifier l'arborescence
+        run: |
+          echo "Répertoire de travail : $(pwd)"
+          ls -la
+          echo "--- scripts ---"
+          ls -la scripts || echo "Le dossier scripts est absent."
 
       - name: Installer les dépendances
         run: npm install cheerio --no-save
@@ -45,15 +55,13 @@ jobs:
       - name: Récupérer le bulletin
         id: fetch
         run: node scripts/fetch-bulletin.mjs
-        working-directory: csmart
         continue-on-error: true   # un échec ne doit pas écraser le fichier valide
 
       - name: Publier si le bulletin est valide
         if: steps.fetch.outcome == 'success'
         run: |
-          cd csmart
           if git diff --quiet -- bulletin.json; then
-            echo "Aucun changement, rien à publier."
+            echo "Bulletin inchangé, rien à publier."
             exit 0
           fi
           git config user.name  "csmart-bot"
