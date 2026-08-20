@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1280, height=720">
+<title>CSMART TV — Bulletin du domaine · Les Arcs</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#070E18; --bg2:#0C1626; --card:#111E31; --card2:#16263D;
+    --acc:#4AA8E8; --acc2:#7FD9C2;
+    --vert:#3CC66B; --bleu:#3E8FE0; --rouge:#E0483F; --noir:#9AA3B2; --kl:#E0A93C;
+    --ok:#3CC66B; --wait:#E0A93C; --off:#E0483F;
+    --txt:#E8EFF7; --txt2:#93A6BE; --txt3:#61748C;
+    --line:rgba(255,255,255,.07);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%;overflow:hidden;background:#03070D}
+  body{font-family:'Inter',system-ui,sans-serif;color:var(--txt);-webkit-font-smoothing:antialiased}
+
+  #fit{position:absolute;top:0;left:0;width:100%;height:100%;overflow:hidden}
+  #tv{position:absolute;top:0;left:0;width:1280px;height:720px;overflow:hidden;
+      -webkit-transform-origin:0 0;transform-origin:0 0;background:var(--bg);
+      background-image:radial-gradient(760px 420px at 10% -14%, rgba(74,168,232,.16), transparent 60%)}
+
+  /* ---------------- bandeau ---------------- */
+  #bar{height:80px;display:flex;align-items:center;padding:0 24px;
+       background:var(--bg2);border-bottom:1px solid var(--line)}
+  .ecu{width:50px;height:50px;border-radius:12px;flex:none;display:flex;align-items:center;justify-content:center;
+       background:linear-gradient(160deg,#5CBBF5,#2E7FC4);
+       font-family:'Archivo';font-weight:800;font-size:19px;color:#07223A}
+  .btit{margin-left:16px;flex:1;min-width:0}
+  .btit b{display:block;font-family:'Archivo';font-weight:800;font-size:30px;letter-spacing:.01em;line-height:1}
+  .btit i{font-style:normal;display:block;font-family:'JetBrains Mono';font-size:11.5px;letter-spacing:.14em;
+          color:var(--txt3);margin-top:6px;text-transform:uppercase}
+  .bmaj{text-align:right;flex:none;font-family:'JetBrains Mono';font-size:11.5px;letter-spacing:.06em;
+        color:var(--txt3);text-transform:uppercase;line-height:1.8}
+  .bmaj b{color:var(--acc);font-weight:500}
+  .bmaj.old b{color:var(--wait)}
+
+  /* ---------------- météo ---------------- */
+  .hero{height:104px;display:flex;align-items:center;background:var(--bg2);border-bottom:1px solid var(--line)}
+  .hc{flex:1;text-align:center;padding:0 8px;border-right:1px solid var(--line)}
+  .hc:last-child{border-right:0}
+  .hc .k{font-family:'JetBrains Mono';font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--txt3)}
+  .hc .v{font-family:'Archivo';font-weight:800;font-size:30px;letter-spacing:-.01em;margin-top:6px;line-height:1;color:var(--acc)}
+  .hc .v.g{color:var(--vert)} .hc .v.w{color:var(--kl)} .hc .v.n{color:var(--txt)}
+  .hc .l{font-size:11.5px;color:var(--txt2);margin-top:6px}
+
+  /* ---------------- compteurs ---------------- */
+  .cnt{height:78px;display:flex;align-items:center;padding:0 20px;border-bottom:1px solid var(--line)}
+  .cb{flex:1;height:54px;background:var(--card);border:1px solid var(--line);border-radius:27px;
+      margin-right:9px;display:flex;align-items:center;padding:0 10px}
+  .cb:last-child{margin-right:0}
+  .cdot{width:30px;height:30px;border-radius:50%;flex:none;background:var(--card2);
+        display:flex;align-items:center;justify-content:center;margin-right:9px}
+  .cdot i{display:block;width:13px;height:13px;border-radius:50%;background:var(--acc)}
+  .cdot i.v{background:var(--vert)} .cdot i.b{background:var(--bleu)}
+  .cdot i.r{background:var(--rouge)} .cdot i.n{background:var(--noir)}
+  .cdot i.s{background:var(--acc2)} .cdot i.o{background:var(--kl)}
+  .cb .t{min-width:0}
+  .cb .t b{display:block;font-family:'Archivo';font-weight:800;font-size:19px;line-height:1;color:var(--vert)}
+  .cb .t b u{text-decoration:none;color:var(--txt3);font-size:14px}
+  .cb .t b.zero{color:var(--kl)}
+  .cb .t i{font-style:normal;display:block;font-family:'JetBrains Mono';font-size:9.5px;
+           letter-spacing:.1em;text-transform:uppercase;color:var(--txt2);margin-top:3px}
+
+  /* ---------------- zone défilante ---------------- */
+  #view{position:absolute;top:262px;left:0;width:1280px;height:452px;overflow:hidden}
+  #doc{position:absolute;top:0;left:0;width:1280px;padding:14px 24px 40px;display:flex}
+  .col{width:400px;margin-right:16px;flex:none}
+  .col:last-child{margin-right:0}
+
+  .blk{background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:16px;overflow:hidden}
+  .bh{display:flex;align-items:baseline;padding:13px 15px 11px;background:var(--card2)}
+  .bh b{font-family:'Archivo';font-weight:800;font-size:19px;letter-spacing:.02em;color:var(--acc);flex:1}
+  .bh .r{font-family:'Archivo';font-weight:800;font-size:16px;color:var(--vert)}
+  .bh .r u{text-decoration:none;color:var(--txt3);font-size:12.5px}
+  .bh .r span{font-family:'JetBrains Mono';font-size:9.5px;letter-spacing:.1em;color:var(--txt3);
+              text-transform:uppercase;margin-left:5px}
+
+  .sh{font-family:'JetBrains Mono';font-size:9.5px;letter-spacing:.13em;text-transform:uppercase;
+      color:var(--txt3);padding:9px 15px 6px;background:rgba(255,255,255,.02)}
+  .bar{height:3px;background:rgba(255,255,255,.07);margin:0 15px 6px;border-radius:2px;overflow:hidden}
+  .bar i{display:block;height:100%;background:linear-gradient(90deg,var(--vert),var(--acc))}
+
+  .ln{display:flex;align-items:center;padding:6px 15px;border-bottom:1px solid rgba(255,255,255,.045)}
+  .ln:last-child{border-bottom:0}
+  .ty{font-family:'JetBrains Mono';font-size:9px;font-weight:500;border-radius:5px;padding:3px 0;
+      flex:none;width:42px;text-align:center;margin-right:10px;color:#0A1520}
+  .pc{width:11px;height:11px;border-radius:50%;flex:none;margin-right:10px;margin-left:2px}
+  .nm{flex:2 1 auto;min-width:0;font-size:13.5px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .no{font-family:'JetBrains Mono';font-size:9.5px;color:var(--kl);margin-left:8px;
+      flex:0 1 auto;min-width:0;max-width:112px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .hr{font-family:'JetBrains Mono';font-size:11px;color:var(--txt2);margin-left:10px;flex:none}
+  .st{width:9px;height:9px;border-radius:50%;flex:none;margin-left:10px;background:var(--ok)}
+  .st.w{background:var(--wait)} .st.f{background:var(--off)}
+  .ln.f .nm{color:var(--txt3)} .ln.f .hr{color:var(--txt3)}
+
+  /* ---------------- pied ---------------- */
+  #sb{position:absolute;bottom:0;left:0;width:1280px;height:6px;background:rgba(255,255,255,.06)}
+  #sb i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--acc),var(--acc2))}
+  .demo{position:absolute;top:6px;left:50%;margin-left:-92px;z-index:9;
+        font-family:'JetBrains Mono';font-size:9px;letter-spacing:.1em;text-transform:uppercase;
+        color:var(--txt3);border:1px solid var(--line);border-radius:99px;padding:3px 10px;background:var(--bg2)}
+  .demo.hide{display:none}
+</style>
+</head>
+<body>
+
+<div id="fit"><div id="tv">
+  <div id="bar">
+    <div class="ecu" id="ecu">LA</div>
+    <div class="btit"><b id="titre">LES ARCS</b><i id="soustitre">—</i></div>
+    <div class="bmaj" id="maj">—</div>
+  </div>
+  <div class="hero" id="hero"></div>
+  <div class="cnt" id="cnt"></div>
+  <div id="view"><div id="doc"></div></div>
+  <div id="sb"><i id="sbar"></i></div>
+  <div class="demo" id="demo">Maquette · flux non connecté</div>
+</div></div>
+
+<script>
+/* ==================================================================
+   CSMART TV — bulletin du domaine
+
+   Le rendu ne lit que l'objet DATA. Pour brancher le flux, ne modifier
+   que charger() : il récupère bulletin.json, le place dans DATA, puis
+   appelle rendre(). Aucun téléviseur n'interroge la source directement.
+
+   Champs d'une piste :
+     nm  nom
+     c   difficulté : "v" verte · "b" bleue · "r" rouge · "n" noire
+         "k" itinéraire ou liaison · "" inconnue
+     hr  horaires, "—" si fermée
+     e   état : "O" ouvert · "P" pause ou ouverture partielle · "F" fermé
+     no  mention courte (pause, partielle, distance…)
+
+   ATTENTION — dans le jeu d'exemple ci-dessous, les difficultés ont été
+   déduites de l'ordre de regroupement de la source. Elles ne sont pas
+   fiables piste par piste et doivent être remplacées par la donnée du
+   flux, qui la porte réellement.
+   ================================================================== */
+
+var DATA = {
+  "ecusson": "LA",
+  "station": "LES ARCS",
+  "soustitre": "Arc 1950 · Paradiski · Bulletin du domaine",
+  "maj": "2026-08-20T15:00:00",
+  "source": "Lumiplan",
+  "hero": [
+    {
+      "k": "Temp. sommet",
+      "v": "14°",
+      "l": "GRAND COL",
+      "c": ""
+    },
+    {
+      "k": "Temp. station",
+      "v": "14°",
+      "l": "ARC 2000 · 2000 m",
+      "c": "n"
+    },
+    {
+      "k": "Vent",
+      "v": "4 km/h",
+      "l": "Secteur N",
+      "c": "w"
+    },
+    {
+      "k": "Limite pluie/neige",
+      "v": "3600 m",
+      "l": "Altitude",
+      "c": "n"
+    },
+    {
+      "k": "Neige sur 24 h",
+      "v": "0 cm",
+      "l": "N/D",
+      "c": ""
+    },
+    {
+      "k": "Dernière chute",
+      "v": "+1 cm",
+      "l": "14/04/2026",
+      "c": ""
+    }
+  ],
+  "compteurs": [
+    {
+      "p": "",
+      "ouv": 12,
+      "tot": 12,
+      "l": "Remontées"
+    },
+    {
+      "p": "s",
+      "ouv": 5,
+      "tot": 5,
+      "l": "Pistes"
+    },
+    {
+      "p": "o",
+      "ouv": 5,
+      "tot": 5,
+      "l": "Itinéraires"
+    }
+  ],
+  "altitudes": [
+    {
+      "lieu": "GRAND COL",
+      "alt": 3000,
+      "ciel": "Ciel variable, pluies faibles",
+      "matin": "14",
+      "aprem": "14",
+      "vent": "4",
+      "dir": "N",
+      "neige24": "0",
+      "qualite": "N/D",
+      "limite": "3600",
+      "derniereH": "2",
+      "derniereD": "14/04/2026"
+    },
+    {
+      "lieu": "ARC 2000",
+      "alt": 2000,
+      "ciel": "Ciel variable, pluies faibles",
+      "matin": "14",
+      "aprem": "14",
+      "vent": "4",
+      "dir": "N",
+      "neige24": "0",
+      "qualite": "N/D",
+      "limite": "3600",
+      "derniereH": "1",
+      "derniereD": "14/04/2026"
+    },
+    {
+      "lieu": "ARC 1600",
+      "alt": 1600,
+      "ciel": "Ciel variable, pluies faibles",
+      "matin": "14",
+      "aprem": "14",
+      "vent": "4",
+      "dir": "N",
+      "neige24": "0",
+      "qualite": "N/D",
+      "limite": "3600",
+      "derniereH": "5",
+      "derniereD": "31/03/2026"
+    },
+    {
+      "lieu": "BOURG ST MAURICE",
+      "alt": 800,
+      "ciel": "Ciel variable, pluies faibles",
+      "matin": "17",
+      "aprem": "21",
+      "vent": "4",
+      "dir": "N",
+      "neige24": "0",
+      "qualite": "N/D",
+      "limite": "3600",
+      "derniereH": "5",
+      "derniereD": "14/03/2026"
+    },
+    {
+      "lieu": "ARC 1800",
+      "alt": 1800,
+      "ciel": "Ciel variable, pluies faibles",
+      "matin": "15",
+      "aprem": "17",
+      "vent": "5",
+      "dir": "E",
+      "neige24": "0",
+      "qualite": "N/D",
+      "limite": "3600",
+      "derniereH": "5",
+      "derniereD": "31/03/2026"
+    }
+  ],
+  "previsions": {
+    "jourDate": "20/08/2026",
+    "jourTitre": "Changement de temps durable pluie et orages",
+    "jourTexte": "Le ciel est chaotique et le temps très instable. Les orages oupluies à caractère orageux se font de plus en plus fréquentesavec un pic d'activité dans l'après-midi/soirée.",
+    "demainDate": "21/08/2026",
+    "demainTitre": "Encore très dégradé neige en très haute montagne",
+    "demainTexte": "Une dernière salve pluvio-orageuse (front froid) arrosel'ensemble du département en matinée/mi journée - lescumuls supplémentaires atteignent 10 mm - puis le tempss'assèche en seconde partie d'après-midi pour un retour deséclaircies en soirée."
+  },
+  "blocs": [
+    {
+      "nom": "PEISEY-VALLANDRY",
+      "sections": [
+        {
+          "titre": "Remontées Mécaniques",
+          "ouv": 1,
+          "tot": 1,
+          "items": [
+            {
+              "ty": "TC",
+              "c": "",
+              "nm": "VALLANDRY",
+              "hr": "09:15–16:50",
+              "e": "O"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nom": "ARC 1600",
+      "sections": [
+        {
+          "titre": "Remontées Mécaniques",
+          "ouv": 2,
+          "tot": 2,
+          "items": [
+            {
+              "ty": "FUNI",
+              "c": "",
+              "nm": "FUNICULAIRE",
+              "hr": "07:15–19:30",
+              "e": "O",
+              "no": "Toutes les 30 min"
+            },
+            {
+              "ty": "TSD",
+              "c": "",
+              "nm": "CACHETTE",
+              "hr": "09:15–16:50",
+              "e": "O"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nom": "ARC 1800",
+      "sections": [
+        {
+          "titre": "Remontées Mécaniques",
+          "ouv": 4,
+          "tot": 4,
+          "items": [
+            {
+              "ty": "TPH",
+              "c": "",
+              "nm": "DAHU",
+              "hr": "08:30–22:00",
+              "e": "O"
+            },
+            {
+              "ty": "TC",
+              "c": "",
+              "nm": "TRANSARC 1",
+              "hr": "09:15–16:50",
+              "e": "O"
+            },
+            {
+              "ty": "TC",
+              "c": "",
+              "nm": "TRANSARC 2",
+              "hr": "09:15–16:50",
+              "e": "O"
+            },
+            {
+              "ty": "TC",
+              "c": "",
+              "nm": "VILLARDS",
+              "hr": "08:45–17:30",
+              "e": "O"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nom": "ARC 2000",
+      "sections": [
+        {
+          "titre": "Remontées Mécaniques",
+          "ouv": 5,
+          "tot": 5,
+          "items": [
+            {
+              "ty": "TPH",
+              "c": "",
+              "nm": "AIGUILLE ROUGE",
+              "hr": "09:45–16:20",
+              "e": "O",
+              "no": "Pause/break 12:45-13:15"
+            },
+            {
+              "ty": "TC",
+              "c": "",
+              "nm": "VARET",
+              "hr": "09:30–16:30",
+              "e": "O"
+            },
+            {
+              "ty": "TSDB",
+              "c": "",
+              "nm": "ARCABULLE",
+              "hr": "09:30–16:50",
+              "e": "O"
+            },
+            {
+              "ty": "TSD",
+              "c": "",
+              "nm": "BOIS DE L'OURS",
+              "hr": "09:15–16:50",
+              "e": "O",
+              "no": "Pause/break 12:45-13:15"
+            },
+            {
+              "ty": "TB",
+              "c": "",
+              "nm": "CABRIOLET",
+              "hr": "09:15–17:00",
+              "e": "O",
+              "no": "Pause/Break : 12:45-13:15"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nom": "ESPACES LUDIQUES",
+      "sections": [
+        {
+          "titre": "Pistes et activités",
+          "ouv": 5,
+          "tot": 5,
+          "items": [
+            {
+              "ty": "",
+              "c": "k",
+              "nm": "GALERIE DES MINERAUX",
+              "hr": "09:25–16:40",
+              "e": "O"
+            },
+            {
+              "ty": "",
+              "c": "k",
+              "nm": "LA TYROLIENNE DE L'AIGUILLE ROUGE",
+              "hr": "09:40–16:30",
+              "e": "O",
+              "no": "Pause/break 12:20-13:30"
+            },
+            {
+              "ty": "",
+              "c": "k",
+              "nm": "GEANTS DE MALGOVERT",
+              "hr": "09:20–16:45",
+              "e": "O"
+            },
+            {
+              "ty": "",
+              "c": "k",
+              "nm": "LES FRESQUES LUMINEUSES DE L'AIGUILLE ROUGE",
+              "hr": "09:40–16:15",
+              "e": "O",
+              "no": "Pause/break : 12:40-13h30"
+            },
+            {
+              "ty": "",
+              "c": "k",
+              "nm": "MUSEUM DES ANIMAUX DE MONTAGNE",
+              "hr": "09:25–16:40",
+              "e": "O"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+};
+
+var CONFIG = {
+  demo:false,
+  pause:6000,            /* temps de lecture à chaque écran */
+  glissement:900,        /* durée du mouvement entre deux écrans */
+  recouvrement:70,       /* pixels repris d'un écran à l'autre */
+  rafraichir:300000,     /* relecture du JSON, 5 min */
+  alerteFraicheurMin:90
+};
+
+/* couleurs de badge par type de remontée */
+var TYPES = {
+  FUNI:"#7C6BE8", TPH:"#7C6BE8", TC:"#3E8FE0", TSDB:"#3FA7C4",
+  TSD:"#2E9B68", TS:"#8A8A46", TK:"#9A6438", TLC:"#4A7FC4",
+  TB:"#B0405C", TR:"#6B7B8C"
+};
+
+/* ================================================================== */
+
+function $(s){ return document.querySelector(s); }
+function pad(n){ return (n<10?"0":"")+n; }
+function esc(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+
+function etatCls(e){ return e === "F" ? " f" : (e === "P" ? " w" : ""); }
+
+function ligneRM(o){
+  var col = TYPES[o.ty] || "#5B6B7E";
+  return '<div class="ln' + (o.e === "F" ? " f" : "") + '">' +
+    '<span class="ty" style="background:' + col + '">' + esc(o.ty) + '</span>' +
+    '<span class="nm">' + esc(o.nm) + '</span>' +
+    (o.no ? '<span class="no">' + esc(o.no) + '</span>' : '') +
+    '<span class="hr">' + esc(o.hr) + '</span>' +
+    '<span class="st' + etatCls(o.e) + '"></span></div>';
+}
+
+var PISTE_COL = { v:"var(--vert)", b:"var(--bleu)", r:"var(--rouge)", n:"var(--noir)", k:"var(--kl)" };
+
+function lignePiste(o){
+  return '<div class="ln' + (o.e === "F" ? " f" : "") + '">' +
+    '<span class="pc" style="background:' + (PISTE_COL[o.c] || "#3E4C5E") + '"></span>' +
+    '<span class="nm">' + esc(o.nm) + '</span>' +
+    (o.no ? '<span class="no">' + esc(o.no) + '</span>' : '') +
+    '<span class="hr">' + esc(o.hr) + '</span>' +
+    '<span class="st' + etatCls(o.e) + '"></span></div>';
+}
+
+function entete(titre, ouv, tot, mot){
+  var z = (ouv === 0) ? " zero" : "";
+  return '<div class="bh"><b>' + esc(titre) + '</b>' +
+    '<span class="r' + z + '">' + ouv + '<u>/' + tot + '</u>' +
+    '<span>' + esc(mot) + '</span></span></div>';
+}
+
+function sousTitre(txt, ouv, tot){
+  var p = tot ? Math.round(ouv / tot * 100) : 0;
+  return '<div class="sh">' + esc(txt) + ' · ' + ouv + '/' + tot + '</div>' +
+         '<div class="bar"><i style="width:' + p + '%"></i></div>';
+}
+
+function blocGenerique(b){
+  var h = '<div class="blk">', i, j, sec, tot = 0, ouv = 0, mot = "éléments";
+  for (i = 0; i < b.sections.length; i++){ tot += b.sections[i].tot; ouv += b.sections[i].ouv; }
+  if (b.sections.length && /remont/i.test(b.sections[0].titre)) mot = "remontées";
+  else if (b.sections.length && /piste/i.test(b.sections[0].titre)) mot = "ouverts";
+  h += entete(b.nom, b.sections[0].ouv, b.sections[0].tot, mot);
+  for (i = 0; i < b.sections.length; i++){
+    sec = b.sections[i];
+    h += sousTitre(b.nom + " · " + sec.titre.toLowerCase(), sec.ouv, sec.tot);
+    for (j = 0; j < sec.items.length; j++){
+      h += sec.items[j].ty ? ligneRM(sec.items[j]) : lignePiste(sec.items[j]);
+    }
+  }
+  return h + '</div>';
+}
+
+/* Répartition en trois colonnes : on empile en cherchant à équilibrer
+   les hauteurs, estimées au nombre de lignes de chaque bloc. */
+function repartir(blocs){
+  var cols = [[], [], []], hauteurs = [0, 0, 0], i, j, n, mini;
+  for (i = 0; i < blocs.length; i++){
+    n = 3;
+    for (j = 0; j < blocs[i].sections.length; j++) n += blocs[i].sections[j].items.length + 2;
+    mini = 0;
+    for (j = 1; j < 3; j++) if (hauteurs[j] < hauteurs[mini]) mini = j;
+    cols[mini].push(blocs[i]);
+    hauteurs[mini] += n;
+  }
+  return cols;
+}
+
+function rendreCorps(){
+  var cols = repartir(DATA.blocs || []), h = "", i, j;
+  for (i = 0; i < cols.length; i++){
+    h += '<div class="col">';
+    for (j = 0; j < cols[i].length; j++) h += blocGenerique(cols[i][j]);
+    h += '</div>';
+  }
+  $("#doc").innerHTML = h;
+}
+
+function rendre(){
+  var h, i, c, z;
+
+  $("#ecu").innerHTML = esc(DATA.ecusson || "");
+  $("#titre").innerHTML = esc(DATA.station || "");
+  $("#soustitre").innerHTML = esc(DATA.soustitre || "");
+
+  h = "";
+  for (i = 0; i < (DATA.hero || []).length; i++){
+    c = DATA.hero[i];
+    h += '<div class="hc"><div class="k">' + esc(c.k) + '</div>' +
+         '<div class="v ' + (c.c || "") + '">' + esc(c.v) + '</div>' +
+         '<div class="l">' + esc(c.l) + '</div></div>';
+  }
+  $("#hero").innerHTML = h;
+
+  h = "";
+  for (i = 0; i < (DATA.compteurs || []).length; i++){
+    c = DATA.compteurs[i];
+    z = (c.ouv === 0) ? " zero" : "";
+    h += '<div class="cb"><span class="cdot"><i class="' + (c.p || "") + '"></i></span>' +
+         '<span class="t"><b class="' + z + '">' + c.ouv + '<u>/' + c.tot + '</u></b>' +
+         '<i>' + esc(c.l) + '</i></span></div>';
+  }
+  $("#cnt").innerHTML = h;
+
+  rendreCorps();
+  fraicheur();
+  preparerDefilement();
+}
+
+/* ---------- défilement automatique ----------
+   Un téléviseur n'a ni souris ni barre de défilement : la page avance
+   seule, écran par écran, avec un léger recouvrement pour qu'aucune
+   ligne ne soit sautée entre deux positions. */
+
+var etapes = [], pos = 0, tempo = null, fige = false;
+var HVUE = 452;
+
+function preparerDefilement(){
+  var doc = $("#doc"), hDoc = doc.offsetHeight, max = Math.max(0, hDoc - HVUE);
+  var pas = HVUE - CONFIG.recouvrement, y = 0;
+  etapes = [0];
+  while (y + pas < max){ y += pas; etapes.push(y); }
+  if (max > 0 && etapes[etapes.length - 1] !== max) etapes.push(max);
+  pos = 0;
+  placer(0, 0);
+  planifier(CONFIG.pause + 2000);
+}
+
+function placer(y, duree){
+  var d = $("#doc"), max = etapes[etapes.length - 1] || 1;
+  d.style.webkitTransition = duree ? ("-webkit-transform " + duree + "ms ease-in-out") : "none";
+  d.style.transition = duree ? ("transform " + duree + "ms ease-in-out") : "none";
+  d.style.webkitTransform = "translateY(-" + y + "px)";
+  d.style.transform = "translateY(-" + y + "px)";
+  $("#sbar").style.width = (y / max * 100) + "%";
+}
+
+function planifier(d){ if (tempo) clearTimeout(tempo); tempo = setTimeout(suivant, d); }
+
+function suivant(){
+  if (fige) return;
+  pos = (pos + 1) % etapes.length;
+  if (pos === 0){ placer(0, 700); planifier(700 + CONFIG.pause + 2000); return; }
+  placer(etapes[pos], CONFIG.glissement);
+  planifier(CONFIG.glissement + CONFIG.pause);
+}
+
+function onKey(e){
+  var k = e.keyCode || e.which;
+  if (k === 38 || k === 37){ pos = (pos - 2 + etapes.length) % etapes.length; suivant(); }
+  else if (k === 40 || k === 39){ suivant(); }
+  else if (k === 13 || k === 32){
+    fige = !fige;
+    if (fige){ if (tempo) clearTimeout(tempo); } else planifier(300);
+  } else return;
+  if (e.preventDefault) e.preventDefault();
+}
+
+/* ---------- bandeau ---------- */
+var JOURS = ["dimanche","lundi","mardi","mercredi","jeudi","vendredi","samedi"];
+var MOIS = ["janvier","février","mars","avril","mai","juin","juillet",
+            "août","septembre","octobre","novembre","décembre"];
+
+function fraicheur(){
+  var e = $("#maj"), d, min;
+  if (!DATA.maj){ e.innerHTML = "Mise à jour inconnue"; e.className = "bmaj old"; return; }
+  d = new Date(String(DATA.maj).replace(" ", "T"));
+  min = Math.round((new Date().getTime() - d.getTime()) / 60000);
+  e.innerHTML = "Mis à jour le <b>" + JOURS[d.getDay()] + " " + d.getDate() + " " +
+    MOIS[d.getMonth()] + " " + d.getFullYear() + " — " + pad(d.getHours()) + ":" + pad(d.getMinutes()) +
+    "</b><br>Source : <b>" + esc(DATA.source) + "</b>";
+  e.className = (min > CONFIG.alerteFraicheurMin) ? "bmaj old" : "bmaj";
+}
+
+function ajuster(){
+  var w = window.innerWidth || 1280, h = window.innerHeight || 720;
+  var k = Math.min(w / 1280, h / 720), tv = document.getElementById("tv");
+  tv.style.webkitTransform = "scale(" + k + ")";
+  tv.style.transform = "scale(" + k + ")";
+  tv.style.left = Math.round((w - 1280 * k) / 2) + "px";
+  tv.style.top = Math.round((h - 720 * k) / 2) + "px";
+}
+
+/* ---------- alimentation ----------
+   En cas d'échec, les dernières données restent affichées : sur un
+   téléviseur, une donnée d'hier vaut mieux qu'un écran vide, à condition
+   que l'heure de mise à jour le signale — d'où le passage en orange. */
+function charger(apres){
+  if (!window.XMLHttpRequest || CONFIG.demo){ if (apres) apres(); return; }
+  var x = new XMLHttpRequest();
+  x.open("GET", "bulletin.json?t=" + new Date().getTime(), true);
+  x.onreadystatechange = function(){
+    if (x.readyState !== 4) return;
+    if (x.status === 200){ try { DATA = JSON.parse(x.responseText); } catch (err) {} }
+    if (apres) apres();
+  };
+  x.send(null);
+}
+
+(function init(){
+  if (!CONFIG.demo) $("#demo").className = "demo hide";
+  ajuster();
+  setInterval(fraicheur, 60000);
+  charger(rendre);
+  setInterval(function(){ charger(rendre); }, CONFIG.rafraichir);
+  if (window.addEventListener){
+    window.addEventListener("resize", ajuster, false);
+    document.addEventListener("keydown", onKey, false);
+  }
+})();
+</script>
+</body>
+</html>
