@@ -1,0 +1,332 @@
+{
+  "ecusson": "LA",
+  "station": "LES ARCS",
+  "soustitre": "Arc 1950 · Paradiski · Bulletin du domaine",
+  "maj": "2026-08-20T16:36:00",
+  "source": "Lumiplan",
+  "hero": [
+    {
+      "k": "Temp. sommet",
+      "v": "14°",
+      "l": "GRAND COL",
+      "c": ""
+    },
+    {
+      "k": "Temp. station",
+      "v": "14°",
+      "l": "ARC 2000 · 2000 m",
+      "c": "n"
+    },
+    {
+      "k": "Vent",
+      "v": "4 km/h",
+      "l": "Secteur N",
+      "c": "w"
+    },
+    {
+      "k": "Limite pluie/neige",
+      "v": "3600 m",
+      "l": "Altitude",
+      "c": "n"
+    },
+    {
+      "k": "Neige sur 24 h",
+      "v": "0 cm",
+      "l": "N/D",
+      "c": ""
+    },
+    {
+      "k": "Dernière chute",
+      "v": "+1 cm",
+      "l": "14/04/2026",
+      "c": ""
+    }
+  ],
+  "compteurs": [
+    {
+      "p": "",
+      "ouv": 12,
+      "tot": 12,
+      "l": "Remontées"
+    },
+    {
+      "p": "s",
+      "ouv": 5,
+      "tot": 5,
+      "l": "Pistes"
+    },
+    {
+      "p": "o",
+      "ouv": 5,
+      "tot": 5,
+      "l": "Itinéraires"
+    }
+  ],
+  "altitudes": [
+    {
+      "lieu": "GRAND COL",
+      "alt": 3000,
+      "ciel": "Ciel variable, pluies faibles",
+      "matin": "14",
+      "aprem": "14",
+      "vent": "4",
+      "dir": "N",
+      "neige24": "0",
+      "qualite": "N/D",
+      "limite": "3600",
+      "derniereH": "2",
+      "derniereD": "14/04/2026"
+    },
+    {
+      "lieu": "ARC 2000",
+      "alt": 2000,
+      "ciel": "Ciel variable, pluies faibles",
+      "matin": "14",
+      "aprem": "14",
+      "vent": "4",
+      "dir": "N",
+      "neige24": "0",
+      "qualite": "N/D",
+      "limite": "3600",
+      "derniereH": "1",
+      "derniereD": "14/04/2026"
+    },
+    {
+      "lieu": "ARC 1600",
+      "alt": 1600,
+      "ciel": "Ciel variable, pluies faibles",
+      "matin": "14",
+      "aprem": "14",
+      "vent": "4",
+      "dir": "N",
+      "neige24": "0",
+      "qualite": "N/D",
+      "limite": "3600",
+      "derniereH": "5",
+      "derniereD": "31/03/2026"
+    },
+    {
+      "lieu": "BOURG ST MAURICE",
+      "alt": 800,
+      "ciel": "Ciel variable, pluies faibles",
+      "matin": "17",
+      "aprem": "21",
+      "vent": "4",
+      "dir": "N",
+      "neige24": "0",
+      "qualite": "N/D",
+      "limite": "3600",
+      "derniereH": "5",
+      "derniereD": "14/03/2026"
+    },
+    {
+      "lieu": "ARC 1800",
+      "alt": 1800,
+      "ciel": "Ciel variable, pluies faibles",
+      "matin": "15",
+      "aprem": "17",
+      "vent": "5",
+      "dir": "E",
+      "neige24": "0",
+      "qualite": "N/D",
+      "limite": "3600",
+      "derniereH": "5",
+      "derniereD": "31/03/2026"
+    }
+  ],
+  "previsions": {
+    "jourDate": "20/08/2026",
+    "jourTitre": "Changement de temps durable pluie et orages",
+    "jourTexte": "Le ciel est chaotique et le temps très instable. Les orages oupluies à caractère orageux se font de plus en plus fréquentesavec un pic d'activité dans l'après-midi/soirée.",
+    "demainDate": "21/08/2026",
+    "demainTitre": "Encore très dégradé neige en très haute montagne",
+    "demainTexte": "Une dernière salve pluvio-orageuse (front froid) arrosel'ensemble du département en matinée/mi journée - lescumuls supplémentaires atteignent 10 mm - puis le tempss'assèche en seconde partie d'après-midi pour un retour deséclaircies en soirée."
+  },
+  "blocs": [
+    {
+      "nom": "PEISEY-VALLANDRY",
+      "sections": [
+        {
+          "titre": "Remontées Mécaniques",
+          "ouv": 1,
+          "tot": 1,
+          "items": [
+            {
+              "ty": "TC",
+              "c": "",
+              "nm": "VALLANDRY",
+              "hr": "09:15–16:50",
+              "e": "O"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nom": "ARC 1600",
+      "sections": [
+        {
+          "titre": "Remontées Mécaniques",
+          "ouv": 2,
+          "tot": 2,
+          "items": [
+            {
+              "ty": "FUNI",
+              "c": "",
+              "nm": "FUNICULAIRE",
+              "hr": "07:15–19:30",
+              "e": "O",
+              "no": "Toutes les 30 min"
+            },
+            {
+              "ty": "TSD",
+              "c": "",
+              "nm": "CACHETTE",
+              "hr": "09:15–16:50",
+              "e": "O"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nom": "ARC 1800",
+      "sections": [
+        {
+          "titre": "Remontées Mécaniques",
+          "ouv": 4,
+          "tot": 4,
+          "items": [
+            {
+              "ty": "TPH",
+              "c": "",
+              "nm": "DAHU",
+              "hr": "08:30–22:00",
+              "e": "O"
+            },
+            {
+              "ty": "TC",
+              "c": "",
+              "nm": "TRANSARC 1",
+              "hr": "09:15–16:50",
+              "e": "O"
+            },
+            {
+              "ty": "TC",
+              "c": "",
+              "nm": "TRANSARC 2",
+              "hr": "09:15–16:50",
+              "e": "O"
+            },
+            {
+              "ty": "TC",
+              "c": "",
+              "nm": "VILLARDS",
+              "hr": "08:45–17:30",
+              "e": "O"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nom": "ARC 2000",
+      "sections": [
+        {
+          "titre": "Remontées Mécaniques",
+          "ouv": 3,
+          "tot": 5,
+          "items": [
+            {
+              "ty": "TPH",
+              "c": "",
+              "nm": "AIGUILLE ROUGE",
+              "hr": "09:45–16:20",
+              "e": "P",
+              "no": "Pause/break 12:45-13:15"
+            },
+            {
+              "ty": "TC",
+              "c": "",
+              "nm": "VARET",
+              "hr": "09:30–16:30",
+              "e": "P"
+            },
+            {
+              "ty": "TSDB",
+              "c": "",
+              "nm": "ARCABULLE",
+              "hr": "09:30–16:50",
+              "e": "O"
+            },
+            {
+              "ty": "TSD",
+              "c": "",
+              "nm": "BOIS DE L'OURS",
+              "hr": "09:15–16:50",
+              "e": "O",
+              "no": "Pause/break 12:45-13:15"
+            },
+            {
+              "ty": "TB",
+              "c": "",
+              "nm": "CABRIOLET",
+              "hr": "09:15–17:00",
+              "e": "O",
+              "no": "Pause/Break : 12:45-13:15"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nom": "ESPACES LUDIQUES",
+      "sections": [
+        {
+          "titre": "Pistes et activités",
+          "ouv": 3,
+          "tot": 5,
+          "items": [
+            {
+              "ty": "",
+              "c": "k",
+              "nm": "GALERIE DES MINERAUX",
+              "hr": "09:25–16:40",
+              "e": "O"
+            },
+            {
+              "ty": "",
+              "c": "k",
+              "nm": "LA TYROLIENNE DE L'AIGUILLE ROUGE",
+              "hr": "09:40–16:30",
+              "e": "P",
+              "no": "Pause/break 12:20-13:30"
+            },
+            {
+              "ty": "",
+              "c": "k",
+              "nm": "GEANTS DE MALGOVERT",
+              "hr": "09:20–16:45",
+              "e": "O"
+            },
+            {
+              "ty": "",
+              "c": "k",
+              "nm": "LES FRESQUES LUMINEUSES DE L'AIGUILLE ROUGE",
+              "hr": "09:40–16:15",
+              "e": "P",
+              "no": "Pause/break : 12:40-13h30"
+            },
+            {
+              "ty": "",
+              "c": "k",
+              "nm": "MUSEUM DES ANIMAUX DE MONTAGNE",
+              "hr": "09:25–16:40",
+              "e": "O"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
