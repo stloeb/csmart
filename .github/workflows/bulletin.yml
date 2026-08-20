@@ -39,16 +39,6 @@ jobs:
         with:
           node-version: "22"
 
-      # Étape de diagnostic : à retirer une fois le workflow stabilisé.
-      # Elle affiche l'arborescence réellement vue par le job, ce qui
-      # lève toute ambiguïté sur l'emplacement des fichiers.
-      - name: Vérifier l'arborescence
-        run: |
-          echo "Répertoire de travail : $(pwd)"
-          ls -la
-          echo "--- scripts ---"
-          ls -la scripts || echo "Le dossier scripts est absent."
-
       - name: Installer les dépendances
         run: npm install cheerio --no-save
 
@@ -60,15 +50,18 @@ jobs:
       - name: Publier si le bulletin est valide
         if: steps.fetch.outcome == 'success'
         run: |
-          if git diff --quiet -- bulletin.json; then
+          git config user.name  "csmart-bot"
+          git config user.email "bot@users.noreply.github.com"
+          # On stage d'abord : sans cela, un bulletin.json encore non suivi
+          # par git passerait inaperçu et ne serait jamais publié.
+          git add bulletin.json
+          if git diff --cached --quiet -- bulletin.json; then
             echo "Bulletin inchangé, rien à publier."
             exit 0
           fi
-          git config user.name  "csmart-bot"
-          git config user.email "bot@users.noreply.github.com"
-          git add bulletin.json
           git commit -m "Bulletin du domaine — $(date -u '+%Y-%m-%d %H:%M UTC')"
           git push
+          echo "Bulletin publié."
 
       - name: Signaler l'échec
         if: steps.fetch.outcome != 'success'
