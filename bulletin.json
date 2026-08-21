@@ -2,7 +2,7 @@
   "ecusson": "LA",
   "station": "LES ARCS",
   "soustitre": "Arc 1950 · Paradiski · Bulletin du domaine",
-  "maj": "2026-08-21T09:42:00",
+  "maj": "2026-08-21T10:40:00",
   "source": "Lumiplan",
   "hero": [
     {
@@ -234,7 +234,7 @@
       "sections": [
         {
           "titre": "Remontées Mécaniques",
-          "ouv": 4,
+          "ouv": 5,
           "tot": 5,
           "items": [
             {
@@ -242,7 +242,7 @@
               "c": "",
               "nm": "AIGUILLE ROUGE",
               "hr": "09:45–16:20",
-              "e": "P",
+              "e": "O",
               "no": "Pause/break 12:45-13:15"
             },
             {
