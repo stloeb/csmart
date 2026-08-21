@@ -2,7 +2,7 @@
   "ecusson": "LA",
   "station": "LES ARCS",
   "soustitre": "Arc 1950 · Paradiski · Bulletin du domaine",
-  "maj": "2026-08-21T18:35:00",
+  "maj": "2026-08-21T19:29:00",
   "source": "Lumiplan",
   "hero": [
     {
@@ -19,13 +19,13 @@
     },
     {
       "k": "Vent",
-      "v": "4 km/h",
-      "l": "Secteur N",
+      "v": "11 km/h",
+      "l": "Secteur O",
       "c": "w"
     },
     {
       "k": "Limite pluie/neige",
-      "v": "3300 m",
+      "v": "2900 m",
       "l": "Altitude",
       "c": "n"
     },
@@ -69,11 +69,11 @@
       "ciel": "Ciel variable, pluies faibles",
       "matin": "11",
       "aprem": "11",
-      "vent": "4",
-      "dir": "N",
+      "vent": "11",
+      "dir": "O",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "3300",
+      "limite": "2900",
       "derniereH": "2",
       "derniereD": "14/04/2026"
     },
@@ -83,11 +83,11 @@
       "ciel": "Ciel variable, pluies faibles",
       "matin": "11",
       "aprem": "11",
-      "vent": "4",
-      "dir": "N",
+      "vent": "11",
+      "dir": "O",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "3300",
+      "limite": "2900",
       "derniereH": "1",
       "derniereD": "14/04/2026"
     },
@@ -97,11 +97,11 @@
       "ciel": "Ciel variable, pluies faibles",
       "matin": "11",
       "aprem": "11",
-      "vent": "4",
-      "dir": "N",
+      "vent": "11",
+      "dir": "O",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "3300",
+      "limite": "2900",
       "derniereH": "5",
       "derniereD": "31/03/2026"
     },
@@ -111,11 +111,11 @@
       "ciel": "Ciel variable, pluies faibles",
       "matin": "15",
       "aprem": "17",
-      "vent": "0",
-      "dir": "",
+      "vent": "4",
+      "dir": "N",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "3300",
+      "limite": "2900",
       "derniereH": "5",
       "derniereD": "14/03/2026"
     },
@@ -125,11 +125,11 @@
       "ciel": "Ciel variable, pluies faibles",
       "matin": "12",
       "aprem": "10",
-      "vent": "3",
-      "dir": "N",
+      "vent": "9",
+      "dir": "SO",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "3300",
+      "limite": "2900",
       "derniereH": "5",
       "derniereD": "31/03/2026"
     }
@@ -137,10 +137,10 @@
   "previsions": {
     "jourDate": "21/08/2026",
     "jourTitre": "",
-    "jourTexte": "Ciel très nuageux à couvert, pluie soutenue en matinée. Puis, le temps devient instable, et les précipitations deviennent souvent orageuses l'après-midi.",
+    "jourTexte": "L'après-midi voit passer de nombreuses averses, localement orageuses. Elles sont déjà présentes à la mi-journée, dans le Beaufortain, en Tarentaise et Vanoise, dans les Bauges ainsi que dans les plaines et basses vallées, pour se généraliser ensuite. La limite pluie-neige s'abaisse jusqu'à 2800 mètres. En milieu d'après-midi, vent de Nord-Ouest soufflant modérément, en Maurienne ; puis atténuation. Cette nuit: Le ciel est en général bien dégagé durant la nuit. Il faut toutefois attendre, en Tarentaise et Vanoise ainsi que dans la Combe de Savoie, que les quelques rares averses, possibles en soirée, cessent. C'est de la neige qui tombe au-dessus de 2800 mètres. Vent variable, faible.",
     "demainDate": "22/08/2026",
     "demainTitre": "",
-    "demainTexte": "Beau en montagne au dessus d'une mer de nuages."
+    "demainTexte": "Le temps est ensoleillé du matin au soir. Pour la nuit : Le ciel est clair toute la nuit. Vent de Nord-Nord-Ouest, faible à modéré, en milieu de journée, dans la Cluse de Chambéry et l'avant-Pays ; après une atténuation, reprise du vent, en première partie de nuit, avec orientation au Nord-Nord-Est."
   },
   "blocs": [
     {
@@ -167,7 +167,7 @@
       "sections": [
         {
           "titre": "Remontées Mécaniques",
-          "ouv": 1,
+          "ouv": 0,
           "tot": 2,
           "items": [
             {
@@ -175,7 +175,7 @@
               "c": "",
               "nm": "FUNICULAIRE",
               "hr": "07:15–19:30",
-              "e": "O",
+              "e": "P",
               "no": "Toutes les 30 min"
             },
             {
