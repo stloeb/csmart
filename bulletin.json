@@ -2,7 +2,7 @@
   "ecusson": "LA",
   "station": "LES ARCS",
   "soustitre": "Arc 1950 · Paradiski · Bulletin du domaine",
-  "maj": "2026-08-21T07:31:00",
+  "maj": "2026-08-21T08:50:00",
   "source": "Lumiplan",
   "hero": [
     {
@@ -137,10 +137,10 @@
   "previsions": {
     "jourDate": "21/08/2026",
     "jourTitre": "",
-    "jourTexte": "Sous un ciel très nuageux à couvert, de faibles pluies se produisent le matin. Puis, le temps devient instable, et les précipitations deviennent souvent orageuses l'après-midi. Située vers 3250 mètres tôt le matin, la limite pluie-neige peut s'abaisser par la suite jusqu'à 2850 mètres. Vent variable, faible. Cette nuit: Le temps est généralement sec, mais en soirée quelques gouttes sont possibles dans le Beaufortain, en Tarentaise et Vanoise ainsi que dans la Combe de Savoie. La limite pluie-neige se situe au plus bas à 2750 mètres. Vent faible, variable.",
+    "jourTexte": "Ciel très nuageux à couvert, pluie soutenue en matinée. Puis, le temps devient instable, et les précipitations deviennent souvent orageuses l'après-midi.",
     "demainDate": "22/08/2026",
     "demainTitre": "",
-    "demainTexte": "Le soleil règne en maître du matin au soir. Pour la nuit : Le temps est calme et propice à l'observation des étoiles. Vent de Nord-Nord-Ouest, faible à modéré, en milieu de journée, dans la Cluse de Chambéry et l'avant-Pays ; après une atténuation, reprise du vent, en début de nuit, avec orientation au Nord-Nord-Est."
+    "demainTexte": "Beau en montagne au dessus d'une mer de nuages."
   },
   "blocs": [
     {
@@ -194,7 +194,7 @@
       "sections": [
         {
           "titre": "Remontées Mécaniques",
-          "ouv": 0,
+          "ouv": 2,
           "tot": 4,
           "items": [
             {
@@ -202,7 +202,7 @@
               "c": "",
               "nm": "DAHU",
               "hr": "08:30–22:00",
-              "e": "P"
+              "e": "O"
             },
             {
               "ty": "TC",
@@ -223,7 +223,7 @@
               "c": "",
               "nm": "VILLARDS",
               "hr": "08:45–17:30",
-              "e": "P"
+              "e": "O"
             }
           ]
         }
