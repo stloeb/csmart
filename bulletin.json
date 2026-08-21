@@ -2,30 +2,30 @@
   "ecusson": "LA",
   "station": "LES ARCS",
   "soustitre": "Arc 1950 · Paradiski · Bulletin du domaine",
-  "maj": "2026-08-20T22:58:00",
+  "maj": "2026-08-21T07:31:00",
   "source": "Lumiplan",
   "hero": [
     {
       "k": "Temp. sommet",
-      "v": "12°",
+      "v": "11°",
       "l": "GRAND COL",
       "c": ""
     },
     {
       "k": "Temp. station",
-      "v": "12°",
+      "v": "11°",
       "l": "ARC 2000 · 2000 m",
       "c": "n"
     },
     {
       "k": "Vent",
-      "v": "7 km/h",
-      "l": "Secteur O",
+      "v": "4 km/h",
+      "l": "Secteur N",
       "c": "w"
     },
     {
       "k": "Limite pluie/neige",
-      "v": "3450 m",
+      "v": "3300 m",
       "l": "Altitude",
       "c": "n"
     },
@@ -67,13 +67,13 @@
       "lieu": "GRAND COL",
       "alt": 3000,
       "ciel": "Ciel variable, pluies faibles",
-      "matin": "14",
-      "aprem": "12",
-      "vent": "7",
-      "dir": "O",
+      "matin": "11",
+      "aprem": "11",
+      "vent": "4",
+      "dir": "N",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "3450",
+      "limite": "3300",
       "derniereH": "2",
       "derniereD": "14/04/2026"
     },
@@ -81,13 +81,13 @@
       "lieu": "ARC 2000",
       "alt": 2000,
       "ciel": "Ciel variable, pluies faibles",
-      "matin": "14",
-      "aprem": "12",
-      "vent": "7",
-      "dir": "O",
+      "matin": "11",
+      "aprem": "11",
+      "vent": "4",
+      "dir": "N",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "3450",
+      "limite": "3300",
       "derniereH": "1",
       "derniereD": "14/04/2026"
     },
@@ -95,13 +95,13 @@
       "lieu": "ARC 1600",
       "alt": 1600,
       "ciel": "Ciel variable, pluies faibles",
-      "matin": "14",
-      "aprem": "12",
-      "vent": "7",
-      "dir": "O",
+      "matin": "11",
+      "aprem": "11",
+      "vent": "4",
+      "dir": "N",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "3450",
+      "limite": "3300",
       "derniereH": "5",
       "derniereD": "31/03/2026"
     },
@@ -109,13 +109,13 @@
       "lieu": "BOURG ST MAURICE",
       "alt": 800,
       "ciel": "Ciel variable, pluies faibles",
-      "matin": "17",
-      "aprem": "18",
+      "matin": "15",
+      "aprem": "17",
       "vent": "0",
       "dir": "",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "3450",
+      "limite": "3300",
       "derniereH": "5",
       "derniereD": "14/03/2026"
     },
@@ -123,24 +123,24 @@
       "lieu": "ARC 1800",
       "alt": 1800,
       "ciel": "Ciel variable, pluies faibles",
-      "matin": "15",
-      "aprem": "14",
-      "vent": "1",
-      "dir": "SE",
+      "matin": "12",
+      "aprem": "10",
+      "vent": "3",
+      "dir": "N",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "3450",
+      "limite": "3300",
       "derniereH": "5",
       "derniereD": "31/03/2026"
     }
   ],
   "previsions": {
-    "jourDate": "20/08/2026",
+    "jourDate": "21/08/2026",
     "jourTitre": "",
-    "jourTexte": "Le ciel est menaçant. Il donne des averses plus ou moins régulières, et celles-ci sont parfois orageuses sauf sur les massifs frontaliers. Située vers 3650 mètres en début d'après-midi, la limite pluie-neige peut s'abaisser par la suite jusqu'à 3450 mètres. Vent de secteur Sud-Ouest virant Sud-Sud-Est, modéré par endroits. Cette nuit: De larges éclaircies sont présentes en soirée. Quelques averses sporadiques sont présentes, dès le début de la nuit, dans la Combe de Savoie ainsi que dans les massifs intérieurs. Ces averses gagnent l'ensemble du territoire en seconde partie de nuit. Les éclaircies se font alors un peu plus discrètes. La limite pluie-neige se situe au plus bas à 3300 mètres. En début de nuit, vent de Sud soufflant modérément, dans la Cluse de Chambéry et l'avant-Pays ; puis atténuation.",
-    "demainDate": "21/08/2026",
+    "jourTexte": "Sous un ciel très nuageux à couvert, de faibles pluies se produisent le matin. Puis, le temps devient instable, et les précipitations deviennent souvent orageuses l'après-midi. Située vers 3250 mètres tôt le matin, la limite pluie-neige peut s'abaisser par la suite jusqu'à 2850 mètres. Vent variable, faible. Cette nuit: Le temps est généralement sec, mais en soirée quelques gouttes sont possibles dans le Beaufortain, en Tarentaise et Vanoise ainsi que dans la Combe de Savoie. La limite pluie-neige se situe au plus bas à 2750 mètres. Vent faible, variable.",
+    "demainDate": "22/08/2026",
     "demainTitre": "",
-    "demainTexte": "En matinée, le ciel est très nuageux à couvert, et donne des pluies éparses. En cours d'après-midi, quelques timides éclaircies peuvent temporairement faire leur apparition. Les précipitations se font alors sous forme d'averses, ici ou là. La limite pluie-neige se situe vers 3350 mètres en fin de matinée. Elle peut s'abaisser ensuite jusqu'à 2900 mètres. Pour la nuit : En soirée, les nuages donnent de faibles averses en Tarentaise et Vanoise ainsi que dans la Combe de Savoie. La neige remplace la pluie au-dessus de 2800 mètres. Ils s'effacent assez vite, et le ciel s'éclaircit dès le milieu de nuit. En fin de matinée, vent de Nord-Ouest modéré, dans la Cluse de Chambéry et l'avant-Pays ; atténuation ensuite."
+    "demainTexte": "Le soleil règne en maître du matin au soir. Pour la nuit : Le temps est calme et propice à l'observation des étoiles. Vent de Nord-Nord-Ouest, faible à modéré, en milieu de journée, dans la Cluse de Chambéry et l'avant-Pays ; après une atténuation, reprise du vent, en début de nuit, avec orientation au Nord-Nord-Est."
   },
   "blocs": [
     {
@@ -167,7 +167,7 @@
       "sections": [
         {
           "titre": "Remontées Mécaniques",
-          "ouv": 0,
+          "ouv": 1,
           "tot": 2,
           "items": [
             {
@@ -175,7 +175,7 @@
               "c": "",
               "nm": "FUNICULAIRE",
               "hr": "07:15–19:30",
-              "e": "P",
+              "e": "O",
               "no": "Toutes les 30 min"
             },
             {
