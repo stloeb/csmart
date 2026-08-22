@@ -2,7 +2,7 @@
   "ecusson": "LA",
   "station": "LES ARCS",
   "soustitre": "Arc 1950 · Paradiski · Bulletin du domaine",
-  "maj": "2026-08-22T15:31:00",
+  "maj": "2026-08-22T16:20:00",
   "source": "Lumiplan",
   "hero": [
     {
@@ -234,7 +234,7 @@
       "sections": [
         {
           "titre": "Remontées Mécaniques",
-          "ouv": 5,
+          "ouv": 4,
           "tot": 5,
           "items": [
             {
@@ -242,7 +242,7 @@
               "c": "",
               "nm": "AIGUILLE ROUGE",
               "hr": "09:45–16:20",
-              "e": "O",
+              "e": "P",
               "no": "Pause/break 12:45-13:15"
             },
             {
@@ -284,7 +284,7 @@
       "sections": [
         {
           "titre": "Pistes et activités",
-          "ouv": 5,
+          "ouv": 4,
           "tot": 5,
           "items": [
             {
@@ -314,7 +314,7 @@
               "c": "k",
               "nm": "LES FRESQUES LUMINEUSES DE L'AIGUILLE ROUGE",
               "hr": "09:40–16:15",
-              "e": "O",
+              "e": "P",
               "no": "Pause/break : 12:40-13h30"
             },
             {
