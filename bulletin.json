@@ -2,7 +2,7 @@
   "ecusson": "LA",
   "station": "LES ARCS",
   "soustitre": "Arc 1950 · Paradiski · Bulletin du domaine",
-  "maj": "2026-08-22T08:45:00",
+  "maj": "2026-08-22T09:32:00",
   "source": "Lumiplan",
   "hero": [
     {
@@ -148,7 +148,7 @@
       "sections": [
         {
           "titre": "Remontées Mécaniques",
-          "ouv": 0,
+          "ouv": 1,
           "tot": 1,
           "items": [
             {
@@ -156,7 +156,7 @@
               "c": "",
               "nm": "VALLANDRY",
               "hr": "09:15–16:50",
-              "e": "P"
+              "e": "O"
             }
           ]
         }
@@ -167,7 +167,7 @@
       "sections": [
         {
           "titre": "Remontées Mécaniques",
-          "ouv": 1,
+          "ouv": 2,
           "tot": 2,
           "items": [
             {
@@ -183,7 +183,7 @@
               "c": "",
               "nm": "CACHETTE",
               "hr": "09:15–16:50",
-              "e": "P"
+              "e": "O"
             }
           ]
         }
@@ -194,7 +194,7 @@
       "sections": [
         {
           "titre": "Remontées Mécaniques",
-          "ouv": 2,
+          "ouv": 4,
           "tot": 4,
           "items": [
             {
@@ -209,14 +209,14 @@
               "c": "",
               "nm": "TRANSARC 1",
               "hr": "09:15–16:50",
-              "e": "P"
+              "e": "O"
             },
             {
               "ty": "TC",
               "c": "",
               "nm": "TRANSARC 2",
               "hr": "09:15–16:50",
-              "e": "P"
+              "e": "O"
             },
             {
               "ty": "TC",
@@ -234,7 +234,7 @@
       "sections": [
         {
           "titre": "Remontées Mécaniques",
-          "ouv": 0,
+          "ouv": 4,
           "tot": 5,
           "items": [
             {
@@ -250,21 +250,21 @@
               "c": "",
               "nm": "VARET",
               "hr": "09:30–16:30",
-              "e": "P"
+              "e": "O"
             },
             {
               "ty": "TSDB",
               "c": "",
               "nm": "ARCABULLE",
               "hr": "09:30–16:50",
-              "e": "P"
+              "e": "O"
             },
             {
               "ty": "TSD",
               "c": "",
               "nm": "BOIS DE L'OURS",
               "hr": "09:15–16:50",
-              "e": "P",
+              "e": "O",
               "no": "Pause/break 12:45-13:15"
             },
             {
@@ -272,7 +272,7 @@
               "c": "",
               "nm": "CABRIOLET",
               "hr": "09:15–17:00",
-              "e": "P",
+              "e": "O",
               "no": "Pause/Break : 12:45-13:15"
             }
           ]
@@ -284,7 +284,7 @@
       "sections": [
         {
           "titre": "Pistes et activités",
-          "ouv": 0,
+          "ouv": 3,
           "tot": 5,
           "items": [
             {
@@ -292,7 +292,7 @@
               "c": "k",
               "nm": "GALERIE DES MINERAUX",
               "hr": "09:25–16:40",
-              "e": "P"
+              "e": "O"
             },
             {
               "ty": "",
@@ -307,7 +307,7 @@
               "c": "k",
               "nm": "GEANTS DE MALGOVERT",
               "hr": "09:20–16:45",
-              "e": "P"
+              "e": "O"
             },
             {
               "ty": "",
@@ -322,7 +322,7 @@
               "c": "k",
               "nm": "MUSEUM DES ANIMAUX DE MONTAGNE",
               "hr": "09:25–16:40",
-              "e": "P"
+              "e": "O"
             }
           ]
         }
