@@ -2,30 +2,30 @@
   "ecusson": "LA",
   "station": "LES ARCS",
   "soustitre": "Arc 1950 · Paradiski · Bulletin du domaine",
-  "maj": "2026-08-21T22:50:00",
+  "maj": "2026-08-22T07:28:00",
   "source": "Lumiplan",
   "hero": [
     {
       "k": "Temp. sommet",
-      "v": "11°",
+      "v": "15°",
       "l": "GRAND COL",
       "c": ""
     },
     {
       "k": "Temp. station",
-      "v": "11°",
+      "v": "15°",
       "l": "ARC 2000 · 2000 m",
       "c": "n"
     },
     {
       "k": "Vent",
-      "v": "11 km/h",
-      "l": "Secteur O",
+      "v": "4 km/h",
+      "l": "Secteur N",
       "c": "w"
     },
     {
       "k": "Limite pluie/neige",
-      "v": "2900 m",
+      "v": "1 m",
       "l": "Altitude",
       "c": "n"
     },
@@ -37,8 +37,8 @@
     },
     {
       "k": "Dernière chute",
-      "v": "+1 cm",
-      "l": "14/04/2026",
+      "v": "+ cm",
+      "l": "—",
       "c": ""
     }
   ],
@@ -66,81 +66,81 @@
     {
       "lieu": "GRAND COL",
       "alt": 3000,
-      "ciel": "Ciel variable, pluies faibles",
-      "matin": "11",
-      "aprem": "11",
-      "vent": "11",
-      "dir": "O",
-      "neige24": "0",
-      "qualite": "N/D",
-      "limite": "2900",
-      "derniereH": "2",
-      "derniereD": "14/04/2026"
-    },
-    {
-      "lieu": "ARC 2000",
-      "alt": 2000,
-      "ciel": "Ciel variable, pluies faibles",
-      "matin": "11",
-      "aprem": "11",
-      "vent": "11",
-      "dir": "O",
-      "neige24": "0",
-      "qualite": "N/D",
-      "limite": "2900",
-      "derniereH": "1",
-      "derniereD": "14/04/2026"
-    },
-    {
-      "lieu": "ARC 1600",
-      "alt": 1600,
-      "ciel": "Ciel variable, pluies faibles",
-      "matin": "11",
-      "aprem": "11",
-      "vent": "11",
-      "dir": "O",
-      "neige24": "0",
-      "qualite": "N/D",
-      "limite": "2900",
-      "derniereH": "5",
-      "derniereD": "31/03/2026"
-    },
-    {
-      "lieu": "BOURG ST MAURICE",
-      "alt": 800,
-      "ciel": "Ciel variable, pluies faibles",
-      "matin": "15",
-      "aprem": "17",
+      "ciel": "Soleil",
+      "matin": "8",
+      "aprem": "15",
       "vent": "4",
       "dir": "N",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "2900",
-      "derniereH": "5",
-      "derniereD": "14/03/2026"
+      "limite": "2",
+      "derniereH": "",
+      "derniereD": ""
+    },
+    {
+      "lieu": "ARC 2000",
+      "alt": 2000,
+      "ciel": "Soleil",
+      "matin": "8",
+      "aprem": "15",
+      "vent": "4",
+      "dir": "N",
+      "neige24": "0",
+      "qualite": "N/D",
+      "limite": "1",
+      "derniereH": "",
+      "derniereD": ""
+    },
+    {
+      "lieu": "ARC 1600",
+      "alt": 1600,
+      "ciel": "Soleil",
+      "matin": "8",
+      "aprem": "15",
+      "vent": "4",
+      "dir": "N",
+      "neige24": "0",
+      "qualite": "N/D",
+      "limite": "5",
+      "derniereH": "",
+      "derniereD": ""
+    },
+    {
+      "lieu": "BOURG ST MAURICE",
+      "alt": 800,
+      "ciel": "Soleil",
+      "matin": "12",
+      "aprem": "23",
+      "vent": "0",
+      "dir": "",
+      "neige24": "0",
+      "qualite": "N/D",
+      "limite": "5",
+      "derniereH": "",
+      "derniereD": ""
     },
     {
       "lieu": "ARC 1800",
       "alt": 1800,
-      "ciel": "Ciel variable, pluies faibles",
-      "matin": "12",
-      "aprem": "10",
-      "vent": "9",
-      "dir": "SO",
+      "ciel": "Soleil",
+      "matin": "7",
+      "aprem": "13",
+      "vent": "7",
+      "dir": "E",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "2900",
-      "derniereH": "5",
-      "derniereD": "31/03/2026"
+      "limite": "5",
+      "derniereH": "",
+      "derniereD": ""
     }
   ],
   "previsions": {
-    "jourDate": "21/08/2026",
+    "jourDate": "22/08/2026",
     "jourTitre": "",
-    "jourTexte": "L'après-midi voit passer de nombreuses averses, localement orageuses. Elles sont déjà présentes à la mi-journée, dans le Beaufortain, en Tarentaise et Vanoise, dans les Bauges ainsi que dans les plaines et basses vallées, pour se généraliser ensuite. La limite pluie-neige s'abaisse jusqu'à 2800 mètres. En milieu d'après-midi, vent de Nord-Ouest soufflant modérément, en Maurienne ; puis atténuation. Cette nuit: Le ciel est en général bien dégagé durant la nuit. Il faut toutefois attendre, en Tarentaise et Vanoise ainsi que dans la Combe de Savoie, que les quelques rares averses, possibles en soirée, cessent. C'est de la neige qui tombe au-dessus de 2800 mètres. Vent variable, faible.",
-    "demainDate": "22/08/2026",
+    "jourTexte": "Le soleil brille sans discontinuer du matin jusqu'au soir. En début d'après-midi, vent s'établissant au Nord-Nord-Ouest modéré, dans la Cluse de Chambéry et l'avant-Pays ; puis atténuation. Cette nuit: Le temps est calme et propice à l'observation des étoiles. Vent de Nord-Est modéré, dans la Cluse de Chambéry et l'avant-Pays.",
+    "demainDate": "23/08/2026",
     "demainTitre": "",
-    "demainTexte": "Le temps est ensoleillé du matin au soir. Pour la nuit : Le ciel est clair toute la nuit. Vent de Nord-Nord-Ouest, faible à modéré, en milieu de journée, dans la Cluse de Chambéry et l'avant-Pays ; après une atténuation, reprise du vent, en première partie de nuit, avec orientation au Nord-Nord-Est."
+    "demainTexte": "C'est une journée bien ensoleillée qui s'annonce, même si on peut noter quelques nuages plus présents dans la Cluse de Chambéry et l'avant-Pays, en début de matinée. Pour la nuit : La nuit est belle, le plus souvent étoilée. Vent modéré par endroits, en fin d'après-midi ; et se renforçant de nouveau en fin de nuit, dans la Combe de Savoie."
   },
   "blocs": [
     {
@@ -167,7 +167,7 @@
       "sections": [
         {
           "titre": "Remontées Mécaniques",
-          "ouv": 0,
+          "ouv": 1,
           "tot": 2,
           "items": [
             {
@@ -175,7 +175,7 @@
               "c": "",
               "nm": "FUNICULAIRE",
               "hr": "07:15–19:30",
-              "e": "P",
+              "e": "O",
               "no": "Toutes les 30 min"
             },
             {
