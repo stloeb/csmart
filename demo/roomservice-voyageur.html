@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CSMART RoomService mobile — Arc 1950 · Marketplace de village</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#06231D;
+    --ink2:#0C332A;
+    --line:rgba(255,255,255,.12);
+    --brand:#00A082;
+    --brand-dk:#00604E;
+    --brand-lt:#E4F4F0;
+    --gray:#969696;
+    --amber:#E09A2E;
+    --amber-lt:#FBF0DC;
+    --sand:#F1EADC;
+    --alert:#C9483E;
+    --screen:#FFFFFF;
+    --screen-alt:#F3F7F6;
+    --text:#12211E;
+    --text-2:#5E6F6B;
+    --radius:14px;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    background:var(--ink);
+    color:#EAF3F0;
+    font-family:'Inter',system-ui,sans-serif;
+    -webkit-font-smoothing:antialiased;
+    background-image:radial-gradient(900px 500px at 12% -8%, rgba(0,160,130,.20), transparent 60%);
+  }
+  .wrap{max-width:1240px;margin:0 auto;padding:40px 20px 90px}
+
+  /* ---------- board header ---------- */
+  .eyebrow{
+    font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--brand);
+  }
+  .board-title{
+    font-family:'Archivo',sans-serif;font-weight:700;font-size:clamp(28px,5vw,46px);
+    line-height:1.04;letter-spacing:-.02em;margin:14px 0 0;max-width:16ch;
+  }
+  .board-title em{font-style:normal;color:var(--brand)}
+  .board-sub{color:#A9C3BC;max-width:58ch;margin:16px 0 0;font-size:15px;line-height:1.6}
+  .toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:26px}
+  .toggle{
+    display:inline-flex;align-items:center;gap:9px;cursor:pointer;
+    font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;
+    background:rgba(255,255,255,.06);border:1px solid var(--line);color:#DCEAE6;
+    padding:9px 14px;border-radius:999px;
+  }
+  .toggle:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+  .dot{width:8px;height:8px;border-radius:50%;background:var(--brand);transition:background .2s}
+  body.no-notes .dot{background:#5A6E69}
+  .legend{display:flex;flex-wrap:wrap;gap:14px;margin-top:22px;font-size:12px;color:#9FB8B2}
+  .legend span{display:inline-flex;align-items:center;gap:7px}
+  .chip{width:10px;height:10px;border-radius:3px;display:inline-block}
+
+  /* ---------- sections ---------- */
+  section{margin-top:64px;border-top:1px solid var(--line);padding-top:26px}
+  .sec-head{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:baseline}
+  .sec-title{font-family:'Archivo',sans-serif;font-weight:600;font-size:22px;letter-spacing:-.01em;margin:0}
+  .sec-note{color:#9FB8B2;font-size:14px;max-width:62ch;margin:10px 0 0;line-height:1.6}
+
+  .row{
+    display:grid;gap:26px;margin-top:30px;
+    grid-template-columns:repeat(auto-fit,minmax(272px,1fr));
+    align-items:start;
+  }
+  .row.trio{max-width:1000px}
+
+  /* the phase rail — signature device */
+  .rail{position:relative;margin-top:34px;padding-top:26px}
+  .rail::before{
+    content:"";position:absolute;top:9px;left:6%;right:6%;height:1px;
+    background:linear-gradient(90deg,transparent,var(--brand),var(--brand),transparent);
+    opacity:.5;
+  }
+  .rail .row{margin-top:0}
+  .stage{position:relative}
+  .stage-tag{
+    font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;color:var(--brand);
+    text-align:center;margin-bottom:14px;position:relative;
+  }
+  .stage-tag::before{
+    content:"";position:absolute;top:-24px;left:50%;transform:translateX(-50%);
+    width:9px;height:9px;border-radius:50%;background:var(--brand);box-shadow:0 0 0 4px var(--ink);
+  }
+  @media (max-width:900px){ .rail::before{display:none} .stage-tag::before{display:none} }
+
+  /* ---------- phone ---------- */
+  .frame{margin:0 auto;width:100%;max-width:300px}
+  .phone{
+    width:100%;height:604px;background:var(--screen);border-radius:34px;
+    border:1px solid rgba(255,255,255,.18);
+    box-shadow:0 26px 50px -22px rgba(0,0,0,.8), 0 0 0 7px #0A2A24;
+    overflow:hidden;display:flex;flex-direction:column;color:var(--text);position:relative;
+  }
+  .statusbar{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:11px 18px 5px;font-size:11px;font-weight:600;color:var(--text);
+    font-family:'JetBrains Mono',monospace;
+  }
+  .statusbar .sig{display:flex;gap:3px;align-items:flex-end}
+  .statusbar .sig i{width:3px;background:var(--text);border-radius:1px;display:block}
+
+  .scr{flex:1;overflow:hidden;position:relative}
+  .scr::after{
+    content:"";position:absolute;left:0;right:0;bottom:0;height:26px;
+    background:linear-gradient(transparent,#fff);pointer-events:none;
+  }
+  .pad{padding:4px 16px 0}
+
+  .apphead{padding:6px 16px 12px}
+  .hello{font-family:'Archivo',sans-serif;font-weight:600;font-size:18px;letter-spacing:-.01em;margin:0}
+  .place{font-size:11.5px;color:var(--text-2);margin:3px 0 0}
+
+  .card{background:var(--screen-alt);border-radius:var(--radius);padding:12px 13px;margin-bottom:9px}
+  .card.brand{background:var(--brand-dk);color:#fff}
+  .card.tint{background:var(--brand-lt)}
+  .card.amber{background:var(--amber-lt)}
+  .card.sandc{background:var(--sand)}
+  .card.flat{background:#fff;border:1px solid #E4EAE8}
+
+  .k{font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--text-2)}
+  .card.brand .k{color:rgba(255,255,255,.66)}
+  .t{font-weight:600;font-size:13.5px;margin:4px 0 0;letter-spacing:-.005em}
+  .s{font-size:11.5px;color:var(--text-2);margin:3px 0 0;line-height:1.45}
+  .card.brand .s{color:rgba(255,255,255,.78)}
+
+  .btn{
+    display:block;width:100%;text-align:center;background:var(--brand);color:#fff;
+    border:0;border-radius:11px;padding:11px;font-family:'Inter',sans-serif;
+    font-weight:600;font-size:13px;margin-top:10px;
+  }
+  .btn.ghost{background:#fff;color:var(--brand-dk);border:1px solid var(--brand)}
+  .btn.amber{background:var(--amber);color:#3A2A08}
+  .btn.dim{background:#E7ECEA;color:#8A9A96}
+  .btn.sm{padding:8px;font-size:12px;border-radius:9px}
+
+  .unlock{
+    width:100%;border:0;border-radius:16px;background:var(--brand);color:#fff;
+    padding:16px 14px;display:flex;align-items:center;gap:12px;text-align:left;margin-bottom:9px;
+  }
+  .unlock .ring{
+    width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.18);
+    display:grid;place-items:center;flex:none;
+  }
+  .unlock b{display:block;font-family:'Archivo',sans-serif;font-size:15px;font-weight:600}
+  .unlock span{font-size:11px;color:rgba(255,255,255,.8)}
+
+  .mini{display:flex;gap:8px;margin-bottom:10px}
+  .mini button{
+    flex:1;border:1px solid #DDE5E3;background:#fff;border-radius:11px;padding:9px 6px;
+    font-family:'Inter',sans-serif;font-size:10.5px;font-weight:500;color:var(--text);line-height:1.3;
+  }
+
+  .line{display:flex;justify-content:space-between;align-items:center;gap:8px}
+  .pill{
+    font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.06em;text-transform:uppercase;
+    padding:3px 7px;border-radius:999px;background:#fff;color:var(--text-2);border:1px solid #DDE5E3;flex:none;
+  }
+  .pill.go{background:var(--brand);color:#fff;border-color:var(--brand)}
+  .pill.wait{background:var(--amber);color:#3A2A08;border-color:var(--amber)}
+  .pill.off{background:#EAEFED;color:#8A9A96}
+
+  .todo{display:flex;gap:10px;align-items:flex-start;padding:10px 0;border-bottom:1px solid #E7EDEB}
+  .todo:last-child{border-bottom:0}
+  .num{
+    font-family:'JetBrains Mono',monospace;font-size:9.5px;color:#fff;background:var(--brand-dk);
+    width:18px;height:18px;border-radius:5px;display:grid;place-items:center;flex:none;margin-top:1px;
+  }
+  .todo .grow{flex:1;min-width:0}
+  .todo .t{margin:0}
+
+  .steps{display:flex;align-items:center;gap:4px;margin-top:9px}
+  .steps i{height:3px;flex:1;border-radius:2px;background:#DCE4E2;display:block}
+  .steps i.on{background:var(--brand)}
+  .steps i.now{background:var(--amber)}
+
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+  .poi{background:var(--screen-alt);border-radius:12px;padding:10px}
+  .poi .t{font-size:12px}
+  .poi .s{font-size:10.5px}
+
+  .tabs{
+    display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid #E7EDEB;
+    background:#fff;padding:7px 4px 11px;flex:none;
+  }
+  .tab{display:flex;flex-direction:column;align-items:center;gap:4px;color:#9AA9A5;font-size:9.5px;font-weight:500}
+  .tab.on{color:var(--brand-dk)}
+  .tab svg{width:19px;height:19px;stroke:currentColor;fill:none;stroke-width:1.7}
+
+  .sheet{
+    position:absolute;left:0;right:0;bottom:0;background:#fff;border-radius:22px 22px 0 0;
+    box-shadow:0 -18px 40px rgba(6,35,29,.28);padding:14px 16px 18px;
+  }
+  .grab{width:36px;height:4px;border-radius:2px;background:#DCE4E2;margin:0 auto 12px}
+  .scrim{position:absolute;inset:0;background:rgba(6,35,29,.42)}
+
+  .amount{font-family:'Archivo',sans-serif;font-size:30px;font-weight:700;letter-spacing:-.02em;margin:2px 0 0}
+  .rule{height:1px;background:#E7EDEB;margin:11px 0}
+
+  /* ---------- captions ---------- */
+  .cap{margin-top:16px;max-width:300px;margin-left:auto;margin-right:auto}
+  .cap h4{
+    font-family:'Archivo',sans-serif;font-size:14px;font-weight:600;margin:0 0 6px;color:#FFFFFF;
+  }
+  .cap p{font-size:12.5px;line-height:1.55;color:#9FB8B2;margin:0}
+  .cap p + p{margin-top:7px}
+  .cap b{color:#CFE4DE;font-weight:600}
+  body.no-notes .cap{display:none}
+
+  footer{margin-top:70px;border-top:1px solid var(--line);padding-top:22px;color:#8FA8A2;font-size:12.5px;line-height:1.7}
+  footer strong{color:#CFE4DE}
+  @media (prefers-reduced-motion:no-preference){
+    .frame{transition:transform .25s ease}
+    .frame:hover{transform:translateY(-4px)}
+  }
+</style>
+<style>
+  .filters{display:flex;gap:6px;margin:2px 0 10px}
+  .filters span{
+    font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.06em;text-transform:uppercase;
+    padding:5px 8px;border-radius:999px;border:1px solid #DDE5E3;color:var(--text-2);background:#fff;flex:none;
+  }
+  .filters span.on{background:var(--brand-dk);color:#fff;border-color:var(--brand-dk)}
+
+  .merch{display:flex;gap:10px;align-items:flex-start}
+  .logo{
+    width:40px;height:40px;border-radius:11px;background:var(--sand);display:grid;place-items:center;
+    font-family:'Archivo',sans-serif;font-weight:700;font-size:12.5px;color:var(--brand-dk);flex:none;
+  }
+  .logo.off{background:#EAEFED;color:#9AA9A5}
+  .meta{display:flex;gap:5px;margin-top:6px;flex-wrap:wrap}
+
+  .cat{display:flex;gap:13px;border-bottom:1px solid #E7EDEB;margin:2px 0 6px;font-size:11.5px;color:var(--text-2)}
+  .cat b{color:var(--brand-dk);font-weight:600;border-bottom:2px solid var(--brand);padding-bottom:7px;margin-bottom:-1px}
+
+  .item{display:flex;gap:10px;align-items:flex-start;padding:9px 0;border-bottom:1px solid #E7EDEB}
+  .item:last-child{border-bottom:0}
+  .item .grow{flex:1;min-width:0}
+  .add{
+    width:25px;height:25px;border-radius:8px;border:1px solid var(--brand);color:var(--brand-dk);
+    background:#fff;font-size:15px;line-height:1;flex:none;font-family:'Inter',sans-serif;
+  }
+  .fab{
+    position:absolute;left:16px;right:16px;bottom:12px;background:var(--brand-dk);color:#fff;border:0;
+    border-radius:12px;padding:12px 14px;display:flex;justify-content:space-between;align-items:center;
+    font-family:'Inter',sans-serif;font-size:12.5px;font-weight:600;z-index:3;
+  }
+  .qty{display:flex;align-items:center;gap:14px;border:1px solid #DDE5E3;border-radius:10px;padding:8px 11px;font-size:13px;font-weight:600;flex:none}
+
+  .map{height:88px;border-radius:12px;background:#EDF3F1;border:1px solid #E0E8E6;position:relative;overflow:hidden;margin-bottom:9px}
+  .map u{position:absolute;display:block;background:#DCE7E3;text-decoration:none}
+  .map .pin{position:absolute;width:9px;height:9px;border-radius:50%;background:var(--brand);box-shadow:0 0 0 4px rgba(0,160,130,.20)}
+  .map .pin.dest{background:var(--brand-dk);box-shadow:0 0 0 4px rgba(0,96,78,.16)}
+
+  .track{display:flex;gap:10px;align-items:flex-start;padding:9px 0}
+  .track .bul{width:14px;height:14px;border-radius:50%;border:2px solid #DCE4E2;flex:none;margin-top:2px;background:#fff}
+  .track .bul.done{background:var(--brand);border-color:var(--brand)}
+  .track .bul.now{border-color:var(--amber);box-shadow:0 0 0 3px var(--amber-lt)}
+
+  .tvwrap{max-width:560px;margin:0 auto}
+  .tvscreen{
+    aspect-ratio:16/9;background:var(--ink2);border-radius:12px;border:1px solid rgba(255,255,255,.18);
+    box-shadow:0 26px 50px -22px rgba(0,0,0,.8);padding:20px;display:flex;gap:20px;color:#EAF3F0;
+  }
+  .tvscreen .k{color:rgba(255,255,255,.55)}
+  .tvcol{flex:1;min-width:0}
+  .tvrow{display:flex;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.10);font-size:13px}
+  .tvrow:last-child{border-bottom:0}
+  .tvrow span{color:#A9C3BC}
+  .qr{width:112px;height:112px;border-radius:10px;background:#fff;display:grid;place-items:center;flex:none}
+  .qr svg{width:82px;height:82px}
+  .cap.wide{max-width:560px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <p class="eyebrow">Wireframe · v1 RoomService voyageur · Arc 1950</p>
+  <h1 class="board-title">CSMART <em>RoomService</em> mobile</h1>
+  <p class="board-sub">Le village est la place de marché : plusieurs commerces livrent le même logement. Casamast
+     encaisse, puis reverse le commerçant et le livreur. Un panier par commerce, un tunnel de paiement déjà
+     connu du voyageur, un suivi de course. Se greffe sur l'onglet Logement de CSMART Hospitality.</p>
+
+  <div class="toolbar">
+    <button class="toggle" id="notes" aria-pressed="true"><span class="dot"></span>Annotations</button>
+  </div>
+
+  <div class="legend">
+    <span><i class="chip" style="background:#00A082"></i>Marchand &amp; disponibilité</span>
+    <span><i class="chip" style="background:#E09A2E"></i>Action payante</span>
+    <span><i class="chip" style="background:#F1EADC"></i>Information</span>
+    <span><i class="chip" style="background:#C9483E"></i>Incident / annulation</span>
+  </div>
+
+  <!-- ============ SECTION 1 : DÉCOUVERTE ============ -->
+  <section>
+    <div class="sec-head">
+      <p class="eyebrow">01 — Onglet Logement › RoomService</p>
+      <h2 class="sec-title">Le village d'abord, le menu ensuite</h2>
+    </div>
+    <p class="sec-note">L'entrée ne se fait pas par un catalogue unique mais par une liste de commerces. Le logement
+       est déjà connu — pas de saisie d'adresse, pas de QR à scanner : le voyageur est authentifié depuis son séjour.
+       Le QR ne sert qu'aux entrées froides (TV, affichage, visiteur sans compte).</p>
+
+    <div class="rail">
+      <div class="row trio">
+
+        <!-- A : LISTE MARCHANDS -->
+        <div class="stage">
+          <p class="stage-tag">A · QUI LIVRE CE SOIR</p>
+          <div class="frame">
+            <div class="phone">
+              <div class="statusbar"><span>19:04</span><span class="sig"><i style="height:4px"></i><i style="height:6px"></i><i style="height:8px"></i><i style="height:10px"></i></span></div>
+              <div class="scr">
+                <div class="apphead">
+                  <p class="hello">Commander</p>
+                  <p class="place">Appartement B204 · Hameau du Glacier</p>
+                </div>
+                <div class="pad">
+                  <div class="card tint">
+                    <div class="line">
+                      <div><p class="k">Livraison au logement</p><p class="t">7 commerces livrent ce soir</p><p class="s">Dernière commande vers 21:00</p></div>
+                      <span class="pill go">Ouvert</span>
+                    </div>
+                  </div>
+
+                  <div class="filters">
+                    <span class="on">Tout</span><span>Restaurant</span><span>Épicerie</span><span>Bar</span><span>Boulangerie</span>
+                  </div>
+
+                  <div class="card flat">
+                    <div class="merch">
+                      <span class="logo">LR</span>
+                      <div class="grow" style="flex:1">
+                        <div class="line"><p class="t">Le Refuge</p><span class="pill go">Ouvert</span></div>
+                        <p class="s">Savoyard · à 300 m</p>
+                        <div class="meta"><span class="pill">25–35 min</span><span class="pill">Livraison 4,50 €</span></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card flat">
+                    <div class="merch">
+                      <span class="logo">CA</span>
+                      <div class="grow" style="flex:1">
+                        <div class="line"><p class="t">Chez Alfred</p><span class="pill wait">Ferme 20:30</span></div>
+                        <p class="s">Bar à vins · planches</p>
+                        <div class="meta"><span class="pill">20 min</span><span class="pill">Livraison 3,00 €</span></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card flat">
+                    <div class="merch">
+                      <span class="logo">SP</span>
+                      <div class="grow" style="flex:1">
+                        <div class="line"><p class="t">Sherpa</p><span class="pill go">Ouvert</span></div>
+                        <p class="s">Épicerie · courses du séjour</p>
+                        <div class="meta"><span class="pill">45 min</span><span class="pill">Minimum 15 €</span></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card flat">
+                    <div class="merch">
+                      <span class="logo off">BL</span>
+                      <div class="grow" style="flex:1">
+                        <div class="line"><p class="t" style="color:#8A9A96">La Boulange</p><span class="pill off">Fermé</span></div>
+                        <p class="s">Ouvre demain 7:00 · précommande possible</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <nav class="tabs">
+              <span class="tab"><svg viewBox="0 0 24 24"><path d="M12 3v4M5 12H3m18 0h-2M6 6l2 2m8-2-2 2"/><circle cx="12" cy="14" r="6"/></svg>Séjour</span>
+              <span class="tab on"><svg viewBox="0 0 24 24"><path d="M4 11 12 4l8 7v8a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1z"/></svg>Logement</span>
+              <span class="tab"><svg viewBox="0 0 24 24"><path d="M4 20V7l6-3 6 3v13M4 20h16M16 20V10l4 2v8M8 12h2m-2 4h2"/></svg>Résidence</span>
+              <span class="tab"><svg viewBox="0 0 24 24"><path d="m3 18 6-12 5 8 3-4 4 8z"/></svg>Village</span>
+              </nav>
+            </div>
+          </div>
+          <div class="cap">
+            <h4>Un annuaire, pas un catalogue</h4>
+            <p>Chaque ligne dit les trois choses qui décident : <b>ouvert ou non</b>, <b>délai</b>, <b>frais de livraison</b>. Le minimum de commande apparaît seulement s'il existe.</p>
+            <p>Un commerce fermé reste visible — il porte la station et prépare la précommande du lendemain.</p>
+            <p><b>À trancher :</b> tri par défaut — distance, délai, ou commerces sous contrat prioritaires.</p>
+          </div>
+        </div>
+
+        <!-- B : FICHE MARCHAND -->
+        <div class="stage">
+          <p class="stage-tag">B · CARTE DU COMMERCE</p>
+          <div class="frame">
+            <div class="phone">
+              <div class="statusbar"><span>19:04</span><span class="sig"><i style="height:4px"></i><i style="height:6px"></i><i style="height:8px"></i><i style="height:10px"></i></span></div>
+              <div class="scr">
+                <div class="apphead">
+                  <p class="hello">Le Refuge</p>
+                  <p class="place">Savoyard · 25–35 min · livraison 4,50 €</p>
+                </div>
+                <div class="pad">
+                  <div class="card sandc">
+                    <div class="line">
+                      <div><p class="k">Livré au B204</p><p class="t">Ce soir · 19:30 – 20:00</p></div>
+                      <span class="pill">Changer</span>
+                    </div>
+                  </div>
+
+                  <div class="cat"><b>Plats</b><span>Entrées</span><span>Vins</span><span>Desserts</span></div>
+
+                  <div class="card flat" style="padding:4px 13px">
+                    <div class="item">
+                      <div class="grow">
+                        <p class="t">Fondue savoyarde</p>
+                        <p class="s">Beaufort, comté, abondance · pain inclus · dès 2 pers.</p>
+                        <p class="t" style="margin-top:5px">22,00 € / pers.</p>
+                      </div>
+                      <button class="add">+</button>
+                    </div>
+                    <div class="item">
+                      <div class="grow">
+                        <p class="t">Croûte au fromage</p>
+                        <p class="s">Vin blanc, jambon de pays</p>
+                        <p class="t" style="margin-top:5px">18,00 €</p>
+                      </div>
+                      <button class="add">+</button>
+                    </div>
+                    <div class="item">
+                      <div class="grow">
+                        <p class="t">Diots au vin blanc</p>
+                        <p class="s">Polenta crémeuse</p>
+                        <p class="t" style="margin-top:5px">19,50 €</p>
+                      </div>
+                      <button class="add">+</button>
+                    </div>
+                    <div class="item">
+                      <div class="grow">
+                        <p class="t" style="color:#8A9A96">Tartiflette</p>
+                        <p class="s">Épuisé pour ce soir</p>
+                      </div>
+                      <span class="pill off">Épuisé</span>
+                    </div>
+                  </div>
+                </div>
+                <button class="fab"><span>Panier · 2 articles</span><span>44,00 €</span></button>
+              </div>
+              <nav class="tabs">
+              <span class="tab"><svg viewBox="0 0 24 24"><path d="M12 3v4M5 12H3m18 0h-2M6 6l2 2m8-2-2 2"/><circle cx="12" cy="14" r="6"/></svg>Séjour</span>
+              <span class="tab on"><svg viewBox="0 0 24 24"><path d="M4 11 12 4l8 7v8a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1z"/></svg>Logement</span>
+              <span class="tab"><svg viewBox="0 0 24 24"><path d="M4 20V7l6-3 6 3v13M4 20h16M16 20V10l4 2v8M8 12h2m-2 4h2"/></svg>Résidence</span>
+              <span class="tab"><svg viewBox="0 0 24 24"><path d="m3 18 6-12 5 8 3-4 4 8z"/></svg>Village</span>
+              </nav>
+            </div>
+          </div>
+          <div class="cap">
+            <h4>La carte est celle du commerçant</h4>
+            <p>Elle est saisie depuis l'app fournisseur — même base, écran de création en un seul geste. L'épuisement d'un plat est un interrupteur côté cuisine, visible ici en quelques secondes.</p>
+            <p><b>Règle :</b> le créneau de livraison est choisi <b>avant</b> le panier. Il conditionne ce qui reste commandable.</p>
+          </div>
+        </div>
+
+        <!-- C : FICHE ARTICLE -->
+        <div class="stage">
+          <p class="stage-tag">C · ARTICLE ET OPTIONS</p>
+          <div class="frame">
+            <div class="phone">
+              <div class="statusbar"><span>19:04</span><span class="sig"><i style="height:4px"></i><i style="height:6px"></i><i style="height:8px"></i><i style="height:10px"></i></span></div>
+              <div class="scr">
+                <div class="apphead">
+                  <p class="hello">Le Refuge</p>
+                  <p class="place">Savoyard · 25–35 min</p>
+                </div>
+                <div class="pad">
+                  <div class="card flat" style="padding:4px 13px">
+                    <div class="item"><div class="grow"><p class="t">Fondue savoyarde</p><p class="s">22,00 € / pers.</p></div></div>
+                    <div class="item"><div class="grow"><p class="t">Croûte au fromage</p><p class="s">18,00 €</p></div></div>
+                  </div>
+                </div>
+                <div class="scrim"></div>
+                <div class="sheet">
+                  <div class="grab"></div>
+                  <p class="t" style="font-size:16px">Fondue savoyarde</p>
+                  <p class="s">Trois fromages, pain de campagne, salade verte. Servie en caquelon consigné.</p>
+                  <div class="rule"></div>
+                  <p class="k">Suppléments</p>
+                  <div class="line" style="margin-top:8px"><p class="s" style="color:var(--text)">Charcuterie de pays</p><span class="pill">+ 6,00 €</span></div>
+                  <div class="line" style="margin-top:7px"><p class="s" style="color:var(--text)">Pain supplémentaire</p><span class="pill go">+ 3,00 €</span></div>
+                  <div class="rule"></div>
+                  <div class="line">
+                    <div class="qty"><span>−</span><span>2</span><span>+</span></div>
+                    <div style="text-align:right"><p class="k">Total article</p><p class="t" style="font-size:15px">47,00 €</p></div>
+                  </div>
+                  <button class="btn">Ajouter au panier</button>
+                </div>
+              </div>
+              <nav class="tabs">
+              <span class="tab"><svg viewBox="0 0 24 24"><path d="M12 3v4M5 12H3m18 0h-2M6 6l2 2m8-2-2 2"/><circle cx="12" cy="14" r="6"/></svg>Séjour</span>
+              <span class="tab on"><svg viewBox="0 0 24 24"><path d="M4 11 12 4l8 7v8a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1z"/></svg>Logement</span>
+              <span class="tab"><svg viewBox="0 0 24 24"><path d="M4 20V7l6-3 6 3v13M4 20h16M16 20V10l4 2v8M8 12h2m-2 4h2"/></svg>Résidence</span>
+              <span class="tab"><svg viewBox="0 0 24 24"><path d="m3 18 6-12 5 8 3-4 4 8z"/></svg>Village</span>
+              </nav>
+            </div>
+          </div>
+          <div class="cap">
+            <h4>Feuille basse, pas nouvelle page</h4>
+            <p>L'article s'ouvre en <b>bottom sheet</b> : le voyageur ne perd pas sa position dans la carte, et l'ajout le ramène là où il était.</p>
+            <p><b>À trancher :</b> consigne du caquelon — objet retourné, donc statut « à rendre » à porter dans le séjour, ou dépôt inclus dans le prix.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 2 : PANIER → PAIEMENT → SUIVI ============ -->
+  <section>
+    <div class="sec-head">
+      <p class="eyebrow">02 — Tunnel de commande</p>
+      <h2 class="sec-title">Un panier par commerce, un paiement déjà connu</h2>
+    </div>
+    <p class="sec-note">Le tunnel réutilise le composant de paiement de CSMART Hospitality — celui des cautions et
+       des forfaits. Une seule chose change : la ligne de livraison et la mention du reversement. Le voyageur paie
+       Casamast, Casamast paie le commerçant et le livreur.</p>
+
+    <div class="rail">
+      <div class="row trio">
+
+        <!-- D : PANIER -->
+        <div class="stage">
+          <p class="stage-tag">D · PANIER</p>
+          <div class="frame">
+            <div class="phone">
+              <div class="statusbar"><span>19:04</span><span class="sig"><i style="height:4px"></i><i style="height:6px"></i><i style="height:8px"></i><i style="height:10px"></i></span></div>
+              <div class="scr">
+                <div class="apphead">
+                  <p class="hello">Votre panier</p>
+                  <p class="place">Le Refuge · livré au B204</p>
+                </div>
+                <div class="pad">
+                  <div class="card flat">
+                    <div class="line"><div><p class="t">Fondue savoyarde × 2</p><p class="s">Pain supplémentaire</p></div><p class="t">47,00 €</p></div>
+                    <div class="rule"></div>
+                    <div class="line"><div><p class="t">Apremont 75 cl</p></div><p class="t">22,00 €</p></div>
+                    <button class="btn ghost sm">Ajouter un article</button>
+                  </div>
+
+                  <div class="card tint">
+                    <div class="line">
+                      <div><p class="k">Créneau de livraison</p><p class="t">Ce soir · 19:30 – 20:00</p></div>
+                      <span class="pill go">Dispo</span>
+                    </div>
+                  </div>
+
+                  <div class="card sandc">
+                    <p class="k">Instructions de livraison</p>
+                    <p class="s">Bâtiment B · 2ᵉ étage · le livreur est autorisé jusqu'au palier</p>
+                  </div>
+
+                  <div class="card flat">
+                    <div class="line"><p class="s">Sous-total</p><p class="s">69,00 €</p></div>
+                    <div class="line" style="margin-top:5px"><p class="s">Livraison</p><p class="s">4,50 €</p></div>
+                    <div class="rule"></div>
+                    <div class="line"><p class="t" style="font-size:15px">Total</p><p class="amount" style="font-size:22px">73,50 €</p></div>
+                    <button class="btn amber">Payer et commander</button>
+                  </div>
+
+                  <p class="s" style="text-align:center">Vous avez <b>1 autre panier</b> chez Chez Alfred</p>
+                </div>
+              </div>
+              <nav class="tabs">
+              <span class="tab"><svg viewBox="0 0 24 24"><path d="M12 3v4M5 12H3m18 0h-2M6 6l2 2m8-2-2 2"/><circle cx="12" cy="14" r="6"/></svg>Séjour</span>
+              <span class="tab on"><svg viewBox="0 0 24 24"><path d="M4 11 12 4l8 7v8a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1z"/></svg>Logement</span>
+              <span class="tab"><svg viewBox="0 0 24 24"><path d="M4 20V7l6-3 6 3v13M4 20h16M16 20V10l4 2v8M8 12h2m-2 4h2"/></svg>Résidence</span>
+              <span class="tab"><svg viewBox="0 0 24 24"><path d="m3 18 6-12 5 8 3-4 4 8z"/></svg>Village</span>
+              </nav>
+            </div>
+          </div>
+          <div class="cap">
+            <h4>Le panier appartient au commerce</h4>
+            <p>Pas de panier commun : deux commerces, deux préparations, deux courses, deux frais. La ligne du bas le dit sans le cacher, et permet de basculer.</p>
+            <p><b>À trancher :</b> pourboire livreur — avant ou après la course, et son traitement comptable dans le reversement.</p>
+          </div>
+        </div>
+
+        <!-- E : PAIEMENT -->
+        <div class="stage">
+          <p class="stage-tag">E · PAIEMENT</p>
+          <div class="frame">
+            <div class="phone">
+              <div class="statusbar"><span>19:04</span><span class="sig"><i style="height:4px"></i><i style="height:6px"></i><i style="height:8px"></i><i style="height:10px"></i></span></div>
+              <div class="scr">
+                <div class="apphead">
+                  <p class="hello">Paiement</p>
+                  <p class="place">Le Refuge · 73,50 €</p>
+                </div>
+                <div class="pad">
+                  <div class="card flat">
+                    <div class="line"><div><p class="t">Le Refuge</p><p class="s">2 articles · livraison 19:30 – 20:00</p></div><p class="t">73,50 €</p></div>
+                  </div>
+
+                  <p class="k" style="margin:12px 0 7px">Moyen de paiement</p>
+                  <div class="card tint">
+                    <div class="line">
+                      <div><p class="t">Carte •••• 4242</p><p class="s">Enregistrée lors de la caution</p></div>
+                      <span class="pill go">Choisie</span>
+                    </div>
+                  </div>
+                  <div class="card flat">
+                    <div class="line">
+                      <div><p class="t">Autre carte</p><p class="s">Apple Pay / Google Pay</p></div>
+                      <span class="pill">Choisir</span>
+                    </div>
+                  </div>
+
+                  <div class="card sandc">
+                    <p class="k">Ce que vous payez</p>
+                    <p class="s">Casamast encaisse la commande, puis reverse Le Refuge et le livreur. Un reçu unique vous est envoyé.</p>
+                  </div>
+
+                  <div class="card flat">
+                    <div class="line"><p class="t" style="font-size:15px">À payer</p><p class="amount" style="font-size:22px">73,50 €</p></div>
+                    <button class="btn amber">Payer 73,50 €</button>
+                    <p class="s" style="text-align:center;margin-top:7px">Paiement sécurisé · Alpilink</p>
+                  </div>
+                </div>
+              </div>
+              <nav class="tabs">
+              <span class="tab"><svg viewBox="0 0 24 24"><path d="M12 3v4M5 12H3m18 0h-2M6 6l2 2m8-2-2 2"/><circle cx="12" cy="14" r="6"/></svg>Séjour</span>
+              <span class="tab on"><svg viewBox="0 0 24 24"><path d="M4 11 12 4l8 7v8a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1z"/></svg>Logement</span>
+              <span class="tab"><svg viewBox="0 0 24 24"><path d="M4 20V7l6-3 6 3v13M4 20h16M16 20V10l4 2v8M8 12h2m-2 4h2"/></svg>Résidence</span>
+              <span class="tab"><svg viewBox="0 0 24 24"><path d="m3 18 6-12 5 8 3-4 4 8z"/></svg>Village</span>
+              </nav>
+            </div>
+          </div>
+          <div class="cap">
+            <h4>Le composant v1, une carte en plus</h4>
+            <p>Récapitulatif, moyen de paiement, montant, bouton unique dont le libellé dit ce qui se passe. La carte sable explique le rôle d'intermédiaire — c'est aussi une exigence d'information au sens DSP2.</p>
+            <p><b>Règle technique :</b> paiement fractionné (Stripe Connect ou équivalent Alpilink) — le split est déclenché à la livraison confirmée, pas au paiement. Les webhooks passent par Node-RED, Bubble n'interroge jamais le PSP.</p>
+          </div>
+        </div>
+
+        <!-- F : SUIVI -->
+        <div class="stage">
+          <p class="stage-tag">F · SUIVI DE COURSE</p>
+          <div class="frame">
+            <div class="phone">
+              <div class="statusbar"><span>19:04</span><span class="sig"><i style="height:4px"></i><i style="height:6px"></i><i style="height:8px"></i><i style="height:10px"></i></span></div>
+              <div class="scr">
+                <div class="apphead">
+                  <p class="hello">Commande #A-2418</p>
+                  <p class="place">Le Refuge · livrée au B204</p>
+                </div>
+                <div class="pad">
+                  <div class="card brand">
+                    <p class="k">Livraison estimée</p>
+                    <p class="t" style="font-size:19px">19:45</p>
+                    <div class="steps"><i class="on"></i><i class="now"></i><i></i><i></i></div>
+                  </div>
+
+                  <div class="map">
+                    <u style="left:0;right:0;top:34px;height:2px"></u>
+                    <u style="left:96px;top:0;bottom:0;width:2px"></u>
+                    <u style="left:0;right:0;bottom:22px;height:2px"></u>
+                    <span class="pin" style="left:52px;top:52px"></span>
+                    <span class="pin dest" style="right:44px;top:22px"></span>
+                  </div>
+
+                  <div class="card flat">
+                    <div class="track"><span class="bul done"></span><div class="grow"><p class="t">Commande acceptée</p><p class="s">19:02 · Le Refuge</p></div></div>
+                    <div class="track"><span class="bul now"></span><div class="grow"><p class="t">En préparation</p><p class="s">Prête vers 19:35</p></div></div>
+                    <div class="track"><span class="bul"></span><div class="grow"><p class="t" style="color:#8A9A96">Livreur en route</p></div></div>
+                    <div class="track"><span class="bul"></span><div class="grow"><p class="t" style="color:#8A9A96">Remise au palier</p></div></div>
+                  </div>
+
+                  <div class="card tint">
+                    <div class="line">
+                      <div><p class="k">Votre livreur</p><p class="t">Marc L.</p><p class="s">Prend la course à 19:35</p></div>
+                      <span class="pill go">Message</span>
+                    </div>
+                  </div>
+
+                  <button class="btn ghost sm">Signaler un problème</button>
+                </div>
+              </div>
+              <nav class="tabs">
+              <span class="tab"><svg viewBox="0 0 24 24"><path d="M12 3v4M5 12H3m18 0h-2M6 6l2 2m8-2-2 2"/><circle cx="12" cy="14" r="6"/></svg>Séjour</span>
+              <span class="tab on"><svg viewBox="0 0 24 24"><path d="M4 11 12 4l8 7v8a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1z"/></svg>Logement</span>
+              <span class="tab"><svg viewBox="0 0 24 24"><path d="M4 20V7l6-3 6 3v13M4 20h16M16 20V10l4 2v8M8 12h2m-2 4h2"/></svg>Résidence</span>
+              <span class="tab"><svg viewBox="0 0 24 24"><path d="m3 18 6-12 5 8 3-4 4 8z"/></svg>Village</span>
+              </nav>
+            </div>
+          </div>
+          <div class="cap">
+            <h4>Quatre états, jamais plus</h4>
+            <p>Acceptée, en préparation, en route, remise. Chaque état vient d'une action réelle dans l'app fournisseur ou livreur — aucun statut décoratif.</p>
+            <p>« Signaler un problème » est la seule porte rouge : c'est elle qui déclenche l'annulation, le remboursement et l'alerte à la conciergerie.</p>
+            <p><b>À trancher :</b> position du livreur en temps réel — utile en village piéton, mais implique un wrapper natif et un traitement RGPD.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 3 : CAS LIMITES ============ -->
+  <section>
+    <div class="sec-head">
+      <p class="eyebrow">03 — Ce qui casse ailleurs</p>
+      <h2 class="sec-title">Plusieurs paniers, un incident, un séjour</h2>
+    </div>
+    <p class="sec-note">Les trois écrans que les marketplaces traitent mal : la commande multi-commerces, l'annulation,
+       et la lecture des dépenses au moment du départ — où le room service croise les cautions.</p>
+
+    <div class="row trio">
+
+      <!-- G : PANIERS -->
+      <div>
+        <div class="frame">
+          <div class="phone">
+            <div class="statusbar"><span>19:04</span><span class="sig"><i style="height:4px"></i><i style="height:6px"></i><i style="height:8px"></i><i style="height:10px"></i></span></div>
+            <div class="scr">
+              <div class="apphead">
+                <p class="hello">Vos paniers</p>
+                <p class="place">2 paniers en cours · B204</p>
+              </div>
+              <div class="pad">
+                <div class="card flat">
+                  <div class="merch">
+                    <span class="logo">LR</span>
+                    <div class="grow" style="flex:1">
+                      <div class="line"><p class="t">Le Refuge</p><p class="t">73,50 €</p></div>
+                      <p class="s">2 articles · créneau 19:30 – 20:00</p>
+                      <button class="btn ghost sm">Reprendre</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card flat">
+                  <div class="merch">
+                    <span class="logo">CA</span>
+                    <div class="grow" style="flex:1">
+                      <div class="line"><p class="t">Chez Alfred</p><p class="t">25,00 €</p></div>
+                      <p class="s">1 planche · ferme à 20:30</p>
+                      <div class="meta"><span class="pill wait">Commander avant 20:00</span></div>
+                      <button class="btn ghost sm">Reprendre</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card sandc">
+                  <p class="k">Pourquoi deux paniers</p>
+                  <p class="s">Chaque commerce prépare et livre séparément. Deux commandes, deux livraisons, deux frais — et deux horaires possibles.</p>
+                </div>
+              </div>
+            </div>
+            <nav class="tabs">
+              <span class="tab"><svg viewBox="0 0 24 24"><path d="M12 3v4M5 12H3m18 0h-2M6 6l2 2m8-2-2 2"/><circle cx="12" cy="14" r="6"/></svg>Séjour</span>
+              <span class="tab on"><svg viewBox="0 0 24 24"><path d="M4 11 12 4l8 7v8a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1z"/></svg>Logement</span>
+              <span class="tab"><svg viewBox="0 0 24 24"><path d="M4 20V7l6-3 6 3v13M4 20h16M16 20V10l4 2v8M8 12h2m-2 4h2"/></svg>Résidence</span>
+              <span class="tab"><svg viewBox="0 0 24 24"><path d="m3 18 6-12 5 8 3-4 4 8z"/></svg>Village</span>
+              </nav>
+          </div>
+        </div>
+        <div class="cap">
+          <h4>Assumer la séparation</h4>
+          <p>Plutôt que de simuler une commande unique impossible à tenir, l'app affiche les paniers côte à côte et rappelle l'heure limite de chacun.</p>
+          <p><b>À trancher :</b> frais de livraison groupés si un même livreur enchaîne deux commerces — arbitrage produit avant d'être technique.</p>
+        </div>
+      </div>
+
+      <!-- H : INCIDENT -->
+      <div>
+        <div class="frame">
+          <div class="phone">
+            <div class="statusbar"><span>19:04</span><span class="sig"><i style="height:4px"></i><i style="height:6px"></i><i style="height:8px"></i><i style="height:10px"></i></span></div>
+            <div class="scr">
+              <div class="apphead">
+                <p class="hello">Commande #A-2418</p>
+                <p class="place">Le Refuge · problème signalé</p>
+              </div>
+              <div class="pad">
+                <div class="card flat" style="border-color:#EFC9C5;background:#FDF3F2">
+                  <p class="k" style="color:var(--alert)">Commande annulée par le commerce</p>
+                  <p class="t">Le Refuge ne peut pas honorer ce créneau</p>
+                  <p class="s">Cuisine complète pour ce soir · annulé à 19:08</p>
+                </div>
+
+                <div class="card tint">
+                  <p class="k">Remboursement</p>
+                  <p class="t">73,50 € · sous 3 jours ouvrés</p>
+                  <p class="s">Sur la carte •••• 4242 · aucun débit conservé</p>
+                </div>
+
+                <p class="k" style="margin:12px 0 7px">Autres commerces disponibles</p>
+                <div class="card flat">
+                  <div class="merch">
+                    <span class="logo">CA</span>
+                    <div class="grow" style="flex:1">
+                      <div class="line"><p class="t">Chez Alfred</p><span class="pill go">20 min</span></div>
+                      <p class="s">Planches et fondue à emporter</p>
+                    </div>
+                  </div>
+                </div>
+
+                <button class="btn">Voir les commerces ouverts</button>
+                <button class="btn ghost sm">Contacter la conciergerie</button>
+              </div>
+            </div>
+            <nav class="tabs">
+              <span class="tab"><svg viewBox="0 0 24 24"><path d="M12 3v4M5 12H3m18 0h-2M6 6l2 2m8-2-2 2"/><circle cx="12" cy="14" r="6"/></svg>Séjour</span>
+              <span class="tab on"><svg viewBox="0 0 24 24"><path d="M4 11 12 4l8 7v8a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1z"/></svg>Logement</span>
+              <span class="tab"><svg viewBox="0 0 24 24"><path d="M4 20V7l6-3 6 3v13M4 20h16M16 20V10l4 2v8M8 12h2m-2 4h2"/></svg>Résidence</span>
+              <span class="tab"><svg viewBox="0 0 24 24"><path d="m3 18 6-12 5 8 3-4 4 8z"/></svg>Village</span>
+              </nav>
+          </div>
+        </div>
+        <div class="cap">
+          <h4>L'échec doit proposer une suite</h4>
+          <p>Le seul écran rouge du parcours. Il annonce l'annulation, garantit le remboursement <b>avec un délai chiffré</b>, puis rouvre immédiatement une alternative.</p>
+          <p><b>Règle :</b> une annulation commerçant remonte à la conciergerie — c'est elle qui porte la relation client, pas le commerce.</p>
+        </div>
+      </div>
+
+      <!-- I : DÉPENSES -->
+      <div>
+        <div class="frame">
+          <div class="phone">
+            <div class="statusbar"><span>19:04</span><span class="sig"><i style="height:4px"></i><i style="height:6px"></i><i style="height:8px"></i><i style="height:10px"></i></span></div>
+            <div class="scr">
+              <div class="apphead">
+                <p class="hello">Vos dépenses</p>
+                <p class="place">Séjour du 14 au 21 mars · B204</p>
+              </div>
+              <div class="pad">
+                <div class="card brand">
+                  <p class="k">Room service · 4 commandes</p>
+                  <p class="amount" style="font-size:26px">168,40 €</p>
+                  <p class="s">Toutes payées · reçus disponibles</p>
+                </div>
+
+                <div class="card flat">
+                  <div class="todo">
+                    <span class="num">1</span>
+                    <div class="grow"><p class="t">Le Refuge · 16 mars</p><p class="s">Fondue, Apremont</p></div>
+                    <p class="t">73,50 €</p>
+                  </div>
+                  <div class="todo">
+                    <span class="num">2</span>
+                    <div class="grow"><p class="t">Sherpa · 15 mars</p><p class="s">Courses du séjour</p></div>
+                    <p class="t">62,90 €</p>
+                  </div>
+                  <div class="todo">
+                    <span class="num">3</span>
+                    <div class="grow"><p class="t">Chez Alfred · 15 mars</p><p class="s">Planche savoyarde</p></div>
+                    <p class="t">32,00 €</p>
+                  </div>
+                  <button class="btn ghost sm">Télécharger les reçus</button>
+                </div>
+
+                <div class="card sandc">
+                  <div class="line">
+                    <div><p class="k">Caution du logement</p><p class="t">500 € · libérée le 22 mars</p></div>
+                    <span class="pill">Onglet Logement</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <nav class="tabs">
+              <span class="tab on"><svg viewBox="0 0 24 24"><path d="M12 3v4M5 12H3m18 0h-2M6 6l2 2m8-2-2 2"/><circle cx="12" cy="14" r="6"/></svg>Séjour</span>
+              <span class="tab"><svg viewBox="0 0 24 24"><path d="M4 11 12 4l8 7v8a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1z"/></svg>Logement</span>
+              <span class="tab"><svg viewBox="0 0 24 24"><path d="M4 20V7l6-3 6 3v13M4 20h16M16 20V10l4 2v8M8 12h2m-2 4h2"/></svg>Résidence</span>
+              <span class="tab"><svg viewBox="0 0 24 24"><path d="m3 18 6-12 5 8 3-4 4 8z"/></svg>Village</span>
+              </nav>
+          </div>
+        </div>
+        <div class="cap">
+          <h4>Room service et caution ne se mélangent pas</h4>
+          <p>Les commandes sont des achats fermes, la caution est une empreinte. Les afficher dans le même total serait une erreur de lecture au moment du départ — d'où le renvoi vers l'onglet Logement.</p>
+          <p>Cet écran alimente aussi l'après-séjour de la home contextuelle de la v1.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ SECTION 4 : TV ============ -->
+  <section>
+    <div class="sec-head">
+      <p class="eyebrow">04 — Version light TV</p>
+      <h2 class="sec-title">La TV montre, le téléphone commande</h2>
+    </div>
+    <p class="sec-note">Aucune saisie, aucun panier, aucun paiement sur la TV. Elle affiche ce qui est commandable
+       maintenant et un QR qui ouvre l'app mobile déjà contextualisée sur le logement et le commerce.</p>
+
+    <div class="tvwrap" style="margin-top:30px">
+      <div class="tvscreen">
+        <div class="tvcol">
+          <p class="k">Appartement B204 · ce soir</p>
+          <p style="font-family:'Archivo',sans-serif;font-weight:600;font-size:20px;margin:6px 0 14px">Livraison au logement</p>
+          <div class="tvrow"><b style="font-weight:600">Le Refuge</b><span>Savoyard · 25–35 min</span></div>
+          <div class="tvrow"><b style="font-weight:600">Chez Alfred</b><span>Bar à vins · ferme 20:30</span></div>
+          <div class="tvrow"><b style="font-weight:600">Sherpa</b><span>Épicerie · 45 min</span></div>
+          <div class="tvrow"><b style="font-weight:600">La Boulange</b><span>Précommande pour demain 7:00</span></div>
+        </div>
+        <div style="width:150px;flex:none;text-align:center">
+          <div class="qr">
+            <svg viewBox="0 0 40 40" fill="#06231D">
+              <rect x="2" y="2" width="11" height="11" fill="none" stroke="#06231D" stroke-width="3"/>
+              <rect x="27" y="2" width="11" height="11" fill="none" stroke="#06231D" stroke-width="3"/>
+              <rect x="2" y="27" width="11" height="11" fill="none" stroke="#06231D" stroke-width="3"/>
+              <rect x="18" y="4" width="3" height="3"/><rect x="18" y="11" width="3" height="6"/>
+              <rect x="24" y="18" width="3" height="3"/><rect x="18" y="24" width="6" height="3"/>
+              <rect x="30" y="20" width="3" height="8"/><rect x="35" y="24" width="3" height="3"/>
+              <rect x="20" y="31" width="3" height="7"/><rect x="27" y="33" width="8" height="3"/>
+              <rect x="4" y="20" width="8" height="3"/><rect x="11" y="18" width="3" height="3"/>
+            </svg>
+          </div>
+          <p class="s" style="color:#A9C3BC;margin-top:10px">Scannez pour commander depuis votre téléphone</p>
+        </div>
+      </div>
+      <div class="cap wide">
+        <h4>Le QR porte le contexte</h4>
+        <p>Le lien encode <b>le logement</b> et, si l'écran est sur une fiche commerce, <b>le commerce</b>. Le voyageur arrive directement sur la carte, sans ressaisir sa chambre.</p>
+        <p><b>À trancher :</b> le QR ouvre l'app installée (deep link) ou une web app — dépend de l'arbitrage BLE / natif déjà ouvert sur la v1. Le token du QR doit expirer avec le séjour.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p><strong>Ce que le wireframe fixe :</strong> entrée par les commerces et non par un catalogue · un panier par commerce, assumé ·
+      créneau choisi avant le panier · réutilisation du composant de paiement v1 · quatre états de suivi · room service séparé des cautions ·
+      TV en lecture seule.</p>
+    <p><strong>Ce qui reste à trancher :</strong> tri par défaut des commerces · frais groupés si course mutualisée · pourboire livreur et son
+      traitement dans le reversement · position du livreur en temps réel (natif + RGPD) · consigne des contenants · déclenchement du split
+      (livraison confirmée vs paiement) · statut du mandat de facturation entre Casamast et les commerçants.</p>
+    <p style="color:#6E8880;margin-top:16px">Wireframe basse fidélité — palette CSMART / Casamast. Contenus d'exemple.</p>
+  </footer>
+
+</div>
+
+<script>
+  const btn = document.getElementById('notes');
+  btn.addEventListener('click', () => {
+    const off = document.body.classList.toggle('no-notes');
+    btn.setAttribute('aria-pressed', String(!off));
+  });
+</script>
+</body>
+</html>
