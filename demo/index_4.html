@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>CSMART · Démonstrations</title>
+<meta name="description" content="Les maquettes CSMART Hospitality et RoomService, à montrer depuis un téléphone." />
+<meta name="theme-color" content="#06231D" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="CSMART" />
+<link rel="manifest" href="manifest.webmanifest" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --ink:#06231D; --ink-2:#0A2A24; --brand:#00A082; --brand-dk:#00604E;
+  --sand:#F1EADC; --amber:#E09A2E; --paper:#F6F9F8; --line:#DDE7E4;
+  --txt:#12211E; --txt-2:#5E6F6B; --txt-3:#8CA09B;
+  --r:16px;
+  --sans:'Inter',system-ui,-apple-system,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,monospace;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--paper);color:var(--txt);
+  font:400 16px/1.6 var(--sans);
+  padding-bottom:calc(28px + env(safe-area-inset-bottom));
+}
+
+/* ── bandeau ── */
+.top{
+  background:var(--ink);color:#fff;
+  padding:calc(26px + env(safe-area-inset-top)) 22px 30px;
+  border-radius:0 0 24px 24px;
+}
+.brand{
+  font:500 11px/1 var(--mono);letter-spacing:.18em;text-transform:uppercase;
+  color:var(--brand);margin:0 0 18px;
+}
+.top h1{
+  margin:0;font-size:27px;line-height:1.18;letter-spacing:-.02em;font-weight:700;
+}
+.top p{
+  margin:12px 0 0;font-size:15px;line-height:1.6;color:#A9C3BC;max-width:34ch;
+}
+
+/* ── contenu ── */
+main{padding:0 18px}
+.grp{margin:30px 0 0}
+.grp > h2{
+  margin:0 0 4px;font:500 10.5px/1 var(--mono);letter-spacing:.16em;
+  text-transform:uppercase;color:var(--brand-dk);
+}
+.grp > .sub{margin:0 0 14px;font-size:14px;color:var(--txt-2)}
+
+.card{
+  display:block;text-decoration:none;color:inherit;
+  background:#fff;border:1px solid var(--line);border-radius:var(--r);
+  padding:18px 18px 16px;margin:0 0 12px;
+  transition:transform .16s ease,border-color .16s ease;
+}
+.card:active{transform:scale(.985);border-color:var(--brand)}
+.card:focus-visible{outline:3px solid var(--brand);outline-offset:2px}
+.card h3{
+  margin:0 0 5px;font-size:17.5px;font-weight:700;letter-spacing:-.01em;
+  display:flex;align-items:center;gap:8px;
+}
+.card h3 .go{margin-left:auto;color:var(--brand);font-size:19px;line-height:1}
+.card p{margin:0;font-size:14.5px;line-height:1.55;color:var(--txt-2)}
+.meta{
+  margin:11px 0 0;display:flex;flex-wrap:wrap;gap:6px;
+}
+.tag{
+  font:500 10px/1 var(--mono);letter-spacing:.09em;text-transform:uppercase;
+  padding:6px 9px;border-radius:7px;background:var(--paper);color:var(--txt-2);
+}
+.tag.who{background:#E4F3EF;color:var(--brand-dk)}
+.tag.land{background:#FBF1DE;color:#8A5D10}
+
+/* ── encart conseil ── */
+.tip{
+  margin:30px 0 0;background:var(--sand);border-radius:var(--r);padding:18px 18px 16px;
+}
+.tip h2{margin:0 0 6px;font-size:15.5px;font-weight:700}
+.tip p{margin:0;font-size:14.5px;line-height:1.6;color:#4A5C58}
+
+footer{
+  margin:26px 0 0;padding:0 4px;
+  font:500 10.5px/1.7 var(--mono);letter-spacing:.07em;color:var(--txt-3);
+}
+
+@media (prefers-reduced-motion:reduce){
+  .card{transition:none}
+  .card:active{transform:none}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <p class="brand">Casamast SmartHome</p>
+  <h1>CSMART<br />Démonstrations</h1>
+  <p>Les maquettes du produit, à ouvrir devant un partenaire. Rien à installer.</p>
+</header>
+
+<main>
+
+  <section class="grp">
+    <h2>Hospitality</h2>
+    <p class="sub">La conciergerie numérique de la résidence.</p>
+
+    <a class="card" href="hospitality.html">
+      <h3>Parcours voyageur <span class="go">→</span></h3>
+      <p>L'arrivée, les services de la résidence, la domotique de l'appartement, l'assistance.</p>
+      <div class="meta">
+        <span class="tag who">Syndic · propriétaire</span>
+        <span class="tag">5 min</span>
+      </div>
+    </a>
+  </section>
+
+  <section class="grp">
+    <h2>RoomService</h2>
+    <p class="sub">La place de marché du village.</p>
+
+    <a class="card" href="roomservice-voyageur.html">
+      <h3>Parcours voyageur <span class="go">→</span></h3>
+      <p>Choisir un commerce, composer le panier, payer, suivre la livraison jusqu'à la porte.</p>
+      <div class="meta">
+        <span class="tag who">Commerçant</span>
+        <span class="tag">4 min</span>
+      </div>
+    </a>
+
+    <a class="card" href="roomservice-partenaires.html">
+      <h3>Commerçant et livreur <span class="go">→</span></h3>
+      <p>Le ticket de préparation, les conditions de service, la rupture en un geste, la ventilation des revenus. Puis les écrans du livreur.</p>
+      <div class="meta">
+        <span class="tag who">Commerçant · livreur</span>
+        <span class="tag">6 min</span>
+      </div>
+    </a>
+  </section>
+
+  <section class="grp">
+    <h2>Affichage TV</h2>
+    <p class="sub">L'écran du salon, quand personne ne regarde son téléphone.</p>
+
+    <a class="card" href="tv-roomservice.html">
+      <h3>RoomService à la télé <span class="go">→</span></h3>
+      <p>Les commerces ouverts ce soir et le QR code qui ouvre la commande sur le téléphone.</p>
+      <div class="meta">
+        <span class="tag who">Commerçant · syndic</span>
+        <span class="tag land">Tourner le téléphone</span>
+      </div>
+    </a>
+
+    <a class="card" href="tv-bulletin.html">
+      <h3>Bulletin du domaine <span class="go">→</span></h3>
+      <p>Remontées mécaniques et pistes ouvertes, mis à jour automatiquement depuis les données de la station.</p>
+      <div class="meta">
+        <span class="tag who">Syndic · office de tourisme</span>
+        <span class="tag land">Tourner le téléphone</span>
+      </div>
+    </a>
+  </section>
+
+  <div class="tip">
+    <h2>À garder sous la main</h2>
+    <p>Ajoutez cette page à l'écran d'accueil : elle s'ouvre alors en plein écran, sans barre d'adresse, et ressemble à une application. Sur iPhone, bouton Partager puis « Sur l'écran d'accueil ». Sur Android, menu ⋮ puis « Ajouter à l'écran d'accueil ».</p>
+  </div>
+
+  <footer>
+    Maquettes de travail · non contractuelles<br />
+    Casamast SmartHome · Arc 1950
+  </footer>
+
+</main>
+</body>
+</html>
