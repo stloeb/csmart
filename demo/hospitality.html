@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CSMART Hospitality mobile — Arc 1950 · Proposition d'ergonomie</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#06231D;
+    --ink2:#0C332A;
+    --line:rgba(255,255,255,.12);
+    --brand:#00A082;
+    --brand-dk:#00604E;
+    --brand-lt:#E4F4F0;
+    --gray:#969696;
+    --amber:#E09A2E;
+    --amber-lt:#FBF0DC;
+    --sand:#F1EADC;
+    --alert:#C9483E;
+    --screen:#FFFFFF;
+    --screen-alt:#F3F7F6;
+    --text:#12211E;
+    --text-2:#5E6F6B;
+    --radius:14px;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    background:var(--ink);
+    color:#EAF3F0;
+    font-family:'Inter',system-ui,sans-serif;
+    -webkit-font-smoothing:antialiased;
+    background-image:radial-gradient(900px 500px at 12% -8%, rgba(0,160,130,.20), transparent 60%);
+  }
+  .wrap{max-width:1240px;margin:0 auto;padding:40px 20px 90px}
+
+  /* ---------- board header ---------- */
+  .eyebrow{
+    font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--brand);
+  }
+  .board-title{
+    font-family:'Archivo',sans-serif;font-weight:700;font-size:clamp(28px,5vw,46px);
+    line-height:1.04;letter-spacing:-.02em;margin:14px 0 0;max-width:16ch;
+  }
+  .board-title em{font-style:normal;color:var(--brand)}
+  .board-sub{color:#A9C3BC;max-width:58ch;margin:16px 0 0;font-size:15px;line-height:1.6}
+  .toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:26px}
+  .toggle{
+    display:inline-flex;align-items:center;gap:9px;cursor:pointer;
+    font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;
+    background:rgba(255,255,255,.06);border:1px solid var(--line);color:#DCEAE6;
+    padding:9px 14px;border-radius:999px;
+  }
+  .toggle:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+  .dot{width:8px;height:8px;border-radius:50%;background:var(--brand);transition:background .2s}
+  body.no-notes .dot{background:#5A6E69}
+  .legend{display:flex;flex-wrap:wrap;gap:14px;margin-top:22px;font-size:12px;color:#9FB8B2}
+  .legend span{display:inline-flex;align-items:center;gap:7px}
+  .chip{width:10px;height:10px;border-radius:3px;display:inline-block}
+
+  /* ---------- sections ---------- */
+  section{margin-top:64px;border-top:1px solid var(--line);padding-top:26px}
+  .sec-head{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:baseline}
+  .sec-title{font-family:'Archivo',sans-serif;font-weight:600;font-size:22px;letter-spacing:-.01em;margin:0}
+  .sec-note{color:#9FB8B2;font-size:14px;max-width:62ch;margin:10px 0 0;line-height:1.6}
+
+  .row{
+    display:grid;gap:26px;margin-top:30px;
+    grid-template-columns:repeat(auto-fit,minmax(272px,1fr));
+    align-items:start;
+  }
+  .row.trio{max-width:1000px}
+
+  /* the phase rail — signature device */
+  .rail{position:relative;margin-top:34px;padding-top:26px}
+  .rail::before{
+    content:"";position:absolute;top:9px;left:6%;right:6%;height:1px;
+    background:linear-gradient(90deg,transparent,var(--brand),var(--brand),transparent);
+    opacity:.5;
+  }
+  .rail .row{margin-top:0}
+  .stage{position:relative}
+  .stage-tag{
+    font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;color:var(--brand);
+    text-align:center;margin-bottom:14px;position:relative;
+  }
+  .stage-tag::before{
+    content:"";position:absolute;top:-24px;left:50%;transform:translateX(-50%);
+    width:9px;height:9px;border-radius:50%;background:var(--brand);box-shadow:0 0 0 4px var(--ink);
+  }
+  @media (max-width:900px){ .rail::before{display:none} .stage-tag::before{display:none} }
+
+  /* ---------- phone ---------- */
+  .frame{margin:0 auto;width:100%;max-width:300px}
+  .phone{
+    width:100%;height:604px;background:var(--screen);border-radius:34px;
+    border:1px solid rgba(255,255,255,.18);
+    box-shadow:0 26px 50px -22px rgba(0,0,0,.8), 0 0 0 7px #0A2A24;
+    overflow:hidden;display:flex;flex-direction:column;color:var(--text);position:relative;
+  }
+  .statusbar{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:11px 18px 5px;font-size:11px;font-weight:600;color:var(--text);
+    font-family:'JetBrains Mono',monospace;
+  }
+  .statusbar .sig{display:flex;gap:3px;align-items:flex-end}
+  .statusbar .sig i{width:3px;background:var(--text);border-radius:1px;display:block}
+
+  .scr{flex:1;overflow:hidden;position:relative}
+  .scr::after{
+    content:"";position:absolute;left:0;right:0;bottom:0;height:26px;
+    background:linear-gradient(transparent,#fff);pointer-events:none;
+  }
+  .pad{padding:4px 16px 0}
+
+  .apphead{padding:6px 16px 12px}
+  .hello{font-family:'Archivo',sans-serif;font-weight:600;font-size:18px;letter-spacing:-.01em;margin:0}
+  .place{font-size:11.5px;color:var(--text-2);margin:3px 0 0}
+
+  .card{background:var(--screen-alt);border-radius:var(--radius);padding:12px 13px;margin-bottom:9px}
+  .card.brand{background:var(--brand-dk);color:#fff}
+  .card.tint{background:var(--brand-lt)}
+  .card.amber{background:var(--amber-lt)}
+  .card.sandc{background:var(--sand)}
+  .card.flat{background:#fff;border:1px solid #E4EAE8}
+
+  .k{font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--text-2)}
+  .card.brand .k{color:rgba(255,255,255,.66)}
+  .t{font-weight:600;font-size:13.5px;margin:4px 0 0;letter-spacing:-.005em}
+  .s{font-size:11.5px;color:var(--text-2);margin:3px 0 0;line-height:1.45}
+  .card.brand .s{color:rgba(255,255,255,.78)}
+
+  .btn{
+    display:block;width:100%;text-align:center;background:var(--brand);color:#fff;
+    border:0;border-radius:11px;padding:11px;font-family:'Inter',sans-serif;
+    font-weight:600;font-size:13px;margin-top:10px;
+  }
+  .btn.ghost{background:#fff;color:var(--brand-dk);border:1px solid var(--brand)}
+  .btn.amber{background:var(--amber);color:#3A2A08}
+  .btn.dim{background:#E7ECEA;color:#8A9A96}
+  .btn.sm{padding:8px;font-size:12px;border-radius:9px}
+
+  .unlock{
+    width:100%;border:0;border-radius:16px;background:var(--brand);color:#fff;
+    padding:16px 14px;display:flex;align-items:center;gap:12px;text-align:left;margin-bottom:9px;
+  }
+  .unlock .ring{
+    width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.18);
+    display:grid;place-items:center;flex:none;
+  }
+  .unlock b{display:block;font-family:'Archivo',sans-serif;font-size:15px;font-weight:600}
+  .unlock span{font-size:11px;color:rgba(255,255,255,.8)}
+
+  .mini{display:flex;gap:8px;margin-bottom:10px}
+  .mini button{
+    flex:1;border:1px solid #DDE5E3;background:#fff;border-radius:11px;padding:9px 6px;
+    font-family:'Inter',sans-serif;font-size:10.5px;font-weight:500;color:var(--text);line-height:1.3;
+  }
+
+  .line{display:flex;justify-content:space-between;align-items:center;gap:8px}
+  .pill{
+    font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.06em;text-transform:uppercase;
+    padding:3px 7px;border-radius:999px;background:#fff;color:var(--text-2);border:1px solid #DDE5E3;flex:none;
+  }
+  .pill.go{background:var(--brand);color:#fff;border-color:var(--brand)}
+  .pill.wait{background:var(--amber);color:#3A2A08;border-color:var(--amber)}
+  .pill.off{background:#EAEFED;color:#8A9A96}
+
+  .todo{display:flex;gap:10px;align-items:flex-start;padding:10px 0;border-bottom:1px solid #E7EDEB}
+  .todo:last-child{border-bottom:0}
+  .num{
+    font-family:'JetBrains Mono',monospace;font-size:9.5px;color:#fff;background:var(--brand-dk);
+    width:18px;height:18px;border-radius:5px;display:grid;place-items:center;flex:none;margin-top:1px;
+  }
+  .todo .grow{flex:1;min-width:0}
+  .todo .t{margin:0}
+
+  .steps{display:flex;align-items:center;gap:4px;margin-top:9px}
+  .steps i{height:3px;flex:1;border-radius:2px;background:#DCE4E2;display:block}
+  .steps i.on{background:var(--brand)}
+  .steps i.now{background:var(--amber)}
+
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+  .poi{background:var(--screen-alt);border-radius:12px;padding:10px}
+  .poi .t{font-size:12px}
+  .poi .s{font-size:10.5px}
+
+  .tabs{
+    display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid #E7EDEB;
+    background:#fff;padding:7px 4px 11px;flex:none;
+  }
+  .tab{display:flex;flex-direction:column;align-items:center;gap:4px;color:#9AA9A5;font-size:9.5px;font-weight:500}
+  .tab.on{color:var(--brand-dk)}
+  .tab svg{width:19px;height:19px;stroke:currentColor;fill:none;stroke-width:1.7}
+
+  .sheet{
+    position:absolute;left:0;right:0;bottom:0;background:#fff;border-radius:22px 22px 0 0;
+    box-shadow:0 -18px 40px rgba(6,35,29,.28);padding:14px 16px 18px;
+  }
+  .grab{width:36px;height:4px;border-radius:2px;background:#DCE4E2;margin:0 auto 12px}
+  .scrim{position:absolute;inset:0;background:rgba(6,35,29,.42)}
+
+  .amount{font-family:'Archivo',sans-serif;font-size:30px;font-weight:700;letter-spacing:-.02em;margin:2px 0 0}
+  .rule{height:1px;background:#E7EDEB;margin:11px 0}
+
+  /* ---------- captions ---------- */
+  .cap{margin-top:16px;max-width:300px;margin-left:auto;margin-right:auto}
+  .cap h4{
+    font-family:'Archivo',sans-serif;font-size:14px;font-weight:600;margin:0 0 6px;color:#FFFFFF;
+  }
+  .cap p{font-size:12.5px;line-height:1.55;color:#9FB8B2;margin:0}
+  .cap p + p{margin-top:7px}
+  .cap b{color:#CFE4DE;font-weight:600}
+  body.no-notes .cap{display:none}
+
+  footer{margin-top:70px;border-top:1px solid var(--line);padding-top:22px;color:#8FA8A2;font-size:12.5px;line-height:1.7}
+  footer strong{color:#CFE4DE}
+  @media (prefers-reduced-motion:no-preference){
+    .frame{transition:transform .25s ease}
+    .frame:hover{transform:translateY(-4px)}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <p class="eyebrow">Wireframe · v1 voyageur · Arc 1950</p>
+  <h1 class="board-title">CSMART Hospitality <em>mobile</em></h1>
+  <p class="board-sub">Quatre onglets, une home qui suit le fil du séjour, un seul tunnel de paiement.
+     Cautions et livret d'accueil sont rattachés au logement. Bubble.io responsive, données Supabase via Node-RED.</p>
+
+  <div class="toolbar">
+    <button class="toggle" id="notes" aria-pressed="true"><span class="dot"></span>Annotations</button>
+  </div>
+
+  <div class="legend">
+    <span><i class="chip" style="background:#00A082"></i>Accès &amp; identité</span>
+    <span><i class="chip" style="background:#E09A2E"></i>Action payante / service</span>
+    <span><i class="chip" style="background:#F1EADC"></i>Information</span>
+    <span><i class="chip" style="background:#C9483E"></i>Urgence</span>
+  </div>
+
+  <!-- ============ SECTION 1 : HOME ============ -->
+  <section>
+    <div class="sec-head">
+      <p class="eyebrow">01 — Onglet Séjour</p>
+      <h2 class="sec-title">La home suit le fil du séjour</h2>
+    </div>
+    <p class="sec-note">Le même onglet affiche trois choses différentes selon le moment. Rien n'est caché :
+       ce qui n'est pas la priorité du jour reste accessible dans les trois autres onglets.</p>
+
+    <div class="rail">
+      <div class="row trio">
+
+        <!-- AVANT -->
+        <div class="stage">
+          <p class="stage-tag">J-3 · AVANT L'ARRIVÉE</p>
+          <div class="frame">
+            <div class="phone">
+              <div class="statusbar"><span>09:41</span><span class="sig"><i style="height:4px"></i><i style="height:6px"></i><i style="height:8px"></i><i style="height:10px"></i></span></div>
+              <div class="scr">
+                <div class="apphead">
+                  <p class="hello">Bonjour Claire</p>
+                  <p class="place">Hameau du Glacier · Arc 1950</p>
+                </div>
+                <div class="pad">
+                  <div class="card brand">
+                    <p class="k">Arrivée samedi 14 mars · 14:00</p>
+                    <p class="t" style="font-size:15px">Votre séjour commence dans 3 jours</p>
+                    <div class="steps"><i class="now"></i><i></i><i></i><i></i></div>
+                  </div>
+
+                  <div class="card flat">
+                    <p class="k">À faire avant de partir</p>
+                    <div class="todo">
+                      <span class="num">1</span>
+                      <div class="grow">
+                        <p class="t">Caution du logement</p>
+                        <p class="s">500 € · empreinte bancaire, aucun débit</p>
+                      </div>
+                      <span class="pill wait">À faire</span>
+                    </div>
+                    <div class="todo">
+                      <span class="num">2</span>
+                      <div class="grow">
+                        <p class="t">Forfaits de ski</p>
+                        <p class="s">6 jours Les Arcs · 4 personnes</p>
+                      </div>
+                      <span class="pill wait">À faire</span>
+                    </div>
+                    <div class="todo">
+                      <span class="num">3</span>
+                      <div class="grow">
+                        <p class="t">Pré-enregistrement</p>
+                        <p class="s">Pièce d'identité des occupants</p>
+                      </div>
+                      <span class="pill go">Fait</span>
+                    </div>
+                    <button class="btn amber">Verser la caution — 500 €</button>
+                  </div>
+
+                  <div class="card sandc">
+                    <div class="line">
+                      <div><p class="k">Arc 1950 · aujourd'hui</p><p class="t">−4 °C · 20 cm de neige fraîche</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <nav class="tabs">
+                <span class="tab on"><svg viewBox="0 0 24 24"><path d="M12 3v4M5 12H3m18 0h-2M6 6l2 2m8-2-2 2"/><circle cx="12" cy="14" r="6"/></svg>Séjour</span>
+                <span class="tab"><svg viewBox="0 0 24 24"><path d="M4 11 12 4l8 7v8a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1z"/></svg>Logement</span>
+                <span class="tab"><svg viewBox="0 0 24 24"><path d="M4 20V7l6-3 6 3v13M4 20h16M16 20V10l4 2v8M8 12h2m-2 4h2"/></svg>Résidence</span>
+                <span class="tab"><svg viewBox="0 0 24 24"><path d="m3 18 6-12 5 8 3-4 4 8z"/></svg>Village</span>
+              </nav>
+            </div>
+          </div>
+          <div class="cap">
+            <h4>Avant : une liste, pas un catalogue</h4>
+            <p>Trois tâches maximum, dans l'ordre où elles bloquent l'arrivée. La caution passe en premier parce qu'elle conditionne la remise des accès.</p>
+            <p><b>Mot-clé :</b> « empreinte bancaire, aucun débit » — écrit sur la carte, pas dans une FAQ.</p>
+          </div>
+        </div>
+
+        <!-- PENDANT -->
+        <div class="stage">
+          <p class="stage-tag">J+2 · EN SÉJOUR</p>
+          <div class="frame">
+            <div class="phone">
+              <div class="statusbar"><span>09:41</span><span class="sig"><i style="height:4px"></i><i style="height:6px"></i><i style="height:8px"></i><i style="height:10px"></i></span></div>
+              <div class="scr">
+                <div class="apphead">
+                  <p class="hello">Appartement B204</p>
+                  <p class="place">Jour 2 sur 7 · départ samedi 10:00</p>
+                </div>
+                <div class="pad">
+                  <button class="unlock">
+                    <span class="ring"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0"/></svg></span>
+                    <span><b>Ouvrir la porte</b><span>Appartement B204 · 2ᵉ étage</span></span>
+                  </button>
+                  <div class="mini">
+                    <button>Hall<br>du bâtiment</button>
+                    <button>Casier<br>à skis 12</button>
+                    <button>Parking<br>niveau −2</button>
+                  </div>
+
+                  <div class="card amber">
+                    <div class="line">
+                      <div><p class="k">Room service · Le Refuge</p><p class="t">Commande en préparation</p><p class="s">Livraison au B204 vers 19:45</p></div>
+                      <span class="pill wait">En cours</span>
+                    </div>
+                  </div>
+
+                  <div class="card sandc">
+                    <p class="k">Arc 1950 · pistes ouvertes 84 %</p>
+                    <p class="t">−4 °C · vent faible · visibilité bonne</p>
+                  </div>
+
+                  <div class="card flat">
+                    <div class="line">
+                      <div><p class="k">Demain 09:00</p><p class="t">Cours de ski · ESF, Front de neige</p></div>
+                      <span class="pill">Réservé</span>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="line">
+                      <div><p class="k">Caution</p><p class="t">500 € bloqués</p><p class="s">Libération prévue le 21 mars</p></div>
+                      <span class="pill go">Active</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <nav class="tabs">
+                <span class="tab on"><svg viewBox="0 0 24 24"><path d="M12 3v4M5 12H3m18 0h-2M6 6l2 2m8-2-2 2"/><circle cx="12" cy="14" r="6"/></svg>Séjour</span>
+                <span class="tab"><svg viewBox="0 0 24 24"><path d="M4 11 12 4l8 7v8a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1z"/></svg>Logement</span>
+                <span class="tab"><svg viewBox="0 0 24 24"><path d="M4 20V7l6-3 6 3v13M4 20h16M16 20V10l4 2v8M8 12h2m-2 4h2"/></svg>Résidence</span>
+                <span class="tab"><svg viewBox="0 0 24 24"><path d="m3 18 6-12 5 8 3-4 4 8z"/></svg>Village</span>
+              </nav>
+            </div>
+          </div>
+          <div class="cap">
+            <h4>Pendant : l'ouverture au premier tap</h4>
+            <p>C'est le geste répété 10 à 20 fois par jour. Il occupe le haut de l'écran, avec les trois accès secondaires du séjour juste dessous.</p>
+            <p><b>À trancher :</b> ouverture cloud (API serrure) = 100 % web. Ouverture BLE = wrapper natif obligatoire.</p>
+          </div>
+        </div>
+
+        <!-- APRES -->
+        <div class="stage">
+          <p class="stage-tag">J+1 · APRÈS LE DÉPART</p>
+          <div class="frame">
+            <div class="phone">
+              <div class="statusbar"><span>09:41</span><span class="sig"><i style="height:4px"></i><i style="height:6px"></i><i style="height:8px"></i><i style="height:10px"></i></span></div>
+              <div class="scr">
+                <div class="apphead">
+                  <p class="hello">Séjour terminé</p>
+                  <p class="place">Hameau du Glacier · 14 au 21 mars</p>
+                </div>
+                <div class="pad">
+                  <div class="card tint">
+                    <p class="k">Caution du logement</p>
+                    <p class="t" style="font-size:15px">Libération en cours — 500 €</p>
+                    <p class="s">État des lieux validé le 21 mars. Fonds disponibles sous 7 jours ouvrés.</p>
+                    <div class="steps"><i class="on"></i><i class="on"></i><i class="now"></i><i></i></div>
+                    <p class="s" style="margin-top:7px">Versée · Bloquée · <b>Libération</b> · Reçue</p>
+                  </div>
+
+                  <div class="card flat">
+                    <div class="line">
+                      <div><p class="k">Vos dépenses du séjour</p><p class="t">Room service · 34,50 €</p><p class="s">2 commandes · payées</p></div>
+                      <span class="pill">Reçu</span>
+                    </div>
+                    <div class="rule"></div>
+                    <div class="line">
+                      <div><p class="t">Forfaits Les Arcs · 1 128 €</p><p class="s">6 jours · 4 personnes</p></div>
+                      <span class="pill">Reçu</span>
+                    </div>
+                    <button class="btn ghost sm">Télécharger les justificatifs</button>
+                  </div>
+
+                  <div class="card">
+                    <p class="k">Votre avis</p>
+                    <p class="t">Comment s'est passé le séjour ?</p>
+                    <button class="btn sm">Donner mon avis</button>
+                  </div>
+
+                  <div class="card" style="opacity:.55">
+                    <div class="line">
+                      <div><p class="k">Accès</p><p class="t">Clés désactivées</p></div>
+                      <span class="pill off">Terminé</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <nav class="tabs">
+                <span class="tab on"><svg viewBox="0 0 24 24"><path d="M12 3v4M5 12H3m18 0h-2M6 6l2 2m8-2-2 2"/><circle cx="12" cy="14" r="6"/></svg>Séjour</span>
+                <span class="tab"><svg viewBox="0 0 24 24"><path d="M4 11 12 4l8 7v8a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1z"/></svg>Logement</span>
+                <span class="tab"><svg viewBox="0 0 24 24"><path d="M4 20V7l6-3 6 3v13M4 20h16M16 20V10l4 2v8M8 12h2m-2 4h2"/></svg>Résidence</span>
+                <span class="tab"><svg viewBox="0 0 24 24"><path d="m3 18 6-12 5 8 3-4 4 8z"/></svg>Village</span>
+              </nav>
+            </div>
+          </div>
+          <div class="cap">
+            <h4>Après : répondre avant qu'on appelle</h4>
+            <p>« Où est ma caution ? » est le premier motif d'appel à la conciergerie. La barre d'état à quatre temps et la date annoncée suppriment l'appel.</p>
+            <p><b>Les accès grisés</b> plutôt que disparus : le voyageur comprend que c'est normal.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 2 : LES 3 ONGLETS ============ -->
+  <section>
+    <div class="sec-head">
+      <p class="eyebrow">02 — Logement · Résidence · Village</p>
+      <h2 class="sec-title">Trois onglets, trois périmètres de gouvernance</h2>
+    </div>
+    <p class="sec-note">La hiérarchie Unité → Bâtiment → Village devient la navigation. Cautions et livret d'accueil
+       sont au niveau du logement : ils appartiennent au contrat de séjour, pas au bâtiment.</p>
+
+    <div class="row">
+
+      <!-- LOGEMENT -->
+      <div>
+        <div class="frame">
+          <div class="phone">
+            <div class="statusbar"><span>09:41</span><span class="sig"><i style="height:4px"></i><i style="height:6px"></i><i style="height:8px"></i><i style="height:10px"></i></span></div>
+            <div class="scr">
+              <div class="apphead">
+                <p class="hello">Logement</p>
+                <p class="place">B204 · 6 personnes · 2ᵉ étage</p>
+              </div>
+              <div class="pad">
+                <button class="unlock" style="padding:13px 14px">
+                  <span class="ring"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0"/></svg></span>
+                  <span><b>Ouvrir la porte</b><span>Code de secours · Partager un accès</span></span>
+                </button>
+
+                <div class="card flat">
+                  <p class="k">Cautions</p>
+                  <div class="todo">
+                    <div class="grow"><p class="t">Logement · 500 €</p><p class="s">Bloquée jusqu'au 21 mars</p></div>
+                    <span class="pill go">Active</span>
+                  </div>
+                  <div class="todo">
+                    <div class="grow"><p class="t">Espace piscine · 50 €</p><p class="s">Bracelet d'accès · 4 personnes</p></div>
+                    <span class="pill wait">À verser</span>
+                  </div>
+                </div>
+
+                <div class="card sandc">
+                  <div class="line">
+                    <div><p class="k">Livret d'accueil</p><p class="t">Tout sur votre logement</p>
+                    <p class="s">Wi-Fi · électroménager · chauffage · tri · consignes de départ</p></div>
+                  </div>
+                  <button class="btn ghost sm">Ouvrir le livret</button>
+                  <p class="s" style="margin-top:6px">Disponible hors connexion</p>
+                </div>
+
+                <div class="card amber">
+                  <p class="k">Room service</p>
+                  <p class="t">Commander, livré au B204</p>
+                  <p class="s">4 commerces livrent ce soir</p>
+                </div>
+
+                <div class="grid2">
+                  <div class="poi"><p class="k">Confort</p><p class="t">21 °C</p><p class="s">Chauffage, volets</p></div>
+                  <div class="poi"><p class="k">Énergie</p><p class="t">48 kWh</p><p class="s">Depuis l'arrivée</p></div>
+                </div>
+              </div>
+            </div>
+            <nav class="tabs">
+              <span class="tab"><svg viewBox="0 0 24 24"><path d="M12 3v4M5 12H3m18 0h-2M6 6l2 2m8-2-2 2"/><circle cx="12" cy="14" r="6"/></svg>Séjour</span>
+              <span class="tab on"><svg viewBox="0 0 24 24"><path d="M4 11 12 4l8 7v8a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1z"/></svg>Logement</span>
+              <span class="tab"><svg viewBox="0 0 24 24"><path d="M4 20V7l6-3 6 3v13M4 20h16M16 20V10l4 2v8M8 12h2m-2 4h2"/></svg>Résidence</span>
+              <span class="tab"><svg viewBox="0 0 24 24"><path d="m3 18 6-12 5 8 3-4 4 8z"/></svg>Village</span>
+            </nav>
+          </div>
+        </div>
+        <div class="cap">
+          <h4>Logement — le contrat de séjour</h4>
+          <p>Accès à l'unité, <b>les deux cautions</b>, <b>le livret d'accueil</b>, room service livré ici, confort et énergie.</p>
+          <p>La caution piscine reste ici même si l'équipement est au bâtiment : c'est l'occupant qui l'engage.</p>
+        </div>
+      </div>
+
+      <!-- RESIDENCE -->
+      <div>
+        <div class="frame">
+          <div class="phone">
+            <div class="statusbar"><span>09:41</span><span class="sig"><i style="height:4px"></i><i style="height:6px"></i><i style="height:8px"></i><i style="height:10px"></i></span></div>
+            <div class="scr">
+              <div class="apphead">
+                <p class="hello">Résidence</p>
+                <p class="place">Hameau du Glacier · bâtiment B</p>
+              </div>
+              <div class="pad">
+                <div class="card tint">
+                  <p class="k">Accès partagés</p>
+                  <div class="mini" style="margin:8px 0 0">
+                    <button>Hall<br>principal</button>
+                    <button>Local<br>à skis</button>
+                    <button>Parking<br>−2</button>
+                  </div>
+                  <div class="mini" style="margin:8px 0 0">
+                    <button>Piscine<br>&amp; spa</button>
+                    <button>Local<br>poussettes</button>
+                    <button>Ascenseur<br>service</button>
+                  </div>
+                </div>
+
+                <div class="card flat">
+                  <div class="line">
+                    <div><p class="k">Piscine &amp; spa</p><p class="t">Ouvert · 08:00 – 21:00</p><p class="s">Bracelet requis · 12 personnes max</p></div>
+                    <span class="pill go">Ouvert</span>
+                  </div>
+                </div>
+
+                <div class="card sandc">
+                  <p class="k">Info copropriété</p>
+                  <p class="t">Ascenseur B en maintenance jeudi</p>
+                  <p class="s">08:00 – 12:00 · escalier nord accessible</p>
+                </div>
+
+                <div class="card">
+                  <div class="line">
+                    <div><p class="k">Conciergerie</p><p class="t">Une demande, un incident ?</p><p class="s">Réponse sous 2 h · 07:30 – 20:00</p></div>
+                  </div>
+                  <button class="btn ghost sm">Contacter la conciergerie</button>
+                </div>
+
+                <div class="card flat" style="border-color:#F0C9C5">
+                  <div class="line">
+                    <div><p class="k" style="color:#C9483E">Urgence</p><p class="t">Astreinte 24/7</p></div>
+                    <span class="pill" style="background:#C9483E;color:#fff;border-color:#C9483E">Appeler</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <nav class="tabs">
+              <span class="tab"><svg viewBox="0 0 24 24"><path d="M12 3v4M5 12H3m18 0h-2M6 6l2 2m8-2-2 2"/><circle cx="12" cy="14" r="6"/></svg>Séjour</span>
+              <span class="tab"><svg viewBox="0 0 24 24"><path d="M4 11 12 4l8 7v8a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1z"/></svg>Logement</span>
+              <span class="tab on"><svg viewBox="0 0 24 24"><path d="M4 20V7l6-3 6 3v13M4 20h16M16 20V10l4 2v8M8 12h2m-2 4h2"/></svg>Résidence</span>
+              <span class="tab"><svg viewBox="0 0 24 24"><path d="m3 18 6-12 5 8 3-4 4 8z"/></svg>Village</span>
+            </nav>
+          </div>
+        </div>
+        <div class="cap">
+          <h4>Résidence — ce qui se partage</h4>
+          <p>Parties communes, règles d'usage, vie de la copropriété, conciergerie. C'est aussi l'onglet que le conseil syndical reconnaît comme le sien.</p>
+          <p>L'urgence est le seul endroit où le rouge apparaît.</p>
+        </div>
+      </div>
+
+      <!-- VILLAGE -->
+      <div>
+        <div class="frame">
+          <div class="phone">
+            <div class="statusbar"><span>09:41</span><span class="sig"><i style="height:4px"></i><i style="height:6px"></i><i style="height:8px"></i><i style="height:10px"></i></span></div>
+            <div class="scr">
+              <div class="apphead">
+                <p class="hello">Village</p>
+                <p class="place">Arc 1950 · Les Arcs · Paradiski</p>
+              </div>
+              <div class="pad">
+                <div class="card sandc">
+                  <div class="line">
+                    <div><p class="k">Aujourd'hui</p><p class="t">−4 °C · 20 cm fraîche</p><p class="s">84 % des pistes ouvertes</p></div>
+                    <span class="pill">Webcams</span>
+                  </div>
+                </div>
+
+                <div class="card amber">
+                  <p class="k">Forfaits de ski</p>
+                  <p class="t">Acheter vos forfaits Les Arcs</p>
+                  <p class="s">À recharger sur votre support ou à retirer en caisse</p>
+                  <button class="btn amber sm">Choisir mes forfaits</button>
+                </div>
+
+                <div class="card flat">
+                  <div class="line">
+                    <div><p class="k">Plan du village</p><p class="t">Commerces, navettes, front de neige</p></div>
+                  </div>
+                  <button class="btn ghost sm">Ouvrir le plan</button>
+                </div>
+
+                <p class="k" style="margin:12px 0 7px">Autour de vous</p>
+                <div class="grid2">
+                  <div class="poi"><p class="t">Restaurants</p><p class="s">14 adresses · 6 livrent</p></div>
+                  <div class="poi"><p class="t">Commerces</p><p class="s">9 ouverts</p></div>
+                  <div class="poi"><p class="t">Activités</p><p class="s">Motoneige, spa, ESF</p></div>
+                  <div class="poi"><p class="t">Services</p><p class="s">Location, garderie</p></div>
+                </div>
+              </div>
+            </div>
+            <nav class="tabs">
+              <span class="tab"><svg viewBox="0 0 24 24"><path d="M12 3v4M5 12H3m18 0h-2M6 6l2 2m8-2-2 2"/><circle cx="12" cy="14" r="6"/></svg>Séjour</span>
+              <span class="tab"><svg viewBox="0 0 24 24"><path d="M4 11 12 4l8 7v8a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1z"/></svg>Logement</span>
+              <span class="tab"><svg viewBox="0 0 24 24"><path d="M4 20V7l6-3 6 3v13M4 20h16M16 20V10l4 2v8M8 12h2m-2 4h2"/></svg>Résidence</span>
+              <span class="tab on"><svg viewBox="0 0 24 24"><path d="m3 18 6-12 5 8 3-4 4 8z"/></svg>Village</span>
+            </nav>
+          </div>
+        </div>
+        <div class="cap">
+          <h4>Village — la station</h4>
+          <p>Météo et neige, forfaits, plan, POI alimentés par Apidae et DATAtourisme. Le seul onglet où le contenu vient de l'extérieur.</p>
+          <p><b>À vérifier :</b> l'émission du forfait dépend de l'exploitant du domaine — e-forfait rechargeable ou retrait en caisse.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ SECTION 3 : PAIEMENT ============ -->
+  <section>
+    <div class="sec-head">
+      <p class="eyebrow">03 — Composant partagé</p>
+      <h2 class="sec-title">Un seul tunnel pour quatre objets payables</h2>
+    </div>
+    <p class="sec-note">Caution logement, caution piscine, room service, forfaits de ski : même feuille de paiement,
+       même vocabulaire, deux mécaniques Alpilink derrière. Un seul écran à construire et à maintenir dans Bubble.</p>
+
+    <div class="row" style="max-width:660px">
+
+      <div>
+        <div class="frame">
+          <div class="phone">
+            <div class="statusbar"><span>09:41</span><span class="sig"><i style="height:4px"></i><i style="height:6px"></i><i style="height:8px"></i><i style="height:10px"></i></span></div>
+            <div class="scr">
+              <div class="apphead" style="opacity:.5">
+                <p class="hello">Logement</p>
+                <p class="place">B204 · 6 personnes</p>
+              </div>
+              <div class="scrim"></div>
+              <div class="sheet">
+                <div class="grab"></div>
+                <p class="k">Caution du logement · empreinte bancaire</p>
+                <p class="amount">500,00 €</p>
+                <p class="s">Aucun débit sur votre compte. Le montant est simplement réservé, puis libéré après l'état des lieux.</p>
+                <div class="rule"></div>
+                <div class="line"><p class="s" style="margin:0">Réservation du</p><p class="t">14 mars</p></div>
+                <div class="line" style="margin-top:6px"><p class="s" style="margin:0">Libération prévue</p><p class="t">21 mars</p></div>
+                <div class="rule"></div>
+                <div class="line">
+                  <p class="s" style="margin:0">Paiement sécurisé · Alpilink</p>
+                  <span class="pill">3-D Secure</span>
+                </div>
+                <button class="btn amber">Continuer vers le paiement</button>
+                <button class="btn ghost sm" style="border:0;color:#5E6F6B">Plus tard</button>
+              </div>
+            </div>
+            <nav class="tabs" style="opacity:.5">
+              <span class="tab"><svg viewBox="0 0 24 24"><path d="M12 3v4M5 12H3m18 0h-2M6 6l2 2m8-2-2 2"/><circle cx="12" cy="14" r="6"/></svg>Séjour</span>
+              <span class="tab on"><svg viewBox="0 0 24 24"><path d="M4 11 12 4l8 7v8a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1z"/></svg>Logement</span>
+              <span class="tab"><svg viewBox="0 0 24 24"><path d="M4 20V7l6-3 6 3v13M4 20h16M16 20V10l4 2v8M8 12h2m-2 4h2"/></svg>Résidence</span>
+              <span class="tab"><svg viewBox="0 0 24 24"><path d="m3 18 6-12 5 8 3-4 4 8z"/></svg>Village</span>
+            </nav>
+          </div>
+        </div>
+        <div class="cap">
+          <h4>Une feuille, deux mécaniques</h4>
+          <p><b>Empreinte / Pay by Link</b> pour les cautions : réservation de fonds, libération datée.</p>
+          <p><b>Achat / Smart Commerce PSP</b> pour room service et forfaits : débit immédiat, reçu.</p>
+        </div>
+      </div>
+
+      <div>
+        <div class="frame">
+          <div class="phone">
+            <div class="statusbar"><span>09:41</span><span class="sig"><i style="height:4px"></i><i style="height:6px"></i><i style="height:8px"></i><i style="height:10px"></i></span></div>
+            <div class="scr">
+              <div class="apphead">
+                <p class="hello">Room service</p>
+                <p class="place">Le Refuge · livraison au B204</p>
+              </div>
+              <div class="pad">
+                <div class="card flat">
+                  <div class="line"><div><p class="t">Fondue savoyarde × 2</p><p class="s">Pain et charcuterie inclus</p></div><p class="t">44,00 €</p></div>
+                  <div class="rule"></div>
+                  <div class="line"><div><p class="t">Apremont 75 cl</p></div><p class="t">22,00 €</p></div>
+                  <div class="rule"></div>
+                  <div class="line"><div><p class="t">Livraison</p></div><p class="t">4,50 €</p></div>
+                </div>
+
+                <div class="card tint">
+                  <div class="line">
+                    <div><p class="k">Créneau de livraison</p><p class="t">Ce soir · 19:30 – 20:00</p></div>
+                    <span class="pill go">Dispo</span>
+                  </div>
+                </div>
+
+                <div class="card sandc">
+                  <p class="k">Instructions de livraison</p>
+                  <p class="s">Bâtiment B · 2ᵉ étage · le livreur est autorisé jusqu'au palier</p>
+                </div>
+
+                <div class="card flat">
+                  <div class="line"><p class="t" style="font-size:15px">Total</p><p class="amount" style="font-size:22px">70,50 €</p></div>
+                  <button class="btn amber">Payer et commander</button>
+                  <p class="s" style="text-align:center;margin-top:7px">Paiement sécurisé · Alpilink</p>
+                </div>
+              </div>
+            </div>
+            <nav class="tabs">
+              <span class="tab"><svg viewBox="0 0 24 24"><path d="M12 3v4M5 12H3m18 0h-2M6 6l2 2m8-2-2 2"/><circle cx="12" cy="14" r="6"/></svg>Séjour</span>
+              <span class="tab on"><svg viewBox="0 0 24 24"><path d="M4 11 12 4l8 7v8a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1z"/></svg>Logement</span>
+              <span class="tab"><svg viewBox="0 0 24 24"><path d="M4 20V7l6-3 6 3v13M4 20h16M16 20V10l4 2v8M8 12h2m-2 4h2"/></svg>Résidence</span>
+              <span class="tab"><svg viewBox="0 0 24 24"><path d="m3 18 6-12 5 8 3-4 4 8z"/></svg>Village</span>
+            </nav>
+          </div>
+        </div>
+        <div class="cap">
+          <h4>Le même écran, contenu différent</h4>
+          <p>Récapitulatif, montant, contexte de livraison ou de libération, puis un bouton unique. Le libellé du bouton dit ce qui se passe : « Payer et commander », « Continuer vers le paiement ».</p>
+          <p><b>Règle technique :</b> le statut vient de Supabase, alimenté par les webhooks Alpilink via Node-RED. Bubble n'interroge jamais le PSP.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p><strong>Ce que le wireframe fixe :</strong> 4 onglets · home contextuelle en 3 phases · cautions et livret d'accueil au niveau logement ·
+      un composant de paiement réutilisable · le rouge réservé à l'urgence.</p>
+    <p><strong>Ce qui reste à trancher :</strong> ouverture BLE ou cloud (détermine web vs wrapper natif) · mode d'émission des forfaits par l'exploitant du domaine ·
+      périmètre du livret disponible hors connexion.</p>
+    <p style="color:#6E8880;margin-top:16px">Wireframe basse fidélité — palette CSMART / Casamast. Contenus d'exemple.</p>
+  </footer>
+
+</div>
+
+<script>
+  const btn = document.getElementById('notes');
+  btn.addEventListener('click', () => {
+    const off = document.body.classList.toggle('no-notes');
+    btn.setAttribute('aria-pressed', String(!off));
+  });
+</script>
+</body>
+</html>
