@@ -2,25 +2,25 @@
   "ecusson": "LA",
   "station": "LES ARCS",
   "soustitre": "Arc 1950 · Paradiski · Bulletin du domaine",
-  "maj": "2026-08-22T22:49:00",
+  "maj": "2026-08-23T07:29:00",
   "source": "Lumiplan",
   "hero": [
     {
       "k": "Temp. sommet",
-      "v": "13°",
+      "v": "19°",
       "l": "GRAND COL",
       "c": ""
     },
     {
       "k": "Temp. station",
-      "v": "13°",
+      "v": "19°",
       "l": "ARC 2000 · 2000 m",
       "c": "n"
     },
     {
       "k": "Vent",
-      "v": "7 km/h",
-      "l": "Secteur O",
+      "v": "4 km/h",
+      "l": "Secteur N",
       "c": "w"
     },
     {
@@ -66,11 +66,11 @@
     {
       "lieu": "GRAND COL",
       "alt": 3000,
-      "ciel": "Soleil",
-      "matin": "8",
-      "aprem": "13",
-      "vent": "7",
-      "dir": "O",
+      "ciel": "Soleil voilé",
+      "matin": "11",
+      "aprem": "19",
+      "vent": "4",
+      "dir": "N",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "2",
@@ -80,11 +80,11 @@
     {
       "lieu": "ARC 2000",
       "alt": 2000,
-      "ciel": "Soleil",
-      "matin": "8",
-      "aprem": "13",
-      "vent": "7",
-      "dir": "O",
+      "ciel": "Soleil voilé",
+      "matin": "11",
+      "aprem": "19",
+      "vent": "4",
+      "dir": "N",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "1",
@@ -94,11 +94,11 @@
     {
       "lieu": "ARC 1600",
       "alt": 1600,
-      "ciel": "Soleil",
-      "matin": "8",
-      "aprem": "13",
-      "vent": "7",
-      "dir": "O",
+      "ciel": "Soleil voilé",
+      "matin": "11",
+      "aprem": "19",
+      "vent": "4",
+      "dir": "N",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "5",
@@ -108,9 +108,9 @@
     {
       "lieu": "BOURG ST MAURICE",
       "alt": 800,
-      "ciel": "Soleil",
-      "matin": "12",
-      "aprem": "19",
+      "ciel": "Soleil voilé",
+      "matin": "11",
+      "aprem": "27",
       "vent": "0",
       "dir": "",
       "neige24": "0",
@@ -122,11 +122,11 @@
     {
       "lieu": "ARC 1800",
       "alt": 1800,
-      "ciel": "Soleil",
-      "matin": "7",
-      "aprem": "12",
-      "vent": "1",
-      "dir": "SO",
+      "ciel": "Soleil voilé",
+      "matin": "12",
+      "aprem": "17",
+      "vent": "6",
+      "dir": "E",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "5",
@@ -135,12 +135,12 @@
     }
   ],
   "previsions": {
-    "jourDate": "22/08/2026",
+    "jourDate": "23/08/2026",
     "jourTitre": "",
-    "jourTexte": "Le soleil brille sans discontinuer toute l'après-midi. Vent variable, faible. Cette nuit: Le ciel est bien étoilé. En début de nuit, vent de Nord-Nord-Est modéré, dans la Cluse de Chambéry et l'avant-Pays ; atténuation ensuite.",
-    "demainDate": "23/08/2026",
+    "jourTexte": "La journée est lumineuse, avec beaucoup de soleil. En milieu d'après-midi, vent s'établissant à l'Ouest modéré, en Tarentaise et Vanoise ; puis atténuation. Cette nuit: Le temps est calme et propice à l'observation des étoiles. En deuxième partie de nuit, vent de Nord-Est modéré, dans la Cluse de Chambéry et l'avant-Pays.",
+    "demainDate": "24/08/2026",
     "demainTitre": "",
-    "demainTexte": "Le temps est ensoleillé du matin au soir. Pour la nuit : Le temps est étoilé, mis à part vers minuit, quand quelques nuages se forment, dans le Beaufortain, en Tarentaise et Vanoise, dans les Bauges ainsi que dans les plaines et basses vallées. Ils se dissipent heureusement rapidement. En fin de nuit, vent s'établissant à l'Est modéré, dans la Combe de Savoie ; puis atténuation."
+    "demainTexte": "Le temps est souvent ensoleillé. En fin d'après-midi, des orages accompagnés de pluies se forment par places dans les Bauges ainsi que dans la Cluse de Chambéry et l'avant-Pays. C'est de la neige qui tombe au-dessus de 3550 mètres. Pour la nuit : Les averses locales se raréfient au fil des heures au profit d'éclaircies de plus en plus belles. Située vers 3550 mètres à la tombée du jour, la limite pluie-neige peut s'abaisser par la suite jusqu'à 3350 mètres. Etablissement, à la tombée du jour, d'un vent de Sud-Est modéré, en Maurienne ; atténuation ensuite."
   },
   "blocs": [
     {
@@ -167,7 +167,7 @@
       "sections": [
         {
           "titre": "Remontées Mécaniques",
-          "ouv": 0,
+          "ouv": 1,
           "tot": 2,
           "items": [
             {
@@ -175,7 +175,7 @@
               "c": "",
               "nm": "FUNICULAIRE",
               "hr": "07:15–19:30",
-              "e": "P",
+              "e": "O",
               "no": "Toutes les 30 min"
             },
             {
