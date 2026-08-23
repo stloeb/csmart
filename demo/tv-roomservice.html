@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CSMART RoomService — écran TV · Arc 1950</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#06231D; --ink2:#0C332A; --ink3:#123E33;
+    --brand:#00A082; --brand-dk:#00604E; --brand-lt:#7FD9C2;
+    --amber:#E09A2E; --sand:#F1EADC; --alert:#C9483E;
+    --txt:#EAF3F0; --txt2:#9FBDB5; --txt3:#6E8880;
+    --line:rgba(255,255,255,.10);
+    --u:1vh;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%;overflow:hidden;background:var(--ink)}
+  body{
+    font-family:'Inter',system-ui,sans-serif;color:var(--txt);
+    -webkit-font-smoothing:antialiased;
+    background-image:radial-gradient(120vh 80vh at 8% -20%, rgba(0,160,130,.18), transparent 62%);
+  }
+
+  .safe{height:100%;padding:4.2vh 4.4vw;display:flex;flex-direction:column}
+
+  /* ---------- en-tête ---------- */
+  header{display:flex;justify-content:space-between;align-items:flex-start;flex:none}
+  .brandline{display:flex;align-items:baseline}
+  .logo{font-family:'Archivo';font-weight:700;font-size:2.6vh;letter-spacing:.16em;color:var(--brand)}
+  .unit{font-family:'JetBrains Mono';font-size:1.7vh;letter-spacing:.1em;color:var(--txt3);text-transform:uppercase}
+  h1{font-family:'Archivo';font-weight:600;font-size:5.4vh;letter-spacing:-.02em;margin-top:1.1vh;line-height:1.05}
+  .sub{font-size:2.1vh;color:var(--txt2);margin-top:.9vh}
+  .clock{text-align:right;flex:none}
+  .time{font-family:'Archivo';font-weight:700;font-size:6.4vh;letter-spacing:-.02em;line-height:1}
+  .date{font-size:1.9vh;color:var(--txt2);margin-top:.5vh;text-transform:capitalize}
+  .meteo{font-size:1.9vh;color:var(--txt3);margin-top:.4vh}
+
+  /* ---------- corps ---------- */
+  .body{flex:1;display:flex;margin-top:3.4vh;min-height:0}
+  .main{width:64%;flex:none;min-width:0;position:relative}
+  .side{width:32%;margin-left:4%;flex:none;display:flex;flex-direction:column}
+
+  .panel{position:absolute;inset:0;opacity:0;transition:opacity .6s ease;pointer-events:none;display:flex;flex-direction:column}
+  .panel.on{opacity:1}
+  .ptitle{display:flex;align-items:baseline;flex:none;margin-bottom:2.2vh}
+  .ptitle b{font-family:'Archivo';font-weight:600;font-size:3.2vh;letter-spacing:-.01em}
+  .ptitle span{font-family:'JetBrains Mono';font-size:1.6vh;letter-spacing:.1em;text-transform:uppercase;color:var(--brand-lt)}
+
+  /* liste commerces */
+  .rows{display:flex;flex-direction:column;flex:1;min-height:0}
+  .row{
+    display:flex;align-items:center;gap:1.6vw;background:var(--ink2);
+    border:1px solid var(--line);border-radius:1.6vh;padding:1.9vh 2vw;flex:1;overflow:hidden;
+  }
+  .row.shut{background:rgba(12,51,42,.45);border-color:rgba(255,255,255,.06)}
+  .mark{
+    width:7vh;height:7vh;border-radius:1.4vh;background:var(--ink3);flex:none;
+    display:grid;place-items:center;font-family:'Archivo';font-weight:700;font-size:2.3vh;color:var(--brand-lt);
+  }
+  .row.shut .mark{background:rgba(255,255,255,.05);color:var(--txt3)}
+  .rmid{flex:1 1 auto;width:1%;min-width:0;overflow:hidden}
+  .rname{font-family:'Archivo';font-weight:600;font-size:2.9vh;letter-spacing:-.01em}
+  .row.shut .rname{color:var(--txt3)}
+  .rdesc{font-size:2vh;color:var(--txt2);margin-top:.4vh;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .row.shut .rdesc{color:var(--txt3)}
+  .rmeta{display:flex;flex:none;align-items:center}
+  .tag{
+    font-family:'JetBrains Mono';font-size:1.5vh;letter-spacing:.06em;text-transform:uppercase;
+    padding:.7vh 1vw;border-radius:99px;border:1px solid var(--line);color:var(--txt2);white-space:nowrap;
+  }
+  .tag.go{background:var(--brand);border-color:var(--brand);color:#04241D}
+  .tag.soon{background:var(--amber);border-color:var(--amber);color:#3A2A08}
+  .tag.off{background:transparent;color:var(--txt3)}
+
+  /* offres */
+  .cards{flex:1;min-height:0}
+  .card{
+    background:var(--ink2);border:1px solid var(--line);border-radius:1.8vh;
+    padding:2.4vh 2vw;display:flex;flex-direction:column;justify-content:space-between;
+  }
+  .card.hero{background:var(--brand-dk);border-color:transparent}
+  .card .k{font-family:'JetBrains Mono';font-size:1.5vh;letter-spacing:.1em;text-transform:uppercase;color:var(--brand-lt)}
+  .card.hero .k{color:rgba(255,255,255,.7)}
+  .card h3{font-family:'Archivo';font-weight:600;font-size:3vh;letter-spacing:-.01em;margin-top:1.1vh;line-height:1.15}
+  .card p{font-size:2vh;color:var(--txt2);margin-top:.9vh;line-height:1.4}
+  .card.hero p{color:rgba(255,255,255,.82)}
+  .card .who{font-size:1.9vh;color:var(--txt3);margin-top:1.4vh}
+  .card.hero .who{color:rgba(255,255,255,.6)}
+
+  /* ---------- colonne QR ---------- */
+  .qrbox{
+    background:#fff;border-radius:2vh;padding:2.4vh;display:flex;flex-direction:column;
+    align-items:center;justify-content:center;flex:none;
+  }
+  #qr{width:19vh;height:19vh;display:grid;place-items:center}
+  #qr img,#qr canvas{width:100%!important;height:100%!important;display:block}
+  .qrfall{width:100%;height:100%;background:#06231D;border-radius:1vh;display:grid;place-items:center;
+    font-family:'JetBrains Mono';font-size:1.4vh;color:#7FD9C2;text-align:center;padding:1vh}
+  .qrcap{color:#06231D;font-family:'Archivo';font-weight:600;font-size:2vh;margin-top:1.8vh;text-align:center;line-height:1.25}
+  .qrsub{color:#4A6A62;font-size:1.7vh;margin-top:.7vh;text-align:center;line-height:1.35}
+
+  .note{background:var(--ink2);border:1px solid var(--line);border-radius:1.8vh;padding:2.2vh 1.8vw;flex:1;display:flex;flex-direction:column;justify-content:center}
+  .note .k{font-family:'JetBrains Mono';font-size:1.5vh;letter-spacing:.1em;text-transform:uppercase;color:var(--txt3)}
+  .note b{display:block;font-family:'Archivo';font-weight:600;font-size:2.5vh;margin-top:1vh}
+  .note p{font-size:1.9vh;color:var(--txt2);margin-top:.8vh;line-height:1.45}
+
+  /* ---------- pied ---------- */
+  footer{flex:none;margin-top:3vh;display:flex;align-items:center}
+  .prog{flex:1;height:.5vh;background:rgba(255,255,255,.1);border-radius:99px;overflow:hidden}
+  .prog i{display:block;height:100%;width:0;background:var(--brand)}
+  .dots{display:flex}
+  .dots i{width:1vh;height:1vh;border-radius:50%;background:rgba(255,255,255,.18)}
+  .dots i.on{background:var(--brand)}
+  .foot{font-size:1.8vh;color:var(--txt3);white-space:nowrap}
+
+  .demo{
+    position:fixed;top:1.2vh;right:1.2vw;font-family:'JetBrains Mono';font-size:1.3vh;
+    letter-spacing:.08em;text-transform:uppercase;color:var(--txt3);
+    border:1px solid var(--line);border-radius:99px;padding:.6vh 1vw;
+  }
+  .demo.hide{display:none}
+
+  /* --- replis pour navigateurs anciens : ni gap, ni grid --- */
+  .brandline .unit{margin-left:1.4vw}
+  .ptitle span{margin-left:1.2vw}
+  .rows .row{margin-bottom:1.5vh}
+  .rows .row:last-child{margin-bottom:0}
+  .rmeta .tag{margin-left:.8vw}
+  .cards{display:flex;flex-wrap:wrap;align-content:stretch}
+  .cards .card{width:48%;margin:0 4% 2vh 0}
+  .cards .card:nth-child(2n){margin-right:0}
+  .cards .card:nth-child(n+3){margin-bottom:0}
+  .side .note{margin-top:2.2vh}
+  .dots i{margin-right:.7vw}
+  .prog{margin-right:1.4vw}
+  .main{overflow:hidden}
+  .panel{width:100%;overflow:hidden}
+  .rows{width:100%;overflow:hidden}
+  .rows .row{width:100%}
+  .cards{width:100%}
+</style>
+</head>
+<body>
+
+<div class="demo" id="demo">Maquette · données d'exemple</div>
+
+<div class="safe">
+
+  <header>
+    <div>
+      <div class="brandline">
+        <span class="logo">CSMART</span>
+        <span class="unit" id="unit">Appartement B204 · Hameau du Glacier</span>
+      </div>
+      <h1>Commandez, on vous livre</h1>
+      <p class="sub">Commerces d'Arc 1950 · livraison au logement</p>
+    </div>
+    <div class="clock">
+      <div class="time" id="clock">19:04</div>
+      <div class="date" id="today">samedi 14 mars</div>
+      <div class="meteo" id="meteo">−4 °C · 20 cm de neige fraîche</div>
+    </div>
+  </header>
+
+  <div class="body">
+    <div class="main" id="stage"></div>
+
+    <aside class="side">
+      <div class="qrbox">
+        <div id="qr"><div class="qrfall">QR</div></div>
+        <div class="qrcap">Scannez pour commander</div>
+        <div class="qrsub">Votre logement est déjà reconnu.<br>Aucune saisie, aucun compte à créer.</div>
+      </div>
+      <div class="note">
+        <span class="k">Bon à savoir</span>
+        <b id="noteTitle">Dernière commande à 21:00</b>
+        <p id="noteText">Le pain et les viennoiseries de demain matin se commandent la veille, jusqu'à 21:00.</p>
+      </div>
+    </aside>
+  </div>
+
+  <footer>
+    <div class="dots" id="dots"></div>
+    <div class="prog"><i id="prog"></i></div>
+    <span class="foot">Service opéré par Casamast · les prix sont ceux des commerces</span>
+  </footer>
+
+</div>
+
+<script>
+/* ------------------------------------------------------------------
+   DONNÉES — à remplacer par un appel API. Horaires et frais de
+   livraison sont des exemples : chaque commerce fixe les siens.
+   ------------------------------------------------------------------ */
+const CONFIG = {
+  logement: "Appartement B204 · Hameau du Glacier",
+  lienQR: "https://roomservice.csmart.fr/l/B204-HDG?src=tv",
+  derniereCommande: "21:00",
+  demo: true,
+  heureDemo: null,      /* ex. "19:04" pour figer l'heure lors d'une démonstration */
+  rotation: 14000
+};
+
+const COMMERCES = [
+  { nom:"Monkey Coffee",          initiales:"MC", type:"Crêperie et café",
+    detail:"Galettes, crêpes, petit-déjeuner", ouv:"08:00", fer:"22:00", delai:"20–30 min", frais:"3,50 €" },
+  { nom:"Arc Doré",               initiales:"AD", type:"Boulangerie",
+    detail:"Pains, viennoiseries, gâteaux",     ouv:"07:00", fer:"19:00", delai:"20 min",    frais:"2,50 €" },
+  { nom:"WoodBear",               initiales:"WB", type:"Pâtisserie et salon de thé",
+    detail:"Tartes, petit-déjeuner hebdomadaire", ouv:"08:00", fer:"19:00", delai:"25 min",  frais:"3,00 €" },
+  { nom:"Le Gourmet Montagnard",  initiales:"GM", type:"Épicerie fine",
+    detail:"Raclette, plateaux fromage et charcuterie", ouv:"09:00", fer:"20:00", delai:"30 min", frais:"4,50 €" },
+  { nom:"Wool Socks",             initiales:"WS", type:"Bar",
+    detail:"Bières artisanales, planches",      ouv:"16:00", fer:"01:00", delai:"15 min",    frais:"3,00 €" }
+];
+
+const SERVICES = [
+  { nom:"Évolution 2",   initiales:"E2", type:"École et activités",
+    detail:"Jardin d'enfants, cours, sorties encadrées", mention:"Sur réservation" },
+  { nom:"Précision Ski", initiales:"PS", type:"Location de matériel",
+    detail:"Skis, snowboards, chaussures",               mention:"Essayage en boutique" }
+];
+
+const OFFRES = [
+  { hero:true, k:"Demain matin", titre:"Le petit-déjeuner arrive avant vous",
+    texte:"Pains, viennoiseries et jus pressé déposés devant votre porte au créneau choisi.",
+    who:"Arc Doré · WoodBear · commande avant 21:00" },
+  { k:"Ce soir", titre:"Soirée raclette",
+    texte:"Fromage à la coupe, charcuterie de pays, pommes de terre — appareil prêté.",
+    who:"Le Gourmet Montagnard" },
+  { k:"Après-ski", titre:"Bières de la vallée",
+    texte:"Sélection de brasseries savoyardes, livrée fraîche en quinze minutes.",
+    who:"Wool Socks" },
+  { k:"À toute heure", titre:"Crêpes et galettes",
+    texte:"Sucrées, salées, sans gluten sur demande. Le classique qui met tout le monde d'accord.",
+    who:"Monkey Coffee" }
+];
+
+/* ------------------------------------------------------------------ */
+
+function $(sel){ return document.querySelector(sel); }
+function pad(n){ return (n < 10 ? "0" : "") + n; }
+function toMin(h){ var p = h.split(":"); return parseInt(p[0],10)*60 + parseInt(p[1],10); }
+function kids(el){ var a = [], i; for (i = 0; i < el.children.length; i++) a.push(el.children[i]); return a; }
+
+function maintenant(){
+  var d = new Date(), p;
+  if (CONFIG.heureDemo){
+    p = CONFIG.heureDemo.split(":");
+    d.setHours(parseInt(p[0],10), parseInt(p[1],10), 0, 0);
+  }
+  return d;
+}
+
+function statut(c, now){
+  var m = now.getHours()*60 + now.getMinutes();
+  var o = toMin(c.ouv), f = toMin(c.fer), ouvert, dansMoins, reste;
+  ouvert = (f > o) ? (m >= o && m < f) : (m >= o || m < f);
+  if (!ouvert){
+    dansMoins = (o - m + 1440) % 1440;
+    if (dansMoins <= 90) return { cls:"soon", txt:"Ouvre à " + c.ouv, shut:true };
+    return { cls:"off", txt:"Fermé", shut:true };
+  }
+  reste = (f - m + 1440) % 1440;
+  if (reste <= 45) return { cls:"soon", txt:"Ferme à " + c.fer, shut:false };
+  return { cls:"go", txt:"Ouvert", shut:false };
+}
+
+function ligne(c, s, meta){
+  return '<div class="row' + (s.shut ? ' shut' : '') + '">' +
+    '<div class="mark">' + c.initiales + '</div>' +
+    '<div class="rmid"><div class="rname">' + c.nom + '</div>' +
+    '<div class="rdesc">' + c.type + ' · ' + c.detail + '</div></div>' +
+    '<div class="rmeta">' + meta + '<span class="tag ' + s.cls + '">' + s.txt + '</span></div></div>';
+}
+
+function panelCommerces(){
+  var now = maintenant(), items = [], html = "", n = 0, i, c, s, meta, rank;
+  for (i = 0; i < COMMERCES.length; i++){
+    c = COMMERCES[i];
+    s = statut(c, now);
+    if (!s.shut) n++;
+    meta = s.shut ? "" :
+      '<span class="tag">' + c.delai + '</span><span class="tag">Livraison ' + c.frais + '</span>';
+    rank = (s.cls === "go") ? 0 : (s.cls === "soon" ? 1 : 2);
+    items.push({ html: ligne(c, s, meta), rank: rank, i: i });
+  }
+  items.sort(function(a, b){ return a.rank - b.rank || a.i - b.i; });
+  for (i = 0; i < items.length; i++) html += items[i].html;
+  return '<div class="ptitle"><b>Qui livre maintenant</b><span>' + n +
+         ' commerces ouverts</span></div><div class="rows">' + html + '</div>';
+}
+
+function panelOffres(){
+  var html = "", i, o;
+  for (i = 0; i < OFFRES.length; i++){
+    o = OFFRES[i];
+    html += '<div class="card' + (o.hero ? ' hero' : '') + '">' +
+      '<div><span class="k">' + o.k + '</span><h3>' + o.titre + '</h3><p>' + o.texte + '</p></div>' +
+      '<div class="who">' + o.who + '</div></div>';
+  }
+  return '<div class="ptitle"><b>La sélection du jour</b><span>Arc 1950</span></div>' +
+         '<div class="cards">' + html + '</div>';
+}
+
+function panelServices(){
+  var now = maintenant(), html = "", i, c, s;
+  for (i = 0; i < SERVICES.length; i++){
+    c = SERVICES[i];
+    html += ligne(c, { cls:"go", txt:c.mention, shut:false }, "");
+  }
+  for (i = 0; i < 3 && i < COMMERCES.length; i++){
+    c = COMMERCES[i];
+    s = statut(c, now);
+    html += ligne(c, s, s.shut ? "" : '<span class="tag">Livraison ' + c.frais + '</span>');
+  }
+  return '<div class="ptitle"><b>Autour de vous</b><span>Services et commerces du village</span></div>' +
+         '<div class="rows">' + html + '</div>';
+}
+
+var PANELS = [
+  { build: panelCommerces, note: ["Dernière commande à " + CONFIG.derniereCommande,
+      "Le pain et les viennoiseries de demain matin se commandent la veille."] },
+  { build: panelOffres, note: ["Livré au logement",
+      "Le livreur est autorisé jusqu'au palier. Il n'entre jamais dans l'appartement."] },
+  { build: panelServices, note: ["Location et activités",
+      "Le matériel et les cours se réservent depuis l'application, retrait en boutique."] }
+];
+
+var idx = -1, t0 = 0, stage = $("#stage");
+
+function render(){
+  var p, el, olds, i, dots;
+  idx = (idx + 1) % PANELS.length;
+  p = PANELS[idx];
+  el = document.createElement("div");
+  el.className = "panel";
+  el.innerHTML = p.build();
+  stage.appendChild(el);
+  if (el.offsetWidth) { /* reflow */ }
+  el.className = "panel on";
+  olds = kids(stage);
+  for (i = 0; i < olds.length; i++) if (olds[i] !== el) olds[i].className = "panel";
+  setTimeout(function(){
+    var c = kids(stage), j;
+    for (j = 0; j < c.length; j++) if (c[j] !== el && c[j].parentNode) c[j].parentNode.removeChild(c[j]);
+  }, 900);
+
+  $("#noteTitle").innerHTML = p.note[0];
+  $("#noteText").innerHTML = p.note[1];
+  dots = kids($("#dots"));
+  for (i = 0; i < dots.length; i++) dots[i].className = (i === idx) ? "on" : "";
+  t0 = new Date().getTime();
+}
+
+function tickProgress(){
+  var pct = Math.min(1, (new Date().getTime() - t0) / CONFIG.rotation);
+  $("#prog").style.width = (pct * 100) + "%";
+}
+
+var MOIS = ["janvier","février","mars","avril","mai","juin","juillet",
+            "août","septembre","octobre","novembre","décembre"];
+var JOURS = ["dimanche","lundi","mardi","mercredi","jeudi","vendredi","samedi"];
+
+function clock(){
+  var d = maintenant();
+  $("#clock").innerHTML = pad(d.getHours()) + ":" + pad(d.getMinutes());
+  $("#today").innerHTML = JOURS[d.getDay()] + " " + d.getDate() + " " + MOIS[d.getMonth()];
+}
+
+function qr(){
+  var box = $("#qr"), s = document.createElement("script");
+  s.src = "https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js";
+  s.onload = function(){
+    var px = box.clientWidth || 220;
+    box.innerHTML = "";
+    new QRCode(box, { text: CONFIG.lienQR, width: px, height: px,
+      colorDark: "#06231D", colorLight: "#ffffff", correctLevel: QRCode.CorrectLevel.M });
+  };
+  s.onerror = function(){
+    box.innerHTML = '<div class="qrfall">QR indisponible<br>hors connexion</div>';
+  };
+  document.getElementsByTagName("head")[0].appendChild(s);
+}
+
+(function init(){
+  var d = "", i;
+  $("#unit").innerHTML = CONFIG.logement;
+  if (!CONFIG.demo) $("#demo").className = "demo hide";
+  for (i = 0; i < PANELS.length; i++) d += "<i></i>";
+  $("#dots").innerHTML = d;
+  clock();
+  setInterval(clock, 15000);
+  qr();
+  render();
+  setInterval(render, CONFIG.rotation);
+  setInterval(tickProgress, 200);
+})();
+</script>
+</body>
+</html>
