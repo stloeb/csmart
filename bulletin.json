@@ -2,7 +2,7 @@
   "ecusson": "LA",
   "station": "LES ARCS",
   "soustitre": "Arc 1950 · Paradiski · Bulletin du domaine",
-  "maj": "2026-08-23T08:42:00",
+  "maj": "2026-08-23T09:33:00",
   "source": "Lumiplan",
   "hero": [
     {
@@ -136,11 +136,11 @@
   ],
   "previsions": {
     "jourDate": "23/08/2026",
-    "jourTitre": "",
-    "jourTexte": "La journée est lumineuse, avec beaucoup de soleil. En milieu d'après-midi, vent s'établissant à l'Ouest modéré, en Tarentaise et Vanoise ; puis atténuation. Cette nuit: Le temps est calme et propice à l'observation des étoiles. En deuxième partie de nuit, vent de Nord-Est modéré, dans la Cluse de Chambéry et l'avant-Pays.",
+    "jourTitre": "Beau temps",
+    "jourTexte": "Belle journée avec un ciel clair à voilé, quelques cumulusdécoratifs sur les montagnes l'après midi.Maximales 28/29 localement 30 °C en plaine. Isotherme 0 °Cvers 4000 m.Vent d'Ouest faible en haute montagne, brises en vallées.",
     "demainDate": "24/08/2026",
-    "demainTitre": "",
-    "demainTexte": "Le temps est souvent ensoleillé. En fin d'après-midi, des orages accompagnés de pluies se forment par places dans les Bauges ainsi que dans la Cluse de Chambéry et l'avant-Pays. C'est de la neige qui tombe au-dessus de 3550 mètres. Pour la nuit : Les averses locales se raréfient au fil des heures au profit d'éclaircies de plus en plus belles. Située vers 3550 mètres à la tombée du jour, la limite pluie-neige peut s'abaisser par la suite jusqu'à 3350 mètres. Etablissement, à la tombée du jour, d'un vent de Sud-Est modéré, en Maurienne ; atténuation ensuite."
+    "demainTitre": "Lundi beau en journée presque partout, passage perturbécourt mais intense la nuit suivante",
+    "demainTexte": "Le temps est sec ensoleillé partout le matin, légèrement voiléà la mi journée avec des cumulus en montagne. Dès la mijournée coté Haute Maurienne la nebbia (nuagesbas/brouillard) déborde d'Italie et accroche les cols frontalier etpeu même déborder comme souvent coté col Mont Cenis. Lajournée est de nouveau trop chaud (maximales 30/32 °C enplaine comme en vallée sous 1000m ) dans un flux de sudapportant cette chaleur. l'isotherme 0 °C remonte vers 4200m.Vent de sud ouest modéré à 3000m toute la journée."
   },
   "blocs": [
     {
@@ -148,7 +148,7 @@
       "sections": [
         {
           "titre": "Remontées Mécaniques",
-          "ouv": 0,
+          "ouv": 1,
           "tot": 1,
           "items": [
             {
@@ -156,7 +156,7 @@
               "c": "",
               "nm": "VALLANDRY",
               "hr": "09:15–16:50",
-              "e": "P"
+              "e": "O"
             }
           ]
         }
@@ -167,7 +167,7 @@
       "sections": [
         {
           "titre": "Remontées Mécaniques",
-          "ouv": 1,
+          "ouv": 2,
           "tot": 2,
           "items": [
             {
@@ -183,7 +183,7 @@
               "c": "",
               "nm": "CACHETTE",
               "hr": "09:15–16:50",
-              "e": "P"
+              "e": "O"
             }
           ]
         }
@@ -194,7 +194,7 @@
       "sections": [
         {
           "titre": "Remontées Mécaniques",
-          "ouv": 1,
+          "ouv": 4,
           "tot": 4,
           "items": [
             {
@@ -209,21 +209,21 @@
               "c": "",
               "nm": "TRANSARC 1",
               "hr": "09:15–16:50",
-              "e": "P"
+              "e": "O"
             },
             {
               "ty": "TC",
               "c": "",
               "nm": "TRANSARC 2",
               "hr": "09:15–16:50",
-              "e": "P"
+              "e": "O"
             },
             {
               "ty": "TC",
               "c": "",
               "nm": "VILLARDS",
               "hr": "08:45–17:30",
-              "e": "P"
+              "e": "O"
             }
           ]
         }
@@ -234,7 +234,7 @@
       "sections": [
         {
           "titre": "Remontées Mécaniques",
-          "ouv": 0,
+          "ouv": 4,
           "tot": 5,
           "items": [
             {
@@ -250,21 +250,21 @@
               "c": "",
               "nm": "VARET",
               "hr": "09:30–16:30",
-              "e": "P"
+              "e": "O"
             },
             {
               "ty": "TSDB",
               "c": "",
               "nm": "ARCABULLE",
               "hr": "09:30–16:50",
-              "e": "P"
+              "e": "O"
             },
             {
               "ty": "TSD",
               "c": "",
               "nm": "BOIS DE L'OURS",
               "hr": "09:15–16:50",
-              "e": "P",
+              "e": "O",
               "no": "Pause/break 12:45-13:15"
             },
             {
@@ -272,7 +272,7 @@
               "c": "",
               "nm": "CABRIOLET",
               "hr": "09:15–17:00",
-              "e": "P",
+              "e": "O",
               "no": "fermeture anticipée -dimanche 23/08 soir"
             }
           ]
@@ -284,7 +284,7 @@
       "sections": [
         {
           "titre": "Pistes et activités",
-          "ouv": 0,
+          "ouv": 3,
           "tot": 5,
           "items": [
             {
@@ -292,7 +292,7 @@
               "c": "k",
               "nm": "GALERIE DES MINERAUX",
               "hr": "09:25–16:40",
-              "e": "P"
+              "e": "O"
             },
             {
               "ty": "",
@@ -307,7 +307,7 @@
               "c": "k",
               "nm": "GEANTS DE MALGOVERT",
               "hr": "09:20–16:45",
-              "e": "P"
+              "e": "O"
             },
             {
               "ty": "",
@@ -322,7 +322,7 @@
               "c": "k",
               "nm": "MUSEUM DES ANIMAUX DE MONTAGNE",
               "hr": "09:25–16:40",
-              "e": "P"
+              "e": "O"
             }
           ]
         }
