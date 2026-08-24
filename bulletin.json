@@ -2,25 +2,25 @@
   "ecusson": "LA",
   "station": "LES ARCS",
   "soustitre": "Arc 1950 · Paradiski · Bulletin du domaine",
-  "maj": "2026-08-23T22:49:00",
+  "maj": "2026-08-24T07:38:00",
   "source": "Lumiplan",
   "hero": [
     {
       "k": "Temp. sommet",
-      "v": "17°",
+      "v": "22°",
       "l": "GRAND COL",
       "c": ""
     },
     {
       "k": "Temp. station",
-      "v": "17°",
+      "v": "22°",
       "l": "ARC 2000 · 2000 m",
       "c": "n"
     },
     {
       "k": "Vent",
-      "v": "7 km/h",
-      "l": "Secteur O",
+      "v": "4 km/h",
+      "l": "Secteur N",
       "c": "w"
     },
     {
@@ -66,11 +66,11 @@
     {
       "lieu": "GRAND COL",
       "alt": 3000,
-      "ciel": "Soleil voilé",
-      "matin": "11",
-      "aprem": "17",
-      "vent": "7",
-      "dir": "O",
+      "ciel": "Soleil",
+      "matin": "13",
+      "aprem": "22",
+      "vent": "4",
+      "dir": "N",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "2",
@@ -80,11 +80,11 @@
     {
       "lieu": "ARC 2000",
       "alt": 2000,
-      "ciel": "Soleil voilé",
-      "matin": "11",
-      "aprem": "17",
-      "vent": "7",
-      "dir": "O",
+      "ciel": "Soleil",
+      "matin": "13",
+      "aprem": "22",
+      "vent": "4",
+      "dir": "N",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "1",
@@ -94,11 +94,11 @@
     {
       "lieu": "ARC 1600",
       "alt": 1600,
-      "ciel": "Soleil voilé",
-      "matin": "11",
-      "aprem": "17",
-      "vent": "7",
-      "dir": "O",
+      "ciel": "Soleil",
+      "matin": "13",
+      "aprem": "22",
+      "vent": "4",
+      "dir": "N",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "5",
@@ -108,9 +108,9 @@
     {
       "lieu": "BOURG ST MAURICE",
       "alt": 800,
-      "ciel": "Soleil voilé",
-      "matin": "11",
-      "aprem": "22",
+      "ciel": "Soleil",
+      "matin": "14",
+      "aprem": "30",
       "vent": "0",
       "dir": "",
       "neige24": "0",
@@ -122,11 +122,11 @@
     {
       "lieu": "ARC 1800",
       "alt": 1800,
-      "ciel": "Soleil voilé",
-      "matin": "12",
-      "aprem": "16",
-      "vent": "3",
-      "dir": "SO",
+      "ciel": "Soleil",
+      "matin": "15",
+      "aprem": "20",
+      "vent": "6",
+      "dir": "E",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "5",
@@ -135,12 +135,12 @@
     }
   ],
   "previsions": {
-    "jourDate": "23/08/2026",
+    "jourDate": "24/08/2026",
     "jourTitre": "",
-    "jourTexte": "Le soleil règne en maître tout l'après-midi. En milieu d'après-midi, vent d'Ouest soufflant modérément, en Tarentaise et Vanoise ; puis atténuation. Cette nuit: La nuit est majoritairement étoilée. En deuxième partie de nuit, vent s'établissant à l'Est-Nord-Est modéré, dans la Cluse de Chambéry et l'avant-Pays.",
-    "demainDate": "24/08/2026",
+    "jourTexte": "Le début de journée est assez bien ensoleillé, puis l'après-midi les nuages deviennent plus nombreux. Quelques averses sont possibles, dans le Beaufortain, en Tarentaise et Vanoise, sur les massifs frontaliers ainsi que dans la Cluse de Chambéry et l'avant-Pays, essentiellement en fin de journée. La neige remplace la pluie au-dessus de 3550 mètres. À la tombée du jour, vent s'établissant au Sud-Est modéré, en Maurienne. Cette nuit: Quelques averses tombent en début de nuit. Elles s'espacent de plus en plus, pour annoncer une seconde partie de nuit sèche, bénéficiant de nombreuses éclaircies. Située vers 3450 mètres à la tombée du jour, la limite pluie-neige peut s'abaisser par la suite jusqu'à 3200 mètres. Vent variable, faible.",
+    "demainDate": "25/08/2026",
     "demainTitre": "",
-    "demainTexte": "La journée débute avec un temps bien ensoleillé. Cependant, l'après-midi, des nuages bourgeonnent et de petites averses sont possibles, sur les massifs frontaliers. C'est de la neige qui tombe au-dessus de 3650 mètres. Pour la nuit : Quelques averses tombent en début de nuit. Elles s'espacent de plus en plus, pour annoncer une seconde partie de nuit sèche, bénéficiant de nombreuses éclaircies. C'est de la neige qui tombe au-dessus de 3350 mètres. À la tombée du jour, vent s'établissant au Sud-Est modéré, en Maurienne ; puis atténuation."
+    "demainTexte": "Le soleil devrait largement s'imposer, malgré quelques développements nuageux inoffensifs, en fin de matinée, sur les massifs frontaliers. Pour la nuit : Le ciel est bien étoilé. Aux premières heures du jour, vent de Sud-Est modéré, en Maurienne."
   },
   "blocs": [
     {
@@ -167,7 +167,7 @@
       "sections": [
         {
           "titre": "Remontées Mécaniques",
-          "ouv": 0,
+          "ouv": 1,
           "tot": 2,
           "items": [
             {
@@ -175,7 +175,7 @@
               "c": "",
               "nm": "FUNICULAIRE",
               "hr": "07:15–19:30",
-              "e": "P",
+              "e": "O",
               "no": "Toutes les 30 min"
             },
             {
