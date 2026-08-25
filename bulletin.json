@@ -2,7 +2,7 @@
   "ecusson": "LA",
   "station": "LES ARCS",
   "soustitre": "Arc 1950 · Paradiski · Bulletin du domaine",
-  "maj": "2026-08-25T09:44:00",
+  "maj": "2026-08-25T10:43:00",
   "source": "Lumiplan",
   "hero": [
     {
@@ -137,10 +137,10 @@
   "previsions": {
     "jourDate": "25/08/2026",
     "jourTitre": "",
-    "jourTexte": "Le soleil brille sans discontinuer du matin jusqu'au soir. Vent faible, variable. Cette nuit: Le temps est calme et propice à l'observation des étoiles. Vent variable, faible.",
+    "jourTexte": "Le soleil brille sans discontinuer du matin jusqu'au soir. Vent faible, variable.",
     "demainDate": "26/08/2026",
     "demainTitre": "",
-    "demainTexte": "La journée est belle. Un grand soleil le matin est parfois contrarié par des passages nuageux l'après-midi. Pour la nuit : Un voile nuageux est présent en début de soirée. Ce voile se déchire rapidement, pour laisser place à une belle nuit, bien étoilée. Vent faible, variable."
+    "demainTexte": "La journée est belle. Un grand soleil le matin est parfois contrarié par des passages nuageux l'après-midi."
   },
   "blocs": [
     {
