@@ -2,30 +2,30 @@
   "ecusson": "LA",
   "station": "LES ARCS",
   "soustitre": "Arc 1950 · Paradiski · Bulletin du domaine",
-  "maj": "2026-08-24T22:30:00",
+  "maj": "2026-08-25T07:32:00",
   "source": "Lumiplan",
   "hero": [
     {
       "k": "Temp. sommet",
-      "v": "18°",
+      "v": "19°",
       "l": "GRAND COL",
       "c": ""
     },
     {
       "k": "Temp. station",
-      "v": "18°",
+      "v": "19°",
       "l": "ARC 2000 · 2000 m",
       "c": "n"
     },
     {
       "k": "Vent",
-      "v": "7 km/h",
-      "l": "Secteur E",
+      "v": "4 km/h",
+      "l": "Secteur N",
       "c": "w"
     },
     {
       "k": "Limite pluie/neige",
-      "v": "3600 m",
+      "v": "1 m",
       "l": "Altitude",
       "c": "n"
     },
@@ -37,8 +37,8 @@
     },
     {
       "k": "Dernière chute",
-      "v": "+1 cm",
-      "l": "14/04/2026",
+      "v": "+ cm",
+      "l": "—",
       "c": ""
     }
   ],
@@ -67,80 +67,80 @@
       "lieu": "GRAND COL",
       "alt": 3000,
       "ciel": "Soleil",
-      "matin": "13",
-      "aprem": "18",
-      "vent": "7",
-      "dir": "E",
+      "matin": "11",
+      "aprem": "19",
+      "vent": "4",
+      "dir": "N",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "3600",
-      "derniereH": "2",
-      "derniereD": "14/04/2026"
+      "limite": "2",
+      "derniereH": "",
+      "derniereD": ""
     },
     {
       "lieu": "ARC 2000",
       "alt": 2000,
       "ciel": "Soleil",
-      "matin": "13",
-      "aprem": "18",
-      "vent": "7",
-      "dir": "E",
+      "matin": "11",
+      "aprem": "19",
+      "vent": "4",
+      "dir": "N",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "3600",
-      "derniereH": "1",
-      "derniereD": "14/04/2026"
+      "limite": "1",
+      "derniereH": "",
+      "derniereD": ""
     },
     {
       "lieu": "ARC 1600",
       "alt": 1600,
       "ciel": "Soleil",
-      "matin": "13",
-      "aprem": "18",
-      "vent": "7",
-      "dir": "E",
+      "matin": "11",
+      "aprem": "19",
+      "vent": "4",
+      "dir": "N",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "3600",
-      "derniereH": "5",
-      "derniereD": "31/03/2026"
+      "limite": "5",
+      "derniereH": "",
+      "derniereD": ""
     },
     {
       "lieu": "BOURG ST MAURICE",
       "alt": 800,
       "ciel": "Soleil",
-      "matin": "14",
-      "aprem": "24",
-      "vent": "7",
-      "dir": "E",
+      "matin": "15",
+      "aprem": "27",
+      "vent": "0",
+      "dir": "",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "3600",
-      "derniereH": "5",
-      "derniereD": "14/03/2026"
+      "limite": "5",
+      "derniereH": "",
+      "derniereD": ""
     },
     {
       "lieu": "ARC 1800",
       "alt": 1800,
       "ciel": "Soleil",
-      "matin": "15",
-      "aprem": "17",
-      "vent": "9",
-      "dir": "O",
+      "matin": "12",
+      "aprem": "16",
+      "vent": "3",
+      "dir": "SE",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "3600",
-      "derniereH": "5",
-      "derniereD": "31/03/2026"
+      "limite": "5",
+      "derniereH": "",
+      "derniereD": ""
     }
   ],
   "previsions": {
-    "jourDate": "24/08/2026",
+    "jourDate": "25/08/2026",
     "jourTitre": "",
-    "jourTexte": "Des petits nuages se forment à la mi-journée. Ils vont grossir au cours de l'après-midi, dans le Beaufortain, dans les Bauges ainsi que dans la Cluse de Chambéry et l'avant-Pays. Ils provoquent des averses, voire des orages. Cependant, sur les autres zones, le temps reste assez bien ensoleillé. Il neige à partir de 3550 mètres. À la tombée du jour, vent s'établissant au Sud-Est modéré, en Maurienne. Cette nuit: Quelques averses tombent en début de nuit. Elles s'espacent de plus en plus, pour annoncer une seconde partie de nuit sèche, bénéficiant de nombreuses éclaircies. Située vers 3450 mètres à la tombée du jour, la limite pluie-neige peut s'abaisser par la suite jusqu'à 3200 mètres. Vent variable, faible.",
-    "demainDate": "25/08/2026",
+    "jourTexte": "Le soleil brille sans discontinuer du matin jusqu'au soir. Vent faible, variable. Cette nuit: Le temps est calme et propice à l'observation des étoiles. Vent variable, faible.",
+    "demainDate": "26/08/2026",
     "demainTitre": "",
-    "demainTexte": "Le soleil devrait largement s'imposer, malgré quelques développements nuageux inoffensifs, en fin de matinée, sur les massifs frontaliers. Pour la nuit : Les rares nuages présents n'empêchent nullement l'observation des étoiles. Etablissement, l'après-midi, d'un vent d'Ouest modéré, en Tarentaise et Vanoise ; atténuation ensuite."
+    "demainTexte": "La journée est belle. Un grand soleil le matin est parfois contrarié par des passages nuageux l'après-midi. Pour la nuit : Un voile nuageux est présent en début de soirée. Ce voile se déchire rapidement, pour laisser place à une belle nuit, bien étoilée. Vent faible, variable."
   },
   "blocs": [
     {
@@ -167,7 +167,7 @@
       "sections": [
         {
           "titre": "Remontées Mécaniques",
-          "ouv": 0,
+          "ouv": 1,
           "tot": 2,
           "items": [
             {
@@ -175,7 +175,7 @@
               "c": "",
               "nm": "FUNICULAIRE",
               "hr": "07:15–19:30",
-              "e": "P",
+              "e": "O",
               "no": "Toutes les 30 min"
             },
             {
