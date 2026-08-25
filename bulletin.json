@@ -2,7 +2,7 @@
   "ecusson": "LA",
   "station": "LES ARCS",
   "soustitre": "Arc 1950 · Paradiski · Bulletin du domaine",
-  "maj": "2026-08-25T21:31:00",
+  "maj": "2026-08-25T22:30:00",
   "source": "Lumiplan",
   "hero": [
     {
@@ -194,7 +194,7 @@
       "sections": [
         {
           "titre": "Remontées Mécaniques",
-          "ouv": 1,
+          "ouv": 0,
           "tot": 4,
           "items": [
             {
@@ -202,7 +202,7 @@
               "c": "",
               "nm": "DAHU",
               "hr": "08:30–22:00",
-              "e": "O",
+              "e": "P",
               "no": "Ouverture non garantie si orages"
             },
             {
