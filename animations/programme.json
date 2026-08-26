@@ -1,8 +1,27 @@
 {
-  "semaine": null,
-  "debut": null,
-  "fin": null,
+  "semaine": "35",
+  "debut": "2026-08-24",
+  "fin": "2026-08-30",
   "source": "https://www.arc1950.com/programme-danimations-1458",
-  "maj": null,
-  "visuels": []
+  "maj": "2026-08-26T08:23:01+00:00",
+  "visuels": [
+    {
+      "fichier": "img/sem_35_01_1031_fr.jpg"
+    },
+    {
+      "fichier": "img/sem_35_012_1032_fr.jpg"
+    },
+    {
+      "fichier": "img/sem_35_013_1033_fr.jpg"
+    },
+    {
+      "fichier": "img/sem_35_014_1034_fr.jpg"
+    },
+    {
+      "fichier": "img/sem_35_015_1035_fr.jpg"
+    },
+    {
+      "fichier": "img/sem_35_016_1036_fr.jpg"
+    }
+  ]
 }
