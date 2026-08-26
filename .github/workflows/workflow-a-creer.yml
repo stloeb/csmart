@@ -1,0 +1,40 @@
+name: Programme d'animations Arc 1950
+
+on:
+  schedule:
+    # Tous les jours a 05:10 UTC (07:10 heure d'ete en France).
+    - cron: "10 5 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: maj-programme-animations
+  cancel-in-progress: false
+
+jobs:
+  maj:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Lire le programme Arc 1950
+        run: python3 animations/scripts/scrape.py
+
+      - name: Commiter les changements
+        run: |
+          git config user.name  "csmart-bot"
+          git config user.email "csmart-bot@users.noreply.github.com"
+          git add -A animations/img animations/programme.json
+          if git diff --cached --quiet; then
+            echo "Aucun changement : le programme affiche est deja a jour."
+            exit 0
+          fi
+          SEMAINE=$(python3 -c "import json;print(json.load(open('animations/programme.json')).get('semaine','?'))")
+          git commit -m "Programme d'animations — semaine ${SEMAINE}"
+          git push
