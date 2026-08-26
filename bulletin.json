@@ -2,25 +2,25 @@
   "ecusson": "LA",
   "station": "LES ARCS",
   "soustitre": "Arc 1950 · Paradiski · Bulletin du domaine",
-  "maj": "2026-08-25T22:30:00",
+  "maj": "2026-08-26T07:33:00",
   "source": "Lumiplan",
   "hero": [
     {
       "k": "Temp. sommet",
-      "v": "16°",
+      "v": "24°",
       "l": "GRAND COL",
       "c": ""
     },
     {
       "k": "Temp. station",
-      "v": "16°",
+      "v": "24°",
       "l": "ARC 2000 · 2000 m",
       "c": "n"
     },
     {
       "k": "Vent",
-      "v": "7 km/h",
-      "l": "Secteur O",
+      "v": "4 km/h",
+      "l": "Secteur N",
       "c": "w"
     },
     {
@@ -67,10 +67,10 @@
       "lieu": "GRAND COL",
       "alt": 3000,
       "ciel": "Soleil",
-      "matin": "11",
-      "aprem": "16",
-      "vent": "7",
-      "dir": "O",
+      "matin": "14",
+      "aprem": "24",
+      "vent": "4",
+      "dir": "N",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "2",
@@ -81,10 +81,10 @@
       "lieu": "ARC 2000",
       "alt": 2000,
       "ciel": "Soleil",
-      "matin": "11",
-      "aprem": "16",
-      "vent": "7",
-      "dir": "O",
+      "matin": "14",
+      "aprem": "24",
+      "vent": "4",
+      "dir": "N",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "1",
@@ -95,10 +95,10 @@
       "lieu": "ARC 1600",
       "alt": 1600,
       "ciel": "Soleil",
-      "matin": "11",
-      "aprem": "16",
-      "vent": "7",
-      "dir": "O",
+      "matin": "14",
+      "aprem": "24",
+      "vent": "4",
+      "dir": "N",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "5",
@@ -110,9 +110,9 @@
       "alt": 800,
       "ciel": "Soleil",
       "matin": "15",
-      "aprem": "22",
-      "vent": "0",
-      "dir": "",
+      "aprem": "31",
+      "vent": "4",
+      "dir": "N",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "5",
@@ -123,10 +123,10 @@
       "lieu": "ARC 1800",
       "alt": 1800,
       "ciel": "Soleil",
-      "matin": "12",
-      "aprem": "15",
-      "vent": "4",
-      "dir": "O",
+      "matin": "14",
+      "aprem": "20",
+      "vent": "7",
+      "dir": "E",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "5",
@@ -135,12 +135,12 @@
     }
   ],
   "previsions": {
-    "jourDate": "25/08/2026",
+    "jourDate": "26/08/2026",
     "jourTitre": "",
-    "jourTexte": "Le soleil brille sans discontinuer toute l'après-midi. En cours d'après-midi, vent de Nord-Ouest modéré, en Maurienne ; atténuation ensuite. Cette nuit: Le ciel est clair toute la nuit. Vent faible, variable.",
-    "demainDate": "26/08/2026",
+    "jourTexte": "La journée est lumineuse, avec un beau soleil parfois contrarié par des passages nuageux qui restent inoffensifs. Vent variable, faible. Cette nuit: La nuit débute sous un ciel bien étoilé. Des passages nuageux circulent, mais le ciel se dégage à nouveau en fin de nuit. En fin de nuit, vent s'établissant au Sud-Sud-Est modéré, en Maurienne.",
+    "demainDate": "27/08/2026",
     "demainTitre": "",
-    "demainTexte": "La journée est lumineuse, malgré la présence de nuages élevés. Pour la nuit : Le ciel est bien dégagé. Les quelques nuages présents jusqu'en fin de nuit, sauf sur les massifs frontaliers, restent inoffensifs. Ces nuages se dissipent avant l'aurore. Vent variable, faible."
+    "demainTexte": "Quelques nuages sont présents en matinée. L'après-midi est ensoleillée pour tous. Pour la nuit : Le temps est bien dégagé. En cours de nuit, des nuages se forment. Ils deviennent menaçants, s'accompagnent parfois d'averses et des orages éclatent en fin de nuit dans le Beaufortain, en Tarentaise et Vanoise, dans les Bauges ainsi que dans les plaines et basses vallées. La limite pluie-neige s'abaisse jusqu'à 3700 mètres. Vent généralement modéré, de secteur Sud. Avec des rafales à 75 km/h, localement, en fin d'après-midi et la nuit suivante."
   },
   "blocs": [
     {
@@ -167,7 +167,7 @@
       "sections": [
         {
           "titre": "Remontées Mécaniques",
-          "ouv": 0,
+          "ouv": 1,
           "tot": 2,
           "items": [
             {
@@ -175,7 +175,7 @@
               "c": "",
               "nm": "FUNICULAIRE",
               "hr": "07:15–19:30",
-              "e": "P",
+              "e": "O",
               "no": "Toutes les 30 min"
             },
             {
