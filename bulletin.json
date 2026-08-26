@@ -2,25 +2,25 @@
   "ecusson": "LA",
   "station": "LES ARCS",
   "soustitre": "Arc 1950 · Paradiski · Bulletin du domaine",
-  "maj": "2026-08-26T18:17:00",
+  "maj": "2026-08-26T20:15:00",
   "source": "Lumiplan",
   "hero": [
     {
       "k": "Temp. sommet",
-      "v": "24°",
+      "v": "20°",
       "l": "GRAND COL",
       "c": ""
     },
     {
       "k": "Temp. station",
-      "v": "24°",
+      "v": "20°",
       "l": "ARC 2000 · 2000 m",
       "c": "n"
     },
     {
       "k": "Vent",
-      "v": "4 km/h",
-      "l": "Secteur N",
+      "v": "7 km/h",
+      "l": "Secteur E",
       "c": "w"
     },
     {
@@ -68,9 +68,9 @@
       "alt": 3000,
       "ciel": "Soleil",
       "matin": "14",
-      "aprem": "24",
-      "vent": "4",
-      "dir": "N",
+      "aprem": "20",
+      "vent": "7",
+      "dir": "E",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "2",
@@ -82,9 +82,9 @@
       "alt": 2000,
       "ciel": "Soleil",
       "matin": "14",
-      "aprem": "24",
-      "vent": "4",
-      "dir": "N",
+      "aprem": "20",
+      "vent": "7",
+      "dir": "E",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "1",
@@ -96,9 +96,9 @@
       "alt": 1600,
       "ciel": "Soleil",
       "matin": "14",
-      "aprem": "24",
-      "vent": "4",
-      "dir": "N",
+      "aprem": "20",
+      "vent": "7",
+      "dir": "E",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "5",
@@ -110,7 +110,7 @@
       "alt": 800,
       "ciel": "Soleil",
       "matin": "15",
-      "aprem": "31",
+      "aprem": "25",
       "vent": "4",
       "dir": "N",
       "neige24": "0",
@@ -124,9 +124,9 @@
       "alt": 1800,
       "ciel": "Soleil",
       "matin": "14",
-      "aprem": "20",
-      "vent": "7",
-      "dir": "E",
+      "aprem": "18",
+      "vent": "2",
+      "dir": "SE",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "5",
@@ -137,10 +137,10 @@
   "previsions": {
     "jourDate": "26/08/2026",
     "jourTitre": "",
-    "jourTexte": "La journée est lumineuse, avec un beau soleil parfois contrarié par des passages nuageux qui restent inoffensifs.",
+    "jourTexte": "Les quelques nuages présents ici et là disparaissent au fil du temps et le soleil devient prédominant. Vent variable, faible. Cette nuit: La nuit débute sous un ciel bien étoilé. Des passages nuageux circulent, mais le ciel se dégage à nouveau en fin de nuit. En seconde partie de nuit, vent de Sud-Sud-Est modéré, en Maurienne.",
     "demainDate": "27/08/2026",
     "demainTitre": "",
-    "demainTexte": "Quelques nuages sont présents en matinée. L'après-midi est ensoleillée pour tous."
+    "demainTexte": "Quelques nuages sont présents en matinée. L'après-midi est ensoleillée pour tous. Pour la nuit : Le temps est bien dégagé. En cours de nuit, des nuages se forment. Ils deviennent menaçants, s'accompagnent parfois d'averses et des orages éclatent en fin de nuit dans le Beaufortain, en Tarentaise et Vanoise, dans les Bauges ainsi que dans les plaines et basses vallées. C'est de la neige qui tombe au-dessus de 3700 mètres. Vent généralement modéré, de secteur Sud. Avec des rafales atteignant, localement, 85 km/h, en fin de nuit."
   },
   "blocs": [
     {
@@ -167,7 +167,7 @@
       "sections": [
         {
           "titre": "Remontées Mécaniques",
-          "ouv": 1,
+          "ouv": 0,
           "tot": 2,
           "items": [
             {
@@ -175,7 +175,7 @@
               "c": "",
               "nm": "FUNICULAIRE",
               "hr": "07:15–19:30",
-              "e": "O",
+              "e": "P",
               "no": "Toutes les 30 min"
             },
             {
