@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CSMART TV — Animations du village · Arc 1950</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  /* Palette CSMART TV — alignée sur le wrapper météo (stloeb.github.io/csmart) */
+  :root{
+    --bg:#070E18; --bg2:#0C1626; --card:#111E31; --card2:#16263D;
+    --acc:#4AA8E8; --acc2:#7FD9C2;
+    --csm:#29BC9F;                       /* vert CASAMAST */
+    --txt:#E8EFF7; --txt2:#93A6BE; --txt3:#61748C;
+    --line:rgba(255,255,255,.07);
+  }
+
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;height:100%;background:var(--bg);overflow:hidden}
+  body{font-family:'Inter',system-ui,-apple-system,sans-serif;color:var(--txt);-webkit-font-smoothing:antialiased}
+
+  /* ===================== Scène TV 1280x720 ===================== */
+
+  #fit{position:absolute;top:0;left:0;width:100%;height:100%;overflow:hidden}
+  #tv{
+    position:absolute;top:0;left:0;width:1280px;height:720px;overflow:hidden;
+    -webkit-transform-origin:0 0;transform-origin:0 0;
+    background:var(--bg);
+  }
+
+  /* Décor : massif stylisé, indépendant du visuel affiché */
+  #decor{position:absolute;inset:0;z-index:0}
+  #decor svg{width:100%;height:100%;display:block}
+  #voile{
+    position:absolute;inset:0;z-index:1;
+    background:
+      radial-gradient(760px 420px at 10% -14%, rgba(74,168,232,.20), transparent 62%),
+      linear-gradient(180deg, rgba(7,14,24,.42) 0%, rgba(7,14,24,.30) 38%, rgba(7,14,24,.72) 100%);
+  }
+  /* Les blocs de contenu passent au-dessus du décor sans que leur
+     positionnement propre soit modifié. */
+  #bar, #semaine{position:relative;z-index:2}
+
+  /* ---------- Bandeau ---------- */
+
+  #bar{
+    height:80px;display:flex;align-items:center;gap:16px;padding:0 24px;
+    background:rgba(12,22,38,.82);border-bottom:1px solid var(--line);
+    -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
+  }
+  #bar .logo{height:44px;width:auto;display:block;flex:none}
+  #bar .ident{display:flex;flex-direction:column;gap:3px;min-width:0}
+  #bar .t1{font-family:'Archivo',sans-serif;font-weight:600;font-size:26px;line-height:1;letter-spacing:.005em}
+  #bar .t2{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--csm);font-weight:600}
+  #bar .horloge{margin-left:auto;text-align:right;display:flex;flex-direction:column;gap:3px;flex:none}
+  #bar .jour{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--txt2)}
+  #bar .heure{font-family:'Archivo',sans-serif;font-weight:600;font-size:26px;line-height:1;color:var(--txt)}
+
+  /* ---------- Bandeau semaine ---------- */
+
+  #semaine{
+    height:86px;display:flex;align-items:center;gap:14px;padding:0 24px;
+    background:rgba(17,30,49,.62);border-bottom:1px solid var(--line);
+  }
+  #semaine .etiq{
+    display:flex;flex-direction:column;gap:2px;flex:none;padding-right:18px;
+    border-right:1px solid var(--line);
+  }
+  #semaine .etiq b{font-family:'Archivo',sans-serif;font-weight:600;font-size:19px;letter-spacing:.02em}
+  #semaine .etiq span{font-size:12px;color:var(--txt2)}
+  #jours{display:flex;gap:8px;flex:1;justify-content:space-between}
+  #jours .jour{
+    flex:1;height:56px;border-radius:10px;
+    background:rgba(255,255,255,.045);border:1px solid var(--line);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;
+  }
+  #jours .jour .nom{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--txt3)}
+  #jours .jour .num{font-family:'Archivo',sans-serif;font-weight:600;font-size:21px;color:var(--txt2)}
+  #jours .jour.actuel{
+    background:linear-gradient(180deg, rgba(41,188,159,.22), rgba(41,188,159,.08));
+    border-color:rgba(41,188,159,.55);
+    box-shadow:0 0 0 1px rgba(41,188,159,.18), 0 8px 22px rgba(41,188,159,.14);
+  }
+  #jours .jour.actuel .nom{color:var(--acc2)}
+  #jours .jour.actuel .num{color:var(--txt)}
+  #jours .jour.passe{opacity:.42}
+
+  /* ---------- Fenêtre de lecture ---------- */
+
+  #view{position:absolute;top:166px;left:0;width:1280px;height:548px;overflow:hidden;z-index:2}
+  #doc{position:absolute;top:0;left:0;width:1280px;padding:16px 64px 40px}
+  #doc figure{margin:0 0 18px}
+  #doc img{
+    width:100%;height:auto;display:block;
+    border-radius:12px;
+    background:#fff;
+    border:1px solid rgba(255,255,255,.12);
+    box-shadow:0 18px 46px rgba(0,0,0,.5);
+    /* Un aplat blanc plein écran est agressif le soir : on baisse la
+       luminance sans toucher au contraste du texte. */
+    filter:brightness(.95) contrast(1.03);
+  }
+
+  #sb{position:absolute;bottom:0;left:0;width:1280px;height:6px;background:rgba(255,255,255,.06);z-index:3}
+  #sb i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--csm),var(--acc2))}
+
+  /* ---------- États ---------- */
+
+  #etat{
+    position:absolute;inset:0;z-index:9;display:none;
+    flex-direction:column;align-items:center;justify-content:center;gap:16px;
+    text-align:center;padding:40px;background:var(--bg);
+  }
+  #etat.visible{display:flex}
+  #etat .titre{font-family:'Archivo',sans-serif;font-weight:600;font-size:30px;color:var(--txt)}
+  #etat .detail{font-size:17px;color:var(--txt2);max-width:52ch;line-height:1.55}
+  .rondelle{
+    width:36px;height:36px;border:3px solid rgba(255,255,255,.14);
+    border-top-color:var(--csm);border-radius:50%;animation:tourne 900ms linear infinite;
+  }
+  @keyframes tourne{to{transform:rotate(360deg)}}
+
+  /* ===================== Mode mobile ===================== */
+
+  body.mobile{overflow:auto;-webkit-overflow-scrolling:touch}
+  body.mobile #fit{display:none}
+  #mob{display:none}
+  body.mobile #mob{display:block;min-height:100%;background:var(--bg)}
+
+  #mob .tete{
+    position:sticky;top:0;z-index:5;
+    display:flex;align-items:center;gap:12px;padding:14px 16px;
+    background:rgba(12,22,38,.96);border-bottom:1px solid var(--line);
+    -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
+  }
+  #mob .tete img{height:34px;width:auto;flex:none}
+  #mob .tete .t1{font-family:'Archivo',sans-serif;font-weight:600;font-size:17px;line-height:1.15}
+  #mob .tete .t2{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--csm);font-weight:600}
+  #mob .tete .sem{margin-left:auto;text-align:right;font-size:11.5px;color:var(--txt2);line-height:1.35;flex:none}
+  #mob .tete .sem b{display:block;font-family:'Archivo',sans-serif;font-size:14px;color:var(--txt);font-weight:600}
+
+  #mob .rubanjours{
+    display:flex;gap:7px;padding:12px 16px 4px;overflow-x:auto;
+    scrollbar-width:none;
+  }
+  #mob .rubanjours::-webkit-scrollbar{display:none}
+  #mob .rubanjours .jour{
+    flex:none;width:52px;padding:8px 0;border-radius:10px;text-align:center;
+    background:rgba(255,255,255,.05);border:1px solid var(--line);
+  }
+  #mob .rubanjours .jour .nom{display:block;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--txt3)}
+  #mob .rubanjours .jour .num{display:block;font-family:'Archivo',sans-serif;font-weight:600;font-size:17px;color:var(--txt2)}
+  #mob .rubanjours .jour.actuel{background:rgba(41,188,159,.18);border-color:rgba(41,188,159,.5)}
+  #mob .rubanjours .jour.actuel .nom{color:var(--acc2)}
+  #mob .rubanjours .jour.actuel .num{color:var(--txt)}
+
+  #mob .pile{display:flex;flex-direction:column;gap:12px;padding:12px 14px 30px}
+  #mob .pile img{
+    width:100%;height:auto;display:block;border-radius:12px;background:#fff;
+    border:1px solid rgba(255,255,255,.1);
+  }
+  #mob .aide{text-align:center;color:var(--txt3);font-size:12px;padding:0 0 22px}
+
+  #zoom{position:fixed;inset:0;display:none;background:rgba(7,14,24,.97);z-index:60;
+        overflow:auto;-webkit-overflow-scrolling:touch;touch-action:pan-x pan-y pinch-zoom}
+  #zoom.visible{display:block}
+  #zoom img{display:block;width:190%;max-width:none;height:auto;background:#fff}
+  #zoom .fermer{
+    position:fixed;top:14px;right:14px;width:44px;height:44px;border:0;border-radius:50%;
+    background:var(--card2);color:var(--txt);font-size:22px;line-height:1;cursor:pointer;z-index:61;
+  }
+
+  @media (prefers-reduced-motion: reduce){ #doc{transition:none !important} }
+</style>
+</head>
+<body>
+
+<div id="fit"><div id="tv">
+
+  <div id="decor">
+    <svg viewBox="0 0 1280 720" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <defs>
+        <linearGradient id="ciel" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%"  stop-color="#0E2237"/>
+          <stop offset="55%" stop-color="#0A1728"/>
+          <stop offset="100%" stop-color="#070E18"/>
+        </linearGradient>
+        <linearGradient id="m1" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#1B3A55"/><stop offset="100%" stop-color="#0C1B2C"/>
+        </linearGradient>
+        <linearGradient id="m2" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#14293F"/><stop offset="100%" stop-color="#0A1524"/>
+        </linearGradient>
+        <linearGradient id="m3" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#0E1E30"/><stop offset="100%" stop-color="#080F1B"/>
+        </linearGradient>
+      </defs>
+      <rect width="1280" height="720" fill="url(#ciel)"/>
+      <circle cx="1075" cy="112" r="190" fill="#4AA8E8" opacity=".10"/>
+      <circle cx="1075" cy="112" r="98"  fill="#7FD9C2" opacity=".07"/>
+      <circle cx="1075" cy="112" r="34"  fill="#CFE6F5" opacity=".13"/>
+      <!-- crêtes lointaines -->
+      <path d="M0 392 L150 284 L232 334 L370 212 L470 292 L560 250 L700 364 L820 292 L960 386 L1090 314 L1280 414 L1280 720 L0 720 Z" fill="url(#m1)"/>
+      <path d="M0 470 L120 410 L250 462 L400 356 L520 424 L640 372 L760 446 L900 384 L1040 456 L1180 406 L1280 466 L1280 720 L0 720 Z" fill="url(#m2)"/>
+      <path d="M0 548 L180 502 L330 552 L470 488 L620 544 L780 494 L920 552 L1080 506 L1280 556 L1280 720 L0 720 Z" fill="url(#m3)"/>
+      <!-- névés -->
+      <path d="M370 212 L406 242 L387 249 L415 273 L370 266 L335 279 L354 249 L339 242 Z" fill="#E8EFF7" opacity=".30"/>
+      <path d="M400 356 L428 380 L411 386 L433 403 L398 396 L370 407 L387 383 L376 379 Z" fill="#E8EFF7" opacity=".20"/>
+      <path d="M470 488 L492 507 L479 512 L496 526 L468 520 L446 528 L461 509 L452 506 Z" fill="#E8EFF7" opacity=".12"/>
+    </svg>
+  </div>
+  <div id="voile"></div>
+
+  <div id="bar">
+    <img class="logo" id="logo-tv" src="assets/casamast-icone.png" alt="CASAMAST">
+    <div class="ident">
+      <span class="t1">Animations du village</span>
+      <span class="t2">Arc 1950</span>
+    </div>
+    <div class="horloge">
+      <span class="jour" id="date-jour"></span>
+      <span class="heure" id="date-heure"></span>
+    </div>
+  </div>
+
+  <div id="semaine">
+    <div class="etiq">
+      <b id="lib-semaine">Semaine</b>
+      <span id="lib-dates"></span>
+    </div>
+    <div id="jours"></div>
+  </div>
+
+  <div id="view"><div id="doc"></div></div>
+  <div id="sb"><i id="sbar"></i></div>
+
+  <div id="etat" class="visible">
+    <div class="rondelle" id="rondelle"></div>
+    <div class="titre" id="etat-titre">Chargement du programme…</div>
+    <div class="detail" id="etat-detail"></div>
+  </div>
+
+</div></div>
+
+<section id="mob">
+  <div class="tete">
+    <img src="assets/casamast-icone.png" alt="CASAMAST">
+    <div>
+      <div class="t1">Animations du village</div>
+      <div class="t2">Arc 1950</div>
+    </div>
+    <div class="sem"><b id="mob-semaine"></b><span id="mob-dates"></span></div>
+  </div>
+  <div class="rubanjours" id="mob-jours"></div>
+  <div class="pile" id="mob-pile"></div>
+  <p class="aide">Touchez un visuel pour l'agrandir</p>
+</section>
+
+<div id="zoom">
+  <button class="fermer" id="fermer-zoom" aria-label="Fermer">&times;</button>
+  <img id="zoom-img" alt="">
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  var params = new URLSearchParams(location.search);
+  var CONFIG = {
+    pause:        (parseInt(params.get("pause"), 10) || 7) * 1000,   // arrêt sur chaque écran
+    glissement:   1100,                                             // durée du défilement
+    recouvrement: 70,                                               // pixels repris d'un écran à l'autre
+    rafraichir:   30 * 60 * 1000
+  };
+  var MODE_FORCE = params.get("mode");   // "tv" | "mobile"
+  var HVUE = 548;
+
+  var $ = function (s) { return document.querySelector(s); };
+
+  var doc = $("#doc"), etat = $("#etat"), zoom = $("#zoom"), zoomImg = $("#zoom-img");
+  var etapes = [0], pos = 0, tempo = null, fige = false, signature = null;
+
+  var JOURS = ["dim", "lun", "mar", "mer", "jeu", "ven", "sam"];
+
+  /* ---------------- Mise à l'échelle 1280x720 ---------------- */
+
+  function ajuster() {
+    var w = window.innerWidth || 1280, h = window.innerHeight || 720;
+    var k = Math.min(w / 1280, h / 720), tv = $("#tv");
+    tv.style.webkitTransform = "scale(" + k + ")";
+    tv.style.transform = "scale(" + k + ")";
+    tv.style.left = Math.round((w - 1280 * k) / 2) + "px";
+    tv.style.top  = Math.round((h - 720 * k) / 2) + "px";
+  }
+
+  function estMobile() {
+    if (MODE_FORCE === "tv") return false;
+    if (MODE_FORCE === "mobile") return true;
+    return window.innerWidth < 820 || window.innerHeight > window.innerWidth * 1.15;
+  }
+  function appliquerMode() {
+    document.body.classList.toggle("mobile", estMobile());
+    ajuster();
+  }
+
+  /* ---------------- Horloge ---------------- */
+
+  function horloge() {
+    var d = new Date();
+    $("#date-jour").textContent = d.toLocaleDateString("fr-FR",
+      { weekday: "long", day: "numeric", month: "long" });
+    $("#date-heure").textContent =
+      String(d.getHours()).padStart(2, "0") + ":" + String(d.getMinutes()).padStart(2, "0");
+  }
+
+  /* ---------------- États ---------------- */
+
+  function afficherEtat(titre, detail, rondelle) {
+    $("#etat-titre").textContent = titre;
+    $("#etat-detail").textContent = detail || "";
+    $("#rondelle").style.display = rondelle ? "" : "none";
+    etat.classList.add("visible");
+  }
+  function masquerEtat() { etat.classList.remove("visible"); }
+
+  /* ---------------- Bandeau semaine ---------------- */
+
+  function construireSemaine(data) {
+    var conteneur = $("#jours"), ruban = $("#mob-jours");
+    conteneur.innerHTML = ""; ruban.innerHTML = "";
+    if (!data.debut) return;
+
+    var depart = new Date(data.debut + "T00:00:00");
+    if (isNaN(depart)) return;
+
+    var auj = new Date(); auj.setHours(0, 0, 0, 0);
+
+    for (var i = 0; i < 7; i++) {
+      var j = new Date(depart.getTime());
+      j.setDate(depart.getDate() + i);
+
+      var etat_ = j.getTime() === auj.getTime() ? "actuel"
+                : (j < auj ? "passe" : "");
+
+      [conteneur, ruban].forEach(function (cible) {
+        var el = document.createElement("div");
+        el.className = "jour " + etat_;
+        el.innerHTML = '<span class="nom">' + JOURS[j.getDay()] + '</span>' +
+                       '<span class="num">' + j.getDate() + '</span>';
+        cible.appendChild(el);
+      });
+    }
+
+    var opts = { day: "numeric", month: "long" };
+    var fin = new Date(depart.getTime()); fin.setDate(depart.getDate() + 6);
+    var periode = depart.toLocaleDateString("fr-FR", { day: "numeric", month: "short" }) +
+                  " – " + fin.toLocaleDateString("fr-FR", opts);
+
+    $("#lib-semaine").textContent = data.semaine ? "Semaine " + data.semaine : "Cette semaine";
+    $("#lib-dates").textContent = periode;
+    $("#mob-semaine").textContent = data.semaine ? "Semaine " + data.semaine : "";
+    $("#mob-dates").textContent = periode;
+  }
+
+  /* ---------------- Données ---------------- */
+
+  function chargerProgramme(premier) {
+    fetch("programme.json?t=" + Date.now(), { cache: "no-store" })
+      .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+      .then(function (data) {
+        if (!data || !Array.isArray(data.visuels) || !data.visuels.length) {
+          throw new Error("programme vide");
+        }
+        if (data.maj === signature) return;
+        signature = data.maj;
+        construire(data);
+      })
+      .catch(function (err) {
+        if (!premier) return;             // un programme déjà affiché reste en place
+        afficherEtat("Programme momentanément indisponible",
+          "Le programme des animations n'a pas pu être chargé (" + err.message +
+          "). Nouvelle tentative dans une minute.", false);
+        setTimeout(function () { chargerProgramme(true); }, 60000);
+      });
+  }
+
+  function construire(data) {
+    clearTimeout(tempo);
+    doc.innerHTML = "";
+    $("#mob-pile").innerHTML = "";
+    construireSemaine(data);
+
+    var restants = data.visuels.length, valides = 0;
+
+    data.visuels.forEach(function (v, i) {
+      var alt = "Programme des animations — page " + (i + 1);
+
+      var fig = document.createElement("figure");
+      var im = document.createElement("img");
+      im.alt = alt;
+      im.onload = function () { valides++; fini(); };
+      im.onerror = function () { fig.remove(); fini(); };
+      im.src = v.fichier;
+      fig.appendChild(im);
+      doc.appendChild(fig);
+
+      var mi = document.createElement("img");
+      mi.src = v.fichier; mi.alt = alt; mi.loading = i < 2 ? "eager" : "lazy";
+      mi.addEventListener("click", function () { ouvrirZoom(v.fichier, alt); });
+      $("#mob-pile").appendChild(mi);
+    });
+
+    function fini() {
+      if (--restants > 0) return;
+      if (!valides) {
+        afficherEtat("Visuels indisponibles",
+          "Les images du programme n'ont pas pu être affichées.", false);
+        return;
+      }
+      masquerEtat();
+      preparerDefilement();
+    }
+  }
+
+  /* ---------------- Défilement (même principe que le wrapper météo) ---------------- */
+
+  function preparerDefilement() {
+    var hDoc = doc.offsetHeight, max = Math.max(0, hDoc - HVUE);
+    var pas = HVUE - CONFIG.recouvrement, y = 0;
+    etapes = [0];
+    while (y + pas < max) { y += pas; etapes.push(y); }
+    if (max > 0 && etapes[etapes.length - 1] !== max) etapes.push(max);
+    pos = 0;
+    placer(0, 0);
+    planifier(CONFIG.pause + 1500);
+  }
+
+  function placer(y, duree) {
+    var max = etapes[etapes.length - 1] || 1;
+    doc.style.webkitTransition = duree ? ("-webkit-transform " + duree + "ms ease-in-out") : "none";
+    doc.style.transition = duree ? ("transform " + duree + "ms ease-in-out") : "none";
+    doc.style.webkitTransform = "translateY(-" + y + "px)";
+    doc.style.transform = "translateY(-" + y + "px)";
+    $("#sbar").style.width = (y / max * 100) + "%";
+  }
+
+  function planifier(d) { clearTimeout(tempo); tempo = setTimeout(suivant, d); }
+
+  function suivant() {
+    if (fige || etapes.length < 2) return;
+    pos = (pos + 1) % etapes.length;
+    if (pos === 0) { placer(0, 700); planifier(700 + CONFIG.pause + 1500); return; }
+    placer(etapes[pos], CONFIG.glissement);
+    planifier(CONFIG.glissement + CONFIG.pause);
+  }
+
+  /* ---------------- Zoom mobile ---------------- */
+
+  function ouvrirZoom(src, alt) {
+    zoomImg.src = src; zoomImg.alt = alt;
+    zoom.classList.add("visible");
+    zoom.scrollTop = 0; zoom.scrollLeft = zoom.scrollWidth / 6;
+  }
+  function fermerZoom() { zoom.classList.remove("visible"); zoomImg.removeAttribute("src"); }
+  $("#fermer-zoom").addEventListener("click", fermerZoom);
+  zoom.addEventListener("click", function (e) { if (e.target === zoom) fermerZoom(); });
+
+  /* ---------------- Télécommande ---------------- */
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "ArrowDown" || e.key === "ArrowRight" || e.key === "PageDown") {
+      planifier(0);
+    } else if (e.key === "ArrowUp" || e.key === "ArrowLeft" || e.key === "PageUp") {
+      pos = (pos - 2 + etapes.length) % etapes.length; planifier(0);
+    } else if (e.key === " " || e.key === "Enter") {
+      fige = !fige;
+      if (!fige) planifier(CONFIG.pause);
+      e.preventDefault();
+    } else if (e.key === "Escape") { fermerZoom(); }
+  });
+
+  /* ---------------- Cycle de vie ---------------- */
+
+  window.addEventListener("resize", appliquerMode);
+  window.addEventListener("orientationchange", appliquerMode);
+  setInterval(function () { chargerProgramme(false); }, CONFIG.rafraichir);
+  setInterval(horloge, 20000);
+  document.addEventListener("visibilitychange", function () {
+    if (!document.hidden) { horloge(); chargerProgramme(false); }
+  });
+
+  horloge();
+  appliquerMode();
+  chargerProgramme(true);
+})();
+</script>
+</body>
+</html>
