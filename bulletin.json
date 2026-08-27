@@ -2,25 +2,25 @@
   "ecusson": "LA",
   "station": "LES ARCS",
   "soustitre": "Arc 1950 · Paradiski · Bulletin du domaine",
-  "maj": "2026-08-26T22:40:00",
+  "maj": "2026-08-27T18:09:00",
   "source": "Lumiplan",
   "hero": [
     {
       "k": "Temp. sommet",
-      "v": "20°",
+      "v": "26°",
       "l": "GRAND COL",
       "c": ""
     },
     {
       "k": "Temp. station",
-      "v": "20°",
+      "v": "26°",
       "l": "ARC 2000 · 2000 m",
       "c": "n"
     },
     {
       "k": "Vent",
-      "v": "7 km/h",
-      "l": "Secteur E",
+      "v": "4 km/h",
+      "l": "Secteur N",
       "c": "w"
     },
     {
@@ -67,10 +67,10 @@
       "lieu": "GRAND COL",
       "alt": 3000,
       "ciel": "Soleil",
-      "matin": "14",
-      "aprem": "20",
-      "vent": "7",
-      "dir": "E",
+      "matin": "16",
+      "aprem": "26",
+      "vent": "4",
+      "dir": "N",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "2",
@@ -81,10 +81,10 @@
       "lieu": "ARC 2000",
       "alt": 2000,
       "ciel": "Soleil",
-      "matin": "14",
-      "aprem": "20",
-      "vent": "7",
-      "dir": "E",
+      "matin": "16",
+      "aprem": "26",
+      "vent": "4",
+      "dir": "N",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "1",
@@ -95,10 +95,10 @@
       "lieu": "ARC 1600",
       "alt": 1600,
       "ciel": "Soleil",
-      "matin": "14",
-      "aprem": "20",
-      "vent": "7",
-      "dir": "E",
+      "matin": "16",
+      "aprem": "26",
+      "vent": "4",
+      "dir": "N",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "5",
@@ -109,10 +109,10 @@
       "lieu": "BOURG ST MAURICE",
       "alt": 800,
       "ciel": "Soleil",
-      "matin": "15",
-      "aprem": "25",
-      "vent": "4",
-      "dir": "N",
+      "matin": "19",
+      "aprem": "34",
+      "vent": "0",
+      "dir": "",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "5",
@@ -123,10 +123,10 @@
       "lieu": "ARC 1800",
       "alt": 1800,
       "ciel": "Soleil",
-      "matin": "14",
-      "aprem": "18",
-      "vent": "2",
-      "dir": "SE",
+      "matin": "19",
+      "aprem": "23",
+      "vent": "10",
+      "dir": "E",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "5",
@@ -135,12 +135,12 @@
     }
   ],
   "previsions": {
-    "jourDate": "26/08/2026",
-    "jourTitre": "",
-    "jourTexte": "Les quelques nuages présents ici et là disparaissent au fil du temps et le soleil devient prédominant. Vent variable, faible. Cette nuit: La nuit débute sous un ciel bien étoilé. Des passages nuageux circulent, mais le ciel se dégage à nouveau en fin de nuit. En seconde partie de nuit, vent de Sud-Sud-Est modéré, en Maurienne.",
-    "demainDate": "27/08/2026",
+    "jourDate": "27/08/2026",
+    "jourTitre": "Temps sec et ciel généralement dégagé, mais la visibilité estmauvaise à cause des poussières sahariennes présentesdans l'atmosphère.Maximales atteignant un pic à 34/35 °C à Chambéry et",
+    "jourTexte": "Albertville. A noter qu'il fera probablement autant voire pluschaud à Brg-St-Maurice/St-Michel de Maurienne qu'en plaineà cause du foehn (36 °C possible dans ces secteurs !). 26 °Cà Val d'Isère.Isotherme 0 °C 4600 m",
+    "demainDate": "28/08/2026",
     "demainTitre": "",
-    "demainTexte": "Quelques nuages sont présents en matinée. L'après-midi est ensoleillée pour tous. Pour la nuit : Le temps est bien dégagé. En cours de nuit, des nuages se forment. Ils deviennent menaçants, s'accompagnent parfois d'averses et des orages éclatent en fin de nuit dans le Beaufortain, en Tarentaise et Vanoise, dans les Bauges ainsi que dans les plaines et basses vallées. C'est de la neige qui tombe au-dessus de 3700 mètres. Vent généralement modéré, de secteur Sud. Avec des rafales atteignant, localement, 85 km/h, en fin de nuit."
+    "demainTexte": "Le temps est franchement maussade. En matinée etjusqu'à la mi-journée, un axe pluvieux et orageux très actifse met en place sur l'ouest de la Savoie"
   },
   "blocs": [
     {
@@ -167,7 +167,7 @@
       "sections": [
         {
           "titre": "Remontées Mécaniques",
-          "ouv": 0,
+          "ouv": 1,
           "tot": 2,
           "items": [
             {
@@ -175,7 +175,7 @@
               "c": "",
               "nm": "FUNICULAIRE",
               "hr": "07:15–19:30",
-              "e": "P",
+              "e": "O",
               "no": "Toutes les 30 min"
             },
             {
@@ -194,7 +194,7 @@
       "sections": [
         {
           "titre": "Remontées Mécaniques",
-          "ouv": 0,
+          "ouv": 1,
           "tot": 4,
           "items": [
             {
@@ -202,8 +202,8 @@
               "c": "",
               "nm": "DAHU",
               "hr": "08:30–22:00",
-              "e": "P",
-              "no": "Ouverture non garantie si orages"
+              "e": "O",
+              "no": "ouverture non garantie si orages ce soir."
             },
             {
               "ty": "TC",
