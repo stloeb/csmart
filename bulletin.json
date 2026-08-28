@@ -2,18 +2,18 @@
   "ecusson": "LA",
   "station": "LES ARCS",
   "soustitre": "Arc 1950 · Paradiski · Bulletin du domaine",
-  "maj": "2026-08-27T18:09:00",
+  "maj": "2026-08-28T03:03:00",
   "source": "Lumiplan",
   "hero": [
     {
       "k": "Temp. sommet",
-      "v": "26°",
+      "v": "14°",
       "l": "GRAND COL",
       "c": ""
     },
     {
       "k": "Temp. station",
-      "v": "26°",
+      "v": "14°",
       "l": "ARC 2000 · 2000 m",
       "c": "n"
     },
@@ -25,7 +25,7 @@
     },
     {
       "k": "Limite pluie/neige",
-      "v": "1 m",
+      "v": "3800 m",
       "l": "Altitude",
       "c": "n"
     },
@@ -37,8 +37,8 @@
     },
     {
       "k": "Dernière chute",
-      "v": "+ cm",
-      "l": "—",
+      "v": "+1 cm",
+      "l": "14/04/2026",
       "c": ""
     }
   ],
@@ -66,53 +66,53 @@
     {
       "lieu": "GRAND COL",
       "alt": 3000,
-      "ciel": "Soleil",
-      "matin": "16",
-      "aprem": "26",
+      "ciel": "Ciel variable, pluies faibles",
+      "matin": "18",
+      "aprem": "14",
       "vent": "4",
       "dir": "N",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "2",
-      "derniereH": "",
-      "derniereD": ""
+      "limite": "3800",
+      "derniereH": "2",
+      "derniereD": "14/04/2026"
     },
     {
       "lieu": "ARC 2000",
       "alt": 2000,
-      "ciel": "Soleil",
-      "matin": "16",
-      "aprem": "26",
+      "ciel": "Ciel variable, pluies faibles",
+      "matin": "18",
+      "aprem": "14",
       "vent": "4",
       "dir": "N",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "1",
-      "derniereH": "",
-      "derniereD": ""
+      "limite": "3800",
+      "derniereH": "1",
+      "derniereD": "14/04/2026"
     },
     {
       "lieu": "ARC 1600",
       "alt": 1600,
-      "ciel": "Soleil",
-      "matin": "16",
-      "aprem": "26",
+      "ciel": "Ciel variable, pluies faibles",
+      "matin": "18",
+      "aprem": "14",
       "vent": "4",
       "dir": "N",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "5",
-      "derniereH": "",
-      "derniereD": ""
+      "limite": "3800",
+      "derniereH": "5",
+      "derniereD": "31/03/2026"
     },
     {
       "lieu": "BOURG ST MAURICE",
       "alt": 800,
-      "ciel": "Soleil",
-      "matin": "19",
-      "aprem": "34",
-      "vent": "0",
-      "dir": "",
+      "ciel": "Couvert",
+      "matin": "22",
+      "aprem": "20",
+      "vent": "7",
+      "dir": "S",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "5",
@@ -122,11 +122,11 @@
     {
       "lieu": "ARC 1800",
       "alt": 1800,
-      "ciel": "Soleil",
+      "ciel": "Couvert",
       "matin": "19",
-      "aprem": "23",
-      "vent": "10",
-      "dir": "E",
+      "aprem": "19",
+      "vent": "18",
+      "dir": "SO",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "5",
@@ -135,12 +135,12 @@
     }
   ],
   "previsions": {
-    "jourDate": "27/08/2026",
-    "jourTitre": "Temps sec et ciel généralement dégagé, mais la visibilité estmauvaise à cause des poussières sahariennes présentesdans l'atmosphère.Maximales atteignant un pic à 34/35 °C à Chambéry et",
-    "jourTexte": "Albertville. A noter qu'il fera probablement autant voire pluschaud à Brg-St-Maurice/St-Michel de Maurienne qu'en plaineà cause du foehn (36 °C possible dans ces secteurs !). 26 °Cà Val d'Isère.Isotherme 0 °C 4600 m",
-    "demainDate": "28/08/2026",
+    "jourDate": "28/08/2026",
+    "jourTitre": "",
+    "jourTexte": "Le ciel est très ensoleillé. Seuls quelques rares nuages se montrent timidement en cours d'après-midi, en Maurienne. Vent de Sud à Sud-Ouest, généralement modéré. Avec des rafales atteignant, dans les Bauges, 55 km/h, à la tombée du jour. Cette nuit: Le ciel est généralement bien dégagé en début de nuit. Mais progressivement, les nuages se font plus nombreux. Ils deviennent majoritaires en Maurienne, sur les massifs frontaliers, dans les Bauges ainsi que dans les plaines et basses vallées, et ils apportent quelques averses dès le milieu de nuit. Avant l'aurore, les précipitations sont plus continues, dans les Bauges ainsi que dans la Cluse de Chambéry et l'avant-Pays, et un orage n'est pas exclu. La limite pluie-neige s'abaisse jusqu'à 3700 mètres. Vent de Sud, modéré par endroits.",
+    "demainDate": "29/08/2026",
     "demainTitre": "",
-    "demainTexte": "Le temps est franchement maussade. En matinée etjusqu'à la mi-journée, un axe pluvieux et orageux très actifse met en place sur l'ouest de la Savoie"
+    "demainTexte": "Le temps est souvent nuageux avec des averses, mais aussi quelques éclaircies. Généralement, les averses restent faibles et éparses et le temps devient plus sec et plus ensoleillé en fin de journée. Cependant dans le Beaufortain, en Maurienne, dans les Bauges ainsi que dans les plaines et basses vallées, un orage est possible à la mi-journée. La limite pluie-neige se situe vers 3800 mètres tôt le matin, puis elle peut s'abaisser jusqu'à 3350 mètres ensuite. Pour la nuit : Dans l'ensemble, la nuit se déroule agréablement avec de larges éclaircies. Cependant, en soirée, quelques gouttes peuvent tomber, dans le Beaufortain, en Tarentaise et Vanoise, dans la Combe de Savoie ainsi que dans les Bauges. La limite pluie-neige s'abaisse jusqu'à 3150 mètres. Vers minuit, il peut aussi se former de manière fugace des brumes, très localement. En milieu de journée, vent de Sud à Sud-Ouest soufflant modérément, dans les massifs intérieurs ; puis atténuation."
   },
   "blocs": [
     {
@@ -167,7 +167,7 @@
       "sections": [
         {
           "titre": "Remontées Mécaniques",
-          "ouv": 1,
+          "ouv": 0,
           "tot": 2,
           "items": [
             {
@@ -175,7 +175,7 @@
               "c": "",
               "nm": "FUNICULAIRE",
               "hr": "07:15–19:30",
-              "e": "O",
+              "e": "P",
               "no": "Toutes les 30 min"
             },
             {
@@ -194,7 +194,7 @@
       "sections": [
         {
           "titre": "Remontées Mécaniques",
-          "ouv": 1,
+          "ouv": 0,
           "tot": 4,
           "items": [
             {
@@ -202,7 +202,7 @@
               "c": "",
               "nm": "DAHU",
               "hr": "08:30–22:00",
-              "e": "O",
+              "e": "P",
               "no": "ouverture non garantie si orages ce soir."
             },
             {
