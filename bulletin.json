@@ -2,30 +2,30 @@
   "ecusson": "LA",
   "station": "LES ARCS",
   "soustitre": "Arc 1950 · Paradiski · Bulletin du domaine",
-  "maj": "2026-08-28T03:03:00",
+  "maj": "2026-08-28T19:10:00",
   "source": "Lumiplan",
   "hero": [
     {
       "k": "Temp. sommet",
-      "v": "14°",
+      "v": "12°",
       "l": "GRAND COL",
       "c": ""
     },
     {
       "k": "Temp. station",
-      "v": "14°",
+      "v": "12°",
       "l": "ARC 2000 · 2000 m",
       "c": "n"
     },
     {
       "k": "Vent",
-      "v": "4 km/h",
-      "l": "Secteur N",
+      "v": "11 km/h",
+      "l": "Secteur O",
       "c": "w"
     },
     {
       "k": "Limite pluie/neige",
-      "v": "3800 m",
+      "v": "3300 m",
       "l": "Altitude",
       "c": "n"
     },
@@ -66,81 +66,81 @@
     {
       "lieu": "GRAND COL",
       "alt": 3000,
-      "ciel": "Ciel variable, pluies faibles",
-      "matin": "18",
-      "aprem": "14",
-      "vent": "4",
-      "dir": "N",
+      "ciel": "Couvert",
+      "matin": "19",
+      "aprem": "12",
+      "vent": "11",
+      "dir": "O",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "3800",
+      "limite": "3300",
       "derniereH": "2",
       "derniereD": "14/04/2026"
     },
     {
       "lieu": "ARC 2000",
       "alt": 2000,
-      "ciel": "Ciel variable, pluies faibles",
-      "matin": "18",
-      "aprem": "14",
-      "vent": "4",
-      "dir": "N",
+      "ciel": "Couvert",
+      "matin": "19",
+      "aprem": "12",
+      "vent": "11",
+      "dir": "O",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "3800",
+      "limite": "3300",
       "derniereH": "1",
       "derniereD": "14/04/2026"
     },
     {
       "lieu": "ARC 1600",
       "alt": 1600,
-      "ciel": "Ciel variable, pluies faibles",
-      "matin": "18",
-      "aprem": "14",
-      "vent": "4",
-      "dir": "N",
+      "ciel": "Couvert",
+      "matin": "19",
+      "aprem": "12",
+      "vent": "11",
+      "dir": "O",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "3800",
+      "limite": "3300",
       "derniereH": "5",
       "derniereD": "31/03/2026"
     },
     {
       "lieu": "BOURG ST MAURICE",
       "alt": 800,
-      "ciel": "Couvert",
-      "matin": "22",
-      "aprem": "20",
+      "ciel": "Très nuageux, courtes éclaircies",
+      "matin": "23",
+      "aprem": "18",
       "vent": "7",
-      "dir": "S",
+      "dir": "O",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "5",
-      "derniereH": "",
-      "derniereD": ""
+      "limite": "3300",
+      "derniereH": "5",
+      "derniereD": "14/03/2026"
     },
     {
       "lieu": "ARC 1800",
       "alt": 1800,
-      "ciel": "Couvert",
-      "matin": "19",
-      "aprem": "19",
-      "vent": "18",
+      "ciel": "Très nuageux, courtes éclaircies",
+      "matin": "18",
+      "aprem": "11",
+      "vent": "8",
       "dir": "SO",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "5",
-      "derniereH": "",
-      "derniereD": ""
+      "limite": "3300",
+      "derniereH": "5",
+      "derniereD": "31/03/2026"
     }
   ],
   "previsions": {
     "jourDate": "28/08/2026",
     "jourTitre": "",
-    "jourTexte": "Le ciel est très ensoleillé. Seuls quelques rares nuages se montrent timidement en cours d'après-midi, en Maurienne. Vent de Sud à Sud-Ouest, généralement modéré. Avec des rafales atteignant, dans les Bauges, 55 km/h, à la tombée du jour. Cette nuit: Le ciel est généralement bien dégagé en début de nuit. Mais progressivement, les nuages se font plus nombreux. Ils deviennent majoritaires en Maurienne, sur les massifs frontaliers, dans les Bauges ainsi que dans les plaines et basses vallées, et ils apportent quelques averses dès le milieu de nuit. Avant l'aurore, les précipitations sont plus continues, dans les Bauges ainsi que dans la Cluse de Chambéry et l'avant-Pays, et un orage n'est pas exclu. La limite pluie-neige s'abaisse jusqu'à 3700 mètres. Vent de Sud, modéré par endroits.",
+    "jourTexte": "Durant la mi-journée, le ciel est variable, les passages nuageux donnent quelques averses ici ou là. À noter que ces averses peuvent être orageuses dans le Beaufortain ainsi que dans la Combe de Savoie. En fin d'après-midi, le ciel se couvre progressivement, les précipitations s'atténuent, et en toute fin de journée ne subsistent plus que quelques pluies éparses, dans la Combe de Savoie ainsi que dans les massifs intérieurs. Située vers 3500 mètres en début d'après-midi, la limite pluie-neige peut s'abaisser par la suite jusqu'à 3200 mètres. En cours d'après-midi, vent d'Ouest-Sud-Ouest modéré, en Tarentaise et Vanoise ; atténuation ensuite. Cette nuit: En soirée, les nuages donnent de faibles averses en Tarentaise et Vanoise ainsi que sur les massifs frontaliers. La neige remplace la pluie au-dessus de 3000 mètres. Ils s'effacent assez vite, et le ciel s'éclaircit dès le milieu de nuit. Vent variable, faible.",
     "demainDate": "29/08/2026",
     "demainTitre": "",
-    "demainTexte": "Le temps est souvent nuageux avec des averses, mais aussi quelques éclaircies. Généralement, les averses restent faibles et éparses et le temps devient plus sec et plus ensoleillé en fin de journée. Cependant dans le Beaufortain, en Maurienne, dans les Bauges ainsi que dans les plaines et basses vallées, un orage est possible à la mi-journée. La limite pluie-neige se situe vers 3800 mètres tôt le matin, puis elle peut s'abaisser jusqu'à 3350 mètres ensuite. Pour la nuit : Dans l'ensemble, la nuit se déroule agréablement avec de larges éclaircies. Cependant, en soirée, quelques gouttes peuvent tomber, dans le Beaufortain, en Tarentaise et Vanoise, dans la Combe de Savoie ainsi que dans les Bauges. La limite pluie-neige s'abaisse jusqu'à 3150 mètres. Vers minuit, il peut aussi se former de manière fugace des brumes, très localement. En milieu de journée, vent de Sud à Sud-Ouest soufflant modérément, dans les massifs intérieurs ; puis atténuation."
+    "demainTexte": "La journée est très ensoleillée, mis à part en fin de matinée, quand quelques nuages se forment, dans le Beaufortain, en Tarentaise et Vanoise, dans les Bauges ainsi que dans les plaines et basses vallées. Ils se dissipent heureusement rapidement. Pour la nuit : Le temps est calme et propice à l'observation des étoiles. En milieu d'après-midi, vent s'orientant Ouest modéré, en Tarentaise et Vanoise ; atténuation ensuite."
   },
   "blocs": [
     {
@@ -167,7 +167,7 @@
       "sections": [
         {
           "titre": "Remontées Mécaniques",
-          "ouv": 0,
+          "ouv": 1,
           "tot": 2,
           "items": [
             {
@@ -175,7 +175,7 @@
               "c": "",
               "nm": "FUNICULAIRE",
               "hr": "07:15–19:30",
-              "e": "P",
+              "e": "O",
               "no": "Toutes les 30 min"
             },
             {
@@ -194,7 +194,7 @@
       "sections": [
         {
           "titre": "Remontées Mécaniques",
-          "ouv": 0,
+          "ouv": 1,
           "tot": 4,
           "items": [
             {
@@ -202,8 +202,8 @@
               "c": "",
               "nm": "DAHU",
               "hr": "08:30–22:00",
-              "e": "P",
-              "no": "ouverture non garantie si orages ce soir."
+              "e": "O",
+              "no": "Ouverture non garantie en soirée si orages"
             },
             {
               "ty": "TC",
@@ -244,7 +244,7 @@
               "nm": "AIGUILLE ROUGE",
               "hr": "09:45–16:20",
               "e": "P",
-              "no": "Pause/break 12:45-13:15"
+              "no": "Pause/Break : 12:45-13:15"
             },
             {
               "ty": "TC",
@@ -266,7 +266,7 @@
               "nm": "BOIS DE L'OURS",
               "hr": "09:15–16:50",
               "e": "P",
-              "no": "Pause/break 12:45-13:15"
+              "no": "Pause/Break : 12:45-13:15"
             },
             {
               "ty": "TB",
@@ -301,7 +301,7 @@
               "nm": "LA TYROLIENNE DE L'AIGUILLE ROUGE",
               "hr": "09:40–16:30",
               "e": "P",
-              "no": "Pause/break 12:20-13:30"
+              "no": "Pause/Break : 12:20-13:30"
             },
             {
               "ty": "",
@@ -316,7 +316,7 @@
               "nm": "LES FRESQUES LUMINEUSES DE L'AIGUILLE ROUGE",
               "hr": "09:40–16:15",
               "e": "P",
-              "no": "Pause/break : 12:40-13h30"
+              "no": "Pause/Break : 12:40-13:30"
             },
             {
               "ty": "",
