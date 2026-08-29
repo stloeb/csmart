@@ -2,7 +2,7 @@
   "ecusson": "LA",
   "station": "LES ARCS",
   "soustitre": "Arc 1950 · Paradiski · Bulletin du domaine",
-  "maj": "2026-08-29T03:05:00",
+  "maj": "2026-08-29T13:28:00",
   "source": "Lumiplan",
   "hero": [
     {
@@ -51,13 +51,13 @@
     },
     {
       "p": "s",
-      "ouv": 5,
+      "ouv": 4,
       "tot": 5,
       "l": "Pistes"
     },
     {
       "p": "o",
-      "ouv": 5,
+      "ouv": 4,
       "tot": 5,
       "l": "Itinéraires"
     }
@@ -110,7 +110,7 @@
       "alt": 800,
       "ciel": "Soleil",
       "matin": "12",
-      "aprem": "24",
+      "aprem": "25",
       "vent": "0",
       "dir": "",
       "neige24": "0",
@@ -124,7 +124,7 @@
       "alt": 1800,
       "ciel": "Soleil",
       "matin": "10",
-      "aprem": "14",
+      "aprem": "15",
       "vent": "4",
       "dir": "SE",
       "neige24": "0",
@@ -137,10 +137,10 @@
   "previsions": {
     "jourDate": "29/08/2026",
     "jourTitre": "",
-    "jourTexte": "Durant la mi-journée, le ciel est variable, les passages nuageux donnent quelques averses ici ou là. À noter que ces averses peuvent être orageuses dans le Beaufortain ainsi que dans la Combe de Savoie. En fin d'après-midi, le ciel se couvre progressivement, les précipitations s'atténuent, et en toute fin de journée ne subsistent plus que quelques pluies éparses, dans la Combe de Savoie ainsi que dans les massifs intérieurs. Située vers 3500 mètres en début d'après-midi, la limite pluie-neige peut s'abaisser par la suite jusqu'à 3200 mètres. En cours d'après-midi, vent d'Ouest-Sud-Ouest modéré, en Tarentaise et Vanoise ; atténuation ensuite. Cette nuit: En soirée, les nuages donnent de faibles averses en Tarentaise et Vanoise ainsi que sur les massifs frontaliers. La neige remplace la pluie au-dessus de 3000 mètres. Ils s'effacent assez vite, et le ciel s'éclaircit dès le milieu de nuit. Vent variable, faible.",
+    "jourTexte": "La journée débute sous un ciel bien ensoleillé. Des passages nuageux circulent en cours de journée, mais le soleil reprend le dessus.",
     "demainDate": "30/08/2026",
     "demainTitre": "",
-    "demainTexte": "La journée est très ensoleillée, mis à part en fin de matinée, quand quelques nuages se forment, dans le Beaufortain, en Tarentaise et Vanoise, dans les Bauges ainsi que dans les plaines et basses vallées. Ils se dissipent heureusement rapidement. Pour la nuit : Le temps est calme et propice à l'observation des étoiles. En milieu d'après-midi, vent s'orientant Ouest modéré, en Tarentaise et Vanoise ; atténuation ensuite."
+    "demainTexte": "L'ensoleillement est globalement excellent."
   },
   "blocs": [
     {
@@ -156,7 +156,8 @@
               "c": "",
               "nm": "VALLANDRY",
               "hr": "09:15–16:50",
-              "e": "P"
+              "e": "P",
+              "no": "Incident technique maintenance en cours"
             }
           ]
         }
@@ -167,7 +168,7 @@
       "sections": [
         {
           "titre": "Remontées Mécaniques",
-          "ouv": 0,
+          "ouv": 2,
           "tot": 2,
           "items": [
             {
@@ -175,7 +176,7 @@
               "c": "",
               "nm": "FUNICULAIRE",
               "hr": "07:15–19:30",
-              "e": "P",
+              "e": "O",
               "no": "Toutes les 30 min"
             },
             {
@@ -183,7 +184,7 @@
               "c": "",
               "nm": "CACHETTE",
               "hr": "09:15–16:50",
-              "e": "P"
+              "e": "O"
             }
           ]
         }
@@ -194,7 +195,7 @@
       "sections": [
         {
           "titre": "Remontées Mécaniques",
-          "ouv": 0,
+          "ouv": 4,
           "tot": 4,
           "items": [
             {
@@ -202,29 +203,28 @@
               "c": "",
               "nm": "DAHU",
               "hr": "08:30–22:00",
-              "e": "P",
-              "no": "Ouverture non garantie en soirée si orages"
+              "e": "O"
             },
             {
               "ty": "TC",
               "c": "",
               "nm": "TRANSARC 1",
               "hr": "09:15–16:50",
-              "e": "P"
+              "e": "O"
             },
             {
               "ty": "TC",
               "c": "",
               "nm": "TRANSARC 2",
               "hr": "09:15–16:50",
-              "e": "P"
+              "e": "O"
             },
             {
               "ty": "TC",
               "c": "",
               "nm": "VILLARDS",
               "hr": "08:45–17:30",
-              "e": "P"
+              "e": "O"
             }
           ]
         }
@@ -235,7 +235,7 @@
       "sections": [
         {
           "titre": "Remontées Mécaniques",
-          "ouv": 0,
+          "ouv": 4,
           "tot": 5,
           "items": [
             {
@@ -243,7 +243,7 @@
               "c": "",
               "nm": "AIGUILLE ROUGE",
               "hr": "09:45–16:20",
-              "e": "P",
+              "e": "O",
               "no": "Pause/Break : 12:45-13:15"
             },
             {
@@ -251,21 +251,21 @@
               "c": "",
               "nm": "VARET",
               "hr": "09:30–16:30",
-              "e": "P"
+              "e": "O"
             },
             {
               "ty": "TSDB",
               "c": "",
               "nm": "ARCABULLE",
               "hr": "09:30–16:50",
-              "e": "P"
+              "e": "O"
             },
             {
               "ty": "TSD",
               "c": "",
               "nm": "BOIS DE L'OURS",
               "hr": "09:15–16:50",
-              "e": "P",
+              "e": "O",
               "no": "Pause/Break : 12:45-13:15"
             },
             {
@@ -285,7 +285,7 @@
       "sections": [
         {
           "titre": "Pistes et activités",
-          "ouv": 0,
+          "ouv": 4,
           "tot": 5,
           "items": [
             {
@@ -293,29 +293,29 @@
               "c": "k",
               "nm": "GALERIE DES MINERAUX",
               "hr": "09:25–16:40",
-              "e": "P"
+              "e": "O"
             },
             {
               "ty": "",
               "c": "k",
               "nm": "LA TYROLIENNE DE L'AIGUILLE ROUGE",
-              "hr": "09:40–16:30",
-              "e": "P",
-              "no": "Pause/Break : 12:20-13:30"
+              "hr": "09:40–13:00",
+              "e": "F",
+              "no": "Fermeture définitive à 13:00"
             },
             {
               "ty": "",
               "c": "k",
               "nm": "GEANTS DE MALGOVERT",
               "hr": "09:20–16:45",
-              "e": "P"
+              "e": "O"
             },
             {
               "ty": "",
               "c": "k",
               "nm": "LES FRESQUES LUMINEUSES DE L'AIGUILLE ROUGE",
               "hr": "09:40–16:15",
-              "e": "P",
+              "e": "O",
               "no": "Pause/Break : 12:40-13:30"
             },
             {
@@ -323,7 +323,7 @@
               "c": "k",
               "nm": "MUSEUM DES ANIMAUX DE MONTAGNE",
               "hr": "09:25–16:40",
-              "e": "P"
+              "e": "O"
             }
           ]
         }
