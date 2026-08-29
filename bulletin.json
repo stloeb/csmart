@@ -2,18 +2,18 @@
   "ecusson": "LA",
   "station": "LES ARCS",
   "soustitre": "Arc 1950 · Paradiski · Bulletin du domaine",
-  "maj": "2026-08-29T17:43:00",
+  "maj": "2026-08-29T21:15:00",
   "source": "Lumiplan",
   "hero": [
     {
       "k": "Temp. sommet",
-      "v": "17°",
+      "v": "15°",
       "l": "GRAND COL",
       "c": ""
     },
     {
       "k": "Temp. station",
-      "v": "17°",
+      "v": "15°",
       "l": "ARC 2000 · 2000 m",
       "c": "n"
     },
@@ -68,7 +68,7 @@
       "alt": 3000,
       "ciel": "Soleil",
       "matin": "9",
-      "aprem": "17",
+      "aprem": "15",
       "vent": "4",
       "dir": "N",
       "neige24": "0",
@@ -82,7 +82,7 @@
       "alt": 2000,
       "ciel": "Soleil",
       "matin": "9",
-      "aprem": "17",
+      "aprem": "15",
       "vent": "4",
       "dir": "N",
       "neige24": "0",
@@ -96,7 +96,7 @@
       "alt": 1600,
       "ciel": "Soleil",
       "matin": "9",
-      "aprem": "17",
+      "aprem": "15",
       "vent": "4",
       "dir": "N",
       "neige24": "0",
@@ -110,7 +110,7 @@
       "alt": 800,
       "ciel": "Soleil",
       "matin": "12",
-      "aprem": "25",
+      "aprem": "20",
       "vent": "0",
       "dir": "",
       "neige24": "0",
@@ -124,9 +124,9 @@
       "alt": 1800,
       "ciel": "Soleil",
       "matin": "10",
-      "aprem": "15",
-      "vent": "4",
-      "dir": "SE",
+      "aprem": "14",
+      "vent": "3",
+      "dir": "SO",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "5",
@@ -137,10 +137,10 @@
   "previsions": {
     "jourDate": "29/08/2026",
     "jourTitre": "",
-    "jourTexte": "La journée débute sous un ciel bien ensoleillé. Des passages nuageux circulent en cours de journée, mais le soleil reprend le dessus.",
+    "jourTexte": "Quelques nuages sont présents à la mi-journée, dans le Beaufortain, en Tarentaise et Vanoise, dans les Bauges ainsi que dans les plaines et basses vallées. La fin d'après-midi est ensoleillée pour tous. Vent faible, variable. Cette nuit: Le ciel est clair, même si on peut noter quelques nuages plus présents en Tarentaise et Vanoise, en soirée. Vent variable, faible.",
     "demainDate": "30/08/2026",
     "demainTitre": "",
-    "demainTexte": "L'ensoleillement est globalement excellent."
+    "demainTexte": "L'ensoleillement est globalement excellent. Seuls quelques rares nuages apparaissent temporairement, dans le Beaufortain, en Tarentaise et Vanoise, dans les Bauges ainsi que dans les plaines et basses vallées. Pour la nuit : La soirée est bien étoilée. Mais le ciel clair ne résiste pas partout. Dès le milieu de nuit, dans le Beaufortain, en Tarentaise et Vanoise ainsi que sur les massifs frontaliers, les nuages deviennent plus nombreux et délivrent quelques averses averses. C'est de la neige qui tombe au-dessus de 3300 mètres. Vent faible, variable."
   },
   "blocs": [
     {
@@ -167,7 +167,7 @@
       "sections": [
         {
           "titre": "Remontées Mécaniques",
-          "ouv": 1,
+          "ouv": 0,
           "tot": 2,
           "items": [
             {
@@ -175,7 +175,7 @@
               "c": "",
               "nm": "FUNICULAIRE",
               "hr": "07:15–19:30",
-              "e": "O",
+              "e": "P",
               "no": "Toutes les 30 min"
             },
             {
