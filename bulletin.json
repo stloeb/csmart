@@ -2,18 +2,18 @@
   "ecusson": "LA",
   "station": "LES ARCS",
   "soustitre": "Arc 1950 · Paradiski · Bulletin du domaine",
-  "maj": "2026-08-29T23:52:00",
+  "maj": "2026-09-14T12:22:00",
   "source": "Lumiplan",
   "hero": [
     {
       "k": "Temp. sommet",
-      "v": "15°",
+      "v": "18°",
       "l": "GRAND COL",
       "c": ""
     },
     {
       "k": "Temp. station",
-      "v": "15°",
+      "v": "18°",
       "l": "ARC 2000 · 2000 m",
       "c": "n"
     },
@@ -45,21 +45,9 @@
   "compteurs": [
     {
       "p": "",
-      "ouv": 11,
-      "tot": 12,
+      "ouv": 0,
+      "tot": 52,
       "l": "Remontées"
-    },
-    {
-      "p": "s",
-      "ouv": 4,
-      "tot": 5,
-      "l": "Pistes"
-    },
-    {
-      "p": "o",
-      "ouv": 4,
-      "tot": 5,
-      "l": "Itinéraires"
     }
   ],
   "altitudes": [
@@ -68,7 +56,7 @@
       "alt": 3000,
       "ciel": "Soleil",
       "matin": "9",
-      "aprem": "15",
+      "aprem": "18",
       "vent": "4",
       "dir": "N",
       "neige24": "0",
@@ -82,7 +70,7 @@
       "alt": 2000,
       "ciel": "Soleil",
       "matin": "9",
-      "aprem": "15",
+      "aprem": "18",
       "vent": "4",
       "dir": "N",
       "neige24": "0",
@@ -96,7 +84,7 @@
       "alt": 1600,
       "ciel": "Soleil",
       "matin": "9",
-      "aprem": "15",
+      "aprem": "18",
       "vent": "4",
       "dir": "N",
       "neige24": "0",
@@ -110,7 +98,7 @@
       "alt": 800,
       "ciel": "Soleil",
       "matin": "12",
-      "aprem": "20",
+      "aprem": "26",
       "vent": "0",
       "dir": "",
       "neige24": "0",
@@ -123,10 +111,10 @@
       "lieu": "ARC 1800",
       "alt": 1800,
       "ciel": "Soleil",
-      "matin": "10",
-      "aprem": "14",
-      "vent": "3",
-      "dir": "SO",
+      "matin": "12",
+      "aprem": "16",
+      "vent": "4",
+      "dir": "E",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "5",
@@ -135,12 +123,12 @@
     }
   ],
   "previsions": {
-    "jourDate": "29/08/2026",
+    "jourDate": "14/09/2026",
     "jourTitre": "",
-    "jourTexte": "Quelques nuages sont présents à la mi-journée, dans le Beaufortain, en Tarentaise et Vanoise, dans les Bauges ainsi que dans les plaines et basses vallées. La fin d'après-midi est ensoleillée pour tous. Vent faible, variable. Cette nuit: Le ciel est clair, même si on peut noter quelques nuages plus présents en Tarentaise et Vanoise, en soirée. Vent variable, faible.",
-    "demainDate": "30/08/2026",
+    "jourTexte": "Le soleil brille sans discontinuer du matin jusqu'au soir. L'après-midi jusqu'en début de soirée, vent s'établissant au Nord modéré, dans la Cluse de Chambéry et l'avant-Pays. Cette nuit: Le ciel est bien étoilé. Vent variable, faible.",
+    "demainDate": "15/09/2026",
     "demainTitre": "",
-    "demainTexte": "L'ensoleillement est globalement excellent. Seuls quelques rares nuages apparaissent temporairement, dans le Beaufortain, en Tarentaise et Vanoise, dans les Bauges ainsi que dans les plaines et basses vallées. Pour la nuit : La soirée est bien étoilée. Mais le ciel clair ne résiste pas partout. Dès le milieu de nuit, dans le Beaufortain, en Tarentaise et Vanoise ainsi que sur les massifs frontaliers, les nuages deviennent plus nombreux et délivrent quelques averses averses. C'est de la neige qui tombe au-dessus de 3300 mètres. Vent faible, variable."
+    "demainTexte": "L'ensoleillement est excellent et le soleil règne sans partage. Pour la nuit : Le ciel est clair toute la nuit. Vent faible, variable."
   },
   "blocs": [
     {
@@ -149,14 +137,78 @@
         {
           "titre": "Remontées Mécaniques",
           "ouv": 0,
-          "tot": 1,
+          "tot": 10,
           "items": [
             {
               "ty": "TC",
               "c": "",
+              "nm": "TELEVILLAGE",
+              "hr": "—",
+              "e": "F"
+            },
+            {
+              "ty": "TC",
+              "c": "",
               "nm": "VALLANDRY",
-              "hr": "09:15–16:50",
-              "e": "P"
+              "hr": "—",
+              "e": "F",
+              "no": "Fermeture définitive ce soir"
+            },
+            {
+              "ty": "TSD",
+              "c": "",
+              "nm": "DERBY",
+              "hr": "—",
+              "e": "F"
+            },
+            {
+              "ty": "TSD",
+              "c": "",
+              "nm": "GRIZZLY",
+              "hr": "—",
+              "e": "F"
+            },
+            {
+              "ty": "TSD",
+              "c": "",
+              "nm": "PEISEY",
+              "hr": "—",
+              "e": "F"
+            },
+            {
+              "ty": "TS",
+              "c": "",
+              "nm": "2300",
+              "hr": "—",
+              "e": "F"
+            },
+            {
+              "ty": "TS",
+              "c": "",
+              "nm": "PARCHEY",
+              "hr": "—",
+              "e": "F"
+            },
+            {
+              "ty": "TK",
+              "c": "",
+              "nm": "1ER VIRAGES",
+              "hr": "—",
+              "e": "F"
+            },
+            {
+              "ty": "TK",
+              "c": "",
+              "nm": "CABRI",
+              "hr": "—",
+              "e": "F"
+            },
+            {
+              "ty": "TR",
+              "c": "",
+              "nm": "1ERE GLISSE",
+              "hr": "—",
+              "e": "F"
             }
           ]
         }
@@ -168,22 +220,77 @@
         {
           "titre": "Remontées Mécaniques",
           "ouv": 0,
-          "tot": 2,
+          "tot": 10,
           "items": [
             {
               "ty": "FUNI",
               "c": "",
               "nm": "FUNICULAIRE",
-              "hr": "07:15–19:30",
-              "e": "P",
-              "no": "Toutes les 30 min"
+              "hr": "—",
+              "e": "F"
+            },
+            {
+              "ty": "TSD",
+              "c": "",
+              "nm": "ARPETTE",
+              "hr": "—",
+              "e": "F"
             },
             {
               "ty": "TSD",
               "c": "",
               "nm": "CACHETTE",
-              "hr": "09:15–16:50",
-              "e": "P"
+              "hr": "—",
+              "e": "F"
+            },
+            {
+              "ty": "TSD",
+              "c": "",
+              "nm": "MONT BLANC",
+              "hr": "—",
+              "e": "F"
+            },
+            {
+              "ty": "TS",
+              "c": "",
+              "nm": "CLOCHERET",
+              "hr": "—",
+              "e": "F"
+            },
+            {
+              "ty": "TS",
+              "c": "",
+              "nm": "COMBETTES",
+              "hr": "—",
+              "e": "F"
+            },
+            {
+              "ty": "TK",
+              "c": "",
+              "nm": "MILLERETTE",
+              "hr": "—",
+              "e": "F"
+            },
+            {
+              "ty": "TK",
+              "c": "",
+              "nm": "SNOWPARK",
+              "hr": "—",
+              "e": "F"
+            },
+            {
+              "ty": "TK",
+              "c": "",
+              "nm": "TOMMELET",
+              "hr": "—",
+              "e": "F"
+            },
+            {
+              "ty": "TK",
+              "c": "",
+              "nm": "VEZAILLE",
+              "hr": "—",
+              "e": "F"
             }
           ]
         }
@@ -195,35 +302,77 @@
         {
           "titre": "Remontées Mécaniques",
           "ouv": 0,
-          "tot": 4,
+          "tot": 10,
           "items": [
             {
               "ty": "TPH",
               "c": "",
               "nm": "DAHU",
-              "hr": "08:30–22:00",
-              "e": "P"
+              "hr": "—",
+              "e": "F"
             },
             {
               "ty": "TC",
               "c": "",
               "nm": "TRANSARC 1",
-              "hr": "09:15–16:50",
-              "e": "P"
+              "hr": "—",
+              "e": "F"
             },
             {
               "ty": "TC",
               "c": "",
               "nm": "TRANSARC 2",
-              "hr": "09:15–16:50",
-              "e": "P"
+              "hr": "—",
+              "e": "F"
             },
             {
               "ty": "TC",
               "c": "",
               "nm": "VILLARDS",
-              "hr": "08:45–17:30",
-              "e": "P"
+              "hr": "—",
+              "e": "F"
+            },
+            {
+              "ty": "TSD",
+              "c": "",
+              "nm": "CARRELEY",
+              "hr": "—",
+              "e": "F"
+            },
+            {
+              "ty": "TSD",
+              "c": "",
+              "nm": "VAGERE",
+              "hr": "—",
+              "e": "F"
+            },
+            {
+              "ty": "TS",
+              "c": "",
+              "nm": "CHARMETTOGER",
+              "hr": "—",
+              "e": "F"
+            },
+            {
+              "ty": "TS",
+              "c": "",
+              "nm": "JARDIN ALPIN",
+              "hr": "—",
+              "e": "F"
+            },
+            {
+              "ty": "TR",
+              "c": "",
+              "nm": "1ere GLISSE 1800",
+              "hr": "—",
+              "e": "F"
+            },
+            {
+              "ty": "TLC",
+              "c": "",
+              "nm": "1ers VIRAGES 1800",
+              "hr": "—",
+              "e": "F"
             }
           ]
         }
@@ -235,43 +384,132 @@
         {
           "titre": "Remontées Mécaniques",
           "ouv": 0,
-          "tot": 5,
+          "tot": 18,
           "items": [
             {
               "ty": "TPH",
               "c": "",
               "nm": "AIGUILLE ROUGE",
-              "hr": "09:45–16:20",
-              "e": "P",
-              "no": "Pause/Break : 12:45-13:15"
+              "hr": "—",
+              "e": "F"
             },
             {
               "ty": "TC",
               "c": "",
               "nm": "VARET",
-              "hr": "09:30–16:30",
-              "e": "P"
+              "hr": "—",
+              "e": "F"
             },
             {
               "ty": "TSDB",
               "c": "",
               "nm": "ARCABULLE",
-              "hr": "09:30–16:50",
-              "e": "P"
+              "hr": "—",
+              "e": "F"
+            },
+            {
+              "ty": "TSDB",
+              "c": "",
+              "nm": "PRE ST ESPRIT",
+              "hr": "—",
+              "e": "F"
             },
             {
               "ty": "TSD",
               "c": "",
               "nm": "BOIS DE L'OURS",
-              "hr": "09:15–16:50",
-              "e": "P",
-              "no": "Pause/Break : 12:45-13:15"
+              "hr": "—",
+              "e": "F"
+            },
+            {
+              "ty": "TSD",
+              "c": "",
+              "nm": "COMBORCIERE",
+              "hr": "—",
+              "e": "F"
+            },
+            {
+              "ty": "TSD",
+              "c": "",
+              "nm": "MARMOTTES",
+              "hr": "—",
+              "e": "F"
+            },
+            {
+              "ty": "TSD",
+              "c": "",
+              "nm": "PLAGNETTES",
+              "hr": "—",
+              "e": "F"
+            },
+            {
+              "ty": "TS",
+              "c": "",
+              "nm": "GRAND COL",
+              "hr": "—",
+              "e": "F"
+            },
+            {
+              "ty": "TS",
+              "c": "",
+              "nm": "LANCHETTES",
+              "hr": "—",
+              "e": "F"
+            },
+            {
+              "ty": "TS",
+              "c": "",
+              "nm": "ST JACQUES",
+              "hr": "—",
+              "e": "F"
+            },
+            {
+              "ty": "TK",
+              "c": "",
+              "nm": "LAC DES COMBES",
+              "hr": "—",
+              "e": "F"
+            },
+            {
+              "ty": "TK",
+              "c": "",
+              "nm": "RHODOS",
+              "hr": "—",
+              "e": "F"
+            },
+            {
+              "ty": "TR",
+              "c": "",
+              "nm": "ELDORADOR",
+              "hr": "—",
+              "e": "F"
+            },
+            {
+              "ty": "TR",
+              "c": "",
+              "nm": "ETERLOU",
+              "hr": "—",
+              "e": "F"
+            },
+            {
+              "ty": "TR",
+              "c": "",
+              "nm": "FLAMME OLYMPIQUE",
+              "hr": "—",
+              "e": "F"
+            },
+            {
+              "ty": "TLC",
+              "c": "",
+              "nm": "PLAN VERT",
+              "hr": "—",
+              "e": "F"
             },
             {
               "ty": "TB",
               "c": "",
               "nm": "CABRIOLET",
-              "hr": "09:15–17:00",
+              "hr": "—",
               "e": "F",
               "no": "Fermeture le 23/08/26"
             }
@@ -280,49 +518,40 @@
       ]
     },
     {
-      "nom": "ESPACES LUDIQUES",
+      "nom": "VILLAROGER",
       "sections": [
         {
-          "titre": "Pistes et activités",
+          "titre": "Remontées Mécaniques",
           "ouv": 0,
-          "tot": 5,
+          "tot": 4,
           "items": [
             {
-              "ty": "",
-              "c": "k",
-              "nm": "GALERIE DES MINERAUX",
-              "hr": "09:25–16:40",
-              "e": "P"
+              "ty": "TC",
+              "c": "",
+              "nm": "VILLAROGER",
+              "hr": "—",
+              "e": "F"
             },
             {
-              "ty": "",
-              "c": "k",
-              "nm": "LA TYROLIENNE DE L'AIGUILLE ROUGE",
-              "hr": "09:40–13:00",
-              "e": "F",
-              "no": "Fermeture définitive à 13:00"
+              "ty": "TS",
+              "c": "",
+              "nm": "DROSET",
+              "hr": "—",
+              "e": "F"
             },
             {
-              "ty": "",
-              "c": "k",
-              "nm": "GEANTS DE MALGOVERT",
-              "hr": "09:20–16:45",
-              "e": "P"
+              "ty": "TK",
+              "c": "",
+              "nm": "RHONAZ",
+              "hr": "—",
+              "e": "F"
             },
             {
-              "ty": "",
-              "c": "k",
-              "nm": "LES FRESQUES LUMINEUSES DE L'AIGUILLE ROUGE",
-              "hr": "09:40–16:15",
-              "e": "P",
-              "no": "Pause/Break : 12:40-13:30"
-            },
-            {
-              "ty": "",
-              "c": "k",
-              "nm": "MUSEUM DES ANIMAUX DE MONTAGNE",
-              "hr": "09:25–16:40",
-              "e": "P"
+              "ty": "TLC",
+              "c": "",
+              "nm": "AZURE",
+              "hr": "—",
+              "e": "F"
             }
           ]
         }
