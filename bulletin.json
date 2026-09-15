@@ -2,18 +2,18 @@
   "ecusson": "LA",
   "station": "LES ARCS",
   "soustitre": "Arc 1950 · Paradiski · Bulletin du domaine",
-  "maj": "2026-09-15T16:41:00",
+  "maj": "2026-09-15T20:44:00",
   "source": "Lumiplan",
   "hero": [
     {
       "k": "Temp. sommet",
-      "v": "20°",
+      "v": "15°",
       "l": "GRAND COL",
       "c": ""
     },
     {
       "k": "Temp. station",
-      "v": "20°",
+      "v": "15°",
       "l": "ARC 2000 · 2000 m",
       "c": "n"
     },
@@ -56,7 +56,7 @@
       "alt": 3000,
       "ciel": "Soleil",
       "matin": "11",
-      "aprem": "20",
+      "aprem": "15",
       "vent": "4",
       "dir": "N",
       "neige24": "0",
@@ -70,7 +70,7 @@
       "alt": 2000,
       "ciel": "Soleil",
       "matin": "11",
-      "aprem": "20",
+      "aprem": "15",
       "vent": "4",
       "dir": "N",
       "neige24": "0",
@@ -84,7 +84,7 @@
       "alt": 1600,
       "ciel": "Soleil",
       "matin": "11",
-      "aprem": "20",
+      "aprem": "15",
       "vent": "4",
       "dir": "N",
       "neige24": "0",
@@ -98,9 +98,9 @@
       "alt": 800,
       "ciel": "Soleil",
       "matin": "13",
-      "aprem": "28",
-      "vent": "0",
-      "dir": "",
+      "aprem": "21",
+      "vent": "4",
+      "dir": "N",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "5",
@@ -112,9 +112,9 @@
       "alt": 1800,
       "ciel": "Soleil",
       "matin": "13",
-      "aprem": "17",
-      "vent": "4",
-      "dir": "E",
+      "aprem": "16",
+      "vent": "3",
+      "dir": "SO",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "5",
@@ -125,10 +125,10 @@
   "previsions": {
     "jourDate": "15/09/2026",
     "jourTitre": "",
-    "jourTexte": "Le soleil brille sans interruption. Vent variable, faible. Cette nuit: Les rares nuages présents n'empêchent nullement l'observation des étoiles. Vent faible, variable.",
+    "jourTexte": "L'ensoleillement est excellent et le soleil règne sans partage. Vent variable, faible. Cette nuit: Le temps est calme et propice à l'observation des étoiles. Vent faible, variable.",
     "demainDate": "16/09/2026",
     "demainTitre": "",
-    "demainTexte": "Le ciel est partagé entre nuages et belles éclaircies. Des averses sont possibles, dans le Beaufortain, en Maurienne, sur les massifs frontaliers ainsi que dans la Combe de Savoie, dès la fin de matinée. Elles persistent l'après-midi, alors que les éclaircies s'imposent, en Tarentaise et Vanoise. C'est de la neige qui tombe au-dessus de 3250 mètres. Pour la nuit : En début de soirée le ciel est très nuageux avec des brumes ici ou là. Le temps est généralement sec, mais quelques rares averses sont possibles, dans le Beaufortain ainsi que dans la Combe de Savoie. La neige remplace la pluie au-dessus de 3150 mètres. Les précipitations cessent vite et progressivement, les nuages disparaissent quelque peu, laissant une belle place aux étoiles en fin de nuit. Etablissement, en seconde partie de journée, d'un vent d'Ouest à Nord-Ouest, généralement modéré ; atténuation ensuite."
+    "demainTexte": "Le temps est assez bien ensoleillé le matin. En cours de journée, des nuages se développent, amenant un risque d'averses dans le Beaufortain, en Tarentaise et Vanoise, en Maurienne ainsi que dans les plaines et basses vallées l'après-midi. Elles sont parfois orageuses. La neige remplace la pluie au-dessus de 3250 mètres. Pour la nuit : En soirée, on aperçoit des étoiles entre les passages nuageux. De rares averses sont possibles, dans le Beaufortain ainsi que dans les plaines et basses vallées, jusqu'en milieu de nuit. Il neige à partir de 3000 mètres. En seconde partie de nuit, le ciel est étoilé. En seconde partie de journée, vent s'établissant à l'Ouest à Nord-Ouest, généralement modéré ; puis atténuation."
   },
   "blocs": [
     {
