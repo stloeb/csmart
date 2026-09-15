@@ -2,7 +2,7 @@
   "ecusson": "LA",
   "station": "LES ARCS",
   "soustitre": "Arc 1950 · Paradiski · Bulletin du domaine",
-  "maj": "2026-09-15T01:20:00",
+  "maj": "2026-09-15T11:48:00",
   "source": "Lumiplan",
   "hero": [
     {
@@ -55,7 +55,7 @@
       "lieu": "GRAND COL",
       "alt": 3000,
       "ciel": "Soleil",
-      "matin": "10",
+      "matin": "11",
       "aprem": "20",
       "vent": "4",
       "dir": "N",
@@ -69,7 +69,7 @@
       "lieu": "ARC 2000",
       "alt": 2000,
       "ciel": "Soleil",
-      "matin": "10",
+      "matin": "11",
       "aprem": "20",
       "vent": "4",
       "dir": "N",
@@ -83,7 +83,7 @@
       "lieu": "ARC 1600",
       "alt": 1600,
       "ciel": "Soleil",
-      "matin": "10",
+      "matin": "11",
       "aprem": "20",
       "vent": "4",
       "dir": "N",
@@ -97,7 +97,7 @@
       "lieu": "BOURG ST MAURICE",
       "alt": 800,
       "ciel": "Soleil",
-      "matin": "12",
+      "matin": "13",
       "aprem": "28",
       "vent": "0",
       "dir": "",
@@ -125,10 +125,10 @@
   "previsions": {
     "jourDate": "15/09/2026",
     "jourTitre": "",
-    "jourTexte": "Le soleil brille sans interruption. Vent de Nord modéré, dans la Cluse de Chambéry et l'avant-Pays. Cette nuit: Les rares nuages présents n'empêchent nullement l'observation des étoiles. Vent faible, variable.",
+    "jourTexte": "Le soleil brille sans interruption. Vent variable, faible. Cette nuit: Les rares nuages présents n'empêchent nullement l'observation des étoiles. Vent faible, variable.",
     "demainDate": "16/09/2026",
     "demainTitre": "",
-    "demainTexte": "Le soleil est généreux tout au long de la journée. Pour la nuit : Le ciel est clair toute la nuit. Vent variable, faible."
+    "demainTexte": "Le ciel est partagé entre nuages et belles éclaircies. Des averses sont possibles, dans le Beaufortain, en Maurienne, sur les massifs frontaliers ainsi que dans la Combe de Savoie, dès la fin de matinée. Elles persistent l'après-midi, alors que les éclaircies s'imposent, en Tarentaise et Vanoise. C'est de la neige qui tombe au-dessus de 3250 mètres. Pour la nuit : En début de soirée le ciel est très nuageux avec des brumes ici ou là. Le temps est généralement sec, mais quelques rares averses sont possibles, dans le Beaufortain ainsi que dans la Combe de Savoie. La neige remplace la pluie au-dessus de 3150 mètres. Les précipitations cessent vite et progressivement, les nuages disparaissent quelque peu, laissant une belle place aux étoiles en fin de nuit. Etablissement, en seconde partie de journée, d'un vent d'Ouest à Nord-Ouest, généralement modéré ; atténuation ensuite."
   },
   "blocs": [
     {
