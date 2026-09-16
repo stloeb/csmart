@@ -2,7 +2,7 @@
   "ecusson": "LA",
   "station": "LES ARCS",
   "soustitre": "Arc 1950 · Paradiski · Bulletin du domaine",
-  "maj": "2026-09-16T11:43:00",
+  "maj": "2026-09-16T16:40:00",
   "source": "Lumiplan",
   "hero": [
     {
@@ -131,89 +131,6 @@
     "demainTexte": "Le temps est sec, avec un soleil qui brille toute la journée. Tout au plus quelques nuages apparaissent en fin d'après-midi dans la Cluse de Chambéry et l'avant-Pays. Pour la nuit : Nuages et éclaircies se partagent le ciel. Des brumes se forment après minuit, sur les massifs frontaliers, mais se dissipent rapidement. En seconde partie de nuit, les nuages sont généralement un peu plus nombreux qu'en soirée. En fin de matinée, vent de Nord modéré, dans la Cluse de Chambéry et l'avant-Pays ; atténuation ensuite."
   },
   "blocs": [
-    {
-      "nom": "PEISEY-VALLANDRY",
-      "sections": [
-        {
-          "titre": "Remontées Mécaniques",
-          "ouv": 0,
-          "tot": 10,
-          "items": [
-            {
-              "ty": "TC",
-              "c": "",
-              "nm": "TELEVILLAGE",
-              "hr": "—",
-              "e": "F"
-            },
-            {
-              "ty": "TC",
-              "c": "",
-              "nm": "VALLANDRY",
-              "hr": "—",
-              "e": "F",
-              "no": "Fermeture définitive ce soir"
-            },
-            {
-              "ty": "TSD",
-              "c": "",
-              "nm": "DERBY",
-              "hr": "—",
-              "e": "F"
-            },
-            {
-              "ty": "TSD",
-              "c": "",
-              "nm": "GRIZZLY",
-              "hr": "—",
-              "e": "F"
-            },
-            {
-              "ty": "TSD",
-              "c": "",
-              "nm": "PEISEY",
-              "hr": "—",
-              "e": "F"
-            },
-            {
-              "ty": "TS",
-              "c": "",
-              "nm": "2300",
-              "hr": "—",
-              "e": "F"
-            },
-            {
-              "ty": "TS",
-              "c": "",
-              "nm": "PARCHEY",
-              "hr": "—",
-              "e": "F"
-            },
-            {
-              "ty": "TK",
-              "c": "",
-              "nm": "1ER VIRAGES",
-              "hr": "—",
-              "e": "F"
-            },
-            {
-              "ty": "TK",
-              "c": "",
-              "nm": "CABRI",
-              "hr": "—",
-              "e": "F"
-            },
-            {
-              "ty": "TR",
-              "c": "",
-              "nm": "1ERE GLISSE",
-              "hr": "—",
-              "e": "F"
-            }
-          ]
-        }
-      ]
-    },
     {
       "nom": "ARC 1600",
       "sections": [
@@ -512,6 +429,89 @@
               "hr": "—",
               "e": "F",
               "no": "Fermeture le 23/08/26"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nom": "PEISEY-VALLANDRY",
+      "sections": [
+        {
+          "titre": "Remontées Mécaniques",
+          "ouv": 0,
+          "tot": 10,
+          "items": [
+            {
+              "ty": "TC",
+              "c": "",
+              "nm": "TELEVILLAGE",
+              "hr": "—",
+              "e": "F"
+            },
+            {
+              "ty": "TC",
+              "c": "",
+              "nm": "VALLANDRY",
+              "hr": "—",
+              "e": "F",
+              "no": "Fermeture définitive ce soir"
+            },
+            {
+              "ty": "TSD",
+              "c": "",
+              "nm": "DERBY",
+              "hr": "—",
+              "e": "F"
+            },
+            {
+              "ty": "TSD",
+              "c": "",
+              "nm": "GRIZZLY",
+              "hr": "—",
+              "e": "F"
+            },
+            {
+              "ty": "TSD",
+              "c": "",
+              "nm": "PEISEY",
+              "hr": "—",
+              "e": "F"
+            },
+            {
+              "ty": "TS",
+              "c": "",
+              "nm": "2300",
+              "hr": "—",
+              "e": "F"
+            },
+            {
+              "ty": "TS",
+              "c": "",
+              "nm": "PARCHEY",
+              "hr": "—",
+              "e": "F"
+            },
+            {
+              "ty": "TK",
+              "c": "",
+              "nm": "1ER VIRAGES",
+              "hr": "—",
+              "e": "F"
+            },
+            {
+              "ty": "TK",
+              "c": "",
+              "nm": "CABRI",
+              "hr": "—",
+              "e": "F"
+            },
+            {
+              "ty": "TR",
+              "c": "",
+              "nm": "1ERE GLISSE",
+              "hr": "—",
+              "e": "F"
             }
           ]
         }
