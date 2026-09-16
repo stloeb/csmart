@@ -2,30 +2,30 @@
   "ecusson": "LA",
   "station": "LES ARCS",
   "soustitre": "Arc 1950 · Paradiski · Bulletin du domaine",
-  "maj": "2026-09-16T16:40:00",
+  "maj": "2026-09-16T20:43:00",
   "source": "Lumiplan",
   "hero": [
     {
       "k": "Temp. sommet",
-      "v": "17°",
+      "v": "12°",
       "l": "GRAND COL",
       "c": ""
     },
     {
       "k": "Temp. station",
-      "v": "17°",
+      "v": "12°",
       "l": "ARC 2000 · 2000 m",
       "c": "n"
     },
     {
       "k": "Vent",
-      "v": "4 km/h",
-      "l": "Secteur N",
+      "v": "7 km/h",
+      "l": "Secteur O",
       "c": "w"
     },
     {
       "k": "Limite pluie/neige",
-      "v": "1 m",
+      "v": "3200 m",
       "l": "Altitude",
       "c": "n"
     },
@@ -37,8 +37,8 @@
     },
     {
       "k": "Dernière chute",
-      "v": "+ cm",
-      "l": "—",
+      "v": "+1 cm",
+      "l": "14/04/2026",
       "c": ""
     }
   ],
@@ -56,79 +56,79 @@
       "alt": 3000,
       "ciel": "Soleil",
       "matin": "11",
-      "aprem": "17",
-      "vent": "4",
-      "dir": "N",
+      "aprem": "12",
+      "vent": "7",
+      "dir": "O",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "2",
-      "derniereH": "",
-      "derniereD": ""
+      "limite": "3200",
+      "derniereH": "2",
+      "derniereD": "14/04/2026"
     },
     {
       "lieu": "ARC 2000",
       "alt": 2000,
       "ciel": "Soleil",
       "matin": "11",
-      "aprem": "17",
-      "vent": "4",
-      "dir": "N",
+      "aprem": "12",
+      "vent": "7",
+      "dir": "O",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "1",
-      "derniereH": "",
-      "derniereD": ""
+      "limite": "3200",
+      "derniereH": "1",
+      "derniereD": "14/04/2026"
     },
     {
       "lieu": "ARC 1600",
       "alt": 1600,
       "ciel": "Soleil",
       "matin": "11",
-      "aprem": "17",
-      "vent": "4",
-      "dir": "N",
+      "aprem": "12",
+      "vent": "7",
+      "dir": "O",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "5",
-      "derniereH": "",
-      "derniereD": ""
+      "limite": "3200",
+      "derniereH": "5",
+      "derniereD": "31/03/2026"
     },
     {
       "lieu": "BOURG ST MAURICE",
       "alt": 800,
       "ciel": "Soleil",
       "matin": "14",
-      "aprem": "25",
+      "aprem": "18",
       "vent": "0",
       "dir": "",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "5",
-      "derniereH": "",
-      "derniereD": ""
+      "limite": "3200",
+      "derniereH": "5",
+      "derniereD": "14/03/2026"
     },
     {
       "lieu": "ARC 1800",
       "alt": 1800,
       "ciel": "Soleil",
       "matin": "12",
-      "aprem": "14",
-      "vent": "4",
-      "dir": "E",
+      "aprem": "12",
+      "vent": "5",
+      "dir": "O",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "5",
-      "derniereH": "",
-      "derniereD": ""
+      "limite": "3200",
+      "derniereH": "5",
+      "derniereD": "31/03/2026"
     }
   ],
   "previsions": {
     "jourDate": "16/09/2026",
     "jourTitre": "",
-    "jourTexte": "Le ciel est plus ou moins nuageux le matin et le soleil se montre de temps en temps. Cependant, quelques averses sont possibles dans le Beaufortain, en Tarentaise et Vanoise ainsi que dans la Combe de Savoie. Dans l'après-midi, le risque d'averses se généralise et les éclaircies sont moins fréquentes.La limite pluie-neige s'abaisse jusqu'à 3200 mètres. En cours d'après-midi, établissement d'un vent d'Ouest, localement modéré ; atténuation ensuite. Cette nuit: La nuit les passages nuageux laissent une belle place aux étoiles. Cependant, en soirée, le ciel est nuageux avec des averses éparses, dans le Beaufortain, en Tarentaise et Vanoise, en Maurienne ainsi que dans la Combe de Savoie. Le temps s'améliore en cours de nuit avec des éclaircies de plus en plus larges. Les averses restent plus tenaces en Tarentaise et Vanoise. Située vers 3150 mètres à la tombée du jour, la limite pluie-neige peut s'abaisser par la suite jusqu'à 2850 mètres. En fin de nuit, vent s'établissant au Nord modéré, dans la Cluse de Chambéry et l'avant-Pays.",
+    "jourTexte": "Entre deux éclaircies, quelques averses sont possibles tout l'après-midi. La neige remplace la pluie au-dessus de 3200 mètres. En cours d'après-midi, vent d'Ouest modéré, en Tarentaise et Vanoise ; atténuation ensuite. Cette nuit: La nuit les passages nuageux laissent une belle place aux étoiles. Cependant, en soirée, le ciel est nuageux avec des averses éparses, dans le Beaufortain, en Tarentaise et Vanoise, en Maurienne ainsi que dans la Combe de Savoie. Le temps s'améliore en cours de nuit avec des éclaircies de plus en plus larges. Les averses restent plus tenaces en Tarentaise et Vanoise. Située vers 3150 mètres à la tombée du jour, la limite pluie-neige peut s'abaisser par la suite jusqu'à 2900 mètres. Vent faible, variable.",
     "demainDate": "17/09/2026",
     "demainTitre": "",
-    "demainTexte": "Le temps est sec, avec un soleil qui brille toute la journée. Tout au plus quelques nuages apparaissent en fin d'après-midi dans la Cluse de Chambéry et l'avant-Pays. Pour la nuit : Nuages et éclaircies se partagent le ciel. Des brumes se forment après minuit, sur les massifs frontaliers, mais se dissipent rapidement. En seconde partie de nuit, les nuages sont généralement un peu plus nombreux qu'en soirée. En fin de matinée, vent de Nord modéré, dans la Cluse de Chambéry et l'avant-Pays ; atténuation ensuite."
+    "demainTexte": "Après dissipation des brouillards dans le Beaufortain, le soleil brille partout, toute la journée. Pour la nuit : La nuit est étoilée. Petit bémol, sur les massifs frontaliers, car des brumes se forment en seconde partie de nuit. En fin de matinée, vent de Nord soufflant modérément, dans la Cluse de Chambéry et l'avant-Pays ; puis atténuation."
   },
   "blocs": [
     {
