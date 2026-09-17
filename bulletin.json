@@ -2,18 +2,18 @@
   "ecusson": "LA",
   "station": "LES ARCS",
   "soustitre": "Arc 1950 · Paradiski · Bulletin du domaine",
-  "maj": "2026-09-17T16:43:00",
+  "maj": "2026-09-17T20:50:00",
   "source": "Lumiplan",
   "hero": [
     {
       "k": "Temp. sommet",
-      "v": "13°",
+      "v": "9°",
       "l": "GRAND COL",
       "c": ""
     },
     {
       "k": "Temp. station",
-      "v": "13°",
+      "v": "9°",
       "l": "ARC 2000 · 2000 m",
       "c": "n"
     },
@@ -56,7 +56,7 @@
       "alt": 3000,
       "ciel": "Soleil",
       "matin": "6",
-      "aprem": "13",
+      "aprem": "9",
       "vent": "4",
       "dir": "N",
       "neige24": "0",
@@ -70,7 +70,7 @@
       "alt": 2000,
       "ciel": "Soleil",
       "matin": "6",
-      "aprem": "13",
+      "aprem": "9",
       "vent": "4",
       "dir": "N",
       "neige24": "0",
@@ -84,7 +84,7 @@
       "alt": 1600,
       "ciel": "Soleil",
       "matin": "6",
-      "aprem": "13",
+      "aprem": "9",
       "vent": "4",
       "dir": "N",
       "neige24": "0",
@@ -98,7 +98,7 @@
       "alt": 800,
       "ciel": "Soleil",
       "matin": "13",
-      "aprem": "22",
+      "aprem": "16",
       "vent": "0",
       "dir": "",
       "neige24": "0",
@@ -112,9 +112,9 @@
       "alt": 1800,
       "ciel": "Soleil",
       "matin": "8",
-      "aprem": "13",
+      "aprem": "11",
       "vent": "3",
-      "dir": "NE",
+      "dir": "SO",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "5",
@@ -125,10 +125,10 @@
   "previsions": {
     "jourDate": "17/09/2026",
     "jourTitre": "",
-    "jourTexte": "Les quelques brumes présentes ça et là laissent rapidement place à un temps ensoleillé dans le Beaufortain. Le soleil qui perce en matinée est souvent voilé l'après-midi. En fin de matinée, vent de Nord soufflant modérément, dans la Cluse de Chambéry et l'avant-Pays ; puis atténuation. Cette nuit: Le ciel est voilé, mais laisse apparaître les étoiles. Vent faible, variable.",
+    "jourTexte": "Les nuages élevés sont omniprésents, mais l'ambiance reste lumineuse. Vent variable, faible. Cette nuit: Le ciel est voilé, mais laisse apparaître les étoiles. Vent faible, variable.",
     "demainDate": "18/09/2026",
     "demainTitre": "",
-    "demainTexte": "Quelques nuages en début de journée quittent notre ciel pour laisser la place à un franc soleil. Pour la nuit : Les rares nuages présents n'empêchent nullement l'observation des étoiles. À la tombée du jour, vent s'orientant au Nord-Ouest modéré, dans la Cluse de Chambéry et l'avant-Pays ; atténuation ensuite."
+    "demainTexte": "Des nuages inoffensifs sont présents, dans la Combe de Savoie ainsi que dans les massifs intérieurs. Ils se dissipent en cours de matinée. L'après-midi, le temps est partout bien ensoleillé. Pour la nuit : Le temps est calme et propice à l'observation des étoiles. Vent faible, variable."
   },
   "blocs": [
     {
