@@ -2,18 +2,18 @@
   "ecusson": "LA",
   "station": "LES ARCS",
   "soustitre": "Arc 1950 · Paradiski · Bulletin du domaine",
-  "maj": "2026-09-17T23:55:00",
+  "maj": "2026-09-18T11:26:00",
   "source": "Lumiplan",
   "hero": [
     {
       "k": "Temp. sommet",
-      "v": "9°",
+      "v": "13°",
       "l": "GRAND COL",
       "c": ""
     },
     {
       "k": "Temp. station",
-      "v": "9°",
+      "v": "13°",
       "l": "ARC 2000 · 2000 m",
       "c": "n"
     },
@@ -54,9 +54,9 @@
     {
       "lieu": "GRAND COL",
       "alt": 3000,
-      "ciel": "Soleil",
+      "ciel": "Soleil voilé",
       "matin": "6",
-      "aprem": "9",
+      "aprem": "13",
       "vent": "4",
       "dir": "N",
       "neige24": "0",
@@ -68,9 +68,9 @@
     {
       "lieu": "ARC 2000",
       "alt": 2000,
-      "ciel": "Soleil",
+      "ciel": "Soleil voilé",
       "matin": "6",
-      "aprem": "9",
+      "aprem": "13",
       "vent": "4",
       "dir": "N",
       "neige24": "0",
@@ -82,9 +82,9 @@
     {
       "lieu": "ARC 1600",
       "alt": 1600,
-      "ciel": "Soleil",
+      "ciel": "Soleil voilé",
       "matin": "6",
-      "aprem": "9",
+      "aprem": "13",
       "vent": "4",
       "dir": "N",
       "neige24": "0",
@@ -96,9 +96,9 @@
     {
       "lieu": "BOURG ST MAURICE",
       "alt": 800,
-      "ciel": "Soleil",
-      "matin": "13",
-      "aprem": "16",
+      "ciel": "Soleil voilé",
+      "matin": "10",
+      "aprem": "21",
       "vent": "0",
       "dir": "",
       "neige24": "0",
@@ -110,11 +110,11 @@
     {
       "lieu": "ARC 1800",
       "alt": 1800,
-      "ciel": "Soleil",
+      "ciel": "Soleil voilé",
       "matin": "8",
-      "aprem": "11",
-      "vent": "3",
-      "dir": "SO",
+      "aprem": "12",
+      "vent": "1",
+      "dir": "SE",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "5",
@@ -123,12 +123,12 @@
     }
   ],
   "previsions": {
-    "jourDate": "17/09/2026",
+    "jourDate": "18/09/2026",
     "jourTitre": "",
-    "jourTexte": "Les nuages élevés sont omniprésents, mais l'ambiance reste lumineuse. Vent variable, faible. Cette nuit: Le ciel est voilé, mais laisse apparaître les étoiles. Vent faible, variable.",
-    "demainDate": "18/09/2026",
+    "jourTexte": "Le temps est bien ensoleillé malgré un léger voile nuageux en début de journée. Vent variable, faible. Cette nuit: Les rares nuages présents n'empêchent nullement l'observation des étoiles. Vent faible, variable.",
+    "demainDate": "19/09/2026",
     "demainTitre": "",
-    "demainTexte": "Des nuages inoffensifs sont présents, dans la Combe de Savoie ainsi que dans les massifs intérieurs. Ils se dissipent en cours de matinée. L'après-midi, le temps est partout bien ensoleillé. Pour la nuit : Le temps est calme et propice à l'observation des étoiles. Vent faible, variable."
+    "demainTexte": "La journée est belle, le soleil est largement présent. Pour la nuit : Le ciel est clair toute la nuit. En fin de nuit, vent d'Est modéré, dans la Combe de Savoie."
   },
   "blocs": [
     {
