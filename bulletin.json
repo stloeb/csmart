@@ -2,18 +2,18 @@
   "ecusson": "LA",
   "station": "LES ARCS",
   "soustitre": "Arc 1950 · Paradiski · Bulletin du domaine",
-  "maj": "2026-09-19T18:40:00",
+  "maj": "2026-09-19T21:13:00",
   "source": "Lumiplan",
   "hero": [
     {
       "k": "Temp. sommet",
-      "v": "16°",
+      "v": "12°",
       "l": "GRAND COL",
       "c": ""
     },
     {
       "k": "Temp. station",
-      "v": "16°",
+      "v": "12°",
       "l": "ARC 2000 · 2000 m",
       "c": "n"
     },
@@ -56,7 +56,7 @@
       "alt": 3000,
       "ciel": "Soleil voilé",
       "matin": "6",
-      "aprem": "16",
+      "aprem": "12",
       "vent": "4",
       "dir": "N",
       "neige24": "0",
@@ -70,7 +70,7 @@
       "alt": 2000,
       "ciel": "Soleil voilé",
       "matin": "6",
-      "aprem": "16",
+      "aprem": "12",
       "vent": "4",
       "dir": "N",
       "neige24": "0",
@@ -84,7 +84,7 @@
       "alt": 1600,
       "ciel": "Soleil voilé",
       "matin": "6",
-      "aprem": "16",
+      "aprem": "12",
       "vent": "4",
       "dir": "N",
       "neige24": "0",
@@ -98,9 +98,9 @@
       "alt": 800,
       "ciel": "Soleil voilé",
       "matin": "8",
-      "aprem": "24",
-      "vent": "0",
-      "dir": "",
+      "aprem": "18",
+      "vent": "4",
+      "dir": "N",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "5",
@@ -112,9 +112,9 @@
       "alt": 1800,
       "ciel": "Soleil voilé",
       "matin": "10",
-      "aprem": "15",
-      "vent": "5",
-      "dir": "SE",
+      "aprem": "14",
+      "vent": "6",
+      "dir": "SO",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "5",
@@ -125,10 +125,10 @@
   "previsions": {
     "jourDate": "19/09/2026",
     "jourTitre": "",
-    "jourTexte": "Le soleil règne en maître du matin au soir. Vent faible, variable. Cette nuit: La présence d'un voile de nuages élevés ternit l'éclat des étoiles. Vent variable, faible.",
+    "jourTexte": "Le soleil domine largement tout l'après-midi. Vent variable, faible. Cette nuit: Le ciel est généralement voilé. Vent faible, variable.",
     "demainDate": "20/09/2026",
     "demainTitre": "",
-    "demainTexte": "De fins nuages d'altitude troublent un peu l'ensoleillement, mais le temps reste agréable. Pour la nuit : Le ciel est voilé, mais laisse apparaître les étoiles. En fin de nuit, vent d'Est-Nord-Est modéré, dans la Combe de Savoie."
+    "demainTexte": "Les nuages élevés sont omniprésents, mais l'ambiance reste lumineuse. Pour la nuit : Le ciel est voilé, mais laisse apparaître les étoiles. En seconde partie de nuit, vent s'établissant au Nord-Est modéré, dans les plaines et basses vallées."
   },
   "blocs": [
     {
