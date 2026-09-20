@@ -2,18 +2,18 @@
   "ecusson": "LA",
   "station": "LES ARCS",
   "soustitre": "Arc 1950 · Paradiski · Bulletin du domaine",
-  "maj": "2026-09-20T15:59:00",
+  "maj": "2026-09-20T19:23:00",
   "source": "Lumiplan",
   "hero": [
     {
       "k": "Temp. sommet",
-      "v": "18°",
+      "v": "12°",
       "l": "GRAND COL",
       "c": ""
     },
     {
       "k": "Temp. station",
-      "v": "18°",
+      "v": "12°",
       "l": "ARC 2000 · 2000 m",
       "c": "n"
     },
@@ -56,7 +56,7 @@
       "alt": 3000,
       "ciel": "Soleil voilé",
       "matin": "9",
-      "aprem": "18",
+      "aprem": "12",
       "vent": "4",
       "dir": "N",
       "neige24": "0",
@@ -70,7 +70,7 @@
       "alt": 2000,
       "ciel": "Soleil voilé",
       "matin": "9",
-      "aprem": "18",
+      "aprem": "12",
       "vent": "4",
       "dir": "N",
       "neige24": "0",
@@ -84,7 +84,7 @@
       "alt": 1600,
       "ciel": "Soleil voilé",
       "matin": "9",
-      "aprem": "18",
+      "aprem": "12",
       "vent": "4",
       "dir": "N",
       "neige24": "0",
@@ -98,9 +98,9 @@
       "alt": 800,
       "ciel": "Soleil voilé",
       "matin": "10",
-      "aprem": "26",
-      "vent": "0",
-      "dir": "",
+      "aprem": "18",
+      "vent": "4",
+      "dir": "N",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "5",
@@ -112,9 +112,9 @@
       "alt": 1800,
       "ciel": "Soleil voilé",
       "matin": "11",
-      "aprem": "16",
-      "vent": "4",
-      "dir": "E",
+      "aprem": "14",
+      "vent": "8",
+      "dir": "O",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "5",
@@ -125,10 +125,10 @@
   "previsions": {
     "jourDate": "20/09/2026",
     "jourTitre": "",
-    "jourTexte": "La journée débute sous un ciel largement ensoleillé. Les nuages se font progressivement plus nombreux, mais il ne s'agit souvent que d'un voile élevé et le ciel reste lumineux. Vent faible, variable. Cette nuit: Le ciel est voilé, mais laisse apparaître les étoiles. En fin de nuit, vent s'établissant au Nord-Nord-Est modéré, dans la Cluse de Chambéry et l'avant-Pays.",
+    "jourTexte": "Un voile nuageux filtre le soleil. Vent variable, faible. Cette nuit: Le temps est calme et de fins nuages d'altitude défilent dans le ciel. En fin de nuit, vent s'établissant au Nord-Nord-Est modéré, dans la Cluse de Chambéry et l'avant-Pays.",
     "demainDate": "21/09/2026",
     "demainTitre": "",
-    "demainTexte": "Un voile nuageux filtre le soleil. Pour la nuit : Les rares nuages présents n'empêchent nullement l'observation des étoiles. En journée et jusqu'en milieu de nuit, vent de Nord, localement modéré ; ensuite atténuation."
+    "demainTexte": "Les nuages élevés sont omniprésents, mais l'ambiance reste lumineuse. Pour la nuit : Le ciel est clair toute la nuit. Vent de Nord, localement modéré, en journée et jusqu'en milieu de nuit ; puis atténuation."
   },
   "blocs": [
     {
