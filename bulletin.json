@@ -2,18 +2,18 @@
   "ecusson": "LA",
   "station": "LES ARCS",
   "soustitre": "Arc 1950 · Paradiski · Bulletin du domaine",
-  "maj": "2026-09-21T22:50:00",
+  "maj": "2026-09-22T11:39:00",
   "source": "Lumiplan",
   "hero": [
     {
       "k": "Temp. sommet",
-      "v": "12°",
+      "v": "18°",
       "l": "GRAND COL",
       "c": ""
     },
     {
       "k": "Temp. station",
-      "v": "12°",
+      "v": "18°",
       "l": "ARC 2000 · 2000 m",
       "c": "n"
     },
@@ -54,9 +54,9 @@
     {
       "lieu": "GRAND COL",
       "alt": 3000,
-      "ciel": "Soleil voilé",
-      "matin": "9",
-      "aprem": "12",
+      "ciel": "Soleil",
+      "matin": "8",
+      "aprem": "18",
       "vent": "4",
       "dir": "N",
       "neige24": "0",
@@ -68,9 +68,9 @@
     {
       "lieu": "ARC 2000",
       "alt": 2000,
-      "ciel": "Soleil voilé",
-      "matin": "9",
-      "aprem": "12",
+      "ciel": "Soleil",
+      "matin": "8",
+      "aprem": "18",
       "vent": "4",
       "dir": "N",
       "neige24": "0",
@@ -82,9 +82,9 @@
     {
       "lieu": "ARC 1600",
       "alt": 1600,
-      "ciel": "Soleil voilé",
-      "matin": "9",
-      "aprem": "12",
+      "ciel": "Soleil",
+      "matin": "8",
+      "aprem": "18",
       "vent": "4",
       "dir": "N",
       "neige24": "0",
@@ -96,11 +96,11 @@
     {
       "lieu": "BOURG ST MAURICE",
       "alt": 800,
-      "ciel": "Soleil voilé",
-      "matin": "11",
-      "aprem": "18",
-      "vent": "4",
-      "dir": "N",
+      "ciel": "Soleil",
+      "matin": "10",
+      "aprem": "25",
+      "vent": "0",
+      "dir": "",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "5",
@@ -110,11 +110,11 @@
     {
       "lieu": "ARC 1800",
       "alt": 1800,
-      "ciel": "Soleil voilé",
-      "matin": "12",
-      "aprem": "14",
-      "vent": "6",
-      "dir": "NO",
+      "ciel": "Soleil",
+      "matin": "13",
+      "aprem": "17",
+      "vent": "3",
+      "dir": "E",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "5",
@@ -123,12 +123,12 @@
     }
   ],
   "previsions": {
-    "jourDate": "21/09/2026",
+    "jourDate": "22/09/2026",
     "jourTitre": "",
-    "jourTexte": "Le soleil est généreux tout au long de l'après-midi. Vent de Nord, localement modéré. Cette nuit: Les rares nuages présents n'empêchent nullement l'observation des étoiles. Vent de Nord modéré, dans la Cluse de Chambéry et l'avant-Pays.",
-    "demainDate": "22/09/2026",
+    "jourTexte": "L'ensoleillement est excellent et le soleil règne sans partage. Vent de Nord, localement modéré. Cette nuit: Le ciel est clair toute la nuit. En cours de nuit, vent de Nord-Est soufflant modérément, dans la Cluse de Chambéry et l'avant-Pays ; puis atténuation.",
+    "demainDate": "23/09/2026",
     "demainTitre": "",
-    "demainTexte": "L'ensoleillement est excellent et le soleil règne sans partage. Pour la nuit : Le ciel est clair toute la nuit. En journée et jusqu'en milieu de nuit, vent de Nord à Nord-Est, modéré par endroits ; puis faiblissant."
+    "demainTexte": "Le temps est sec, avec un soleil qui brille toute la journée. Tout au plus quelques nuages apparaissent en fin d'après-midi sur les massifs frontaliers. Pour la nuit : Le ciel est bien étoilé. En fin de nuit, vent d'Est-Nord-Est modéré, dans la Combe de Savoie."
   },
   "blocs": [
     {
