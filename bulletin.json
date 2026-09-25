@@ -2,18 +2,18 @@
   "ecusson": "LA",
   "station": "LES ARCS",
   "soustitre": "Arc 1950 · Paradiski · Bulletin du domaine",
-  "maj": "2026-09-25T17:26:00",
+  "maj": "2026-09-25T21:27:00",
   "source": "Lumiplan",
   "hero": [
     {
       "k": "Temp. sommet",
-      "v": "17°",
+      "v": "11°",
       "l": "GRAND COL",
       "c": ""
     },
     {
       "k": "Temp. station",
-      "v": "17°",
+      "v": "11°",
       "l": "ARC 2000 · 2000 m",
       "c": "n"
     },
@@ -56,7 +56,7 @@
       "alt": 3000,
       "ciel": "Soleil voilé",
       "matin": "7",
-      "aprem": "17",
+      "aprem": "11",
       "vent": "4",
       "dir": "N",
       "neige24": "0",
@@ -70,7 +70,7 @@
       "alt": 2000,
       "ciel": "Soleil voilé",
       "matin": "7",
-      "aprem": "17",
+      "aprem": "11",
       "vent": "4",
       "dir": "N",
       "neige24": "0",
@@ -84,7 +84,7 @@
       "alt": 1600,
       "ciel": "Soleil voilé",
       "matin": "7",
-      "aprem": "17",
+      "aprem": "11",
       "vent": "4",
       "dir": "N",
       "neige24": "0",
@@ -98,9 +98,9 @@
       "alt": 800,
       "ciel": "Soleil voilé",
       "matin": "9",
-      "aprem": "25",
-      "vent": "0",
-      "dir": "",
+      "aprem": "17",
+      "vent": "4",
+      "dir": "N",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "5",
@@ -112,9 +112,9 @@
       "alt": 1800,
       "ciel": "Soleil voilé",
       "matin": "11",
-      "aprem": "15",
-      "vent": "5",
-      "dir": "E",
+      "aprem": "13",
+      "vent": "2",
+      "dir": "O",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "5",
@@ -125,10 +125,10 @@
   "previsions": {
     "jourDate": "25/09/2026",
     "jourTitre": "",
-    "jourTexte": "Nuages et belles éclaircies se partagent le ciel le matin. Au fil des heures, les nuages disparaissent et c'est sous un ciel bien dégagé que se termine la journée. Vent variable, faible. Cette nuit: Le temps est calme et propice à l'observation des étoiles. Vent faible, variable.",
+    "jourTexte": "L'après-midi est lumineuse, avec beaucoup de soleil. Vent variable, faible. Cette nuit: Le temps est calme et propice à l'observation des étoiles. Vent faible, variable.",
     "demainDate": "26/09/2026",
     "demainTitre": "",
-    "demainTexte": "Le temps reste sec et très ensoleillé. Un léger voile nuageux dans le Beaufortain, en Maurienne ainsi que dans la Combe de Savoie ne gâche pas cette impression de beau temps. Pour la nuit : Le ciel est bien étoilé. En fin de nuit, vent d'Est modéré, dans la Combe de Savoie."
+    "demainTexte": "Le soleil brille sans discontinuer du matin jusqu'au soir. Pour la nuit : Le ciel est bien étoilé. En fin de nuit, vent d'Est modéré, dans la Combe de Savoie."
   },
   "blocs": [
     {
