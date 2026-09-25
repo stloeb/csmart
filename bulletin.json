@@ -2,7 +2,7 @@
   "ecusson": "LA",
   "station": "LES ARCS",
   "soustitre": "Arc 1950 · Paradiski · Bulletin du domaine",
-  "maj": "2026-09-25T00:04:00",
+  "maj": "2026-09-25T12:02:00",
   "source": "Lumiplan",
   "hero": [
     {
@@ -99,8 +99,8 @@
       "ciel": "Soleil voilé",
       "matin": "9",
       "aprem": "25",
-      "vent": "4",
-      "dir": "N",
+      "vent": "0",
+      "dir": "",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "5",
@@ -125,10 +125,10 @@
   "previsions": {
     "jourDate": "25/09/2026",
     "jourTitre": "",
-    "jourTexte": "Les nuages présents à la mi-journée se font de plus en plus discrets au fil du temps. Vent faible, variable. Cette nuit: La présence d'un voile de nuages élevés ternit l'éclat des étoiles. Vent variable, faible.",
+    "jourTexte": "Nuages et belles éclaircies se partagent le ciel le matin. Au fil des heures, les nuages disparaissent et c'est sous un ciel bien dégagé que se termine la journée. Vent variable, faible. Cette nuit: Le temps est calme et propice à l'observation des étoiles. Vent faible, variable.",
     "demainDate": "26/09/2026",
     "demainTitre": "",
-    "demainTexte": "C'est une belle journée qui s'annonce. Les quelques nuages du petit matin cèdent rapidement la place à de larges éclaircies. L'après-midi promet d'être bien ensoleillée. Pour la nuit : Les rares nuages présents n'empêchent nullement l'observation des étoiles. En fin de nuit, vent s'établissant à l'Est modéré, dans la Combe de Savoie."
+    "demainTexte": "Le temps reste sec et très ensoleillé. Un léger voile nuageux dans le Beaufortain, en Maurienne ainsi que dans la Combe de Savoie ne gâche pas cette impression de beau temps. Pour la nuit : Le ciel est bien étoilé. En fin de nuit, vent d'Est modéré, dans la Combe de Savoie."
   },
   "blocs": [
     {
