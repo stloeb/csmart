@@ -2,7 +2,7 @@
   "ecusson": "LA",
   "station": "LES ARCS",
   "soustitre": "Arc 1950 · Paradiski · Bulletin du domaine",
-  "maj": "2026-09-26T00:42:00",
+  "maj": "2026-09-26T11:43:00",
   "source": "Lumiplan",
   "hero": [
     {
@@ -113,7 +113,7 @@
       "ciel": "Soleil",
       "matin": "12",
       "aprem": "16",
-      "vent": "4",
+      "vent": "5",
       "dir": "E",
       "neige24": "0",
       "qualite": "N/D",
@@ -125,10 +125,10 @@
   "previsions": {
     "jourDate": "26/09/2026",
     "jourTitre": "",
-    "jourTexte": "L'après-midi est lumineuse, avec beaucoup de soleil. Vent variable, faible. Cette nuit: Le temps est calme et propice à l'observation des étoiles. Vent faible, variable.",
+    "jourTexte": "La journée est ensoleillée, avec tout au plus quelques nuages très discrets. Vent variable, faible. Cette nuit: Le ciel est bien étoilé. Vent faible, variable.",
     "demainDate": "27/09/2026",
     "demainTitre": "",
-    "demainTexte": "Le soleil brille sans discontinuer du matin jusqu'au soir. Pour la nuit : Le ciel est bien étoilé. En fin de nuit, vent d'Est modéré, dans la Combe de Savoie."
+    "demainTexte": "Le soleil brille sans discontinuer du matin jusqu'au soir. Pour la nuit : Les rares nuages présents n'empêchent nullement l'observation des étoiles. En fin de nuit, vent s'établissant à l'Est modéré, dans la Combe de Savoie."
   },
   "blocs": [
     {
