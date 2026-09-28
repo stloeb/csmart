@@ -2,18 +2,18 @@
   "ecusson": "LA",
   "station": "LES ARCS",
   "soustitre": "Arc 1950 · Paradiski · Bulletin du domaine",
-  "maj": "2026-09-28T13:30:00",
+  "maj": "2026-09-28T21:22:00",
   "source": "Lumiplan",
   "hero": [
     {
       "k": "Temp. sommet",
-      "v": "20°",
+      "v": "13°",
       "l": "GRAND COL",
       "c": ""
     },
     {
       "k": "Temp. station",
-      "v": "20°",
+      "v": "13°",
       "l": "ARC 2000 · 2000 m",
       "c": "n"
     },
@@ -56,7 +56,7 @@
       "alt": 3000,
       "ciel": "Soleil",
       "matin": "10",
-      "aprem": "20",
+      "aprem": "13",
       "vent": "4",
       "dir": "N",
       "neige24": "0",
@@ -70,7 +70,7 @@
       "alt": 2000,
       "ciel": "Soleil",
       "matin": "10",
-      "aprem": "20",
+      "aprem": "13",
       "vent": "4",
       "dir": "N",
       "neige24": "0",
@@ -84,7 +84,7 @@
       "alt": 1600,
       "ciel": "Soleil",
       "matin": "10",
-      "aprem": "20",
+      "aprem": "13",
       "vent": "4",
       "dir": "N",
       "neige24": "0",
@@ -98,7 +98,7 @@
       "alt": 800,
       "ciel": "Soleil",
       "matin": "11",
-      "aprem": "27",
+      "aprem": "19",
       "vent": "0",
       "dir": "",
       "neige24": "0",
@@ -112,9 +112,9 @@
       "alt": 1800,
       "ciel": "Soleil",
       "matin": "14",
-      "aprem": "17",
-      "vent": "5",
-      "dir": "SE",
+      "aprem": "16",
+      "vent": "3",
+      "dir": "NE",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "5",
@@ -125,10 +125,10 @@
   "previsions": {
     "jourDate": "28/09/2026",
     "jourTitre": "",
-    "jourTexte": "Le soleil brille largement, malgré la présence de quelques nuages l'après-midi. Vent variable, faible. Cette nuit: Le temps est calme et de fins nuages d'altitude défilent dans le ciel. Vent faible, variable.",
+    "jourTexte": "Le soleil est généralement voilé par des nuages. Vent faible, variable. Cette nuit: Le temps est calme et de fins nuages d'altitude défilent dans le ciel. Vent variable, faible.",
     "demainDate": "29/09/2026",
     "demainTitre": "",
-    "demainTexte": "Le ciel est lumineux et peu nuageux, l'essentiel de la journée. Mais des nuages se développent en fin d'après-midi, ne laissant plus passer que quelques rayons de soleil. Pour la nuit : En général, le ciel en soirée est très clair. Cependant juste avant minuit de nombreux nuages se forment temporairement, sur les massifs frontaliers ainsi que dans la Cluse de Chambéry et l'avant-Pays. En seconde partie de nuit est agréable, avec la présence de larges éclaircies. Vent faible, variable."
+    "demainTexte": "Le ciel est souvent voilé le matin. L'après-midi, des nuages plus épais se développent, mais le soleil reste toutefois largement présent. Pour la nuit : Les éclaircies sont belles toute la nuit. Les passages nuageux, peu nombreux, restent inoffensifs. Vent variable, faible."
   },
   "blocs": [
     {
