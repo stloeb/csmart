@@ -2,7 +2,7 @@
   "ecusson": "LA",
   "station": "LES ARCS",
   "soustitre": "Arc 1950 · Paradiski · Bulletin du domaine",
-  "maj": "2026-09-28T00:26:00",
+  "maj": "2026-09-28T13:30:00",
   "source": "Lumiplan",
   "hero": [
     {
@@ -19,8 +19,8 @@
     },
     {
       "k": "Vent",
-      "v": "7 km/h",
-      "l": "Secteur E",
+      "v": "4 km/h",
+      "l": "Secteur N",
       "c": "w"
     },
     {
@@ -57,8 +57,8 @@
       "ciel": "Soleil",
       "matin": "10",
       "aprem": "20",
-      "vent": "7",
-      "dir": "E",
+      "vent": "4",
+      "dir": "N",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "2",
@@ -71,8 +71,8 @@
       "ciel": "Soleil",
       "matin": "10",
       "aprem": "20",
-      "vent": "7",
-      "dir": "E",
+      "vent": "4",
+      "dir": "N",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "1",
@@ -85,8 +85,8 @@
       "ciel": "Soleil",
       "matin": "10",
       "aprem": "20",
-      "vent": "7",
-      "dir": "E",
+      "vent": "4",
+      "dir": "N",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "5",
@@ -97,7 +97,7 @@
       "lieu": "BOURG ST MAURICE",
       "alt": 800,
       "ciel": "Soleil",
-      "matin": "10",
+      "matin": "11",
       "aprem": "27",
       "vent": "0",
       "dir": "",
@@ -113,8 +113,8 @@
       "ciel": "Soleil",
       "matin": "14",
       "aprem": "17",
-      "vent": "6",
-      "dir": "E",
+      "vent": "5",
+      "dir": "SE",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "5",
@@ -125,10 +125,10 @@
   "previsions": {
     "jourDate": "28/09/2026",
     "jourTitre": "",
-    "jourTexte": "Le soleil est généreux tout au long de l'après-midi. Vent faible, variable. Cette nuit: Les étoiles sont largement visibles. Juste avant l'aurore, elles sont toutefois masquées par des nuages, dans les Bauges ainsi que dans la Cluse de Chambéry et l'avant-Pays. Vent variable, faible.",
+    "jourTexte": "Le soleil brille largement, malgré la présence de quelques nuages l'après-midi. Vent variable, faible. Cette nuit: Le temps est calme et de fins nuages d'altitude défilent dans le ciel. Vent faible, variable.",
     "demainDate": "29/09/2026",
     "demainTitre": "",
-    "demainTexte": "La journée est lumineuse, malgré la présence de nuages élevés. Pour la nuit : Le ciel est voilé, mais laisse apparaître les étoiles. Vent faible, variable."
+    "demainTexte": "Le ciel est lumineux et peu nuageux, l'essentiel de la journée. Mais des nuages se développent en fin d'après-midi, ne laissant plus passer que quelques rayons de soleil. Pour la nuit : En général, le ciel en soirée est très clair. Cependant juste avant minuit de nombreux nuages se forment temporairement, sur les massifs frontaliers ainsi que dans la Cluse de Chambéry et l'avant-Pays. En seconde partie de nuit est agréable, avec la présence de larges éclaircies. Vent faible, variable."
   },
   "blocs": [
     {
