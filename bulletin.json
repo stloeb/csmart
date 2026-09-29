@@ -2,25 +2,25 @@
   "ecusson": "LA",
   "station": "LES ARCS",
   "soustitre": "Arc 1950 · Paradiski · Bulletin du domaine",
-  "maj": "2026-09-29T01:52:00",
+  "maj": "2026-09-29T13:10:00",
   "source": "Lumiplan",
   "hero": [
     {
       "k": "Temp. sommet",
-      "v": "19°",
+      "v": "20°",
       "l": "GRAND COL",
       "c": ""
     },
     {
       "k": "Temp. station",
-      "v": "19°",
+      "v": "20°",
       "l": "ARC 2000 · 2000 m",
       "c": "n"
     },
     {
       "k": "Vent",
       "v": "7 km/h",
-      "l": "Secteur E",
+      "l": "Secteur NE",
       "c": "w"
     },
     {
@@ -56,9 +56,9 @@
       "alt": 3000,
       "ciel": "Soleil voilé",
       "matin": "10",
-      "aprem": "19",
+      "aprem": "20",
       "vent": "7",
-      "dir": "E",
+      "dir": "NE",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "2",
@@ -70,9 +70,9 @@
       "alt": 2000,
       "ciel": "Soleil voilé",
       "matin": "10",
-      "aprem": "19",
+      "aprem": "20",
       "vent": "7",
-      "dir": "E",
+      "dir": "NE",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "1",
@@ -84,9 +84,9 @@
       "alt": 1600,
       "ciel": "Soleil voilé",
       "matin": "10",
-      "aprem": "19",
+      "aprem": "20",
       "vent": "7",
-      "dir": "E",
+      "dir": "NE",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "5",
@@ -97,10 +97,10 @@
       "lieu": "BOURG ST MAURICE",
       "alt": 800,
       "ciel": "Soleil voilé",
-      "matin": "11",
-      "aprem": "26",
-      "vent": "0",
-      "dir": "",
+      "matin": "12",
+      "aprem": "27",
+      "vent": "4",
+      "dir": "N",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "5",
@@ -113,7 +113,7 @@
       "ciel": "Soleil voilé",
       "matin": "15",
       "aprem": "17",
-      "vent": "6",
+      "vent": "7",
       "dir": "E",
       "neige24": "0",
       "qualite": "N/D",
@@ -125,10 +125,10 @@
   "previsions": {
     "jourDate": "29/09/2026",
     "jourTitre": "",
-    "jourTexte": "Le soleil est généralement voilé par des nuages. Vent faible, variable. Cette nuit: Le temps est calme et de fins nuages d'altitude défilent dans le ciel. Vent variable, faible.",
+    "jourTexte": "Le ciel est souvent voilé le matin. L'après-midi, des nuages plus épais se développent, mais le soleil reste toutefois largement présent. À la mi-journée, vent de Sud-Sud-Est soufflant modérément, en Maurienne ; puis atténuation. Cette nuit: Passages nuageux et étoiles se partagent le ciel. Les éclaircies sont en général belles. Elles restent timides, dans la Cluse de Chambéry et l'avant-Pays. Par contre, en Tarentaise et Vanoise ainsi que sur les massifs frontaliers, le ciel se dégage en début de nuit et reste assez clair jusqu'à l'aube. En milieu de nuit, vent s'orientant au Sud-Sud-Est modéré, en Maurienne ; atténuation ensuite.",
     "demainDate": "30/09/2026",
     "demainTitre": "",
-    "demainTexte": "Le ciel est souvent voilé le matin. L'après-midi, des nuages plus épais se développent, mais le soleil reste toutefois largement présent. Pour la nuit : Les éclaircies sont belles toute la nuit. Les passages nuageux, peu nombreux, restent inoffensifs. Vent variable, faible."
+    "demainTexte": "Le soleil est bien présent tout au long de la journée. Seul bémol, des nuages et quelques gouttes sont possibles sur les massifs frontaliers en fin d'après-midi. La neige remplace la pluie au-dessus de 3400 mètres. Pour la nuit : Les petites éclaircies du début de nuit s'élargissent après minuit. Cette amélioration n'est que de courte durée, puisqu'en fin de nuit, les nuages reprennent le dessus, apportant même quelques averses fugaces dans le Beaufortain, en Maurienne, dans les Bauges ainsi que dans les plaines et basses vallées. La limite pluie-neige se situe au plus bas à 3350 mètres. Vent variable, faible."
   },
   "blocs": [
     {
