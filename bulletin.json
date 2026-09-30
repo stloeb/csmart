@@ -2,25 +2,25 @@
   "ecusson": "LA",
   "station": "LES ARCS",
   "soustitre": "Arc 1950 · Paradiski · Bulletin du domaine",
-  "maj": "2026-09-29T23:15:00",
+  "maj": "2026-09-30T12:58:00",
   "source": "Lumiplan",
   "hero": [
     {
       "k": "Temp. sommet",
-      "v": "14°",
+      "v": "18°",
       "l": "GRAND COL",
       "c": ""
     },
     {
       "k": "Temp. station",
-      "v": "14°",
+      "v": "18°",
       "l": "ARC 2000 · 2000 m",
       "c": "n"
     },
     {
       "k": "Vent",
       "v": "7 km/h",
-      "l": "Secteur E",
+      "l": "Secteur NE",
       "c": "w"
     },
     {
@@ -54,11 +54,11 @@
     {
       "lieu": "GRAND COL",
       "alt": 3000,
-      "ciel": "Soleil voilé",
-      "matin": "10",
-      "aprem": "14",
+      "ciel": "Belles éclaircies, passages nuageux",
+      "matin": "11",
+      "aprem": "18",
       "vent": "7",
-      "dir": "E",
+      "dir": "NE",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "2",
@@ -68,11 +68,11 @@
     {
       "lieu": "ARC 2000",
       "alt": 2000,
-      "ciel": "Soleil voilé",
-      "matin": "10",
-      "aprem": "14",
+      "ciel": "Belles éclaircies, passages nuageux",
+      "matin": "11",
+      "aprem": "18",
       "vent": "7",
-      "dir": "E",
+      "dir": "NE",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "1",
@@ -82,11 +82,11 @@
     {
       "lieu": "ARC 1600",
       "alt": 1600,
-      "ciel": "Soleil voilé",
-      "matin": "10",
-      "aprem": "14",
+      "ciel": "Belles éclaircies, passages nuageux",
+      "matin": "11",
+      "aprem": "18",
       "vent": "7",
-      "dir": "E",
+      "dir": "NE",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "5",
@@ -96,9 +96,9 @@
     {
       "lieu": "BOURG ST MAURICE",
       "alt": 800,
-      "ciel": "Soleil voilé",
-      "matin": "12",
-      "aprem": "20",
+      "ciel": "Belles éclaircies, passages nuageux",
+      "matin": "13",
+      "aprem": "25",
       "vent": "4",
       "dir": "N",
       "neige24": "0",
@@ -110,8 +110,8 @@
     {
       "lieu": "ARC 1800",
       "alt": 1800,
-      "ciel": "Soleil voilé",
-      "matin": "15",
+      "ciel": "Belles éclaircies, passages nuageux",
+      "matin": "12",
       "aprem": "15",
       "vent": "7",
       "dir": "NE",
@@ -123,12 +123,12 @@
     }
   ],
   "previsions": {
-    "jourDate": "29/09/2026",
+    "jourDate": "30/09/2026",
     "jourTitre": "",
-    "jourTexte": "Le soleil est généralement voilé par des nuages. Vent variable, faible. Cette nuit: Le ciel est partagé entre nuages et éclaircies durant toute la nuit, le temps reste sec. En première partie de nuit, vent de Sud-Est soufflant modérément, en Maurienne ; puis atténuation.",
-    "demainDate": "30/09/2026",
+    "jourTexte": "La journée est souvent bien ensoleillée malgré les passages nuageux. Toutefois, les nuages deviennent plus nombreux, sur les massifs frontaliers, dans les Bauges ainsi que dans la Cluse de Chambéry et l'avant-Pays, et quelques averses sont alors possibles l'après-midi. La limite pluie-neige se situe au plus bas à 3450 mètres. L'après-midi jusqu'en début de soirée, établissement d'un vent de Sud à Sud-Est, modéré par endroits. Cette nuit: Le ciel est nuageux à très nuageux, et généralement sec. Cependant, quelques averses sont possibles en seconde partie de nuit, en Maurienne, dans les Bauges ainsi que dans les plaines et basses vallées. C'est de la neige qui tombe au-dessus de 3350 mètres. En début de nuit, vent de Sud modéré, dans la Cluse de Chambéry et l'avant-Pays ; atténuation ensuite.",
+    "demainDate": "01/10/2026",
     "demainTitre": "",
-    "demainTexte": "Le soleil est bien présent tout au long de la journée. Seul bémol, des nuages et quelques gouttes sont possibles sur les massifs frontaliers en fin d'après-midi. La neige remplace la pluie au-dessus de 3400 mètres. Pour la nuit : Les nuages sont peu nombreux en soirée. En seconde partie de nuit, ils deviennent plus nombreux, et peuvent donner une ou deux averses en fin de nuit. La limite pluie-neige se situe au plus bas à 3350 mètres. Vent faible, variable."
+    "demainTexte": "Les nuages sont nombreux toute la journée, et les éclaircies timides. Ces nuages apportent de petites averses, en Maurienne, dans les Bauges ainsi que dans les plaines et basses vallées en début de journée. Puis les averses se généralisent dès la mi-journée. Il neige à partir de 3350 mètres. Pour la nuit : De rares averses tombent en soirée. C'est de la neige qui tombe au-dessus de 3300 mètres. À la faveur d'éclaircies parfois belles, des brouillards légers, mais tenaces, se forment durant la nuit. En milieu de nuit, vent s'établissant au Nord modéré, dans la Cluse de Chambéry et l'avant-Pays ; puis atténuation."
   },
   "blocs": [
     {
