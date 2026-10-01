@@ -2,30 +2,30 @@
   "ecusson": "LA",
   "station": "LES ARCS",
   "soustitre": "Arc 1950 · Paradiski · Bulletin du domaine",
-  "maj": "2026-10-01T13:25:00",
+  "maj": "2026-10-01T19:27:00",
   "source": "Lumiplan",
   "hero": [
     {
       "k": "Temp. sommet",
-      "v": "13°",
+      "v": "11°",
       "l": "GRAND COL",
       "c": ""
     },
     {
       "k": "Temp. station",
-      "v": "13°",
+      "v": "11°",
       "l": "ARC 2000 · 2000 m",
       "c": "n"
     },
     {
       "k": "Vent",
-      "v": "4 km/h",
-      "l": "Secteur N",
+      "v": "0 km/h",
+      "l": "Secteur ",
       "c": "w"
     },
     {
       "k": "Limite pluie/neige",
-      "v": "1 m",
+      "v": "3400 m",
       "l": "Altitude",
       "c": "n"
     },
@@ -37,8 +37,8 @@
     },
     {
       "k": "Dernière chute",
-      "v": "+ cm",
-      "l": "—",
+      "v": "+1 cm",
+      "l": "14/04/2026",
       "c": ""
     }
   ],
@@ -56,79 +56,79 @@
       "alt": 3000,
       "ciel": "Très nuageux, courtes éclaircies",
       "matin": "11",
-      "aprem": "13",
-      "vent": "4",
-      "dir": "N",
+      "aprem": "11",
+      "vent": "0",
+      "dir": "",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "2",
-      "derniereH": "",
-      "derniereD": ""
+      "limite": "3400",
+      "derniereH": "2",
+      "derniereD": "14/04/2026"
     },
     {
       "lieu": "ARC 2000",
       "alt": 2000,
       "ciel": "Très nuageux, courtes éclaircies",
       "matin": "11",
-      "aprem": "13",
-      "vent": "4",
-      "dir": "N",
+      "aprem": "11",
+      "vent": "0",
+      "dir": "",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "1",
-      "derniereH": "",
-      "derniereD": ""
+      "limite": "3400",
+      "derniereH": "1",
+      "derniereD": "14/04/2026"
     },
     {
       "lieu": "ARC 1600",
       "alt": 1600,
       "ciel": "Très nuageux, courtes éclaircies",
       "matin": "11",
-      "aprem": "13",
-      "vent": "4",
-      "dir": "N",
+      "aprem": "11",
+      "vent": "0",
+      "dir": "",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "5",
-      "derniereH": "",
-      "derniereD": ""
+      "limite": "3400",
+      "derniereH": "5",
+      "derniereD": "31/03/2026"
     },
     {
       "lieu": "BOURG ST MAURICE",
       "alt": 800,
       "ciel": "Très nuageux, courtes éclaircies",
       "matin": "14",
-      "aprem": "20",
+      "aprem": "17",
       "vent": "0",
       "dir": "",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "5",
-      "derniereH": "",
-      "derniereD": ""
+      "limite": "3400",
+      "derniereH": "5",
+      "derniereD": "14/03/2026"
     },
     {
       "lieu": "ARC 1800",
       "alt": 1800,
       "ciel": "Très nuageux, courtes éclaircies",
       "matin": "12",
-      "aprem": "14",
-      "vent": "3",
-      "dir": "E",
+      "aprem": "11",
+      "vent": "1",
+      "dir": "SE",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "5",
-      "derniereH": "",
-      "derniereD": ""
+      "limite": "3400",
+      "derniereH": "5",
+      "derniereD": "31/03/2026"
     }
   ],
   "previsions": {
     "jourDate": "01/10/2026",
     "jourTitre": "",
-    "jourTexte": "Sous un ciel le plus souvent chargé, des averses éparses se produisent tout au long de la journée. Il neige à partir de 3350 mètres. À noter que, dans le Beaufortain, la matinée bénéficie d'éclaircies plus généreuses et d'un temps sec. Vent faible, variable. Cette nuit: Dans l'ensemble, la nuit se déroule agréablement avec de larges éclaircies. Cependant, en soirée, quelques gouttes peuvent tomber, dans le Beaufortain, dans les Bauges ainsi que dans les plaines et basses vallées. C'est de la neige qui tombe au-dessus de 3300 mètres. Vers minuit, il peut aussi se former de manière fugace des brumes, dans le Beaufortain. En fin de nuit, vent s'établissant au Nord modéré, dans la Cluse de Chambéry et l'avant-Pays.",
+    "jourTexte": "L'après-midi se déroule sous un ciel bien encombré, accompagné de pluies éparses ou de petites averses. C'est de la neige qui tombe au-dessus de 3400 mètres. Vent variable, faible. Cette nuit: Dans l'ensemble, la nuit se déroule agréablement avec de larges éclaircies. Cependant, en soirée, quelques gouttes peuvent tomber, sauf sur les massifs frontaliers. C'est de la neige qui tombe au-dessus de 3350 mètres. Vers minuit, il peut aussi se former de manière fugace des brumes, dans le Beaufortain ainsi que dans les Bauges. En fin de nuit, vent de Nord-Nord-Est modéré, dans la Cluse de Chambéry et l'avant-Pays.",
     "demainDate": "02/10/2026",
     "demainTitre": "",
-    "demainTexte": "Le début de journée est généralement bien ensoleillé, même si on note quelques brumes au lever du jour, très localement. Dans l'après-midi, les nuages s'invitent davantage et deviennent prédominants. Ils sont porteurs de quelques averses, en Tarentaise et Vanoise, en Maurienne ainsi que sur les massifs frontaliers. C'est de la neige qui tombe au-dessus de 3300 mètres. Pour la nuit : La nuit est étoilée. Notons cependant que des brumes se forment après minuit, en Tarentaise et Vanoise, en Maurienne ainsi que sur les massifs frontaliers. Vent variable, faible."
+    "demainTexte": "Le ciel est voilé. L'après-midi, en Tarentaise et Vanoise, en Maurienne ainsi que sur les massifs frontaliers, des nuages plus épais peuvent donner quelques averses. La neige remplace la pluie au-dessus de 3300 mètres. Pour la nuit : La nuit est étoilée. Notons cependant que des brumes se forment après minuit, en Tarentaise et Vanoise, en Maurienne, sur les massifs frontaliers ainsi que dans la Combe de Savoie. Vent faible, variable."
   },
   "blocs": [
     {
