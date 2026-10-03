@@ -2,7 +2,7 @@
   "ecusson": "LA",
   "station": "LES ARCS",
   "soustitre": "Arc 1950 · Paradiski · Bulletin du domaine",
-  "maj": "2026-10-03T20:34:00",
+  "maj": "2026-10-03T23:59:00",
   "source": "Lumiplan",
   "hero": [
     {
@@ -123,10 +123,10 @@
     }
   ],
   "previsions": {
-    "jourDate": "03/10/2026",
+    "jourDate": "04/10/2026",
     "jourTitre": "",
     "jourTexte": "Le ciel est généralement assez encombré et des averses sont possibles tout au long de l'après-midi. On peut espérer quelques éclaircies plus larges, et des précipitations plus rares, dans les Bauges ainsi que dans les plaines et basses vallées. La limite pluie-neige se situe au plus bas à 3200 mètres. Vent variable, faible. Cette nuit: La présence d'un voile de nuages élevés ternit l'éclat des étoiles. Vent faible, variable.",
-    "demainDate": "04/10/2026",
+    "demainDate": "05/10/2026",
     "demainTitre": "",
     "demainTexte": "Les périodes ensoleillées dominent les passages nuageux. L'après-midi, des nuages un peu plus développés peuvent donner quelques averses dans le Beaufortain ainsi qu'en Tarentaise et Vanoise. La limite pluie-neige se situe au plus bas à 3000 mètres. Pour la nuit : La soirée est partagée entre ciel dégagé et passages nuageux. En seconde partie de nuit, les nuages se dissipent et laissent place à une nuit bien étoilée. Cependant, à la faveur des éclaircies, dans la Combe de Savoie, des brumes ou légers brouillards se forment. Vent variable, faible."
   },
