@@ -2,18 +2,18 @@
   "ecusson": "LA",
   "station": "LES ARCS",
   "soustitre": "Arc 1950 · Paradiski · Bulletin du domaine",
-  "maj": "2026-10-03T23:59:00",
+  "maj": "2026-10-04T12:57:00",
   "source": "Lumiplan",
   "hero": [
     {
       "k": "Temp. sommet",
-      "v": "11°",
+      "v": "15°",
       "l": "GRAND COL",
       "c": ""
     },
     {
       "k": "Temp. station",
-      "v": "11°",
+      "v": "15°",
       "l": "ARC 2000 · 2000 m",
       "c": "n"
     },
@@ -25,7 +25,7 @@
     },
     {
       "k": "Limite pluie/neige",
-      "v": "3250 m",
+      "v": "1 m",
       "l": "Altitude",
       "c": "n"
     },
@@ -37,8 +37,8 @@
     },
     {
       "k": "Dernière chute",
-      "v": "+1 cm",
-      "l": "14/04/2026",
+      "v": "+ cm",
+      "l": "—",
       "c": ""
     }
   ],
@@ -54,81 +54,81 @@
     {
       "lieu": "GRAND COL",
       "alt": 3000,
-      "ciel": "Soleil voilé",
+      "ciel": "Belles éclaircies, passages nuageux",
       "matin": "9",
-      "aprem": "11",
+      "aprem": "15",
       "vent": "4",
       "dir": "N",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "3250",
-      "derniereH": "2",
-      "derniereD": "14/04/2026"
+      "limite": "2",
+      "derniereH": "",
+      "derniereD": ""
     },
     {
       "lieu": "ARC 2000",
       "alt": 2000,
-      "ciel": "Soleil voilé",
+      "ciel": "Belles éclaircies, passages nuageux",
       "matin": "9",
-      "aprem": "11",
+      "aprem": "15",
       "vent": "4",
       "dir": "N",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "3250",
-      "derniereH": "1",
-      "derniereD": "14/04/2026"
+      "limite": "1",
+      "derniereH": "",
+      "derniereD": ""
     },
     {
       "lieu": "ARC 1600",
       "alt": 1600,
-      "ciel": "Soleil voilé",
+      "ciel": "Belles éclaircies, passages nuageux",
       "matin": "9",
-      "aprem": "11",
+      "aprem": "15",
       "vent": "4",
       "dir": "N",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "3250",
-      "derniereH": "5",
-      "derniereD": "31/03/2026"
+      "limite": "5",
+      "derniereH": "",
+      "derniereD": ""
     },
     {
       "lieu": "BOURG ST MAURICE",
       "alt": 800,
-      "ciel": "Soleil voilé",
-      "matin": "12",
-      "aprem": "17",
+      "ciel": "Belles éclaircies, passages nuageux",
+      "matin": "11",
+      "aprem": "23",
       "vent": "0",
       "dir": "",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "3250",
-      "derniereH": "5",
-      "derniereD": "14/03/2026"
+      "limite": "5",
+      "derniereH": "",
+      "derniereD": ""
     },
     {
       "lieu": "ARC 1800",
       "alt": 1800,
-      "ciel": "Soleil voilé",
+      "ciel": "Belles éclaircies, passages nuageux",
       "matin": "10",
-      "aprem": "11",
-      "vent": "3",
-      "dir": "SO",
+      "aprem": "13",
+      "vent": "5",
+      "dir": "E",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "3250",
-      "derniereH": "5",
-      "derniereD": "31/03/2026"
+      "limite": "5",
+      "derniereH": "",
+      "derniereD": ""
     }
   ],
   "previsions": {
     "jourDate": "04/10/2026",
     "jourTitre": "",
-    "jourTexte": "Le ciel est généralement assez encombré et des averses sont possibles tout au long de l'après-midi. On peut espérer quelques éclaircies plus larges, et des précipitations plus rares, dans les Bauges ainsi que dans les plaines et basses vallées. La limite pluie-neige se situe au plus bas à 3200 mètres. Vent variable, faible. Cette nuit: La présence d'un voile de nuages élevés ternit l'éclat des étoiles. Vent faible, variable.",
+    "jourTexte": "Le soleil domine dans un ciel parsemé de petits nuages. L'après-midi, ces nuages prennent de l'ampleur dans le Beaufortain, en Tarentaise et Vanoise ainsi que sur les massifs frontaliers et peuvent lâcher quelques averses. Il neige à partir de 3100 mètres. Vent faible, variable. Cette nuit: Après quelques passages nuageux, la deuxième partie de nuit devient bien étoilée. Vent variable, faible.",
     "demainDate": "05/10/2026",
     "demainTitre": "",
-    "demainTexte": "Les périodes ensoleillées dominent les passages nuageux. L'après-midi, des nuages un peu plus développés peuvent donner quelques averses dans le Beaufortain ainsi qu'en Tarentaise et Vanoise. La limite pluie-neige se situe au plus bas à 3000 mètres. Pour la nuit : La soirée est partagée entre ciel dégagé et passages nuageux. En seconde partie de nuit, les nuages se dissipent et laissent place à une nuit bien étoilée. Cependant, à la faveur des éclaircies, dans la Combe de Savoie, des brumes ou légers brouillards se forment. Vent variable, faible."
+    "demainTexte": "Le soleil brille sans discontinuer du matin jusqu'au soir. Pour la nuit : Le ciel est bien étoilé. Vent variable, faible."
   },
   "blocs": [
     {
