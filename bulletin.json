@@ -2,7 +2,7 @@
   "ecusson": "LA",
   "station": "LES ARCS",
   "soustitre": "Arc 1950 · Paradiski · Bulletin du domaine",
-  "maj": "2026-10-05T00:25:00",
+  "maj": "2026-10-06T13:50:00",
   "source": "Lumiplan",
   "hero": [
     {
@@ -98,9 +98,9 @@
       "alt": 800,
       "ciel": "Soleil",
       "matin": "10",
-      "aprem": "22",
-      "vent": "0",
-      "dir": "",
+      "aprem": "23",
+      "vent": "4",
+      "dir": "N",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "5",
@@ -111,9 +111,9 @@
       "lieu": "ARC 1800",
       "alt": 1800,
       "ciel": "Soleil",
-      "matin": "10",
-      "aprem": "13",
-      "vent": "4",
+      "matin": "9",
+      "aprem": "12",
+      "vent": "3",
       "dir": "SE",
       "neige24": "0",
       "qualite": "N/D",
@@ -123,14 +123,96 @@
     }
   ],
   "previsions": {
-    "jourDate": "05/10/2026",
+    "jourDate": "06/10/2026",
     "jourTitre": "",
-    "jourTexte": "Sous un ciel partagé entre éclaircies et passages nuageux des averses sont possibles. Le risque d'averses, quasi généralisé à la mi-journée, se réduit progressivement, mais en fin de journée, il est encore présent dans le Beaufortain ainsi qu'en Maurienne. C'est de la neige qui tombe au-dessus de 3100 mètres. Vent faible, variable. Cette nuit: Les quelques nuages de la soirée se font de plus en plus discrets en cours de nuit. Vent variable, faible.",
-    "demainDate": "06/10/2026",
+    "jourTexte": "Le soleil règne en maître du matin au soir. Vent variable, faible. Cette nuit: Le ciel nocturne est bien dégagé. Cependant, des nuages plus épais arrivent en seconde partie de nuit. En fin de nuit, vent de Sud-Est modéré, en Maurienne.",
+    "demainDate": "07/10/2026",
     "demainTitre": "",
-    "demainTexte": "La journée est ensoleillée, avec tout au plus quelques nuages très discrets. Pour la nuit : La nuit est étoilée. Notons cependant que des brumes se forment après minuit, en Tarentaise et Vanoise ainsi qu'en Maurienne. Vent variable, faible."
+    "demainTexte": "Tout au long de la journée, il est possible de rencontrer l'une ou l'autre averse, sous les nombreux passages nuageux. Il neige à partir de 2850 mètres. Pour la nuit : Quelques gouttes en soirée et quelques averses ensuite peuvent nécessiter l'usage du parapluie. En seconde partie de nuit, ces averses peuvent prendre un caractère orageux, dans les Bauges ainsi que dans la Cluse de Chambéry et l'avant-Pays. La limite pluie-neige se situe au plus bas à 2700 mètres. Jusqu'en milieu d'après-midi, vent de Sud-Est, localement modéré. Nouveau renforcement en milieu de nuit, dans la Cluse de Chambéry et l'avant-Pays, avec orientation au Sud-Sud-Ouest."
   },
   "blocs": [
+    {
+      "nom": "PEISEY-VALLANDRY",
+      "sections": [
+        {
+          "titre": "Remontées Mécaniques",
+          "ouv": 0,
+          "tot": 10,
+          "items": [
+            {
+              "ty": "TC",
+              "c": "",
+              "nm": "TELEVILLAGE",
+              "hr": "—",
+              "e": "F"
+            },
+            {
+              "ty": "TC",
+              "c": "",
+              "nm": "VALLANDRY",
+              "hr": "—",
+              "e": "F"
+            },
+            {
+              "ty": "TSD",
+              "c": "",
+              "nm": "DERBY",
+              "hr": "—",
+              "e": "F"
+            },
+            {
+              "ty": "TSD",
+              "c": "",
+              "nm": "GRIZZLY",
+              "hr": "—",
+              "e": "F"
+            },
+            {
+              "ty": "TSD",
+              "c": "",
+              "nm": "PEISEY",
+              "hr": "—",
+              "e": "F"
+            },
+            {
+              "ty": "TS",
+              "c": "",
+              "nm": "2300",
+              "hr": "—",
+              "e": "F"
+            },
+            {
+              "ty": "TS",
+              "c": "",
+              "nm": "PARCHEY",
+              "hr": "—",
+              "e": "F"
+            },
+            {
+              "ty": "TK",
+              "c": "",
+              "nm": "1ER VIRAGES",
+              "hr": "—",
+              "e": "F"
+            },
+            {
+              "ty": "TK",
+              "c": "",
+              "nm": "CABRI",
+              "hr": "—",
+              "e": "F"
+            },
+            {
+              "ty": "TR",
+              "c": "",
+              "nm": "1ERE GLISSE",
+              "hr": "—",
+              "e": "F"
+            }
+          ]
+        }
+      ]
+    },
     {
       "nom": "ARC 1600",
       "sections": [
@@ -426,88 +508,6 @@
               "ty": "TB",
               "c": "",
               "nm": "CABRIOLET",
-              "hr": "—",
-              "e": "F"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nom": "PEISEY-VALLANDRY",
-      "sections": [
-        {
-          "titre": "Remontées Mécaniques",
-          "ouv": 0,
-          "tot": 10,
-          "items": [
-            {
-              "ty": "TC",
-              "c": "",
-              "nm": "TELEVILLAGE",
-              "hr": "—",
-              "e": "F"
-            },
-            {
-              "ty": "TC",
-              "c": "",
-              "nm": "VALLANDRY",
-              "hr": "—",
-              "e": "F"
-            },
-            {
-              "ty": "TSD",
-              "c": "",
-              "nm": "DERBY",
-              "hr": "—",
-              "e": "F"
-            },
-            {
-              "ty": "TSD",
-              "c": "",
-              "nm": "GRIZZLY",
-              "hr": "—",
-              "e": "F"
-            },
-            {
-              "ty": "TSD",
-              "c": "",
-              "nm": "PEISEY",
-              "hr": "—",
-              "e": "F"
-            },
-            {
-              "ty": "TS",
-              "c": "",
-              "nm": "2300",
-              "hr": "—",
-              "e": "F"
-            },
-            {
-              "ty": "TS",
-              "c": "",
-              "nm": "PARCHEY",
-              "hr": "—",
-              "e": "F"
-            },
-            {
-              "ty": "TK",
-              "c": "",
-              "nm": "1ER VIRAGES",
-              "hr": "—",
-              "e": "F"
-            },
-            {
-              "ty": "TK",
-              "c": "",
-              "nm": "CABRI",
-              "hr": "—",
-              "e": "F"
-            },
-            {
-              "ty": "TR",
-              "c": "",
-              "nm": "1ERE GLISSE",
               "hr": "—",
               "e": "F"
             }
