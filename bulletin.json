@@ -2,7 +2,7 @@
   "ecusson": "LA",
   "station": "LES ARCS",
   "soustitre": "Arc 1950 · Paradiski · Bulletin du domaine",
-  "maj": "2026-10-07T00:44:00",
+  "maj": "2026-10-07T13:34:00",
   "source": "Lumiplan",
   "hero": [
     {
@@ -82,10 +82,10 @@
     {
       "lieu": "ARC 1600",
       "alt": 1600,
-      "ciel": "Soleil voilé",
-      "matin": "8",
-      "aprem": "12",
-      "vent": "11",
+      "ciel": "Très nuageux, courtes éclaircies",
+      "matin": "9",
+      "aprem": "11",
+      "vent": "14",
       "dir": "NE",
       "neige24": "0",
       "qualite": "N/D",
