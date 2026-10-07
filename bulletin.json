@@ -2,30 +2,30 @@
   "ecusson": "LA",
   "station": "LES ARCS",
   "soustitre": "Arc 1950 · Paradiski · Bulletin du domaine",
-  "maj": "2026-10-07T13:34:00",
+  "maj": "2026-10-07T20:35:00",
   "source": "Lumiplan",
   "hero": [
     {
       "k": "Temp. sommet",
-      "v": "12°",
+      "v": "10°",
       "l": "GRAND COL",
       "c": ""
     },
     {
       "k": "Temp. station",
-      "v": "12°",
+      "v": "10°",
       "l": "ARC 2000 · 2000 m",
       "c": "n"
     },
     {
       "k": "Vent",
-      "v": "11 km/h",
-      "l": "Secteur NE",
+      "v": "4 km/h",
+      "l": "Secteur N",
       "c": "w"
     },
     {
       "k": "Limite pluie/neige",
-      "v": "1 m",
+      "v": "2950 m",
       "l": "Altitude",
       "c": "n"
     },
@@ -37,8 +37,8 @@
     },
     {
       "k": "Dernière chute",
-      "v": "+ cm",
-      "l": "—",
+      "v": "+1 cm",
+      "l": "14/04/2026",
       "c": ""
     }
   ],
@@ -56,56 +56,56 @@
       "alt": 3000,
       "ciel": "Soleil voilé",
       "matin": "8",
-      "aprem": "12",
-      "vent": "11",
-      "dir": "NE",
+      "aprem": "10",
+      "vent": "4",
+      "dir": "N",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "2",
-      "derniereH": "",
-      "derniereD": ""
+      "limite": "2950",
+      "derniereH": "2",
+      "derniereD": "14/04/2026"
     },
     {
       "lieu": "ARC 2000",
       "alt": 2000,
       "ciel": "Soleil voilé",
       "matin": "8",
-      "aprem": "12",
-      "vent": "11",
-      "dir": "NE",
+      "aprem": "10",
+      "vent": "4",
+      "dir": "N",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "1",
-      "derniereH": "",
-      "derniereD": ""
+      "limite": "2950",
+      "derniereH": "1",
+      "derniereD": "14/04/2026"
     },
     {
       "lieu": "ARC 1600",
       "alt": 1600,
       "ciel": "Très nuageux, courtes éclaircies",
       "matin": "9",
-      "aprem": "11",
-      "vent": "14",
-      "dir": "NE",
+      "aprem": "10",
+      "vent": "4",
+      "dir": "N",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "5",
-      "derniereH": "",
-      "derniereD": ""
+      "limite": "2950",
+      "derniereH": "5",
+      "derniereD": "31/03/2026"
     },
     {
       "lieu": "BOURG ST MAURICE",
       "alt": 800,
       "ciel": "Soleil voilé",
       "matin": "11",
-      "aprem": "19",
-      "vent": "4",
-      "dir": "N",
+      "aprem": "16",
+      "vent": "0",
+      "dir": "",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "5",
-      "derniereH": "",
-      "derniereD": ""
+      "limite": "2950",
+      "derniereH": "5",
+      "derniereD": "14/03/2026"
     },
     {
       "lieu": "ARC 1800",
@@ -113,106 +113,24 @@
       "ciel": "Soleil voilé",
       "matin": "9",
       "aprem": "12",
-      "vent": "7",
+      "vent": "2",
       "dir": "NE",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "5",
-      "derniereH": "",
-      "derniereD": ""
+      "limite": "2950",
+      "derniereH": "5",
+      "derniereD": "31/03/2026"
     }
   ],
   "previsions": {
     "jourDate": "07/10/2026",
     "jourTitre": "",
-    "jourTexte": "L'après-midi est ensoleillée, avec tout au plus quelques nuages très discrets. Vent variable, faible. Cette nuit: Le temps est calme, avec une première partie de nuit bien étoilée. Aux premières heures du jour, vent s'établissant au Sud-Est modéré, en Maurienne.",
+    "jourTexte": "De rares averses tombent d'abord dans le Beaufortain, en Maurienne, dans les Bauges ainsi que dans les plaines et basses vallées, puis se généralisent assez vite sur le reste du territoire. En deuxième partie d'après-midi, le soleil arrive à percer la couche nuageuse entre deux averses. La limite pluie-neige se situe vers 3100 mètres en début d'après-midi, puis elle peut s'abaisser jusqu'à 2900 mètres ensuite. Vent de Sud à Sud-Est, localement modéré. Cette nuit: Des nuages épais apportent quelques gouttes ici ou là, puis les pluies faibles deviennent un peu plus fréquentes, après minuit. Située vers 2850 mètres à la tombée du jour, la limite pluie-neige peut s'abaisser par la suite jusqu'à 2650 mètres. En première partie de nuit, vent de Sud soufflant modérément, dans la Cluse de Chambéry et l'avant-Pays ; puis atténuation.",
     "demainDate": "08/10/2026",
     "demainTitre": "",
-    "demainTexte": "Sous un ciel changeant alternant nombreux passages nuageux et éclaircies, quelques averses se manifestent çà et là surtout à partir de la mi-journée. C'est de la neige qui tombe au-dessus de 2950 mètres. Pour la nuit : Le temps se dégrade et les pluies se généralisent. Située vers 2850 mètres à la tombée du jour, la limite pluie-neige peut s'abaisser par la suite jusqu'à 2650 mètres. En journée, vent de Sud-Est, modéré par endroits ; puis faiblissant."
+    "demainTexte": "Le ciel, chargé en matinée, lâche des précipitations, qui s'espacent au fil des heures. En cours d'après-midi, les nuages se déchirent temporairement, mais de rares averses peuvent encore se manifester par endroits. Cette petite embellie ne dure pas. La limite pluie-neige se situe vers 2500 mètres tôt le matin, puis elle peut s'abaisser jusqu'à 1600 mètres ensuite. Pour la nuit : Des bancs de brouillard sont présents, très localement. Ils se dissipent en fin de soirée. Les averses vont devenir de plus en plus localisées au cours de la nuit. Attention toutefois, car elles peuvent ponctuellement évoluer en orage. Il neige à partir de 1450 mètres. Vent généralement de Nord-Ouest virant Nord à Nord-Est modéré, en journée et jusqu'en milieu de nuit ; puis s'atténuant."
   },
   "blocs": [
-    {
-      "nom": "PEISEY-VALLANDRY",
-      "sections": [
-        {
-          "titre": "Remontées Mécaniques",
-          "ouv": 0,
-          "tot": 10,
-          "items": [
-            {
-              "ty": "TC",
-              "c": "",
-              "nm": "TELEVILLAGE",
-              "hr": "—",
-              "e": "F"
-            },
-            {
-              "ty": "TC",
-              "c": "",
-              "nm": "VALLANDRY",
-              "hr": "—",
-              "e": "F"
-            },
-            {
-              "ty": "TSD",
-              "c": "",
-              "nm": "DERBY",
-              "hr": "—",
-              "e": "F"
-            },
-            {
-              "ty": "TSD",
-              "c": "",
-              "nm": "GRIZZLY",
-              "hr": "—",
-              "e": "F"
-            },
-            {
-              "ty": "TSD",
-              "c": "",
-              "nm": "PEISEY",
-              "hr": "—",
-              "e": "F"
-            },
-            {
-              "ty": "TS",
-              "c": "",
-              "nm": "2300",
-              "hr": "—",
-              "e": "F"
-            },
-            {
-              "ty": "TS",
-              "c": "",
-              "nm": "PARCHEY",
-              "hr": "—",
-              "e": "F"
-            },
-            {
-              "ty": "TK",
-              "c": "",
-              "nm": "1ER VIRAGES",
-              "hr": "—",
-              "e": "F"
-            },
-            {
-              "ty": "TK",
-              "c": "",
-              "nm": "CABRI",
-              "hr": "—",
-              "e": "F"
-            },
-            {
-              "ty": "TR",
-              "c": "",
-              "nm": "1ERE GLISSE",
-              "hr": "—",
-              "e": "F"
-            }
-          ]
-        }
-      ]
-    },
     {
       "nom": "ARC 1600",
       "sections": [
@@ -508,6 +426,88 @@
               "ty": "TB",
               "c": "",
               "nm": "CABRIOLET",
+              "hr": "—",
+              "e": "F"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nom": "PEISEY-VALLANDRY",
+      "sections": [
+        {
+          "titre": "Remontées Mécaniques",
+          "ouv": 0,
+          "tot": 10,
+          "items": [
+            {
+              "ty": "TC",
+              "c": "",
+              "nm": "TELEVILLAGE",
+              "hr": "—",
+              "e": "F"
+            },
+            {
+              "ty": "TC",
+              "c": "",
+              "nm": "VALLANDRY",
+              "hr": "—",
+              "e": "F"
+            },
+            {
+              "ty": "TSD",
+              "c": "",
+              "nm": "DERBY",
+              "hr": "—",
+              "e": "F"
+            },
+            {
+              "ty": "TSD",
+              "c": "",
+              "nm": "GRIZZLY",
+              "hr": "—",
+              "e": "F"
+            },
+            {
+              "ty": "TSD",
+              "c": "",
+              "nm": "PEISEY",
+              "hr": "—",
+              "e": "F"
+            },
+            {
+              "ty": "TS",
+              "c": "",
+              "nm": "2300",
+              "hr": "—",
+              "e": "F"
+            },
+            {
+              "ty": "TS",
+              "c": "",
+              "nm": "PARCHEY",
+              "hr": "—",
+              "e": "F"
+            },
+            {
+              "ty": "TK",
+              "c": "",
+              "nm": "1ER VIRAGES",
+              "hr": "—",
+              "e": "F"
+            },
+            {
+              "ty": "TK",
+              "c": "",
+              "nm": "CABRI",
+              "hr": "—",
+              "e": "F"
+            },
+            {
+              "ty": "TR",
+              "c": "",
+              "nm": "1ERE GLISSE",
               "hr": "—",
               "e": "F"
             }
