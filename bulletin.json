@@ -2,7 +2,7 @@
   "ecusson": "LA",
   "station": "LES ARCS",
   "soustitre": "Arc 1950 · Paradiski · Bulletin du domaine",
-  "maj": "2026-10-08T01:29:00",
+  "maj": "2026-10-08T13:49:00",
   "source": "Lumiplan",
   "hero": [
     {
@@ -54,8 +54,8 @@
     {
       "lieu": "GRAND COL",
       "alt": 3000,
-      "ciel": "Couvert, pluies modérées ou fortes",
-      "matin": "6",
+      "ciel": "Couvert, pluies faibles",
+      "matin": "7",
       "aprem": "6",
       "vent": "4",
       "dir": "N",
@@ -68,8 +68,8 @@
     {
       "lieu": "ARC 2000",
       "alt": 2000,
-      "ciel": "Couvert, pluies modérées ou fortes",
-      "matin": "6",
+      "ciel": "Couvert, pluies faibles",
+      "matin": "7",
       "aprem": "6",
       "vent": "4",
       "dir": "N",
@@ -82,8 +82,8 @@
     {
       "lieu": "ARC 1600",
       "alt": 1600,
-      "ciel": "Couvert, pluies modérées ou fortes",
-      "matin": "6",
+      "ciel": "Couvert, pluies faibles",
+      "matin": "7",
       "aprem": "6",
       "vent": "4",
       "dir": "N",
@@ -96,7 +96,7 @@
     {
       "lieu": "BOURG ST MAURICE",
       "alt": 800,
-      "ciel": "Couvert, pluies modérées ou fortes",
+      "ciel": "Couvert, pluies faibles",
       "matin": "11",
       "aprem": "12",
       "vent": "0",
@@ -110,11 +110,11 @@
     {
       "lieu": "ARC 1800",
       "alt": 1800,
-      "ciel": "Couvert, pluies modérées ou fortes",
+      "ciel": "Couvert, pluies faibles",
       "matin": "7",
-      "aprem": "5",
-      "vent": "4",
-      "dir": "E",
+      "aprem": "6",
+      "vent": "2",
+      "dir": "O",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "2650",
@@ -125,10 +125,10 @@
   "previsions": {
     "jourDate": "08/10/2026",
     "jourTitre": "",
-    "jourTexte": "De rares averses tombent d'abord dans le Beaufortain, en Maurienne, dans les Bauges ainsi que dans les plaines et basses vallées, puis se généralisent assez vite sur le reste du territoire. En deuxième partie d'après-midi, le soleil arrive à percer la couche nuageuse entre deux averses. La limite pluie-neige se situe vers 3100 mètres en début d'après-midi, puis elle peut s'abaisser jusqu'à 2900 mètres ensuite. Vent de Sud à Sud-Est, localement modéré. Cette nuit: Des nuages épais apportent quelques gouttes ici ou là, puis les pluies faibles deviennent un peu plus fréquentes, après minuit. Située vers 2850 mètres à la tombée du jour, la limite pluie-neige peut s'abaisser par la suite jusqu'à 2650 mètres. En première partie de nuit, vent de Sud soufflant modérément, dans la Cluse de Chambéry et l'avant-Pays ; puis atténuation.",
+    "jourTexte": "Des précipitations se produisent sur tout notre territoire dès le matin. Les précipitations sont faibles, mais durent toute la journée. La limite pluie-neige se situe vers 2500 mètres aux premières heures du jour, puis elle peut s'abaisser jusqu'à 2050 mètres ensuite. L'après-midi jusqu'en début de soirée, vent s'orientant au Nord à Nord-Ouest, modéré par endroits. Cette nuit: La soirée débute sous un ciel bien chargé avec quelques averses ici ou là. C'est de la neige qui tombe au-dessus de 1900 mètres. Rapidement, les précipitations cessent, et les nuages laissent une large place aux étoiles. À noter tout de même, en fin de nuit, la présence de brumes ou brouillards légers en Tarentaise et Vanoise ainsi que dans les Bauges. Vent de Nord, modéré par endroits.",
     "demainDate": "09/10/2026",
     "demainTitre": "",
-    "demainTexte": "Le ciel, chargé en matinée, lâche des précipitations, qui s'espacent au fil des heures. En cours d'après-midi, les nuages se déchirent temporairement, mais de rares averses peuvent encore se manifester par endroits. Cette petite embellie ne dure pas. La limite pluie-neige se situe vers 2500 mètres tôt le matin, puis elle peut s'abaisser jusqu'à 1600 mètres ensuite. Pour la nuit : Des bancs de brouillard sont présents, très localement. Ils se dissipent en fin de soirée. Les averses vont devenir de plus en plus localisées au cours de la nuit. Attention toutefois, car elles peuvent ponctuellement évoluer en orage. Il neige à partir de 1450 mètres. Vent généralement de Nord-Ouest virant Nord à Nord-Est modéré, en journée et jusqu'en milieu de nuit ; puis s'atténuant."
+    "demainTexte": "Le soleil règne presque en maître du matin au soir, seuls quelques passages nuageux le contrarient un peu en fin de journée. Pour la nuit : Les nuages sont bien présents. En fin de nuit, ils apportent de faibles pluies dans le Beaufortain ainsi que dans la Cluse de Chambéry et l'avant-Pays. Il neige à partir de 2500 mètres. En fin de matinée, vent de Nord, localement modéré ; ensuite atténuation."
   },
   "blocs": [
     {
