@@ -2,30 +2,30 @@
   "ecusson": "LA",
   "station": "LES ARCS",
   "soustitre": "Arc 1950 · Paradiski · Bulletin du domaine",
-  "maj": "2026-10-08T20:34:00",
+  "maj": "2026-10-09T01:40:00",
   "source": "Lumiplan",
   "hero": [
     {
       "k": "Temp. sommet",
-      "v": "5°",
+      "v": "10°",
       "l": "GRAND COL",
       "c": ""
     },
     {
       "k": "Temp. station",
-      "v": "5°",
+      "v": "10°",
       "l": "ARC 2000 · 2000 m",
       "c": "n"
     },
     {
       "k": "Vent",
-      "v": "4 km/h",
-      "l": "Secteur N",
+      "v": "0 km/h",
+      "l": "Secteur ",
       "c": "w"
     },
     {
       "k": "Limite pluie/neige",
-      "v": "2200 m",
+      "v": "1 m",
       "l": "Altitude",
       "c": "n"
     },
@@ -37,8 +37,8 @@
     },
     {
       "k": "Dernière chute",
-      "v": "+1 cm",
-      "l": "14/04/2026",
+      "v": "+ cm",
+      "l": "—",
       "c": ""
     }
   ],
@@ -54,79 +54,79 @@
     {
       "lieu": "GRAND COL",
       "alt": 3000,
-      "ciel": "Couvert, pluies faibles",
-      "matin": "7",
-      "aprem": "5",
-      "vent": "4",
-      "dir": "N",
+      "ciel": "Brouillards",
+      "matin": "3",
+      "aprem": "10",
+      "vent": "0",
+      "dir": "",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "2200",
-      "derniereH": "2",
-      "derniereD": "14/04/2026"
+      "limite": "2",
+      "derniereH": "",
+      "derniereD": ""
     },
     {
       "lieu": "ARC 2000",
       "alt": 2000,
-      "ciel": "Couvert, pluies faibles",
-      "matin": "7",
-      "aprem": "5",
-      "vent": "4",
-      "dir": "N",
+      "ciel": "Brouillards",
+      "matin": "3",
+      "aprem": "10",
+      "vent": "0",
+      "dir": "",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "2200",
-      "derniereH": "1",
-      "derniereD": "14/04/2026"
+      "limite": "1",
+      "derniereH": "",
+      "derniereD": ""
     },
     {
       "lieu": "ARC 1600",
       "alt": 1600,
-      "ciel": "Couvert, pluies faibles",
-      "matin": "7",
-      "aprem": "5",
-      "vent": "4",
-      "dir": "N",
+      "ciel": "Brouillards",
+      "matin": "3",
+      "aprem": "10",
+      "vent": "0",
+      "dir": "",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "2200",
-      "derniereH": "5",
-      "derniereD": "31/03/2026"
+      "limite": "5",
+      "derniereH": "",
+      "derniereD": ""
     },
     {
       "lieu": "BOURG ST MAURICE",
       "alt": 800,
-      "ciel": "Couvert, pluies faibles",
-      "matin": "11",
-      "aprem": "10",
-      "vent": "4",
-      "dir": "N",
+      "ciel": "Brouillards",
+      "matin": "8",
+      "aprem": "17",
+      "vent": "0",
+      "dir": "",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "2200",
-      "derniereH": "5",
-      "derniereD": "14/03/2026"
+      "limite": "5",
+      "derniereH": "",
+      "derniereD": ""
     },
     {
       "lieu": "ARC 1800",
       "alt": 1800,
-      "ciel": "Couvert, pluies faibles",
-      "matin": "7",
-      "aprem": "4",
+      "ciel": "Brouillards",
+      "matin": "4",
+      "aprem": "9",
       "vent": "5",
       "dir": "SO",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "2200",
-      "derniereH": "5",
-      "derniereD": "31/03/2026"
+      "limite": "5",
+      "derniereH": "",
+      "derniereD": ""
     }
   ],
   "previsions": {
-    "jourDate": "08/10/2026",
+    "jourDate": "09/10/2026",
     "jourTitre": "",
     "jourTexte": "Tout l'après-midi, le ciel est bien nuageux, avec de petites précipitations ou averses. En fin de journée, quelques éclaircies sont toutefois possibles. La limite pluie-neige se situe au plus bas à 2000 mètres. Vent de Nord à Nord-Ouest, localement modéré. Cette nuit: Le ciel est voilé en début de nuit. Des orages sont même possibles très localement. La limite pluie-neige se situe au plus bas à 1900 mètres. Ensuite, les étoiles brillent parfois dans un ciel clair, mais en Tarentaise et Vanoise, en Maurienne ainsi que dans les Bauges, des brumes se forment et le ciel est couvert. Vent de Nord, modéré par endroits.",
-    "demainDate": "09/10/2026",
+    "demainDate": "10/10/2026",
     "demainTitre": "",
     "demainTexte": "Le soleil est bien présent. Quelques nuages apparaissent l'après-midi, en Tarentaise et Vanoise. Pour la nuit : Les timides éclaircies en soirée, se comblent. La suite se déroule sous un ciel gris. Des brumes se forment après minuit, en Tarentaise et Vanoise, en Maurienne ainsi que sur les massifs frontaliers. Elles se dissipent assez vite. En fin de nuit, des pluies éparses tombent, dans la Cluse de Chambéry et l'avant-Pays. La neige remplace la pluie au-dessus de 2600 mètres. En fin de matinée, vent de Nord, modéré par endroits ; puis faiblissant."
   },
