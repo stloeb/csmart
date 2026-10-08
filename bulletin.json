@@ -2,18 +2,18 @@
   "ecusson": "LA",
   "station": "LES ARCS",
   "soustitre": "Arc 1950 · Paradiski · Bulletin du domaine",
-  "maj": "2026-10-08T13:49:00",
+  "maj": "2026-10-08T20:34:00",
   "source": "Lumiplan",
   "hero": [
     {
       "k": "Temp. sommet",
-      "v": "6°",
+      "v": "5°",
       "l": "GRAND COL",
       "c": ""
     },
     {
       "k": "Temp. station",
-      "v": "6°",
+      "v": "5°",
       "l": "ARC 2000 · 2000 m",
       "c": "n"
     },
@@ -25,7 +25,7 @@
     },
     {
       "k": "Limite pluie/neige",
-      "v": "2650 m",
+      "v": "2200 m",
       "l": "Altitude",
       "c": "n"
     },
@@ -56,12 +56,12 @@
       "alt": 3000,
       "ciel": "Couvert, pluies faibles",
       "matin": "7",
-      "aprem": "6",
+      "aprem": "5",
       "vent": "4",
       "dir": "N",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "2650",
+      "limite": "2200",
       "derniereH": "2",
       "derniereD": "14/04/2026"
     },
@@ -70,12 +70,12 @@
       "alt": 2000,
       "ciel": "Couvert, pluies faibles",
       "matin": "7",
-      "aprem": "6",
+      "aprem": "5",
       "vent": "4",
       "dir": "N",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "2650",
+      "limite": "2200",
       "derniereH": "1",
       "derniereD": "14/04/2026"
     },
@@ -84,12 +84,12 @@
       "alt": 1600,
       "ciel": "Couvert, pluies faibles",
       "matin": "7",
-      "aprem": "6",
+      "aprem": "5",
       "vent": "4",
       "dir": "N",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "2650",
+      "limite": "2200",
       "derniereH": "5",
       "derniereD": "31/03/2026"
     },
@@ -98,12 +98,12 @@
       "alt": 800,
       "ciel": "Couvert, pluies faibles",
       "matin": "11",
-      "aprem": "12",
-      "vent": "0",
-      "dir": "",
+      "aprem": "10",
+      "vent": "4",
+      "dir": "N",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "2650",
+      "limite": "2200",
       "derniereH": "5",
       "derniereD": "14/03/2026"
     },
@@ -112,12 +112,12 @@
       "alt": 1800,
       "ciel": "Couvert, pluies faibles",
       "matin": "7",
-      "aprem": "6",
-      "vent": "2",
-      "dir": "O",
+      "aprem": "4",
+      "vent": "5",
+      "dir": "SO",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "2650",
+      "limite": "2200",
       "derniereH": "5",
       "derniereD": "31/03/2026"
     }
@@ -125,10 +125,10 @@
   "previsions": {
     "jourDate": "08/10/2026",
     "jourTitre": "",
-    "jourTexte": "Des précipitations se produisent sur tout notre territoire dès le matin. Les précipitations sont faibles, mais durent toute la journée. La limite pluie-neige se situe vers 2500 mètres aux premières heures du jour, puis elle peut s'abaisser jusqu'à 2050 mètres ensuite. L'après-midi jusqu'en début de soirée, vent s'orientant au Nord à Nord-Ouest, modéré par endroits. Cette nuit: La soirée débute sous un ciel bien chargé avec quelques averses ici ou là. C'est de la neige qui tombe au-dessus de 1900 mètres. Rapidement, les précipitations cessent, et les nuages laissent une large place aux étoiles. À noter tout de même, en fin de nuit, la présence de brumes ou brouillards légers en Tarentaise et Vanoise ainsi que dans les Bauges. Vent de Nord, modéré par endroits.",
+    "jourTexte": "Tout l'après-midi, le ciel est bien nuageux, avec de petites précipitations ou averses. En fin de journée, quelques éclaircies sont toutefois possibles. La limite pluie-neige se situe au plus bas à 2000 mètres. Vent de Nord à Nord-Ouest, localement modéré. Cette nuit: Le ciel est voilé en début de nuit. Des orages sont même possibles très localement. La limite pluie-neige se situe au plus bas à 1900 mètres. Ensuite, les étoiles brillent parfois dans un ciel clair, mais en Tarentaise et Vanoise, en Maurienne ainsi que dans les Bauges, des brumes se forment et le ciel est couvert. Vent de Nord, modéré par endroits.",
     "demainDate": "09/10/2026",
     "demainTitre": "",
-    "demainTexte": "Le soleil règne presque en maître du matin au soir, seuls quelques passages nuageux le contrarient un peu en fin de journée. Pour la nuit : Les nuages sont bien présents. En fin de nuit, ils apportent de faibles pluies dans le Beaufortain ainsi que dans la Cluse de Chambéry et l'avant-Pays. Il neige à partir de 2500 mètres. En fin de matinée, vent de Nord, localement modéré ; ensuite atténuation."
+    "demainTexte": "Le soleil est bien présent. Quelques nuages apparaissent l'après-midi, en Tarentaise et Vanoise. Pour la nuit : Les timides éclaircies en soirée, se comblent. La suite se déroule sous un ciel gris. Des brumes se forment après minuit, en Tarentaise et Vanoise, en Maurienne ainsi que sur les massifs frontaliers. Elles se dissipent assez vite. En fin de nuit, des pluies éparses tombent, dans la Cluse de Chambéry et l'avant-Pays. La neige remplace la pluie au-dessus de 2600 mètres. En fin de matinée, vent de Nord, modéré par endroits ; puis faiblissant."
   },
   "blocs": [
     {
