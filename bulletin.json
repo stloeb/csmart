@@ -2,18 +2,18 @@
   "ecusson": "LA",
   "station": "LES ARCS",
   "soustitre": "Arc 1950 · Paradiski · Bulletin du domaine",
-  "maj": "2026-10-09T01:40:00",
+  "maj": "2026-10-09T13:41:00",
   "source": "Lumiplan",
   "hero": [
     {
       "k": "Temp. sommet",
-      "v": "10°",
+      "v": "9°",
       "l": "GRAND COL",
       "c": ""
     },
     {
       "k": "Temp. station",
-      "v": "10°",
+      "v": "9°",
       "l": "ARC 2000 · 2000 m",
       "c": "n"
     },
@@ -54,9 +54,9 @@
     {
       "lieu": "GRAND COL",
       "alt": 3000,
-      "ciel": "Brouillards",
-      "matin": "3",
-      "aprem": "10",
+      "ciel": "Belles éclaircies, passages nuageux",
+      "matin": "2",
+      "aprem": "9",
       "vent": "0",
       "dir": "",
       "neige24": "0",
@@ -68,9 +68,9 @@
     {
       "lieu": "ARC 2000",
       "alt": 2000,
-      "ciel": "Brouillards",
-      "matin": "3",
-      "aprem": "10",
+      "ciel": "Belles éclaircies, passages nuageux",
+      "matin": "2",
+      "aprem": "9",
       "vent": "0",
       "dir": "",
       "neige24": "0",
@@ -82,9 +82,9 @@
     {
       "lieu": "ARC 1600",
       "alt": 1600,
-      "ciel": "Brouillards",
-      "matin": "3",
-      "aprem": "10",
+      "ciel": "Belles éclaircies, passages nuageux",
+      "matin": "2",
+      "aprem": "9",
       "vent": "0",
       "dir": "",
       "neige24": "0",
@@ -98,9 +98,9 @@
       "alt": 800,
       "ciel": "Brouillards",
       "matin": "8",
-      "aprem": "17",
-      "vent": "0",
-      "dir": "",
+      "aprem": "16",
+      "vent": "4",
+      "dir": "N",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "5",
@@ -113,7 +113,7 @@
       "ciel": "Brouillards",
       "matin": "4",
       "aprem": "9",
-      "vent": "5",
+      "vent": "4",
       "dir": "SO",
       "neige24": "0",
       "qualite": "N/D",
@@ -125,10 +125,10 @@
   "previsions": {
     "jourDate": "09/10/2026",
     "jourTitre": "",
-    "jourTexte": "Tout l'après-midi, le ciel est bien nuageux, avec de petites précipitations ou averses. En fin de journée, quelques éclaircies sont toutefois possibles. La limite pluie-neige se situe au plus bas à 2000 mètres. Vent de Nord à Nord-Ouest, localement modéré. Cette nuit: Le ciel est voilé en début de nuit. Des orages sont même possibles très localement. La limite pluie-neige se situe au plus bas à 1900 mètres. Ensuite, les étoiles brillent parfois dans un ciel clair, mais en Tarentaise et Vanoise, en Maurienne ainsi que dans les Bauges, des brumes se forment et le ciel est couvert. Vent de Nord, modéré par endroits.",
+    "jourTexte": "Après dissipation des brouillards en Tarentaise et Vanoise, le soleil brille partout toute la journée. En fin de journée, le ciel se voile. À la mi-journée, vent de Nord-Ouest soufflant modérément, dans la Cluse de Chambéry et l'avant-Pays ; puis atténuation. Cette nuit: Sous un ciel variable, le temps reste le plus souvent sec. Seules quelques averses sont à attendre dans le Beaufortain, dans les Bauges ainsi que dans les plaines et basses vallées, en fin de nuit. La neige remplace la pluie au-dessus de 2450 mètres. Vent faible, variable.",
     "demainDate": "10/10/2026",
     "demainTitre": "",
-    "demainTexte": "Le soleil est bien présent. Quelques nuages apparaissent l'après-midi, en Tarentaise et Vanoise. Pour la nuit : Les timides éclaircies en soirée, se comblent. La suite se déroule sous un ciel gris. Des brumes se forment après minuit, en Tarentaise et Vanoise, en Maurienne ainsi que sur les massifs frontaliers. Elles se dissipent assez vite. En fin de nuit, des pluies éparses tombent, dans la Cluse de Chambéry et l'avant-Pays. La neige remplace la pluie au-dessus de 2600 mètres. En fin de matinée, vent de Nord, modéré par endroits ; puis faiblissant."
+    "demainTexte": "Toute la journée, nuages et soleil se disputent le ciel. Par moments, ce sont les nuages qui prédominent, parfois le soleil arrive à s'imposer. À noter qu'en début d'après-midi, les passages nuageux s'accompagnent de quelques averses, dans le Beaufortain, en Tarentaise et Vanoise ainsi que dans la Combe de Savoie. La neige remplace la pluie au-dessus de 2250 mètres. Pour la nuit : Les étoiles sont visibles toute la nuit. Tout au plus on peut noter quelques passages nuageux plus conséquents les cachant, en début de soirée dans le Beaufortain, dans la Combe de Savoie ainsi que dans les Bauges. Vent variable, faible."
   },
   "blocs": [
     {
