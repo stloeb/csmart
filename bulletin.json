@@ -2,18 +2,18 @@
   "ecusson": "LA",
   "station": "LES ARCS",
   "soustitre": "Arc 1950 · Paradiski · Bulletin du domaine",
-  "maj": "2026-10-09T13:41:00",
+  "maj": "2026-10-09T20:05:00",
   "source": "Lumiplan",
   "hero": [
     {
       "k": "Temp. sommet",
-      "v": "9°",
+      "v": "7°",
       "l": "GRAND COL",
       "c": ""
     },
     {
       "k": "Temp. station",
-      "v": "9°",
+      "v": "7°",
       "l": "ARC 2000 · 2000 m",
       "c": "n"
     },
@@ -56,7 +56,7 @@
       "alt": 3000,
       "ciel": "Belles éclaircies, passages nuageux",
       "matin": "2",
-      "aprem": "9",
+      "aprem": "7",
       "vent": "0",
       "dir": "",
       "neige24": "0",
@@ -70,7 +70,7 @@
       "alt": 2000,
       "ciel": "Belles éclaircies, passages nuageux",
       "matin": "2",
-      "aprem": "9",
+      "aprem": "7",
       "vent": "0",
       "dir": "",
       "neige24": "0",
@@ -84,7 +84,7 @@
       "alt": 1600,
       "ciel": "Belles éclaircies, passages nuageux",
       "matin": "2",
-      "aprem": "9",
+      "aprem": "7",
       "vent": "0",
       "dir": "",
       "neige24": "0",
@@ -98,9 +98,9 @@
       "alt": 800,
       "ciel": "Brouillards",
       "matin": "8",
-      "aprem": "16",
-      "vent": "4",
-      "dir": "N",
+      "aprem": "12",
+      "vent": "0",
+      "dir": "",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "5",
@@ -112,7 +112,7 @@
       "alt": 1800,
       "ciel": "Brouillards",
       "matin": "4",
-      "aprem": "9",
+      "aprem": "7",
       "vent": "4",
       "dir": "SO",
       "neige24": "0",
@@ -125,10 +125,10 @@
   "previsions": {
     "jourDate": "09/10/2026",
     "jourTitre": "",
-    "jourTexte": "Après dissipation des brouillards en Tarentaise et Vanoise, le soleil brille partout toute la journée. En fin de journée, le ciel se voile. À la mi-journée, vent de Nord-Ouest soufflant modérément, dans la Cluse de Chambéry et l'avant-Pays ; puis atténuation. Cette nuit: Sous un ciel variable, le temps reste le plus souvent sec. Seules quelques averses sont à attendre dans le Beaufortain, dans les Bauges ainsi que dans les plaines et basses vallées, en fin de nuit. La neige remplace la pluie au-dessus de 2450 mètres. Vent faible, variable.",
+    "jourTexte": "Passages nuageux et soleil se partagent le ciel. Les éclaircies sont en général belles. Elles restent timides, dans le Beaufortain, dans les Bauges ainsi que dans les plaines et basses vallées. Par contre, en Maurienne, le ciel se dégage en cours d'après-midi et reste assez clair jusqu'en fin de journée, avec un temps lumineux. Vent variable, faible. Cette nuit: Les nuages prédominent. En milieu de nuit, le ciel se couvre rapidement, et en fin de nuit, de faibles pluies se produisent, dans le Beaufortain, dans les Bauges ainsi que dans les plaines et basses vallées. La limite pluie-neige se situe au plus bas à 2500 mètres. Vent faible, variable.",
     "demainDate": "10/10/2026",
     "demainTitre": "",
-    "demainTexte": "Toute la journée, nuages et soleil se disputent le ciel. Par moments, ce sont les nuages qui prédominent, parfois le soleil arrive à s'imposer. À noter qu'en début d'après-midi, les passages nuageux s'accompagnent de quelques averses, dans le Beaufortain, en Tarentaise et Vanoise ainsi que dans la Combe de Savoie. La neige remplace la pluie au-dessus de 2250 mètres. Pour la nuit : Les étoiles sont visibles toute la nuit. Tout au plus on peut noter quelques passages nuageux plus conséquents les cachant, en début de soirée dans le Beaufortain, dans la Combe de Savoie ainsi que dans les Bauges. Vent variable, faible."
+    "demainTexte": "Les nuages sont bien nombreux dans un ciel variable. Quelques précipitations ou averses se produisent dans le Beaufortain, dans la Combe de Savoie ainsi que dans les Bauges. Située vers 2450 mètres aux premières heures du jour, la limite pluie-neige peut s'abaisser par la suite jusqu'à 2200 mètres. Pour la nuit : Après dissipation des brouillards locaux dans le Beaufortain, la nuit est belle. Vent variable, faible."
   },
   "blocs": [
     {
