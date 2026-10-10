@@ -2,7 +2,7 @@
   "ecusson": "LA",
   "station": "LES ARCS",
   "soustitre": "Arc 1950 · Paradiski · Bulletin du domaine",
-  "maj": "2026-10-10T00:48:00",
+  "maj": "2026-10-10T12:57:00",
   "source": "Lumiplan",
   "hero": [
     {
@@ -54,7 +54,7 @@
     {
       "lieu": "GRAND COL",
       "alt": 3000,
-      "ciel": "Belles éclaircies, passages nuageux",
+      "ciel": "Couvert",
       "matin": "5",
       "aprem": "8",
       "vent": "4",
@@ -68,7 +68,7 @@
     {
       "lieu": "ARC 2000",
       "alt": 2000,
-      "ciel": "Belles éclaircies, passages nuageux",
+      "ciel": "Couvert",
       "matin": "5",
       "aprem": "8",
       "vent": "4",
@@ -82,7 +82,7 @@
     {
       "lieu": "ARC 1600",
       "alt": 1600,
-      "ciel": "Belles éclaircies, passages nuageux",
+      "ciel": "Couvert",
       "matin": "5",
       "aprem": "8",
       "vent": "4",
@@ -97,8 +97,8 @@
       "lieu": "BOURG ST MAURICE",
       "alt": 800,
       "ciel": "Couvert",
-      "matin": "9",
-      "aprem": "16",
+      "matin": "10",
+      "aprem": "14",
       "vent": "0",
       "dir": "",
       "neige24": "0",
@@ -111,10 +111,10 @@
       "lieu": "ARC 1800",
       "alt": 1800,
       "ciel": "Couvert",
-      "matin": "5",
-      "aprem": "8",
-      "vent": "4",
-      "dir": "SO",
+      "matin": "6",
+      "aprem": "7",
+      "vent": "3",
+      "dir": "S",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "5",
@@ -125,10 +125,10 @@
   "previsions": {
     "jourDate": "10/10/2026",
     "jourTitre": "",
-    "jourTexte": "Passages nuageux et soleil se partagent le ciel. Les éclaircies sont en général belles. Elles restent timides, dans le Beaufortain, dans les Bauges ainsi que dans les plaines et basses vallées. Par contre, en Maurienne, le ciel se dégage en cours d'après-midi et reste assez clair jusqu'en fin de journée, avec un temps lumineux. Vent variable, faible. Cette nuit: Les nuages prédominent. En milieu de nuit, le ciel se couvre rapidement, et en fin de nuit, de faibles pluies se produisent, dans le Beaufortain, dans les Bauges ainsi que dans les plaines et basses vallées. La limite pluie-neige se situe au plus bas à 2500 mètres. Vent faible, variable.",
+    "jourTexte": "Le ciel est dégagé, avec quelques brumes ou bancs de brouillard le matin, dans les Bauges. Puis le ciel devient plus nuageux en milieu de journée, avec même quelques gouttes l'après-midi dans le Beaufortain, dans les Bauges ainsi que dans la Cluse de Chambéry et l'avant-Pays. C'est de la neige qui tombe au-dessus de 2550 mètres. Des éclaircies se forment en fin de journée. Vent variable, faible. Cette nuit: Le ciel est bien étoilé. Cependant dans le Beaufortain les nuages sont nombreux et donnent quelques averses en début de nuit. La limite pluie-neige s'abaisse jusqu'à 2400 mètres. Vent faible, variable.",
     "demainDate": "11/10/2026",
     "demainTitre": "",
-    "demainTexte": "Les nuages sont bien nombreux dans un ciel variable. Quelques précipitations ou averses se produisent dans le Beaufortain, dans la Combe de Savoie ainsi que dans les Bauges. Située vers 2450 mètres aux premières heures du jour, la limite pluie-neige peut s'abaisser par la suite jusqu'à 2200 mètres. Pour la nuit : Après dissipation des brouillards locaux dans le Beaufortain, la nuit est belle. Vent variable, faible."
+    "demainTexte": "La journée est lumineuse, avec un beau soleil parfois contrarié par des passages nuageux qui restent inoffensifs. Pour la nuit : Les rares nuages présents n'empêchent nullement l'observation des étoiles. Vent faible à modéré dans les plaines et basses vallées, de Nord-Nord-Ouest, en début d'après-midi ; et de Nord à Nord-Est, la nuit."
   },
   "blocs": [
     {
