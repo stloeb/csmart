@@ -2,18 +2,18 @@
   "ecusson": "LA",
   "station": "LES ARCS",
   "soustitre": "Arc 1950 · Paradiski · Bulletin du domaine",
-  "maj": "2026-10-11T22:49:00",
+  "maj": "2026-10-12T14:50:00",
   "source": "Lumiplan",
   "hero": [
     {
       "k": "Temp. sommet",
-      "v": "5°",
+      "v": "12°",
       "l": "GRAND COL",
       "c": ""
     },
     {
       "k": "Temp. station",
-      "v": "5°",
+      "v": "12°",
       "l": "ARC 2000 · 2000 m",
       "c": "n"
     },
@@ -54,9 +54,9 @@
     {
       "lieu": "GRAND COL",
       "alt": 3000,
-      "ciel": "Soleil voilé",
+      "ciel": "Soleil",
       "matin": "4",
-      "aprem": "5",
+      "aprem": "12",
       "vent": "4",
       "dir": "N",
       "neige24": "0",
@@ -68,9 +68,9 @@
     {
       "lieu": "ARC 2000",
       "alt": 2000,
-      "ciel": "Soleil voilé",
+      "ciel": "Soleil",
       "matin": "4",
-      "aprem": "5",
+      "aprem": "12",
       "vent": "4",
       "dir": "N",
       "neige24": "0",
@@ -82,9 +82,9 @@
     {
       "lieu": "ARC 1600",
       "alt": 1600,
-      "ciel": "Soleil voilé",
+      "ciel": "Soleil",
       "matin": "4",
-      "aprem": "5",
+      "aprem": "12",
       "vent": "4",
       "dir": "N",
       "neige24": "0",
@@ -96,11 +96,11 @@
     {
       "lieu": "BOURG ST MAURICE",
       "alt": 800,
-      "ciel": "Soleil voilé",
-      "matin": "7",
-      "aprem": "11",
-      "vent": "0",
-      "dir": "",
+      "ciel": "Soleil",
+      "matin": "6",
+      "aprem": "19",
+      "vent": "4",
+      "dir": "N",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "5",
@@ -110,11 +110,11 @@
     {
       "lieu": "ARC 1800",
       "alt": 1800,
-      "ciel": "Soleil voilé",
-      "matin": "6",
-      "aprem": "7",
-      "vent": "4",
-      "dir": "SO",
+      "ciel": "Soleil",
+      "matin": "5",
+      "aprem": "10",
+      "vent": "5",
+      "dir": "NE",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "5",
@@ -123,12 +123,12 @@
     }
   ],
   "previsions": {
-    "jourDate": "11/10/2026",
+    "jourDate": "12/10/2026",
     "jourTitre": "",
-    "jourTexte": "Le ciel est variable à la mi-journée. Puis, de belles éclaircies laissent passer le soleil, en fin d'après-midi. Vent faible, variable. Cette nuit: Le ciel est bien étoilé. En deuxième partie de nuit, vent s'établissant au Nord-Nord-Est modéré, dans la Cluse de Chambéry et l'avant-Pays.",
-    "demainDate": "12/10/2026",
+    "jourTexte": "Le soleil brille sans interruption. En milieu de journée, vent de Nord soufflant modérément, dans la Cluse de Chambéry et l'avant-Pays ; puis atténuation. Cette nuit: Les rares nuages présents n'empêchent nullement l'observation des étoiles. Vent variable, faible.",
+    "demainDate": "13/10/2026",
     "demainTitre": "",
-    "demainTexte": "Le temps est ensoleillé du matin au soir. Pour la nuit : Le ciel est clair toute la nuit. En milieu de journée, vent de Nord, modéré dans la Cluse de Chambéry et l'avant-Pays, puis s'atténuant ; en fin de nuit, vent se renforçant dans la Combe de Savoie, avec orientation à l'Est."
+    "demainTexte": "Le soleil règne presque en maître du matin au soir, seuls quelques passages nuageux le contrarient un peu en fin de journée. Pour la nuit : Le ciel est passagèrement assez nuageux. Les nuages ont tendance à se dissiper, et en fin de nuit, le ciel étoilé prend le dessus. En fin de nuit, vent d'Est modéré, dans la Combe de Savoie."
   },
   "blocs": [
     {
