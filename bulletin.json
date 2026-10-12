@@ -2,18 +2,18 @@
   "ecusson": "LA",
   "station": "LES ARCS",
   "soustitre": "Arc 1950 · Paradiski · Bulletin du domaine",
-  "maj": "2026-10-12T14:50:00",
+  "maj": "2026-10-12T23:35:00",
   "source": "Lumiplan",
   "hero": [
     {
       "k": "Temp. sommet",
-      "v": "12°",
+      "v": "6°",
       "l": "GRAND COL",
       "c": ""
     },
     {
       "k": "Temp. station",
-      "v": "12°",
+      "v": "6°",
       "l": "ARC 2000 · 2000 m",
       "c": "n"
     },
@@ -56,7 +56,7 @@
       "alt": 3000,
       "ciel": "Soleil",
       "matin": "4",
-      "aprem": "12",
+      "aprem": "6",
       "vent": "4",
       "dir": "N",
       "neige24": "0",
@@ -70,7 +70,7 @@
       "alt": 2000,
       "ciel": "Soleil",
       "matin": "4",
-      "aprem": "12",
+      "aprem": "6",
       "vent": "4",
       "dir": "N",
       "neige24": "0",
@@ -84,7 +84,7 @@
       "alt": 1600,
       "ciel": "Soleil",
       "matin": "4",
-      "aprem": "12",
+      "aprem": "6",
       "vent": "4",
       "dir": "N",
       "neige24": "0",
@@ -98,9 +98,9 @@
       "alt": 800,
       "ciel": "Soleil",
       "matin": "6",
-      "aprem": "19",
-      "vent": "4",
-      "dir": "N",
+      "aprem": "11",
+      "vent": "0",
+      "dir": "",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "5",
@@ -112,9 +112,9 @@
       "alt": 1800,
       "ciel": "Soleil",
       "matin": "5",
-      "aprem": "10",
-      "vent": "5",
-      "dir": "NE",
+      "aprem": "9",
+      "vent": "7",
+      "dir": "N",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "5",
@@ -125,10 +125,10 @@
   "previsions": {
     "jourDate": "12/10/2026",
     "jourTitre": "",
-    "jourTexte": "Le soleil brille sans interruption. En milieu de journée, vent de Nord soufflant modérément, dans la Cluse de Chambéry et l'avant-Pays ; puis atténuation. Cette nuit: Les rares nuages présents n'empêchent nullement l'observation des étoiles. Vent variable, faible.",
+    "jourTexte": "L'ensoleillement est excellent et le soleil règne sans partage. Vent variable, faible. Cette nuit: Le temps est calme et propice à l'observation des étoiles. Vent faible, variable.",
     "demainDate": "13/10/2026",
     "demainTitre": "",
-    "demainTexte": "Le soleil règne presque en maître du matin au soir, seuls quelques passages nuageux le contrarient un peu en fin de journée. Pour la nuit : Le ciel est passagèrement assez nuageux. Les nuages ont tendance à se dissiper, et en fin de nuit, le ciel étoilé prend le dessus. En fin de nuit, vent d'Est modéré, dans la Combe de Savoie."
+    "demainTexte": "Le soleil, très présent le matin, est moins éclatant l'après-midi, souvent voilé par des passages de nuages élevés. Pour la nuit : Un voile nuageux masque temporairement le ciel, qui devient plus clair en fin de nuit. En fin de nuit, vent s'établissant à l'Est modéré, dans la Combe de Savoie ; puis atténuation."
   },
   "blocs": [
     {
