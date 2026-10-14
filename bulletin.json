@@ -2,18 +2,18 @@
   "ecusson": "LA",
   "station": "LES ARCS",
   "soustitre": "Arc 1950 · Paradiski · Bulletin du domaine",
-  "maj": "2026-10-14T16:56:00",
+  "maj": "2026-10-14T21:15:00",
   "source": "Lumiplan",
   "hero": [
     {
       "k": "Temp. sommet",
-      "v": "16°",
+      "v": "8°",
       "l": "GRAND COL",
       "c": ""
     },
     {
       "k": "Temp. station",
-      "v": "16°",
+      "v": "8°",
       "l": "ARC 2000 · 2000 m",
       "c": "n"
     },
@@ -56,7 +56,7 @@
       "alt": 3000,
       "ciel": "Soleil voilé",
       "matin": "7",
-      "aprem": "16",
+      "aprem": "8",
       "vent": "4",
       "dir": "N",
       "neige24": "0",
@@ -70,7 +70,7 @@
       "alt": 2000,
       "ciel": "Soleil voilé",
       "matin": "7",
-      "aprem": "16",
+      "aprem": "8",
       "vent": "4",
       "dir": "N",
       "neige24": "0",
@@ -84,7 +84,7 @@
       "alt": 1600,
       "ciel": "Soleil voilé",
       "matin": "7",
-      "aprem": "16",
+      "aprem": "8",
       "vent": "4",
       "dir": "N",
       "neige24": "0",
@@ -98,7 +98,7 @@
       "alt": 800,
       "ciel": "Soleil voilé",
       "matin": "8",
-      "aprem": "22",
+      "aprem": "13",
       "vent": "0",
       "dir": "",
       "neige24": "0",
@@ -112,8 +112,8 @@
       "alt": 1800,
       "ciel": "Soleil voilé",
       "matin": "9",
-      "aprem": "14",
-      "vent": "4",
+      "aprem": "13",
+      "vent": "3",
       "dir": "SE",
       "neige24": "0",
       "qualite": "N/D",
@@ -125,10 +125,10 @@
   "previsions": {
     "jourDate": "14/10/2026",
     "jourTitre": "",
-    "jourTexte": "C'est une journée bien ensoleillée qui s'annonce, même si on peut noter quelques nuages plus présents en Maurienne, en début de matinée. Vent variable, faible. Cette nuit: Le ciel est bien étoilé. Vent faible, variable.",
+    "jourTexte": "L'ensoleillement est excellent et le soleil règne sans partage. Vent variable, faible. Cette nuit: Le temps est calme et propice à l'observation des étoiles. Vent faible, variable.",
     "demainDate": "15/10/2026",
     "demainTitre": "",
-    "demainTexte": "Le temps est sec, avec un soleil qui brille toute la journée. Tout au plus quelques nuages apparaissent en fin d'après-midi sur les massifs frontaliers. Pour la nuit : La nuit est étoilée. Petit bémol, dans la Combe de Savoie, car des brumes se forment en seconde partie de nuit. En fin de nuit, vent s'orientant Est modéré, dans la Combe de Savoie ; atténuation ensuite."
+    "demainTexte": "La journée est ensoleillée, même si quelques nuages discrets apparaissent à partir de la fin de matinée, dans le Beaufortain, en Tarentaise et Vanoise ainsi que sur les massifs frontaliers. Pour la nuit : La nuit est étoilée. Petit bémol, dans la Combe de Savoie, car des brumes se forment en seconde partie de nuit. En fin de nuit, vent d'Est modéré, dans la Combe de Savoie."
   },
   "blocs": [
     {
