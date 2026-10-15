@@ -2,7 +2,7 @@
   "ecusson": "LA",
   "station": "LES ARCS",
   "soustitre": "Arc 1950 · Paradiski · Bulletin du domaine",
-  "maj": "2026-10-15T00:30:00",
+  "maj": "2026-10-15T11:38:00",
   "source": "Lumiplan",
   "hero": [
     {
@@ -97,8 +97,8 @@
       "lieu": "BOURG ST MAURICE",
       "alt": 800,
       "ciel": "Soleil",
-      "matin": "6",
-      "aprem": "23",
+      "matin": "7",
+      "aprem": "24",
       "vent": "4",
       "dir": "N",
       "neige24": "0",
@@ -125,10 +125,10 @@
   "previsions": {
     "jourDate": "15/10/2026",
     "jourTitre": "",
-    "jourTexte": "L'ensoleillement est excellent et le soleil règne sans partage. Vent variable, faible. Cette nuit: Le temps est calme et propice à l'observation des étoiles. Vent faible, variable.",
+    "jourTexte": "Le soleil, très présent le matin, est moins éclatant l'après-midi, souvent voilé par des passages de nuages élevés. Vent variable, faible. Cette nuit: Quelques nuages sont présents en début de nuit, puis ils s'effacent et la nuit est bien étoilée. Vent faible, variable.",
     "demainDate": "16/10/2026",
     "demainTitre": "",
-    "demainTexte": "La journée est ensoleillée, même si quelques nuages discrets apparaissent à partir de la fin de matinée, dans le Beaufortain, en Tarentaise et Vanoise ainsi que sur les massifs frontaliers. Pour la nuit : La nuit est étoilée. Petit bémol, dans la Combe de Savoie, car des brumes se forment en seconde partie de nuit. En fin de nuit, vent d'Est modéré, dans la Combe de Savoie."
+    "demainTexte": "Le soleil s'impose largement, malgré quelques passages nuageux en matinée. Pour la nuit : Le ciel est dégagé dès le début de soirée. Toutefois, dans la Cluse de Chambéry et l'avant-Pays, des nuages apparaissent en fin de nuit. En fin de nuit, vent s'établissant à l'Est modéré, dans la Combe de Savoie."
   },
   "blocs": [
     {
