@@ -2,18 +2,18 @@
   "ecusson": "LA",
   "station": "LES ARCS",
   "soustitre": "Arc 1950 · Paradiski · Bulletin du domaine",
-  "maj": "2026-10-15T23:57:00",
+  "maj": "2026-10-16T11:32:00",
   "source": "Lumiplan",
   "hero": [
     {
       "k": "Temp. sommet",
-      "v": "10°",
+      "v": "15°",
       "l": "GRAND COL",
       "c": ""
     },
     {
       "k": "Temp. station",
-      "v": "10°",
+      "v": "15°",
       "l": "ARC 2000 · 2000 m",
       "c": "n"
     },
@@ -54,9 +54,9 @@
     {
       "lieu": "GRAND COL",
       "alt": 3000,
-      "ciel": "Soleil",
-      "matin": "7",
-      "aprem": "10",
+      "ciel": "Soleil voilé",
+      "matin": "8",
+      "aprem": "15",
       "vent": "4",
       "dir": "N",
       "neige24": "0",
@@ -68,9 +68,9 @@
     {
       "lieu": "ARC 2000",
       "alt": 2000,
-      "ciel": "Soleil",
-      "matin": "7",
-      "aprem": "10",
+      "ciel": "Soleil voilé",
+      "matin": "8",
+      "aprem": "15",
       "vent": "4",
       "dir": "N",
       "neige24": "0",
@@ -82,9 +82,9 @@
     {
       "lieu": "ARC 1600",
       "alt": 1600,
-      "ciel": "Soleil",
-      "matin": "7",
-      "aprem": "10",
+      "ciel": "Soleil voilé",
+      "matin": "8",
+      "aprem": "15",
       "vent": "4",
       "dir": "N",
       "neige24": "0",
@@ -96,9 +96,9 @@
     {
       "lieu": "BOURG ST MAURICE",
       "alt": 800,
-      "ciel": "Soleil",
+      "ciel": "Soleil voilé",
       "matin": "7",
-      "aprem": "15",
+      "aprem": "21",
       "vent": "0",
       "dir": "",
       "neige24": "0",
@@ -110,9 +110,9 @@
     {
       "lieu": "ARC 1800",
       "alt": 1800,
-      "ciel": "Soleil",
+      "ciel": "Soleil voilé",
       "matin": "12",
-      "aprem": "15",
+      "aprem": "13",
       "vent": "5",
       "dir": "E",
       "neige24": "0",
@@ -123,12 +123,12 @@
     }
   ],
   "previsions": {
-    "jourDate": "15/10/2026",
+    "jourDate": "16/10/2026",
     "jourTitre": "",
-    "jourTexte": "L'après-midi est lumineuse, malgré la présence de nuages élevés. Vent faible, variable. Cette nuit: Le ciel est souvent étoilé la nuit. Vent variable, faible.",
-    "demainDate": "16/10/2026",
+    "jourTexte": "Le ciel est généralement voilé ou très nuageux le matin. Dans l'après-midi, le soleil arrive à percer régulièrement. Il est particulièrement présent. Vent faible, variable. Cette nuit: La nuit est bien étoilée. Tout au plus quelques nuages apparaissent en fin de nuit dans la Cluse de Chambéry et l'avant-Pays. Vent variable, faible.",
+    "demainDate": "17/10/2026",
     "demainTitre": "",
-    "demainTexte": "Le soleil s'impose largement, malgré quelques passages nuageux en matinée. Pour la nuit : Le ciel est dégagé dès le début de soirée. Toutefois, dans la Cluse de Chambéry et l'avant-Pays, des nuages apparaissent en fin de nuit. Vent variable, faible."
+    "demainTexte": "En matinée le ciel est souvent voilé. L'après-midi de larges éclaircies laissent briller le soleil. Cependant dans les Bauges ainsi que dans les plaines et basses vallées, les nuages sont plus présents et de petites averses sont possibles dès la mi-journée. La neige remplace la pluie au-dessus de 2500 mètres. Pour la nuit : En soirée, le temps est brumeux dans le Beaufortain ainsi que dans les Bauges. Au fil des heures, le ciel se couvre de plus en plus, et les nuages donnent même quelques averses, après minuit, dans le Beaufortain, en Maurienne, dans les Bauges ainsi que dans les plaines et basses vallées. La limite pluie-neige se situe vers 2400 mètres en milieu de nuit, puis elle peut s'abaisser jusqu'à 2100 mètres ensuite. Etablissement, à la tombée du jour, d'un vent de Nord-Nord-Ouest modéré, dans la Cluse de Chambéry et l'avant-Pays ; atténuation ensuite."
   },
   "blocs": [
     {
