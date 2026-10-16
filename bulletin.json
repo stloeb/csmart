@@ -2,18 +2,18 @@
   "ecusson": "LA",
   "station": "LES ARCS",
   "soustitre": "Arc 1950 · Paradiski · Bulletin du domaine",
-  "maj": "2026-10-16T16:37:00",
+  "maj": "2026-10-16T20:38:00",
   "source": "Lumiplan",
   "hero": [
     {
       "k": "Temp. sommet",
-      "v": "15°",
+      "v": "8°",
       "l": "GRAND COL",
       "c": ""
     },
     {
       "k": "Temp. station",
-      "v": "15°",
+      "v": "8°",
       "l": "ARC 2000 · 2000 m",
       "c": "n"
     },
@@ -56,7 +56,7 @@
       "alt": 3000,
       "ciel": "Soleil voilé",
       "matin": "8",
-      "aprem": "15",
+      "aprem": "8",
       "vent": "4",
       "dir": "N",
       "neige24": "0",
@@ -70,7 +70,7 @@
       "alt": 2000,
       "ciel": "Soleil voilé",
       "matin": "8",
-      "aprem": "15",
+      "aprem": "8",
       "vent": "4",
       "dir": "N",
       "neige24": "0",
@@ -84,7 +84,7 @@
       "alt": 1600,
       "ciel": "Soleil voilé",
       "matin": "8",
-      "aprem": "15",
+      "aprem": "8",
       "vent": "4",
       "dir": "N",
       "neige24": "0",
@@ -98,9 +98,9 @@
       "alt": 800,
       "ciel": "Soleil voilé",
       "matin": "7",
-      "aprem": "21",
-      "vent": "0",
-      "dir": "",
+      "aprem": "12",
+      "vent": "4",
+      "dir": "N",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "5",
@@ -112,9 +112,9 @@
       "alt": 1800,
       "ciel": "Soleil voilé",
       "matin": "12",
-      "aprem": "13",
-      "vent": "5",
-      "dir": "E",
+      "aprem": "12",
+      "vent": "1",
+      "dir": "SE",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "5",
@@ -125,10 +125,10 @@
   "previsions": {
     "jourDate": "16/10/2026",
     "jourTitre": "",
-    "jourTexte": "Le ciel est généralement voilé ou très nuageux le matin. Dans l'après-midi, le soleil arrive à percer régulièrement. Il est particulièrement présent. Vent faible, variable. Cette nuit: La nuit est bien étoilée. Tout au plus quelques nuages apparaissent en fin de nuit dans la Cluse de Chambéry et l'avant-Pays. Vent variable, faible.",
+    "jourTexte": "Le soleil est généreux tout au long de l'après-midi. Vent faible, variable. Cette nuit: Le ciel est clair, toute la nuit. Seuls quelques nuages se développent, avant l'aurore, dans les Bauges ainsi que dans la Cluse de Chambéry et l'avant-Pays. Mais, ils restent minoritaires. Vent variable, faible.",
     "demainDate": "17/10/2026",
     "demainTitre": "",
-    "demainTexte": "En matinée le ciel est souvent voilé. L'après-midi de larges éclaircies laissent briller le soleil. Cependant dans les Bauges ainsi que dans les plaines et basses vallées, les nuages sont plus présents et de petites averses sont possibles dès la mi-journée. La neige remplace la pluie au-dessus de 2500 mètres. Pour la nuit : En soirée, le temps est brumeux dans le Beaufortain ainsi que dans les Bauges. Au fil des heures, le ciel se couvre de plus en plus, et les nuages donnent même quelques averses, après minuit, dans le Beaufortain, en Maurienne, dans les Bauges ainsi que dans les plaines et basses vallées. La limite pluie-neige se situe vers 2400 mètres en milieu de nuit, puis elle peut s'abaisser jusqu'à 2100 mètres ensuite. Etablissement, à la tombée du jour, d'un vent de Nord-Nord-Ouest modéré, dans la Cluse de Chambéry et l'avant-Pays ; atténuation ensuite."
+    "demainTexte": "Les nuages sont déjà assez nombreux en matinée. Ils couvrent le ciel l'après-midi, apportant des pluies éparses, dans le Beaufortain, dans les Bauges ainsi que dans les plaines et basses vallées. Des brumes fugaces se forment en début d'après-midi, dans le Beaufortain. C'est de la neige qui tombe au-dessus de 2700 mètres. Pour la nuit : La nuit débute avec de faibles pluies, en Maurienne, dans les Bauges ainsi que dans les plaines et basses vallées. Le temps est brumeux, dans le Beaufortain. En cours de nuit, quelques éclaircies se forment. Elles restent modestes, et sont entrecoupées d'averses. La limite pluie-neige se situe vers 2500 mètres à la tombée du jour, puis elle peut s'abaisser jusqu'à 2000 mètres ensuite. En début de nuit, vent s'établissant au Nord à Nord-Ouest modéré, dans la Cluse de Chambéry et l'avant-Pays ; puis atténuation."
   },
   "blocs": [
     {
