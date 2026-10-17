@@ -2,18 +2,18 @@
   "ecusson": "LA",
   "station": "LES ARCS",
   "soustitre": "Arc 1950 · Paradiski · Bulletin du domaine",
-  "maj": "2026-10-16T23:55:00",
+  "maj": "2026-10-17T11:03:00",
   "source": "Lumiplan",
   "hero": [
     {
       "k": "Temp. sommet",
-      "v": "8°",
+      "v": "11°",
       "l": "GRAND COL",
       "c": ""
     },
     {
       "k": "Temp. station",
-      "v": "8°",
+      "v": "11°",
       "l": "ARC 2000 · 2000 m",
       "c": "n"
     },
@@ -54,9 +54,9 @@
     {
       "lieu": "GRAND COL",
       "alt": 3000,
-      "ciel": "Soleil voilé",
-      "matin": "8",
-      "aprem": "8",
+      "ciel": "Soleil",
+      "matin": "4",
+      "aprem": "11",
       "vent": "4",
       "dir": "N",
       "neige24": "0",
@@ -68,9 +68,9 @@
     {
       "lieu": "ARC 2000",
       "alt": 2000,
-      "ciel": "Soleil voilé",
-      "matin": "8",
-      "aprem": "8",
+      "ciel": "Soleil",
+      "matin": "4",
+      "aprem": "11",
       "vent": "4",
       "dir": "N",
       "neige24": "0",
@@ -82,9 +82,9 @@
     {
       "lieu": "ARC 1600",
       "alt": 1600,
-      "ciel": "Soleil voilé",
-      "matin": "8",
-      "aprem": "8",
+      "ciel": "Soleil",
+      "matin": "4",
+      "aprem": "11",
       "vent": "4",
       "dir": "N",
       "neige24": "0",
@@ -96,11 +96,11 @@
     {
       "lieu": "BOURG ST MAURICE",
       "alt": 800,
-      "ciel": "Soleil voilé",
-      "matin": "7",
-      "aprem": "12",
-      "vent": "4",
-      "dir": "N",
+      "ciel": "Soleil",
+      "matin": "6",
+      "aprem": "19",
+      "vent": "0",
+      "dir": "",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "5",
@@ -110,11 +110,11 @@
     {
       "lieu": "ARC 1800",
       "alt": 1800,
-      "ciel": "Soleil voilé",
-      "matin": "12",
-      "aprem": "12",
-      "vent": "1",
-      "dir": "SE",
+      "ciel": "Soleil",
+      "matin": "7",
+      "aprem": "9",
+      "vent": "4",
+      "dir": "E",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "5",
@@ -123,12 +123,12 @@
     }
   ],
   "previsions": {
-    "jourDate": "16/10/2026",
+    "jourDate": "17/10/2026",
     "jourTitre": "",
-    "jourTexte": "Le soleil est généreux tout au long de l'après-midi. Vent faible, variable. Cette nuit: Le ciel est clair, toute la nuit. Seuls quelques nuages se développent, avant l'aurore, dans les Bauges ainsi que dans la Cluse de Chambéry et l'avant-Pays. Mais, ils restent minoritaires. Vent variable, faible.",
-    "demainDate": "17/10/2026",
+    "jourTexte": "La matinée est encore assez ensoleillée, mais de gros nuages gris, porteurs de quelques pluies, arrivent l'après-midi, dans le Beaufortain, en Maurienne, dans les Bauges ainsi que dans les plaines et basses vallées. Il neige à partir de 2700 mètres. À la tombée du jour, vent de Nord-Ouest modéré, dans la Cluse de Chambéry et l'avant-Pays. Cette nuit: Le temps est bien nuageux toute la nuit, avec des précipitations, dans le Beaufortain, en Maurienne, dans les Bauges ainsi que dans les plaines et basses vallées. La limite pluie-neige se situe vers 2550 mètres à la tombée du jour, puis elle peut s'abaisser jusqu'à 2300 mètres ensuite. Du brouillard se développe, dans le Beaufortain, en fin de nuit. Vent de Nord-Ouest modéré, dans la Cluse de Chambéry et l'avant-Pays.",
+    "demainDate": "18/10/2026",
     "demainTitre": "",
-    "demainTexte": "Les nuages sont déjà assez nombreux en matinée. Ils couvrent le ciel l'après-midi, apportant des pluies éparses, dans le Beaufortain, dans les Bauges ainsi que dans les plaines et basses vallées. Des brumes fugaces se forment en début d'après-midi, dans le Beaufortain. C'est de la neige qui tombe au-dessus de 2700 mètres. Pour la nuit : La nuit débute avec de faibles pluies, en Maurienne, dans les Bauges ainsi que dans les plaines et basses vallées. Le temps est brumeux, dans le Beaufortain. En cours de nuit, quelques éclaircies se forment. Elles restent modestes, et sont entrecoupées d'averses. La limite pluie-neige se situe vers 2500 mètres à la tombée du jour, puis elle peut s'abaisser jusqu'à 2000 mètres ensuite. En début de nuit, vent s'établissant au Nord à Nord-Ouest modéré, dans la Cluse de Chambéry et l'avant-Pays ; puis atténuation."
+    "demainTexte": "L'atmosphère brumeuse sous de nombreux nuages se résorbe lentement, mais des bancs de brouillard persistent encore jusqu'à la mi-journée, dans le Beaufortain. Le ciel prend, l'après-midi, un aspect plus chaotique. Un risque d'averses concerne progressivement toute la région. La limite pluie-neige s'élève de 2300 mètres, tôt le matin, jusqu'au-dessus de 2500 mètres. Pour la nuit : En début de soirée le ciel est très nuageux avec des brumes ici ou là. Le temps est généralement sec, mais quelques rares averses sont possibles, dans la Cluse de Chambéry et l'avant-Pays. La neige remplace la pluie au-dessus de 2500 mètres. Les précipitations cessent vite et progressivement, les nuages disparaissent quelque peu, laissant une belle place aux étoiles en fin de nuit. Vent localement modéré, en journée. Après une atténuation, reprise en milieu de nuit, sur les massifs frontaliers."
   },
   "blocs": [
     {
