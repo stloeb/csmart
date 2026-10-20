@@ -2,25 +2,25 @@
   "ecusson": "LA",
   "station": "LES ARCS",
   "soustitre": "Arc 1950 · Paradiski · Bulletin du domaine",
-  "maj": "2026-10-20T16:45:00",
+  "maj": "2026-10-20T20:57:00",
   "source": "Lumiplan",
   "hero": [
     {
       "k": "Temp. sommet",
-      "v": "10°",
+      "v": "7°",
       "l": "GRAND COL",
       "c": ""
     },
     {
       "k": "Temp. station",
-      "v": "10°",
+      "v": "7°",
       "l": "ARC 2000 · 2000 m",
       "c": "n"
     },
     {
       "k": "Vent",
       "v": "14 km/h",
-      "l": "Secteur E",
+      "l": "Secteur NE",
       "c": "w"
     },
     {
@@ -56,9 +56,9 @@
       "alt": 3000,
       "ciel": "Très nuageux, courtes éclaircies",
       "matin": "10",
-      "aprem": "10",
+      "aprem": "7",
       "vent": "14",
-      "dir": "E",
+      "dir": "NE",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "2",
@@ -70,9 +70,9 @@
       "alt": 2000,
       "ciel": "Très nuageux, courtes éclaircies",
       "matin": "10",
-      "aprem": "10",
+      "aprem": "7",
       "vent": "14",
-      "dir": "E",
+      "dir": "NE",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "1",
@@ -84,9 +84,9 @@
       "alt": 1600,
       "ciel": "Très nuageux, courtes éclaircies",
       "matin": "10",
-      "aprem": "10",
+      "aprem": "7",
       "vent": "14",
-      "dir": "E",
+      "dir": "NE",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "5",
@@ -98,37 +98,37 @@
       "alt": 800,
       "ciel": "Très nuageux, courtes éclaircies",
       "matin": "13",
-      "aprem": "17",
-      "vent": "7",
+      "aprem": "15",
+      "vent": "11",
       "dir": "NE",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "5",
-      "derniereH": "",
-      "derniereD": ""
+      "limite": "2600",
+      "derniereH": "5",
+      "derniereD": "14/03/2026"
     },
     {
       "lieu": "ARC 1800",
       "alt": 1800,
       "ciel": "Très nuageux, courtes éclaircies",
       "matin": "9",
-      "aprem": "10",
-      "vent": "18",
+      "aprem": "9",
+      "vent": "14",
       "dir": "NE",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "5",
-      "derniereH": "",
-      "derniereD": ""
+      "limite": "2600",
+      "derniereH": "5",
+      "derniereD": "31/03/2026"
     }
   ],
   "previsions": {
     "jourDate": "20/10/2026",
     "jourTitre": "",
-    "jourTexte": "Les nuages sont nombreux toute la journée, et les éclaircies timides. Ces nuages apportent de petites averses, sur les massifs frontaliers, dans les Bauges ainsi que dans la Cluse de Chambéry et l'avant-Pays en début de journée. Puis les averses se généralisent dès la mi-journée. Située vers 2750 mètres tôt le matin, la limite pluie-neige peut s'abaisser par la suite jusqu'à 2550 mètres. Vent d'Est à Sud-Est virant Sud-Est modéré, dans les massifs intérieurs. Cette nuit: L'atmosphère brumeuse sous de nombreux nuages se résorbe lentement, mais des bancs de brouillard persistent encore jusqu'à minuit, très localement. Le ciel prend ensuite un aspect plus chaotique. Un risque d'averses concerne progressivement toute la région. Située vers 2600 mètres à la tombée du jour, la limite pluie-neige peut s'abaisser par la suite jusqu'à 2200 mètres. Vent variable, faible.",
+    "jourTexte": "C'est un temps variable pour l'après-midi. De rares averses sont possibles de ci de là. Il neige à partir de 2650 mètres. En fin d'après-midi, les éclaircies sont plus belles. Vent d'Est à Sud-Est, localement modéré. Cette nuit: Le temps est bien nuageux toute la nuit, avec des précipitations. Située vers 2600 mètres à la tombée du jour, la limite pluie-neige peut s'abaisser par la suite jusqu'à 2200 mètres. Du brouillard se développe, en Maurienne, en fin de nuit. Vent variable, faible.",
     "demainDate": "21/10/2026",
     "demainTitre": "",
-    "demainTexte": "La journée débute sous un ciel gris, avec de faibles précipitations, dans le Beaufortain, en Tarentaise et Vanoise ainsi que dans la Combe de Savoie. Le temps est brumeux, en Maurienne, sur les massifs frontaliers ainsi que dans les Bauges. En cours de matinée, quelques éclaircies se forment. Elles restent modestes, et sont entrecoupées d'averses jusqu'en fin de journée. La limite pluie-neige se situe vers 2100 mètres au lever du jour, puis elle peut s'abaisser jusqu'à 1600 mètres ensuite. Pour la nuit : Sous un ciel couvert, de faibles précipitations se produisent en soirée. Puis, le ciel se découvre un peu, les précipitations s'atténuent et cessent. Mais des averses restent toutefois possibles après minuit, dans le Beaufortain, sur les massifs frontaliers ainsi que dans les plaines et basses vallées. La limite pluie-neige s'abaisse jusqu'à 1250 mètres. Vent soufflant faible à modéré par endroits Avec des rafales atteignant 65 km/h ; atténuation temporaire en milieu de période."
+    "demainTexte": "La journée débute sous un ciel gris, avec de faibles précipitations, dans le Beaufortain, en Tarentaise et Vanoise ainsi que dans la Combe de Savoie. Le temps est brumeux, en Maurienne ainsi que sur les massifs frontaliers. En cours de matinée, quelques éclaircies se forment. Elles restent modestes, et sont entrecoupées d'averses jusqu'en fin de journée. La limite pluie-neige se situe vers 2050 mètres aux premières heures du jour, puis elle peut s'abaisser jusqu'à 1550 mètres ensuite. Pour la nuit : La soirée est nuageuse. Elle est entrecoupée de rares averses et de timides éclaircies. Quelques brumes drapent les endroits les plus humides, très localement. Elles se dissipent vers minuit. La seconde partie de nuit est grise, avec toujours quelques averses. La limite pluie-neige s'abaisse vers 1150 mètres en milieu de nuit, avant de remonter progressivement. Vent soufflant faible à modéré par endroits, de Sud à Sud-Ouest, en milieu d'après-midi ; et d'Ouest, en deuxième partie de nuit. Rafales atteignant 65 km/h, en fin de nuit."
   },
   "blocs": [
     {
