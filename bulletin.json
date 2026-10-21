@@ -2,30 +2,30 @@
   "ecusson": "LA",
   "station": "LES ARCS",
   "soustitre": "Arc 1950 · Paradiski · Bulletin du domaine",
-  "maj": "2026-10-21T21:09:00",
+  "maj": "2026-10-22T00:35:00",
   "source": "Lumiplan",
   "hero": [
     {
       "k": "Temp. sommet",
-      "v": "1°",
+      "v": "8°",
       "l": "GRAND COL",
       "c": ""
     },
     {
       "k": "Temp. station",
-      "v": "1°",
+      "v": "8°",
       "l": "ARC 2000 · 2000 m",
       "c": "n"
     },
     {
       "k": "Vent",
-      "v": "14 km/h",
-      "l": "Secteur O",
+      "v": "7 km/h",
+      "l": "Secteur SE",
       "c": "w"
     },
     {
       "k": "Limite pluie/neige",
-      "v": "1650 m",
+      "v": "1 m",
       "l": "Altitude",
       "c": "n"
     },
@@ -37,8 +37,8 @@
     },
     {
       "k": "Dernière chute",
-      "v": "+1 cm",
-      "l": "14/04/2026",
+      "v": "+ cm",
+      "l": "—",
       "c": ""
     }
   ],
@@ -54,79 +54,79 @@
     {
       "lieu": "GRAND COL",
       "alt": 3000,
-      "ciel": "Couvert, pluies faibles",
-      "matin": "3",
-      "aprem": "1",
-      "vent": "14",
-      "dir": "O",
+      "ciel": "Soleil",
+      "matin": "0",
+      "aprem": "8",
+      "vent": "7",
+      "dir": "SE",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "1650",
-      "derniereH": "2",
-      "derniereD": "14/04/2026"
+      "limite": "2",
+      "derniereH": "",
+      "derniereD": ""
     },
     {
       "lieu": "ARC 2000",
       "alt": 2000,
-      "ciel": "Couvert, pluies faibles",
-      "matin": "3",
-      "aprem": "1",
-      "vent": "14",
-      "dir": "O",
+      "ciel": "Soleil",
+      "matin": "0",
+      "aprem": "8",
+      "vent": "7",
+      "dir": "SE",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "1650",
-      "derniereH": "1",
-      "derniereD": "14/04/2026"
+      "limite": "1",
+      "derniereH": "",
+      "derniereD": ""
     },
     {
       "lieu": "ARC 1600",
       "alt": 1600,
-      "ciel": "Couvert, pluies faibles",
-      "matin": "3",
-      "aprem": "1",
-      "vent": "14",
-      "dir": "O",
+      "ciel": "Soleil",
+      "matin": "0",
+      "aprem": "8",
+      "vent": "7",
+      "dir": "SE",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "1650",
-      "derniereH": "5",
-      "derniereD": "31/03/2026"
+      "limite": "5",
+      "derniereH": "",
+      "derniereD": ""
     },
     {
       "lieu": "BOURG ST MAURICE",
       "alt": 800,
-      "ciel": "Couvert, pluies faibles",
-      "matin": "8",
-      "aprem": "8",
+      "ciel": "Soleil",
+      "matin": "3",
+      "aprem": "15",
       "vent": "4",
       "dir": "N",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "1600",
-      "derniereH": "5",
-      "derniereD": "14/03/2026"
+      "limite": "5",
+      "derniereH": "",
+      "derniereD": ""
     },
     {
       "lieu": "ARC 1800",
       "alt": 1800,
-      "ciel": "Couvert, pluies faibles",
-      "matin": "4",
-      "aprem": "1",
+      "ciel": "Soleil",
+      "matin": "1",
+      "aprem": "5",
       "vent": "4",
-      "dir": "O",
+      "dir": "SE",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "1600",
-      "derniereH": "5",
-      "derniereD": "31/03/2026"
+      "limite": "5",
+      "derniereH": "",
+      "derniereD": ""
     }
   ],
   "previsions": {
-    "jourDate": "21/10/2026",
+    "jourDate": "22/10/2026",
     "jourTitre": "",
     "jourTexte": "Des précipitations éparses tombent durablement. Quelques éclaircies arrivent à se développer, en fin d'après-midi. La neige remplace la pluie au-dessus de 1600 mètres. Vent d'Ouest à Nord-Ouest, localement modéré, en cours d'après-midi ; puis atténuation. Cette nuit: En début de nuit, les nuages sont très nombreux, et de faibles précipitations se produisent par places. La limite pluie-neige s'abaisse jusqu'à 1300 mètres. Les éclaircies reviennent dès le milieu de nuit dans le Beaufortain, en Maurienne, sur les massifs frontaliers, dans les Bauges ainsi que dans la Cluse de Chambéry et l'avant-Pays, puis se généralisent. Vent faible, variable.",
-    "demainDate": "22/10/2026",
+    "demainDate": "23/10/2026",
     "demainTitre": "",
     "demainTexte": "Le soleil est quasi-omniprésent. Par contre, des nuages élevés apparaissent en cours de journée, en Maurienne, dans les Bauges ainsi que dans les plaines et basses vallées. Pour la nuit : Le temps est calme en première partie de nuit. Ensuite, le ciel s'assombrit et quelques précipitations apparaissent sur les massifs frontaliers. La limite pluie-neige se situe au plus bas à 2100 mètres. Vent variable, faible."
   },
