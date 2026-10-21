@@ -2,30 +2,30 @@
   "ecusson": "LA",
   "station": "LES ARCS",
   "soustitre": "Arc 1950 · Paradiski · Bulletin du domaine",
-  "maj": "2026-10-21T16:52:00",
+  "maj": "2026-10-21T21:09:00",
   "source": "Lumiplan",
   "hero": [
     {
       "k": "Temp. sommet",
-      "v": "5°",
+      "v": "1°",
       "l": "GRAND COL",
       "c": ""
     },
     {
       "k": "Temp. station",
-      "v": "5°",
+      "v": "1°",
       "l": "ARC 2000 · 2000 m",
       "c": "n"
     },
     {
       "k": "Vent",
-      "v": "4 km/h",
-      "l": "Secteur N",
+      "v": "14 km/h",
+      "l": "Secteur O",
       "c": "w"
     },
     {
       "k": "Limite pluie/neige",
-      "v": "2400 m",
+      "v": "1650 m",
       "l": "Altitude",
       "c": "n"
     },
@@ -56,12 +56,12 @@
       "alt": 3000,
       "ciel": "Couvert, pluies faibles",
       "matin": "3",
-      "aprem": "5",
-      "vent": "4",
-      "dir": "N",
+      "aprem": "1",
+      "vent": "14",
+      "dir": "O",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "2400",
+      "limite": "1650",
       "derniereH": "2",
       "derniereD": "14/04/2026"
     },
@@ -70,12 +70,12 @@
       "alt": 2000,
       "ciel": "Couvert, pluies faibles",
       "matin": "3",
-      "aprem": "5",
-      "vent": "4",
-      "dir": "N",
+      "aprem": "1",
+      "vent": "14",
+      "dir": "O",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "2400",
+      "limite": "1650",
       "derniereH": "1",
       "derniereD": "14/04/2026"
     },
@@ -84,12 +84,12 @@
       "alt": 1600,
       "ciel": "Couvert, pluies faibles",
       "matin": "3",
-      "aprem": "5",
-      "vent": "4",
-      "dir": "N",
+      "aprem": "1",
+      "vent": "14",
+      "dir": "O",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "2400",
+      "limite": "1650",
       "derniereH": "5",
       "derniereD": "31/03/2026"
     },
@@ -98,12 +98,12 @@
       "alt": 800,
       "ciel": "Couvert, pluies faibles",
       "matin": "8",
-      "aprem": "11",
-      "vent": "0",
-      "dir": "",
+      "aprem": "8",
+      "vent": "4",
+      "dir": "N",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "2400",
+      "limite": "1600",
       "derniereH": "5",
       "derniereD": "14/03/2026"
     },
@@ -112,12 +112,12 @@
       "alt": 1800,
       "ciel": "Couvert, pluies faibles",
       "matin": "4",
-      "aprem": "4",
+      "aprem": "1",
       "vent": "4",
-      "dir": "SO",
+      "dir": "O",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "2400",
+      "limite": "1600",
       "derniereH": "5",
       "derniereD": "31/03/2026"
     }
@@ -125,10 +125,10 @@
   "previsions": {
     "jourDate": "21/10/2026",
     "jourTitre": "",
-    "jourTexte": "La journée se déroule sous un ciel bien encombré, accompagné de précipitations éparses ou de petites averses. La limite pluie-neige se situe vers 1950 mètres tôt le matin, puis elle peut s'abaisser jusqu'à 1550 mètres ensuite. En cours d'après-midi, établissement d'un vent d'Ouest à Nord-Ouest, localement modéré ; atténuation ensuite. Cette nuit: Sous un ciel à dominante nuageuse, quelques averses tombent, en première partie de nuit. La limite pluie-neige s'abaisse jusqu'à 1250 mètres. Puis, en seconde partie de nuit, le temps devient sec, avec des périodes étoilées un peu plus larges. Vent faible, variable.",
+    "jourTexte": "Des précipitations éparses tombent durablement. Quelques éclaircies arrivent à se développer, en fin d'après-midi. La neige remplace la pluie au-dessus de 1600 mètres. Vent d'Ouest à Nord-Ouest, localement modéré, en cours d'après-midi ; puis atténuation. Cette nuit: En début de nuit, les nuages sont très nombreux, et de faibles précipitations se produisent par places. La limite pluie-neige s'abaisse jusqu'à 1300 mètres. Les éclaircies reviennent dès le milieu de nuit dans le Beaufortain, en Maurienne, sur les massifs frontaliers, dans les Bauges ainsi que dans la Cluse de Chambéry et l'avant-Pays, puis se généralisent. Vent faible, variable.",
     "demainDate": "22/10/2026",
     "demainTitre": "",
-    "demainTexte": "Le temps est sec, avec un soleil qui brille toute la journée. Tout au plus quelques nuages apparaissent en fin d'après-midi dans la Cluse de Chambéry et l'avant-Pays. Pour la nuit : De larges éclaircies se développent avant minuit. Le ciel est même dégagé en soirée. Ensuite les nuages reprennent l'avantage, et finissent par voiler le ciel en fin de nuit. Vent variable, faible."
+    "demainTexte": "Le soleil est quasi-omniprésent. Par contre, des nuages élevés apparaissent en cours de journée, en Maurienne, dans les Bauges ainsi que dans les plaines et basses vallées. Pour la nuit : Le temps est calme en première partie de nuit. Ensuite, le ciel s'assombrit et quelques précipitations apparaissent sur les massifs frontaliers. La limite pluie-neige se situe au plus bas à 2100 mètres. Vent variable, faible."
   },
   "blocs": [
     {
