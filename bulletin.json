@@ -2,18 +2,18 @@
   "ecusson": "LA",
   "station": "LES ARCS",
   "soustitre": "Arc 1950 · Paradiski · Bulletin du domaine",
-  "maj": "2026-10-21T00:14:00",
+  "maj": "2026-10-21T11:51:00",
   "source": "Lumiplan",
   "hero": [
     {
       "k": "Temp. sommet",
-      "v": "4°",
+      "v": "5°",
       "l": "GRAND COL",
       "c": ""
     },
     {
       "k": "Temp. station",
-      "v": "4°",
+      "v": "5°",
       "l": "ARC 2000 · 2000 m",
       "c": "n"
     },
@@ -25,7 +25,7 @@
     },
     {
       "k": "Limite pluie/neige",
-      "v": "2350 m",
+      "v": "2400 m",
       "l": "Altitude",
       "c": "n"
     },
@@ -55,13 +55,13 @@
       "lieu": "GRAND COL",
       "alt": 3000,
       "ciel": "Couvert, pluies faibles",
-      "matin": "4",
-      "aprem": "4",
+      "matin": "3",
+      "aprem": "5",
       "vent": "4",
       "dir": "N",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "2350",
+      "limite": "2400",
       "derniereH": "2",
       "derniereD": "14/04/2026"
     },
@@ -69,13 +69,13 @@
       "lieu": "ARC 2000",
       "alt": 2000,
       "ciel": "Couvert, pluies faibles",
-      "matin": "4",
-      "aprem": "4",
+      "matin": "3",
+      "aprem": "5",
       "vent": "4",
       "dir": "N",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "2350",
+      "limite": "2400",
       "derniereH": "1",
       "derniereD": "14/04/2026"
     },
@@ -83,13 +83,13 @@
       "lieu": "ARC 1600",
       "alt": 1600,
       "ciel": "Couvert, pluies faibles",
-      "matin": "4",
-      "aprem": "4",
+      "matin": "3",
+      "aprem": "5",
       "vent": "4",
       "dir": "N",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "2350",
+      "limite": "2400",
       "derniereH": "5",
       "derniereD": "31/03/2026"
     },
@@ -97,13 +97,13 @@
       "lieu": "BOURG ST MAURICE",
       "alt": 800,
       "ciel": "Couvert, pluies faibles",
-      "matin": "9",
-      "aprem": "10",
+      "matin": "8",
+      "aprem": "11",
       "vent": "0",
       "dir": "",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "2350",
+      "limite": "2400",
       "derniereH": "5",
       "derniereD": "14/03/2026"
     },
@@ -111,13 +111,13 @@
       "lieu": "ARC 1800",
       "alt": 1800,
       "ciel": "Couvert, pluies faibles",
-      "matin": "5",
+      "matin": "4",
       "aprem": "4",
-      "vent": "1",
-      "dir": "N",
+      "vent": "4",
+      "dir": "SO",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "2350",
+      "limite": "2400",
       "derniereH": "5",
       "derniereD": "31/03/2026"
     }
@@ -125,10 +125,10 @@
   "previsions": {
     "jourDate": "21/10/2026",
     "jourTitre": "",
-    "jourTexte": "C'est un temps variable pour l'après-midi. De rares averses sont possibles de ci de là. Il neige à partir de 2650 mètres. En fin d'après-midi, les éclaircies sont plus belles. Vent d'Est à Sud-Est, localement modéré. Cette nuit: Le temps est bien nuageux toute la nuit, avec des précipitations. Située vers 2600 mètres à la tombée du jour, la limite pluie-neige peut s'abaisser par la suite jusqu'à 2200 mètres. Du brouillard se développe, en Maurienne, en fin de nuit. Vent variable, faible.",
+    "jourTexte": "La journée se déroule sous un ciel bien encombré, accompagné de précipitations éparses ou de petites averses. La limite pluie-neige se situe vers 1950 mètres tôt le matin, puis elle peut s'abaisser jusqu'à 1550 mètres ensuite. En cours d'après-midi, établissement d'un vent d'Ouest à Nord-Ouest, localement modéré ; atténuation ensuite. Cette nuit: Sous un ciel à dominante nuageuse, quelques averses tombent, en première partie de nuit. La limite pluie-neige s'abaisse jusqu'à 1250 mètres. Puis, en seconde partie de nuit, le temps devient sec, avec des périodes étoilées un peu plus larges. Vent faible, variable.",
     "demainDate": "22/10/2026",
     "demainTitre": "",
-    "demainTexte": "La journée débute sous un ciel gris, avec de faibles précipitations, dans le Beaufortain, en Tarentaise et Vanoise ainsi que dans la Combe de Savoie. Le temps est brumeux, en Maurienne ainsi que sur les massifs frontaliers. En cours de matinée, quelques éclaircies se forment. Elles restent modestes, et sont entrecoupées d'averses jusqu'en fin de journée. La limite pluie-neige se situe vers 2050 mètres aux premières heures du jour, puis elle peut s'abaisser jusqu'à 1550 mètres ensuite. Pour la nuit : La soirée est nuageuse. Elle est entrecoupée de rares averses et de timides éclaircies. Quelques brumes drapent les endroits les plus humides, très localement. Elles se dissipent vers minuit. La seconde partie de nuit est grise, avec toujours quelques averses. La limite pluie-neige s'abaisse vers 1150 mètres en milieu de nuit, avant de remonter progressivement. Vent soufflant faible à modéré par endroits, de Sud à Sud-Ouest, en milieu d'après-midi ; et d'Ouest, en deuxième partie de nuit. Rafales atteignant 65 km/h, en fin de nuit."
+    "demainTexte": "Le temps est sec, avec un soleil qui brille toute la journée. Tout au plus quelques nuages apparaissent en fin d'après-midi dans la Cluse de Chambéry et l'avant-Pays. Pour la nuit : De larges éclaircies se développent avant minuit. Le ciel est même dégagé en soirée. Ensuite les nuages reprennent l'avantage, et finissent par voiler le ciel en fin de nuit. Vent variable, faible."
   },
   "blocs": [
     {
