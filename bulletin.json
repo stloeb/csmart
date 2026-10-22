@@ -2,18 +2,18 @@
   "ecusson": "LA",
   "station": "LES ARCS",
   "soustitre": "Arc 1950 · Paradiski · Bulletin du domaine",
-  "maj": "2026-10-22T21:04:00",
+  "maj": "2026-10-23T00:37:00",
   "source": "Lumiplan",
   "hero": [
     {
       "k": "Temp. sommet",
-      "v": "3°",
+      "v": "2°",
       "l": "GRAND COL",
       "c": ""
     },
     {
       "k": "Temp. station",
-      "v": "3°",
+      "v": "2°",
       "l": "ARC 2000 · 2000 m",
       "c": "n"
     },
@@ -25,7 +25,7 @@
     },
     {
       "k": "Limite pluie/neige",
-      "v": "1 m",
+      "v": "1650 m",
       "l": "Altitude",
       "c": "n"
     },
@@ -37,8 +37,8 @@
     },
     {
       "k": "Dernière chute",
-      "v": "+ cm",
-      "l": "—",
+      "v": "+1 cm",
+      "l": "14/04/2026",
       "c": ""
     }
   ],
@@ -54,79 +54,79 @@
     {
       "lieu": "GRAND COL",
       "alt": 3000,
-      "ciel": "Soleil",
-      "matin": "0",
-      "aprem": "3",
+      "ciel": "Ciel variable, faibles chutes de neige",
+      "matin": "2",
+      "aprem": "2",
       "vent": "7",
       "dir": "E",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "2",
-      "derniereH": "",
-      "derniereD": ""
+      "limite": "1650",
+      "derniereH": "2",
+      "derniereD": "14/04/2026"
     },
     {
       "lieu": "ARC 2000",
       "alt": 2000,
-      "ciel": "Soleil",
-      "matin": "0",
-      "aprem": "3",
+      "ciel": "Ciel variable, faibles chutes de neige",
+      "matin": "2",
+      "aprem": "2",
       "vent": "7",
       "dir": "E",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "1",
-      "derniereH": "",
-      "derniereD": ""
+      "limite": "1650",
+      "derniereH": "1",
+      "derniereD": "14/04/2026"
     },
     {
       "lieu": "ARC 1600",
       "alt": 1600,
-      "ciel": "Soleil",
-      "matin": "0",
-      "aprem": "3",
+      "ciel": "Ciel variable, faibles chutes de neige",
+      "matin": "2",
+      "aprem": "2",
       "vent": "7",
       "dir": "E",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "5",
-      "derniereH": "",
-      "derniereD": ""
+      "limite": "1650",
+      "derniereH": "5",
+      "derniereD": "31/03/2026"
     },
     {
       "lieu": "BOURG ST MAURICE",
       "alt": 800,
-      "ciel": "Soleil",
-      "matin": "3",
+      "ciel": "Ciel variable, pluies faibles",
+      "matin": "7",
       "aprem": "7",
       "vent": "4",
       "dir": "N",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "5",
-      "derniereH": "",
-      "derniereD": ""
+      "limite": "1650",
+      "derniereH": "5",
+      "derniereD": "14/03/2026"
     },
     {
       "lieu": "ARC 1800",
       "alt": 1800,
-      "ciel": "Soleil",
-      "matin": "0",
-      "aprem": "6",
-      "vent": "6",
-      "dir": "SE",
+      "ciel": "Ciel variable, pluies faibles",
+      "matin": "3",
+      "aprem": "2",
+      "vent": "4",
+      "dir": "E",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "5",
-      "derniereH": "",
-      "derniereD": ""
+      "limite": "1650",
+      "derniereH": "5",
+      "derniereD": "31/03/2026"
     }
   ],
   "previsions": {
-    "jourDate": "22/10/2026",
+    "jourDate": "23/10/2026",
     "jourTitre": "",
     "jourTexte": "Le soleil domine généralement, malgré les nuages présents. Vent variable, faible. Cette nuit: Nuages et étoiles se partagent le ciel. De petites averses sont possibles en fin de nuit, en Tarentaise et Vanoise ainsi que sur les massifs frontaliers. La neige remplace la pluie au-dessus de 1650 mètres. Aux premières heures du jour, établissement d'un vent de Sud, localement modéré.",
-    "demainDate": "23/10/2026",
+    "demainDate": "24/10/2026",
     "demainTitre": "",
     "demainTexte": "Les nuages sont nombreux, et délivrent de rares averses. Par moments, le soleil parvient tout de même à percer. La limite pluie-neige se situe vers 1800 mètres tôt le matin, puis elle peut s'abaisser jusqu'à 1600 mètres ensuite. Pour la nuit : Un risque d'averses existe toute la nuit, mais elles restent peu fréquentes. Située vers 1300 mètres à la tombée du jour, la limite pluie-neige peut s'abaisser par la suite jusqu'à 1050 mètres. Vent de Sud à Sud-Ouest virant Ouest-Nord-Ouest, généralement modéré, en journée et une grande partie de la nuit suivante ; puis atténuation. Rafales atteignant 65 km/h sur les massifs frontaliers."
   },
