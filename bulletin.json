@@ -2,30 +2,30 @@
   "ecusson": "LA",
   "station": "LES ARCS",
   "soustitre": "Arc 1950 · Paradiski · Bulletin du domaine",
-  "maj": "2026-10-23T16:42:00",
+  "maj": "2026-10-23T20:53:00",
   "source": "Lumiplan",
   "hero": [
     {
       "k": "Temp. sommet",
-      "v": "3°",
+      "v": "0°",
       "l": "GRAND COL",
       "c": ""
     },
     {
       "k": "Temp. station",
-      "v": "3°",
+      "v": "0°",
       "l": "ARC 2000 · 2000 m",
       "c": "n"
     },
     {
       "k": "Vent",
-      "v": "7 km/h",
-      "l": "Secteur SO",
+      "v": "14 km/h",
+      "l": "Secteur O",
       "c": "w"
     },
     {
       "k": "Limite pluie/neige",
-      "v": "1900 m",
+      "v": "1600 m",
       "l": "Altitude",
       "c": "n"
     },
@@ -56,12 +56,12 @@
       "alt": 3000,
       "ciel": "Ciel variable, pluies faibles",
       "matin": "3",
-      "aprem": "3",
-      "vent": "7",
-      "dir": "SO",
+      "aprem": "0",
+      "vent": "14",
+      "dir": "O",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "1900",
+      "limite": "1600",
       "derniereH": "2",
       "derniereD": "14/04/2026"
     },
@@ -70,12 +70,12 @@
       "alt": 2000,
       "ciel": "Ciel variable, pluies faibles",
       "matin": "3",
-      "aprem": "3",
-      "vent": "7",
-      "dir": "SO",
+      "aprem": "0",
+      "vent": "14",
+      "dir": "O",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "1900",
+      "limite": "1600",
       "derniereH": "1",
       "derniereD": "14/04/2026"
     },
@@ -84,12 +84,12 @@
       "alt": 1600,
       "ciel": "Ciel variable, pluies faibles",
       "matin": "3",
-      "aprem": "3",
-      "vent": "7",
-      "dir": "SO",
+      "aprem": "0",
+      "vent": "14",
+      "dir": "O",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "1900",
+      "limite": "1600",
       "derniereH": "5",
       "derniereD": "31/03/2026"
     },
@@ -98,12 +98,12 @@
       "alt": 800,
       "ciel": "Ciel variable, pluies faibles",
       "matin": "7",
-      "aprem": "8",
+      "aprem": "7",
       "vent": "4",
       "dir": "N",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "1900",
+      "limite": "1600",
       "derniereH": "5",
       "derniereD": "14/03/2026"
     },
@@ -112,12 +112,12 @@
       "alt": 1800,
       "ciel": "Ciel variable, pluies faibles",
       "matin": "3",
-      "aprem": "2",
-      "vent": "6",
-      "dir": "E",
+      "aprem": "1",
+      "vent": "11",
+      "dir": "SO",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "1900",
+      "limite": "1600",
       "derniereH": "5",
       "derniereD": "31/03/2026"
     }
@@ -125,10 +125,10 @@
   "previsions": {
     "jourDate": "23/10/2026",
     "jourTitre": "",
-    "jourTexte": "Après un début de journée gris et humide, quelques timides éclaircies percent. Des averses éparses sont possibles tout au long de la journée. La limite pluie-neige se situe vers 1850 mètres tôt le matin, puis elle peut s'abaisser jusqu'à 1550 mètres ensuite. Vent de Sud à Sud-Ouest, généralement modéré. Cette nuit: Un risque d'averses existe toute la nuit, mais elles restent peu fréquentes. La limite pluie-neige se situe vers 1250 mètres à la tombée du jour, puis elle peut s'abaisser jusqu'à 1000 mètres ensuite. En milieu de nuit, vent s'établissant à l'Ouest modéré, en Tarentaise et Vanoise ; puis atténuation.",
+    "jourTexte": "En début d'après-midi, des orages grondent. Ensuite, le temps redevient plus clément, avec cependant quelques averses résiduelles. C'est de la neige qui tombe au-dessus de 1600 mètres. Vent de secteur Sud-Ouest, généralement modéré. Cette nuit: Le temps est très nuageux et humide. Toute la nuit, des averses se produisent. La limite pluie-neige se situe vers 1300 mètres à la tombée du jour, puis elle peut s'abaisser jusqu'à 1000 mètres ensuite. Quelques étoiles arrivent timidement à se faire une place. Vent faible, variable.",
     "demainDate": "24/10/2026",
     "demainTitre": "",
-    "demainTexte": "Le temps est variable, avec des averses le matin. La limite pluie-neige s'abaisse jusqu'à 1100 mètres. L'après-midi, le soleil revient peu à peu, même s'il doit encore composer avec quelques nuages. Pour la nuit : Le ciel est très nuageux à couvert en soirée, avec de la brume, très localement. Les nuages se fractionnent peu à peu en cours de nuit. Et c'est un temps d'averses éparses, qui se met en place en seconde partie de nuit. La limite pluie-neige se situe vers 1700 mètres en milieu de nuit, et elle remonte ensuite au-dessus de 2150 mètres. En début d'après-midi, vent d'Ouest-Sud-Ouest, modéré en Tarentaise et Vanoise ; en milieu de nuit, vent s'orientant au Sud, même force dans la Cluse de Chambéry et l'avant-Pays."
+    "demainTexte": "Quelques averses tombent en matinée. Elles s'espacent de plus en plus, pour annoncer un temps sec l'après-midi, bénéficiant de nombreuses éclaircies. C'est de la neige qui tombe au-dessus de 1100 mètres. Pour la nuit : Le ciel se couvre rapidement et de petites précipitations ou averses se produisent. La limite pluie-neige se situe vers 1500 mètres en début de nuit, et elle remonte ensuite au-dessus de 2000 mètres. En début d'après-midi, vent d'Ouest-Sud-Ouest, faible à modéré en Tarentaise et Vanoise, puis s'atténuant ; en milieu de nuit, vent se renforçant dans la Cluse de Chambéry et l'avant-Pays, avec orientation au Sud."
   },
   "blocs": [
     {
