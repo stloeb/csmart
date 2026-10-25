@@ -2,30 +2,30 @@
   "ecusson": "LA",
   "station": "LES ARCS",
   "soustitre": "Arc 1950 · Paradiski · Bulletin du domaine",
-  "maj": "2026-10-25T18:45:00",
+  "maj": "2026-10-25T21:30:00",
   "source": "Lumiplan",
   "hero": [
     {
       "k": "Temp. sommet",
-      "v": "5°",
+      "v": "6°",
       "l": "GRAND COL",
       "c": ""
     },
     {
       "k": "Temp. station",
-      "v": "5°",
+      "v": "6°",
       "l": "ARC 2000 · 2000 m",
       "c": "n"
     },
     {
       "k": "Vent",
-      "v": "7 km/h",
-      "l": "Secteur SE",
+      "v": "14 km/h",
+      "l": "Secteur O",
       "c": "w"
     },
     {
       "k": "Limite pluie/neige",
-      "v": "2250 m",
+      "v": "2300 m",
       "l": "Altitude",
       "c": "n"
     },
@@ -56,12 +56,12 @@
       "alt": 3000,
       "ciel": "Couvert, pluies faibles",
       "matin": "3",
-      "aprem": "5",
-      "vent": "7",
-      "dir": "SE",
+      "aprem": "6",
+      "vent": "14",
+      "dir": "O",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "2250",
+      "limite": "2300",
       "derniereH": "2",
       "derniereD": "14/04/2026"
     },
@@ -70,12 +70,12 @@
       "alt": 2000,
       "ciel": "Couvert, pluies faibles",
       "matin": "3",
-      "aprem": "5",
-      "vent": "7",
-      "dir": "SE",
+      "aprem": "6",
+      "vent": "14",
+      "dir": "O",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "2250",
+      "limite": "2300",
       "derniereH": "1",
       "derniereD": "14/04/2026"
     },
@@ -84,12 +84,12 @@
       "alt": 1600,
       "ciel": "Couvert, pluies faibles",
       "matin": "3",
-      "aprem": "5",
-      "vent": "7",
-      "dir": "SE",
+      "aprem": "6",
+      "vent": "14",
+      "dir": "O",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "2250",
+      "limite": "2300",
       "derniereH": "5",
       "derniereD": "31/03/2026"
     },
@@ -99,11 +99,11 @@
       "ciel": "Couvert, pluies faibles",
       "matin": "7",
       "aprem": "10",
-      "vent": "4",
-      "dir": "N",
+      "vent": "7",
+      "dir": "O",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "2200",
+      "limite": "2300",
       "derniereH": "5",
       "derniereD": "14/03/2026"
     },
@@ -112,12 +112,12 @@
       "alt": 1800,
       "ciel": "Couvert, pluies faibles",
       "matin": "5",
-      "aprem": "7",
-      "vent": "6",
-      "dir": "SO",
+      "aprem": "6",
+      "vent": "14",
+      "dir": "O",
       "neige24": "0",
       "qualite": "N/D",
-      "limite": "2200",
+      "limite": "2300",
       "derniereH": "5",
       "derniereD": "31/03/2026"
     }
@@ -125,10 +125,10 @@
   "previsions": {
     "jourDate": "25/10/2026",
     "jourTitre": "",
-    "jourTexte": "Le temps est gris et il pleut d'abord faiblement. En milieu de journée, les précipitations sont plus soutenues. Puis la couche nuageuse se déchire et le soleil fait quelques apparitions en fin de journée. Quelques averses sont encore possibles. Située vers 2600 mètres en début d'après-midi, la limite pluie-neige peut s'abaisser par la suite jusqu'à 2050 mètres. Vent de Sud virant Ouest à Nord-Ouest, généralement modéré. Avec des rafales à 55 km/h, sur les massifs frontaliers, à la tombée du jour. Cette nuit: En début de soirée le ciel est très nuageux avec des brumes ici ou là. Le temps est généralement sec, mais quelques rares averses sont possibles, en Tarentaise et Vanoise ainsi que sur les massifs frontaliers. C'est de la neige qui tombe au-dessus de 1900 mètres. Les précipitations cessent vite et progressivement, les nuages disparaissent quelque peu, laissant une belle place aux étoiles en fin de nuit. Vent faible, variable.",
+    "jourTexte": "Sous un ciel généralement couvert, il pleut de manière continue en début d'après-midi. Ensuite, les précipitations se transforment en averses, et deviennent peu fréquentes. Des éclaircies se développent, en toute fin de journée. La limite pluie-neige se situe vers 2600 mètres en début d'après-midi, puis elle peut s'abaisser jusqu'à 2050 mètres ensuite. Vent de Sud à Sud-Ouest tournant Nord-Ouest, localement modéré. Rafales atteignant 55 km/h, à la tombée du jour. Cette nuit: En début de soirée le ciel est très nuageux avec des brumes ici ou là. Le temps est généralement sec, mais quelques rares averses sont possibles, en Tarentaise et Vanoise ainsi que sur les massifs frontaliers. La neige remplace la pluie au-dessus de 1900 mètres. Les précipitations cessent vite et progressivement, les nuages disparaissent quelque peu, laissant une belle place aux étoiles en fin de nuit. Vent faible, variable.",
     "demainDate": "26/10/2026",
     "demainTitre": "",
-    "demainTexte": "Le soleil brille toute la matinée, puis le ciel se voile. Pour la nuit : La nuit est bien étoilée. En fin de nuit, vent d'Est modéré, dans la Combe de Savoie."
+    "demainTexte": "Le soleil brille toute la matinée, puis le ciel se voile. Pour la nuit : Le ciel devrait être clair, malgré quelques développements nuageux inoffensifs, vers minuit, sur les massifs frontaliers, dans les Bauges ainsi que dans la Cluse de Chambéry et l'avant-Pays. En fin de nuit, vent d'Est modéré, dans la Combe de Savoie."
   },
   "blocs": [
     {
