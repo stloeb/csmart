@@ -2,25 +2,25 @@
   "ecusson": "LA",
   "station": "LES ARCS",
   "soustitre": "Arc 1950 · Paradiski · Bulletin du domaine",
-  "maj": "2026-10-26T18:06:00",
+  "maj": "2026-10-26T22:45:00",
   "source": "Lumiplan",
   "hero": [
     {
       "k": "Temp. sommet",
-      "v": "10°",
+      "v": "7°",
       "l": "GRAND COL",
       "c": ""
     },
     {
       "k": "Temp. station",
-      "v": "10°",
+      "v": "7°",
       "l": "ARC 2000 · 2000 m",
       "c": "n"
     },
     {
       "k": "Vent",
-      "v": "7 km/h",
-      "l": "Secteur E",
+      "v": "4 km/h",
+      "l": "Secteur N",
       "c": "w"
     },
     {
@@ -56,9 +56,9 @@
       "alt": 3000,
       "ciel": "Soleil",
       "matin": "3",
-      "aprem": "10",
-      "vent": "7",
-      "dir": "E",
+      "aprem": "7",
+      "vent": "4",
+      "dir": "N",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "2",
@@ -70,9 +70,9 @@
       "alt": 2000,
       "ciel": "Soleil",
       "matin": "3",
-      "aprem": "10",
-      "vent": "7",
-      "dir": "E",
+      "aprem": "7",
+      "vent": "4",
+      "dir": "N",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "1",
@@ -84,9 +84,9 @@
       "alt": 1600,
       "ciel": "Soleil",
       "matin": "3",
-      "aprem": "10",
-      "vent": "7",
-      "dir": "E",
+      "aprem": "7",
+      "vent": "4",
+      "dir": "N",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "5",
@@ -98,7 +98,7 @@
       "alt": 800,
       "ciel": "Soleil",
       "matin": "3",
-      "aprem": "17",
+      "aprem": "9",
       "vent": "4",
       "dir": "N",
       "neige24": "0",
@@ -113,8 +113,8 @@
       "ciel": "Soleil",
       "matin": "7",
       "aprem": "9",
-      "vent": "8",
-      "dir": "E",
+      "vent": "4",
+      "dir": "S",
       "neige24": "0",
       "qualite": "N/D",
       "limite": "5",
@@ -125,10 +125,10 @@
   "previsions": {
     "jourDate": "26/10/2026",
     "jourTitre": "",
-    "jourTexte": "Le temps est sec et ensoleillé. Les quelques nuages présents par places l'après-midi ne gâchent pas l'impression de beau temps. Vent variable, faible. Cette nuit: La nuit est majoritairement étoilée. Vent faible, variable.",
+    "jourTexte": "La mi-journée est partagée entre passages nuageux et éclaircies, mais peu à peu ces dernières s'élargissent, et la fin d'après-midi bénéficie d'un soleil généreux. Vent faible, variable. Cette nuit: Le temps est calme et propice à l'observation des étoiles. Vent variable, faible.",
     "demainDate": "27/10/2026",
     "demainTitre": "",
-    "demainTexte": "Le soleil règne presque en maître du matin au soir, seuls quelques passages nuageux le contrarient un peu en fin de journée. Pour la nuit : La soirée est partagée entre passages nuageux et périodes étoilées, mais peu à peu ces dernières s'allongent, et après minuit, la voûte céleste est bien dégagée. Vent faible, variable."
+    "demainTexte": "Le soleil règne presque en maître du matin au soir, seuls quelques passages nuageux le contrarient un peu en fin de journée. Pour la nuit : La nuit est belle, les nuages n'empêchent pas de voir les étoiles. Vent faible, variable."
   },
   "blocs": [
     {
